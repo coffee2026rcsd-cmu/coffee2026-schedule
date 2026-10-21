@@ -36,7 +36,7 @@
     {
      "name": "RCSD",
      "url": "https://rcsd.soc.cmu.ac.th/",
-     "logo": "logos/sp-mviccbmr890.png?v=mvid15yf",
+     "logo": "logos/sp-mviccbmr890.png?v=mvidmbay",
      "size": "l"
     }
    ]
@@ -44,6 +44,12 @@
   {
    "group": "Co-organised by",
    "items": [
+    {
+     "name": "Chiang Mai University",
+     "url": "https://www.cmu.ac.th/",
+     "logo": "logos/sp-mvid9bjlfvu.png?v=mvidaqpm",
+     "size": "m"
+    },
     {
      "name": "Yunnan University",
      "url": "https://english.ynu.edu.cn/",
@@ -63,15 +69,9 @@
      "size": "m"
     },
     {
-     "name": "Chiang Mai University",
-     "url": "https://www.cmu.ac.th/",
-     "logo": "logos/sp-mvid9bjlfvu.png?v=mvidaqpm",
-     "size": "m"
-    },
-    {
      "name": "Center for Ethnic Studies and Development",
      "url": "https://cesd.soc.cmu.ac.th/",
-     "logo": "",
+     "logo": "logos/sp-mvidakp70gn.png?v=mvidmjbu",
      "size": "m"
     }
    ]
@@ -81,7 +81,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "22 Oct 2026, 00:16 (GMT+7)",
+ "updated": "22 Oct 2026, 00:19 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
