@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Programme · 3rd International Symposium on Coffee 2026</title>
+<meta name="description" content="Programme of the 3rd International Symposium on Coffee, 27–28 November 2026, Faculty of Social Sciences, Chiang Mai University.">
+<!-- Everything is in this file and schedule.json next to it: no fonts, scripts or images from Google or any other host. -->
+<style>
+  :root{--bg:#f7f5f1;--surface:#fff;--ink:#1d1a16;--ink-2:#4b443c;--ink-3:#8b8279;--line:#e8e2d9;--accent:#8a5a2b;--accent-soft:#f2e9df;--live:#2f7a4a}
+  @media (prefers-color-scheme:dark){:root{--bg:#161412;--surface:#201d1a;--ink:#f1ece6;--ink-2:#cfc6bc;--ink-3:#958b80;--line:#332e29;--accent:#d9a46c;--accent-soft:#2c241c;--live:#6cc08c}}
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 "Helvetica Neue",Helvetica,Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans Thai",sans-serif}
+  a{color:inherit}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+  header{padding:48px 0 18px}
+  .eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700}
+  h1{font-size:clamp(24px,3.4vw,38px);line-height:1.15;letter-spacing:-.015em;margin:10px 0 12px;font-weight:700;max-width:900px}
+  .meta{color:var(--ink-2);font-size:14px}
+  .lang{float:right;display:flex;gap:2px;font-size:12px;margin-top:2px}
+  .lang button{border:0;background:none;color:var(--ink-3);padding:4px 8px;border-radius:999px;cursor:pointer;font:inherit}
+  .lang button[aria-pressed=true]{color:var(--ink);background:var(--accent-soft)}
+  .bar{position:sticky;top:0;z-index:5;background:var(--bg);padding:12px 0;display:flex;gap:10px;flex-wrap:wrap;align-items:center;border-bottom:1px solid var(--line)}
+  .days{display:flex;gap:4px}
+  .days button{border:0;background:none;font:inherit;font-weight:700;color:var(--ink-3);padding:8px 14px;border-radius:999px;cursor:pointer}
+  .days button span{font-weight:400;margin-left:6px}
+  .days button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+  .search{flex:1;min-width:180px;max-width:360px;margin-left:auto;font:inherit;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+  .search:focus{outline:2px solid var(--accent);outline-offset:1px}
+  .now{font-size:13px;color:var(--live);font-weight:700;width:100%}
+  main{padding:8px 0 80px}
+  .block{display:grid;grid-template-columns:118px 1fr;gap:24px;padding:22px 0;border-top:1px solid var(--line);scroll-margin-top:90px}
+  .block:first-child{border-top:0}
+  .time{font-variant-numeric:tabular-nums;font-weight:700;font-size:15px}
+  .time small{display:block;font-weight:400;color:var(--ink-3);font-size:12.5px;margin-top:2px}
+  .block.live .time{color:var(--live)}
+  .block.live .time::after{content:"● now";display:block;font-size:11px;letter-spacing:.06em;margin-top:6px}
+  .block.quiet{padding:12px 0}
+  .block.quiet .bt{color:var(--ink-3);font-size:14px}
+  .bt{font-size:18px;font-weight:700;line-height:1.3;margin:0}
+  .kind{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:4px}
+  .about{color:var(--ink-2);font-size:14px;margin:8px 0 0;max-width:760px}
+  .about summary{cursor:pointer;color:var(--ink-3);font-size:13px}
+  .people{margin:12px 0 0;padding:0;list-style:none;display:grid;gap:8px}
+  .people li b{font-weight:700}
+  .people .talk{display:block;color:var(--ink-2);font-size:14px}
+  .people .aff,.paper .aff{color:var(--ink-3);font-size:13.5px}
+  .mod{margin-top:10px;font-size:14px;color:var(--ink-2)}
+  .lab{color:var(--ink-3)}
+  .sessions{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;margin-top:14px}
+  .session{scroll-margin-top:90px}
+  @media (max-width:640px){.block,.session{scroll-margin-top:130px}}
+  .sh{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+  .code{font:700 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--accent);background:var(--accent-soft);padding:4px 6px;border-radius:6px}
+  .room{font-size:12.5px;color:var(--ink-3)}
+  .sname{font-size:16px;font-weight:700;line-height:1.3;margin:6px 0 2px}
+  .chair{font-size:13px;color:var(--ink-2)}
+  .papers{list-style:none;margin:10px 0 0;padding:0;counter-reset:p}
+  .paper{counter-increment:p;position:relative;padding:9px 0 9px 26px;border-top:1px solid var(--line)}
+  .paper::before{content:counter(p);position:absolute;left:0;top:9px;font-size:12px;font-weight:700;color:var(--ink-3);font-variant-numeric:tabular-nums}
+  .paper .t{font-size:14px;line-height:1.4}
+  .paper .who{font-size:13.5px;margin-top:2px}
+  .online{font-size:11px;font-weight:700;color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 6px;margin-left:6px;white-space:nowrap}
+  .link{border:0;background:none;color:var(--ink-3);cursor:pointer;font:inherit;font-size:12px;padding:0 4px;opacity:.7}
+  .link:hover{opacity:1;color:var(--accent)}
+  .side{margin-top:6px}
+  .side .ev{margin-top:8px}
+  .side .ev b{font-weight:700}
+  .hit{background:color-mix(in srgb,var(--accent) 22%,transparent);border-radius:3px}
+  .empty{padding:40px 0;color:var(--ink-3)}
+  .toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:8px 16px;border-radius:999px;font-size:13px;opacity:0;transition:opacity .2s;pointer-events:none}
+  .toast.on{opacity:.95}
+  footer{color:var(--ink-3);font-size:12.5px;padding:24px 0 40px;border-top:1px solid var(--line)}
+  @media (max-width:640px){
+    header{padding:28px 0 10px}
+    .block{grid-template-columns:1fr;gap:6px}
+    .block.live .time::after{display:inline;margin-left:8px}
+    .search{max-width:none;margin-left:0}
+    .sessions{gap:22px}
+  }
+  @media print{
+    .bar,.lang,.link,.toast{display:none!important}
+    body{background:#fff;color:#000;font-size:11pt}
+    .day{display:block!important;break-before:page}
+    .day:first-of-type{break-before:auto}
+    .day h2{display:block!important}
+    .block{break-inside:avoid}
+  }
+  .day h2{display:none;font-size:20px;margin:24px 0 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="lang" role="group" aria-label="Language"><button data-lang="en" aria-pressed="true">EN</button><button data-lang="zh" aria-pressed="false">中文</button></div>
+    <div class="eyebrow" id="subtitle">3rd International Symposium on Coffee · 27–28 November 2026</div>
+    <h1 id="title">Programme</h1>
+    <div class="meta" id="venue"></div>
+  </header>
+  <div class="bar">
+    <div class="days" id="days" role="tablist"></div>
+    <input class="search" id="q" type="search" placeholder="Search a name, title or room" aria-label="Search">
+    <div class="now" id="now" hidden></div>
+  </div>
+  <main id="main"><div class="empty" id="loading">Loading the programme…</div></main>
+  <footer><span id="updated"></span> · <span data-t="subject">This schedule is subject to change.</span></footer>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+(function () {
+  var T = {
+    en: { search: 'Search a name, title or room', chair: 'Chair', moderator: 'Moderator', online: 'online', also: 'Also at the same time', copy: 'Link copied',
+          none: 'Nothing matches that search.', subject: 'This schedule is subject to change.', updated: 'Updated', loading: 'Loading the programme…',
+          kinds: { keynote: 'Keynote', plenary: 'Plenary discussion', concurrent: 'Concurrent sessions', roundtable: 'Roundtable', opening: 'Opening', closing: 'Closing', side: 'Side programme', open: 'Open session' },
+          about: 'About this session', nowL: 'Now', next: 'Next', min: 'min', failed: 'The programme could not be loaded. Please try again in a moment.' },
+    zh: { search: '搜索姓名、题目或会议室', chair: '主持人', moderator: '主持人', online: '线上', also: '同时进行', copy: '链接已复制',
+          none: '没有找到匹配的内容。', subject: '日程如有变动，以现场为准。', updated: '更新于', loading: '正在加载日程…',
+          kinds: { keynote: '主旨演讲', plenary: '全体讨论', concurrent: '分会场', roundtable: '圆桌讨论', opening: '开幕式', closing: '闭幕式', side: '平行活动', open: '公开环节' },
+          about: '简介', nowL: '正在进行', next: '下一项', min: '分钟', failed: '日程加载失败，请稍后再试。' }
+  };
+  var DAYZH = { 'Day 1': '第一天', 'Day 2': '第二天', 'Day 3': '第三天' };
+  var L = 'en', DATA = null, DAY = 0, Q = '';
+  try { L = localStorage.getItem('lang') || (/^zh/i.test(navigator.language || '') ? 'zh' : 'en'); } catch (e) {}
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); };
+  var t = function (k) { return T[L][k]; };
+  function mark(s) {
+    var h = esc(s);
+    if (!Q) return h;
+    var q = Q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return h.replace(new RegExp('(' + esc(q) + ')', 'gi'), '<span class="hit">$1</span>');
+  }
+  function text(b) {
+    var p = [b.title, b.room, b.about];
+    (b.speakers || []).forEach(function (s) { p.push(s.name, s.affiliation, s.talk); });
+    if (b.moderator) p.push(b.moderator.name);
+    (b.sessions || []).forEach(function (s) { p.push(s.name, s.room, s.chair, s.code); (s.papers || []).forEach(function (x) { p.push(x.title, x.presenter, x.affiliation, x.country); }); });
+    (b.events || []).forEach(function (e) { p.push(e.name, e.org, e.moderator); p.push.apply(p, e.panellists || []); });
+    return p.join(' ').toLowerCase();
+  }
+  function bkk() {   // minutes since midnight and the date, in Chiang Mai time
+    var now = new Date(Date.now() + 7 * 3600000);
+    return { date: now.toISOString().slice(0, 10), min: now.getUTCHours() * 60 + now.getUTCMinutes() };
+  }
+  function isoOf(d) {   // "27 Nov 2026" → 2026-11-27
+    var m = String(d.date || '').match(/(\d{1,2})\s+(\w{3})\w*\s+(\d{4})/);
+    if (!m) return '';
+    var mo = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'].indexOf(m[2].toLowerCase()) + 1;
+    return m[3] + '-' + ('0' + mo).slice(-2) + '-' + ('0' + m[1]).slice(-2);
+  }
+  function dur(b) { var m = String(b.end).match(/(\d+):(\d+)\s*(AM|PM)/), s = b.startMin; if (!m) return 0; var e = (Number(m[1]) % 12 + (m[3] === 'PM' ? 12 : 0)) * 60 + Number(m[2]); return e - s; }
+  function blockHTML(b, live) {
+    var quiet = /^(break|lunch|registration|other)$/.test(b.type) && !(b.speakers && b.speakers.length);
+    var kind = t('kinds')[b.type] || '';
+    var h = '<section class="block' + (quiet ? ' quiet' : '') + (live ? ' live' : '') + '" id="' + esc(b.id) + '">' +
+      '<div class="time">' + esc(b.start) + '<small>– ' + esc(b.end) + '</small></div><div>';
+    if (kind && !quiet) h += '<div class="kind">' + esc(kind) + (b.room ? ' · ' + esc(b.room) : '') + '</div>';
+    h += '<p class="bt">' + mark(b.title) + ' <button class="link" data-link="' + esc(b.id) + '" title="Copy link" aria-label="Copy a link to this">#</button></p>';
+    if (b.about) h += '<details class="about"><summary>' + esc(t('about')) + '</summary>' + mark(b.about) + '</details>';
+    if (b.speakers && b.speakers.length) h += '<ul class="people">' + b.speakers.map(function (s) {
+      return '<li><b>' + mark(s.name) + '</b>' + (s.affiliation ? ' <span class="aff">· ' + mark(s.affiliation) + '</span>' : '') + (s.talk ? '<span class="talk">' + mark(s.talk) + '</span>' : '') + '</li>';
+    }).join('') + '</ul>';
+    if (b.moderator && b.moderator.name) h += '<div class="mod"><span class="lab">' + esc(t('moderator')) + ':</span> ' + mark(b.moderator.name) + (b.moderator.affiliation ? ' <span class="aff">· ' + mark(b.moderator.affiliation) + '</span>' : '') + '</div>';
+    if (b.sessions && b.sessions.length) h += '<div class="sessions">' + b.sessions.map(function (s) {
+      return '<article class="session" id="' + esc(s.code || (b.id + '-' + s.room)) + '"><div class="sh">' + (s.code ? '<span class="code">' + esc(s.code) + '</span>' : '') +
+        '<span class="room">' + mark(s.room) + '</span><button class="link" data-link="' + esc(s.code || (b.id + '-' + s.room)) + '" aria-label="Copy a link to this session">#</button></div>' +
+        '<h3 class="sname">' + mark(s.name) + '</h3>' + (s.chair ? '<div class="chair"><span class="lab">' + esc(t('chair')) + ':</span> ' + mark(s.chair) + '</div>' : '') +
+        '<ol class="papers">' + (s.papers || []).map(function (p) {
+          return '<li class="paper"><div class="t">' + mark(p.title) + '</div><div class="who"><b>' + mark(p.presenter) + '</b>' +
+            (p.online ? '<span class="online">' + esc(t('online')) + '</span>' : '') +
+            (p.affiliation || p.country ? ' <span class="aff">· ' + mark([p.affiliation, p.country && String(p.affiliation).toLowerCase().indexOf(String(p.country).toLowerCase()) === -1 ? p.country : ''].filter(Boolean).join(', ')) + '</span>' : '') + '</div></li>';
+        }).join('') + '</ol></article>';
+    }).join('') + '</div>';
+    if (b.events && b.events.length) h += '<div class="side">' + b.events.map(function (e) {
+      var same = String(e.name).toLowerCase() === String(b.title).toLowerCase();
+      return '<div class="ev">' + (same ? '' : '<b>' + mark(e.name) + '</b>') + (e.kind ? ' <span class="aff">· ' + esc(e.kind) + '</span>' : '') + (e.org ? ' <span class="aff">· ' + mark(e.org) + '</span>' : '') +
+        (e.panellists && e.panellists.length ? '<ul class="people">' + e.panellists.map(function (x) { return '<li>' + mark(x) + '</li>'; }).join('') + '</ul>' : '') +
+        (e.moderator ? '<div class="mod"><span class="lab">' + esc(t('moderator')) + ':</span> ' + mark(e.moderator) + '</div>' : '') + '</div>';
+    }).join('') + '</div>';
+    return h + '</div></section>';
+  }
+  function render() {
+    document.documentElement.lang = L === 'zh' ? 'zh-CN' : 'en';
+    Array.prototype.forEach.call(document.querySelectorAll('[data-lang]'), function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-lang') === L)); });
+    Array.prototype.forEach.call(document.querySelectorAll('[data-t]'), function (el) { el.textContent = t(el.getAttribute('data-t')); });
+    $('q').placeholder = t('search');
+    if (!DATA) return;
+    $('title').textContent = DATA.title || 'Programme';
+    $('subtitle').textContent = DATA.subtitle || '';
+    $('venue').textContent = DATA.venue || '';
+    $('updated').textContent = DATA.updated ? t('updated') + ' ' + DATA.updated : '';
+    var clock = bkk();
+    $('days').innerHTML = DATA.days.map(function (d, i) {
+      return '<button role="tab" data-day="' + i + '" aria-pressed="' + (i === DAY && !Q) + '">' + esc(L === 'zh' ? (DAYZH[d.key] || d.key) : d.key) + '<span>' + esc(d.date) + '</span></button>';
+    }).join('');
+    var html = '', any = false, nowTxt = '';
+    DATA.days.forEach(function (d, i) {
+      var today = isoOf(d) === clock.date;
+      var list = d.blocks.filter(function (b) { return !Q || text(b).indexOf(Q.toLowerCase()) !== -1; });
+      if (Q ? !list.length : i !== DAY) return;
+      any = any || list.length > 0;
+      // side programme items that share a time with a main block are shown under their own time
+      html += '<div class="day"><h2>' + esc(d.key + ' · ' + d.date) + '</h2>' + (Q ? '<div class="kind" style="margin-top:20px">' + esc((L === 'zh' ? (DAYZH[d.key] || d.key) : d.key) + ' · ' + d.date) + '</div>' : '') +
+        list.map(function (b) {
+          var live = today && clock.min >= b.startMin && clock.min < b.startMin + dur(b) && b.type !== 'side';
+          if (live) nowTxt = t('nowL') + ': ' + b.start + ' ' + b.title;
+          return blockHTML(b, live);
+        }).join('') + '</div>';
+    });
+    $('main').innerHTML = any ? html : '<div class="empty">' + esc(t('none')) + '</div>';
+    $('now').hidden = !nowTxt; $('now').textContent = nowTxt ? '● ' + nowTxt : '';
+  }
+  function toast(m) { var el = $('toast'); el.textContent = m; el.classList.add('on'); clearTimeout(el._t); el._t = setTimeout(function () { el.classList.remove('on'); }, 1600); }
+  document.addEventListener('click', function (e) {
+    var d = e.target.closest('[data-day]');
+    if (d) { DAY = Number(d.getAttribute('data-day')); Q = ''; $('q').value = ''; history.replaceState(null, '', '#day' + (DAY + 1)); render(); window.scrollTo({ top: 0 }); return; }
+    var l = e.target.closest('[data-lang]');
+    if (l) { L = l.getAttribute('data-lang'); try { localStorage.setItem('lang', L); } catch (x) {} render(); return; }
+    var k = e.target.closest('[data-link]');
+    if (k) {
+      var url = location.href.split('#')[0] + '#' + k.getAttribute('data-link');
+      history.replaceState(null, '', '#' + k.getAttribute('data-link'));
+      (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject()).then(function () { toast(t('copy')); }, function () { toast(url); });
+    }
+  });
+  $('q').addEventListener('input', function (e) { Q = e.target.value.trim(); render(); });
+  function goHash() {
+    var h = decodeURIComponent(location.hash.slice(1));
+    if (!h || !DATA) return;
+    var m = h.match(/^day(\d)$/i);
+    if (m) { DAY = Math.max(0, Math.min(DATA.days.length - 1, Number(m[1]) - 1)); render(); return; }
+    DATA.days.forEach(function (d, i) {
+      d.blocks.forEach(function (b) {
+        if (b.id === h || (b.sessions || []).some(function (s) { return s.code === h || b.id + '-' + s.room === h; })) DAY = i;
+      });
+    });
+    render();
+    var el = document.getElementById(h);
+    if (el) setTimeout(function () { el.scrollIntoView({ block: 'start' }); el.style.transition = 'background .6s'; el.style.background = 'var(--accent-soft)'; setTimeout(function () { el.style.background = ''; }, 1400); }, 30);
+  }
+  function load() {
+    if (window.__SCHEDULE__) { DATA = window.__SCHEDULE__; render(); goHash(); return; }   // a preview with the data built in
+    var src = (location.search.match(/[?&]data=([^&]+)/) || [])[1] || 'schedule.json';
+    fetch(decodeURIComponent(src) + (src.indexOf('?') === -1 ? '?' : '&') + 't=' + Math.floor(Date.now() / 60000), { cache: 'no-store' })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (d) {
+        DATA = d;
+        var clock = bkk();
+        DATA.days.forEach(function (x, i) { if (isoOf(x) === clock.date) DAY = i; });   // on the day, open today
+        render(); goHash();
+      })
+      .catch(function () { $('main').innerHTML = '<div class="empty">' + esc(t('failed')) + '</div>'; });
+  }
+  window.addEventListener('hashchange', goHash);
+  setInterval(function () { if (DATA && !Q) render(); }, 60000);   // keep "now" in step
+  render(); load();
+})();
+</script>
+</body>
+</html>

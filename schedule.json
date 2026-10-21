@@ -1,0 +1,777 @@
+{
+ "title": "Constructing the Coffee Landscape in the Southeast Asia Region: Commodity, Culture, and Knowledge in Transition",
+ "subtitle": "3rd International Symposium on Coffee · 27–28 November 2026",
+ "venue": "Faculty of Social Sciences, Chiang Mai University",
+ "timezone": "Asia/Bangkok",
+ "updated": "22 Oct 2026, 10:00 (GMT+7)",
+ "days": [
+  {
+   "key": "Day 1",
+   "date": "27 Nov 2026",
+   "blocks": [
+    {
+     "id": "S1-Day1",
+     "start": "8:00 AM",
+     "end": "8:45 AM",
+     "startMin": 480,
+     "type": "registration",
+     "title": "Registration",
+     "about": "",
+     "room": "",
+     "speakers": []
+    },
+    {
+     "id": "S2-Day1",
+     "start": "8:45 AM",
+     "end": "9:45 AM",
+     "startMin": 525,
+     "type": "opening",
+     "title": "Opening remark",
+     "about": "",
+     "room": "",
+     "speakers": [
+      {
+       "name": "Wasan Panyakaew",
+       "affiliation": "Dean of the Faculty of Social Sciences",
+       "talk": "Welcome Remark"
+      },
+      {
+       "name": "He Ming",
+       "affiliation": "School of Ethnology, Yunnan University",
+       "talk": "Opening Remarks"
+      },
+      {
+       "name": "Chayan Vaddhanaphuti",
+       "affiliation": "RCSD Director",
+       "talk": "Expectation and Objectives of the Symposium"
+      }
+     ]
+    },
+    {
+     "id": "S3-Day1",
+     "start": "9:45 AM",
+     "end": "10:30 AM",
+     "startMin": 585,
+     "type": "keynote",
+     "title": "Keynote I: Structural Constraints on Thai Coffee: Trade, Land and Global Markets",
+     "about": "",
+     "room": "",
+     "speakers": [
+      {
+       "name": "Fuadi Pitsuwan",
+       "affiliation": "Vice President, Specialty Coffee Association of Thailand (SCATH)",
+       "talk": "Structural Constraints on Thai Coffee: Trade Barriers, Land Tenure and Global Market"
+      }
+     ]
+    },
+    {
+     "id": "S4-Day1",
+     "start": "10:30 AM",
+     "end": "11:00 AM",
+     "startMin": 630,
+     "type": "break",
+     "title": "Break",
+     "about": "",
+     "room": "",
+     "speakers": []
+    },
+    {
+     "id": "S5-Day1",
+     "start": "11:00 AM",
+     "end": "12:30 PM",
+     "startMin": 660,
+     "type": "plenary",
+     "title": "Plenary Discussion I: State of coffee production and consumption in Southeast Asia and China (China/Vietnam/Thai/Indonesia)",
+     "about": "Coffee was introduced into these four countries at different periods and for different purposes, and the resulting landscapes differ accordingly. This plenary brings together perspectives from research, trade and roasting to review the current situation in each country.",
+     "room": "",
+     "speakers": [
+      {
+       "name": "Lee Ayu Cheupa",
+       "affiliation": "Akha Ama",
+       "talk": ""
+      },
+      {
+       "name": "Nguyễn Văn Chính",
+       "affiliation": "VNU Hanoi",
+       "talk": "From \"Drinking Coffee\" to \"Going for Coffee\""
+      },
+      {
+       "name": "Jittima Singvejsakul",
+       "affiliation": "Chiang Mai University",
+       "talk": ""
+      },
+      {
+       "name": "Adi Taroepratjeka",
+       "affiliation": "5758 Coffee Lab",
+       "talk": ""
+      },
+      {
+       "name": "Fan Xu",
+       "affiliation": "Guangzhou Yinshu Coffee Management Co., Ltd.",
+       "talk": "The Yunnan Terroir Archive"
+      }
+     ],
+     "moderator": {
+      "name": "Amorn Owatworakit",
+      "affiliation": "Tea and Coffee Institute, Mae Fah Luang University"
+     }
+    },
+    {
+     "id": "S6-Day1",
+     "start": "12:30 PM",
+     "end": "1:30 PM",
+     "startMin": 750,
+     "type": "lunch",
+     "title": "Lunch",
+     "about": "",
+     "room": "",
+     "speakers": []
+    },
+    {
+     "id": "SMUQRI9KBD8H",
+     "start": "12:30 PM",
+     "end": "1:30 PM",
+     "startMin": 750,
+     "type": "side",
+     "title": "Roundtable 1 - New Generation Farmers and Women in Coffee Development",
+     "about": "",
+     "room": "Yard",
+     "events": [
+      {
+       "name": "New Generation Coffee Farmers and Women in Coffee Development",
+       "kind": "Panel discussion",
+       "org": "Faculty of Social Sciences",
+       "panellists": [
+        "Melanee Laechoeku, Baan Sip Lang, Chiang Rai",
+        "Nanthana Chantavee, Huay Nam Khuan, Chiang Rai",
+        "Chukait Hongarthan (Toki), Galyani Vadhana, Chiang Mai"
+       ],
+       "moderator": "Arratee Ayuttacorn"
+      }
+     ]
+    },
+    {
+     "id": "S7-Day1",
+     "start": "1:30 PM",
+     "end": "3:00 PM",
+     "startMin": 810,
+     "type": "concurrent",
+     "title": "Concurrent Session I (3 Session)",
+     "about": "",
+     "room": "",
+     "sessions": [
+      {
+       "code": "P01",
+       "name": "Coffee Histories: Colonial legacies, Capital and Memory",
+       "room": "Room 1 Auditorium",
+       "theme": "1. Southeast Asia coffee history",
+       "chair": "",
+       "papers": [
+        {
+         "title": "A Transient Coffee Landscape: Crisis, Trial, and the Restructuring of Chinese Capital in Late 19th-Century Malacca",
+         "presenter": "SIEW BOON LEW",
+         "affiliation": "NEW ERA UNIVERSITY COLLEGE",
+         "country": "Malaysia",
+         "online": false
+        },
+        {
+         "title": "\"Two Days Won't Do\": A Told Landscape of Yunnan Coffee — A Work-in-Progress Oral History and Visual Ethnography",
+         "presenter": "Zhu Min",
+         "affiliation": "Yunnan University",
+         "country": "China",
+         "online": false
+        },
+        {
+         "title": "Paksong’s Coffee, Colonial Legacy to Indigenous Identity",
+         "presenter": "Khamhuk Southep",
+         "affiliation": "World Wild Fund for Nature Laos (WWF-Laos)",
+         "country": "Laos",
+         "online": false
+        },
+        {
+         "title": "The history of coffee, coffee-drinking culture, and social life in Aceh through Malay manuscript sources",
+         "presenter": "Fakhriati Fakhriati",
+         "affiliation": "National Research and Innovation Agency",
+         "country": "Indonesia",
+         "online": false
+        }
+       ]
+      },
+      {
+       "code": "P02",
+       "name": "Coffee in Social Life and Cultural Landscape",
+       "room": "Room 2 Co-working Space",
+       "theme": "4",
+       "chair": "",
+       "papers": [
+        {
+         "title": "Tasting the tradition: Coffee, Coorg, and the narratives of the ‘native’",
+         "presenter": "Azhar Ali V",
+         "affiliation": "Department of Sociology, School of Humanities and Social Sciences, Shiv Nadar Institute of Eminence, Deemed to be University, Delhi NCR",
+         "country": "India",
+         "online": false
+        },
+        {
+         "title": "Daytime Parties in the Name of Coffee: Reconfiguring Spaces of Consumption and Sociality in Thailand",
+         "presenter": "Erika Okuno",
+         "affiliation": "Graduate School of Asian and African Area Studies, Kyoto University",
+         "country": "Thailand",
+         "online": false
+        },
+        {
+         "title": "Beyond the Instant Packet: Coffee Mix and Collective Deliberation in Karen Agrarian Landscapes",
+         "presenter": "Aung Htet Khant",
+         "affiliation": "RCSD",
+         "country": "Thailand",
+         "online": false
+        },
+        {
+         "title": "An Anthropological Perspective on Vietnamese Coffee Culture",
+         "presenter": "Nguyễn Minh Đức",
+         "affiliation": "Vietnam National Institute of Culture and Arts",
+         "country": "Vietnam",
+         "online": false
+        }
+       ]
+      },
+      {
+       "code": "P03",
+       "name": "Coffee Tourism and Experiential Landscapes",
+       "room": "Room 3 4107 Meeting Room",
+       "theme": "4",
+       "chair": "",
+       "papers": [
+        {
+         "title": "Designing Coffee Tourism: “Autonomous Design” and Indigenous Entrepreneurship in a Karen Community in Northern Thailand",
+         "presenter": "Kazuhiro  Sunaga",
+         "affiliation": "Department of Tourism and Transnational Studies",
+         "country": "Japan",
+         "online": false
+        },
+        {
+         "title": "Brewing Mental Wellness: Craft Coffee Tourism as a Healing Experience, Ethical Commodification, and Destination Governance Opportunity in Vietnam",
+         "presenter": "Madura Thiwanka Pathirana",
+         "affiliation": "British University Vietnam",
+         "country": "Vietnam",
+         "online": false
+        },
+        {
+         "title": "From Coffee Production to Experiential Landscapes: Resource Orchestration and Value Co-creation in Baoshan and Pu’er, Yunnan",
+         "presenter": "Qiuchen Huang",
+         "affiliation": "Yunnan Agricultural University",
+         "country": "China",
+         "online": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "S8-Day1",
+     "start": "3:00 PM",
+     "end": "3:30 PM",
+     "startMin": 900,
+     "type": "break",
+     "title": "Break",
+     "about": "",
+     "room": "",
+     "speakers": []
+    },
+    {
+     "id": "S9-Day1",
+     "start": "3:30 PM",
+     "end": "5:00 PM",
+     "startMin": 930,
+     "type": "concurrent",
+     "title": "Concurrent Session II (3 Session)",
+     "about": "",
+     "room": "",
+     "sessions": [
+      {
+       "code": "P04",
+       "name": "Reimagining Coffee Culture: Image, Value and Identity",
+       "room": "Room 1 Auditorium",
+       "theme": "4. Coffee culture",
+       "chair": "",
+       "papers": [
+        {
+         "title": "Body, Nature, and the Gaze: A Study on the Cheat code for views and Cultural Mechanisms of China's influencer Cafes",
+         "presenter": "Yanlan SHI",
+         "affiliation": "School of Law and Politics, Yunnan University of Finance and Economics",
+         "country": "China",
+         "online": false
+        },
+        {
+         "title": "INVENTING COFFEE CULTURE: SOCIAL SPACES, CONSUMPTION PRACTICES, AND ETHNIC IDENTITY AMONG THE Ê ĐÊ OF ĐẮK LẮK, VIETNAM",
+         "presenter": "Ly Doan",
+         "affiliation": "Asia Ingredients Group (AIG), Vietnam",
+         "country": "Vietnam",
+         "online": false
+        },
+        {
+         "title": "From Ritual Hospitality to Digital Distinction: Revaluing Coffee in Urban Indonesia",
+         "presenter": "Funco Tanipu",
+         "affiliation": "Universitas Negeri Gorontalo",
+         "country": "Indonesia",
+         "online": false
+        },
+        {
+         "title": "The Changing Trajectory of Community-Based Coffee Farming and Processing in Barangay Talbak, Doña Remedios Trinidad, Bulacan, Philippines",
+         "presenter": "ARVIN EBALLO",
+         "affiliation": "University of Santo Tomas",
+         "country": "Philippines",
+         "online": false
+        }
+       ]
+      },
+      {
+       "code": "P05",
+       "name": "Ethnicity and Agrarian Transition in the Highlands",
+       "room": "Room 2 Co-working Space",
+       "theme": "5",
+       "chair": "",
+       "papers": [
+        {
+         "title": "Bean Sourcing, Taking Root, and Co-building: The Practices and Contributions of \"New Yunnanese\" in Menglian's Coffee Industry from a Broker Perspective",
+         "presenter": "Chen Xue, He Lijing",
+         "affiliation": "School of Ethnology and Sociology, Yunnan University",
+         "country": "China",
+         "online": false
+        },
+        {
+         "title": "The Effects of Agricultural Transition on Ethic Lifestyles and Livelihoods in Northern Thailand: A Case Study of Mae Chan Tai",
+         "presenter": "Patcharadanai Kiatphetcharat",
+         "affiliation": "Faculty of Social Sciences, Chiang Mai University",
+         "country": "Thailand",
+         "online": false
+        },
+        {
+         "title": "When the Highlands Move: Coffee, Akha, Tai Dam, and the Shifting Geography of Belonging in Thailand",
+         "presenter": "Pheeraphong Jampee",
+         "affiliation": "Chiang Mai University",
+         "country": "Thailand",
+         "online": false
+        },
+        {
+         "title": "Coffee and Everyday World-Making among Akha in Northern Thailand",
+         "presenter": "ZHEN LIAN",
+         "affiliation": "Assumption University of Thailand",
+         "country": "Thailand",
+         "online": false
+        }
+       ]
+      },
+      {
+       "code": "P06",
+       "name": "Producing Coffee Knowledge in Highland Communities",
+       "room": "Room 3 4107 Meeting Room",
+       "theme": "6. Coffee and knowledge production",
+       "chair": "",
+       "papers": [
+        {
+         "title": "Tracing Coffee’s Place in Ethnobotanical Practice: case study from Mae Klang Luang Karen Village, Chiang Mai",
+         "presenter": "Matahari Irandiputri",
+         "affiliation": "Chiang Mai University",
+         "country": "Thailand",
+         "online": false
+        },
+        {
+         "title": "Producing Culture: The Inward Flow of Coffee Knowledge and the Transformation of Everyday and Ritual Practice in Doi Chang, a Coffee-Producing Community in Northern Thailand",
+         "presenter": "Miaomiao Lu",
+         "affiliation": "Yunnan University",
+         "country": "China",
+         "online": false
+        },
+        {
+         "title": "Seeing Sustainability: A Participatory Visual Study of Coffee Farmers’ Knowledge, Negotiation, and Aspirations",
+         "presenter": "Panisa Songsithichoke",
+         "affiliation": "The University of Manchester",
+         "country": "Thailand",
+         "online": true
+        },
+        {
+         "title": "From Fresh Tea Leaves to Coffee Cherries: Remaking Practices and Knowledge in a Highland Borderland",
+         "presenter": "Omsin Boonleart",
+         "affiliation": "Mae Fah Luang University",
+         "country": "Thailand",
+         "online": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "SMUUWU5WOF4J",
+     "start": "3:30 PM",
+     "end": "4:30 PM",
+     "startMin": 930,
+     "type": "side",
+     "title": "Coffee Varieties and Soil Improvement for Adapting to Climate Change",
+     "about": "",
+     "room": "Yard",
+     "events": [
+      {
+       "name": "Coffee Varieties and Soil Improvement for Adapting to Climate Change",
+       "kind": "Panel discussion",
+       "org": "",
+       "panellists": [
+        "Center of Coffee Research and Development, Faculty of Agriculture, CMU (TBC)",
+        "Dr. Vassana Viroonrat, Maejo University"
+       ],
+       "moderator": "Visut Asanavijit"
+      }
+     ]
+    },
+    {
+     "id": "SMUZ1J1OXQYV",
+     "start": "5:00 PM",
+     "end": "5:10 PM",
+     "startMin": 1020,
+     "type": "break",
+     "title": "Transition Period",
+     "about": "",
+     "room": "",
+     "speakers": []
+    }
+   ]
+  },
+  {
+   "key": "Day 2",
+   "date": "28 Nov 2026",
+   "blocks": [
+    {
+     "id": "S14-Day2",
+     "start": "9:00 AM",
+     "end": "10:30 AM",
+     "startMin": 540,
+     "type": "plenary",
+     "title": "Plenary discussion II: Coffee, Land and Forest: Climate and Livelihoods of Upland Growers in Southeast Asia",
+     "about": "Coffee has been promoted across the uplands of the region as a crop that increases household income while maintaining forest cover. This plenary presents four cases.",
+     "room": "",
+     "speakers": [
+      {
+       "name": "Mimin Dwi Hartono",
+       "affiliation": "Indonesian National Human Rights Commission",
+       "talk": "Agrarian conflict and human rights violation: Colol's case in Indonesia"
+      },
+      {
+       "name": "Le Nguyen Phuong",
+       "affiliation": "Vietnam National University of Agriculture",
+       "talk": "Coffee Commercialization and the Transformation of Rural Livelihoods among Ethnic Minority Communities in Dien Bien Province, Vietnam"
+      },
+      {
+       "name": "Siwakorn Odochao",
+       "affiliation": "Lazyman Coffee",
+       "talk": "Land, forest, and coffee: the limitations of coffee growers in Thailand"
+      }
+     ],
+     "moderator": {
+      "name": "Borirak Aphikhantikul",
+      "affiliation": "School Coffee"
+     }
+    },
+    {
+     "id": "S15-Day2",
+     "start": "10:30 AM",
+     "end": "11:00 AM",
+     "startMin": 630,
+     "type": "break",
+     "title": "Break",
+     "about": "",
+     "room": "",
+     "speakers": []
+    },
+    {
+     "id": "S16-Day2",
+     "start": "11:00 AM",
+     "end": "12:30 PM",
+     "startMin": 660,
+     "type": "concurrent",
+     "title": "Concurrent Session III (2 Sessions)",
+     "about": "",
+     "room": "",
+     "sessions": [
+      {
+       "code": "P07",
+       "name": "Livelihoods and Food Security under Climate Change",
+       "room": "Room 1 Auditorium",
+       "theme": "2",
+       "chair": "",
+       "papers": [
+        {
+         "title": "Food Security in Transition: Cash-Crop Coffee Farming, Forest Conservation, and Ethnic Livelihoods in Pangkhon Village, Chiang Rai",
+         "presenter": "Sawang Meesaeng",
+         "affiliation": "School of Social Innovation, Mae Fah Luang University, Chiang Rai, Thailand",
+         "country": "Thailand",
+         "online": false
+        },
+        {
+         "title": "Livelihood Strategies and Economic Disparities in a Lao Coffee Village: Adaptation to Climate Change on the Bolaven Plateau",
+         "presenter": "Arihiro Minoo",
+         "affiliation": "Waseda University",
+         "country": "Japan",
+         "online": false
+        },
+        {
+         "title": "Resilience of Coffee Communities: A hidden story of ethnic communities from Chiang Mai Province, Thailand",
+         "presenter": "Thant Zin Aung",
+         "affiliation": "Lund University",
+         "country": "Thailand",
+         "online": false
+        },
+        {
+         "title": "Coffee Agriculture and Agroforestry Under Climate Change in Laos: From History to Tasty Cup",
+         "presenter": "Bae PHEAXAY",
+         "affiliation": "Faculty of Environmental Sciences, National University of Laos",
+         "country": "Laos",
+         "online": false
+        }
+       ]
+      },
+      {
+       "code": "P08",
+       "name": "Constructing Quality: Taste, Fermentation and Sensory Knowledge",
+       "room": "Room 2 Co-working Space",
+       "theme": "6",
+       "chair": "",
+       "papers": [
+        {
+         "title": "The Making of a New \"Taste of Yunnan\": Quality Construction and Industrial Reorganization of Coffee as a Development Project",
+         "presenter": "Chen Xue",
+         "affiliation": "School of Ethnology and Sociology, Yunnan University",
+         "country": "China",
+         "online": false
+        },
+        {
+         "title": "Transforming coffee landscapes in Lam Dong province, Viet Nam: from production expansion to intensification and quality-oriented development over a decade from 2014-2024",
+         "presenter": "THI HOA PHAM",
+         "affiliation": "PPMU in Lam Dong province",
+         "country": "Vietnam",
+         "online": false
+        },
+        {
+         "title": "Specialty Coffee Fermentation Technique \"Dopamine\" in Practice: A Case Study of Nandaohe Specialty Coffee Estate in Pu'er, Yunnan",
+         "presenter": "Mo Li",
+         "affiliation": "Yunnan Agricultural University",
+         "country": "China",
+         "online": false
+        },
+        {
+         "title": "Sensory Reconstruction: A Study on the \"Multi-level Translation\" and Embodied Practice of Yunnan Coffee within World Standard Language Context",
+         "presenter": "Mingxuan Sun",
+         "affiliation": "Southwest Jiaotong University",
+         "country": "China",
+         "online": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "S17-Day2",
+     "start": "12:30 PM",
+     "end": "1:30 PM",
+     "startMin": 750,
+     "type": "lunch",
+     "title": "Lunch Break",
+     "about": "",
+     "room": "",
+     "speakers": []
+    },
+    {
+     "id": "S23-Day2",
+     "start": "12:30 PM",
+     "end": "1:30 PM",
+     "startMin": 750,
+     "type": "side",
+     "title": "Workshop - Cupping by SCATH",
+     "about": "",
+     "room": "Yard",
+     "events": [
+      {
+       "name": "Public Cupping",
+       "kind": "Workshop",
+       "org": "School Coffee",
+       "panellists": [],
+       "moderator": ""
+      }
+     ]
+    },
+    {
+     "id": "S18-Day2",
+     "start": "1:30 PM",
+     "end": "3:00 PM",
+     "startMin": 810,
+     "type": "concurrent",
+     "title": "Concurrent Session IV (2 Session)",
+     "about": "",
+     "room": "",
+     "sessions": [
+      {
+       "code": "P09",
+       "name": "Café Landscapes in Southeast Asian Cities",
+       "room": "Room 1 Auditorium",
+       "theme": "4",
+       "chair": "",
+       "papers": [
+        {
+         "title": "Producing Urban Space through Coffee Culture: The Transformation of Contemporary Bangkok",
+         "presenter": "Natharinee Neungchamnong",
+         "affiliation": "-",
+         "country": "Thailand",
+         "online": false
+        },
+        {
+         "title": "\"Going for Coffee\" in Coffee Country: Production, Consumption, and Place in Đà Lạt's Café Landscape",
+         "presenter": "Tran Que Tram Nguyen",
+         "affiliation": "Faculty of Social Work, Anthropology and Sociology University of Social Sciences and Humanities, Vietnam National University, Ho Chi Minh City",
+         "country": "Vietnam",
+         "online": false
+        },
+        {
+         "title": "Dynamics of Coffee Consumption and the Development of Coffee Shops in Kendari, Southeast Sulawesi, Indonesia",
+         "presenter": "Benny Baskara",
+         "affiliation": "Halu Oleo University",
+         "country": "Indonesia",
+         "online": true
+        },
+        {
+         "title": "Kopitiams across Southeast Asia: Visualising Space and Hainanese Identities through Documentary Practice",
+         "presenter": "Hanxiang Zhang",
+         "affiliation": "SOAS, University of London",
+         "country": "United Kingdom",
+         "online": false
+        }
+       ]
+      },
+      {
+       "code": "P10",
+       "name": "Coffee as Commodity: Prices, Middlemen and Value Chains",
+       "room": "Room 2 Co-working Space",
+       "theme": "3. Coffee as commodity",
+       "chair": "",
+       "papers": [
+        {
+         "title": "Producing the “Sustainable” Coffee Landscape: Political Ecology, Value Chains, and Smallholder Livelihoods in the Gayo Highlands of Aceh, Indonesia",
+         "presenter": "Sukumar Babu Ramapuram Samuel Vijay",
+         "affiliation": "Goethe University in Germany",
+         "country": "Indonesia",
+         "online": false
+        },
+        {
+         "title": "Between Field and Market: How Middlemen Shape the Sustainable Choices of Coffee Smallholders in Vietnam's Central Highlands",
+         "presenter": "Thi To Ngoc Do",
+         "affiliation": "Phuoc Son Agricultural Trading Ltd. Company",
+         "country": "Vietnam",
+         "online": false
+        },
+        {
+         "title": "Brewing inequality in Flores Coffee: Entrepreneurial Mediation, Logistics, and Unequal Value Chains",
+         "presenter": "Putri Agustina Poerwanti",
+         "affiliation": "Linnaeus University",
+         "country": "Indonesia",
+         "online": false
+        },
+        {
+         "title": "Study on the Coffee Price",
+         "presenter": "Zhang Jianfeng",
+         "affiliation": "National Centre for Borderlands Ethnic Studies in Southwest China, Yunnan University",
+         "country": "China",
+         "online": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "S19-Day2",
+     "start": "3:00 PM",
+     "end": "3:15 PM",
+     "startMin": 900,
+     "type": "break",
+     "title": "Break",
+     "about": "",
+     "room": "",
+     "speakers": []
+    },
+    {
+     "id": "SMUF1HAO3GT7",
+     "start": "3:15 PM",
+     "end": "4:45 PM",
+     "startMin": 915,
+     "type": "concurrent",
+     "title": "Concurrent Session V (2 Session)",
+     "about": "",
+     "room": "",
+     "sessions": [
+      {
+       "code": "P11",
+       "name": "Coffee Science: Grafting, Processing and Food Safety",
+       "room": "Room 1 Auditorium",
+       "theme": "6",
+       "chair": "",
+       "papers": [
+        {
+         "title": "Success and Early Growth Performance of Hypocotyl Mini-Grafting on Elite Robusta Coffee (Coffea canephora) Clones in the Western Highlands of Vietnam",
+         "presenter": "Nguyen Tru",
+         "affiliation": "Western Highlands Agriculture and Forestry Science Institute (WASI)",
+         "country": "Vietnam",
+         "online": false
+        },
+        {
+         "title": "Coffee food safety and monitoring",
+         "presenter": "Amorn Owatworakit",
+         "affiliation": "Mae Fah Luang University",
+         "country": "Thailand",
+         "online": false
+        },
+        {
+         "title": "Optimizing Post-Harvest Processing and Drying Techniques for Thai Arabica Coffee Quality",
+         "presenter": "Sai Aung Moon",
+         "affiliation": "Coffee Quality Reserch Center, Tea and coffee institute, Mae Fah Luang University",
+         "country": "Thailand",
+         "online": false
+        },
+        {
+         "title": "Transforming the Coffee Value Chain: Strengthening producers for Quality and Sustainability",
+         "presenter": "Kitiphong Khongphinitbunjong",
+         "affiliation": "Mae Fah Luang University",
+         "country": "Thailand",
+         "online": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "SMVHUUTI7FXY",
+     "start": "4:45 PM",
+     "end": "4:55 PM",
+     "startMin": 1005,
+     "type": "break",
+     "title": "Transition Period",
+     "about": "",
+     "room": "",
+     "speakers": []
+    },
+    {
+     "id": "S21-Day2",
+     "start": "4:55 PM",
+     "end": "5:25 PM",
+     "startMin": 1015,
+     "type": "closing",
+     "title": "Closing remark",
+     "about": "",
+     "room": "",
+     "speakers": [
+      {
+       "name": "Pongsak Aungasith",
+       "affiliation": "Former President of Chiang Mai University",
+       "talk": ""
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
