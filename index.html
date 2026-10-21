@@ -55,6 +55,17 @@
   .code{font:700 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--accent);background:var(--accent-soft);padding:4px 6px;border-radius:6px}
   .room{font-size:12.5px;color:var(--ink-3)}
   .sname{font-size:16px;font-weight:700;line-height:1.3;margin:6px 0 2px}
+  .session.card{cursor:pointer;border-radius:12px;margin:-10px;padding:10px;transition:background .15s}
+  .session.card:hover{background:var(--accent-soft)}
+  .session.card:hover .sname{color:var(--accent)}
+  .names{list-style:none;margin:8px 0 0;padding:0;font-size:13.5px;color:var(--ink-2);display:grid;gap:2px}
+  .names li{display:flex;gap:6px;align-items:baseline}
+  .names li::before{content:attr(data-n);font-size:11.5px;font-weight:700;color:var(--ink-3);min-width:12px;font-variant-numeric:tabular-nums}
+  .more{margin-top:8px;font-size:13px;font-weight:700;color:var(--accent);border:0;background:none;padding:0;font-family:inherit;cursor:pointer}
+  .inside{font-size:11.5px;font-weight:700;color:var(--accent);margin-left:8px}
+  .sheet-box.wide{max-width:780px}
+  .sheet-box .sname{font-size:21px;margin:8px 30px 4px 0}
+  .sheet-box .papers{margin-top:16px}
   .chair{font-size:13px;color:var(--ink-2)}
   .papers{list-style:none;margin:10px 0 0;padding:0;counter-reset:p}
   .paper{counter-increment:p;position:relative;padding:9px 0 9px 26px;border-top:1px solid var(--line)}
@@ -81,7 +92,7 @@
     .sessions{gap:22px}
   }
   @media print{
-    .bar,.lang,.link,.toast{display:none!important}
+    .bar,.lang,.link,.toast,.more,.where,.rooms-sec,.sheet{display:none!important}
     body{background:#fff;color:#000;font-size:11pt}
     .day{display:block!important;break-before:page}
     .day:first-of-type{break-before:auto}
@@ -98,11 +109,28 @@
   .logos .s img{height:34px}.logos .m img{height:54px}.logos .l img{height:84px;max-width:300px}
   .logos .txt{font-weight:700;font-size:14px;color:var(--ink-2)}
   @media (prefers-color-scheme:dark){.logos img{background:#fff;border-radius:6px;padding:4px}}
-  .venues{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px}
-  .venue{border:0;background:none;padding:0;text-align:left;cursor:pointer;font:inherit;color:inherit;display:flex;gap:10px;align-items:center}
-  .venue img{width:56px;height:40px;object-fit:cover;border-radius:6px;background:var(--line)}
-  .venue span{font-size:13px;border-bottom:1px solid var(--line)}
-  .venue:hover span{border-color:var(--accent);color:var(--accent)}
+  .where{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:12px}
+  .pin{display:inline-flex;align-items:center;gap:6px;text-decoration:none;background:var(--ink);color:var(--bg);padding:7px 13px 7px 10px;border-radius:999px;font-size:13.5px;font-weight:700}
+  .pin svg{width:16px;height:16px;flex:none}
+  .pin.alt{background:var(--accent-soft);color:var(--ink)}
+  .pin.ghost{background:none;color:var(--ink);border:1px solid var(--line);cursor:pointer;font:inherit;font-size:13.5px;font-weight:700}
+  .rooms-sec{margin:44px 0 0;padding-top:22px;border-top:1px solid var(--line)}
+  .rooms-sec h2{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin:0 0 14px}
+  .slides{position:relative}
+  .track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;scrollbar-width:none;border-radius:14px}
+  .track::-webkit-scrollbar{display:none}
+  .slide{flex:0 0 100%;scroll-snap-align:start;margin:0}
+  .slide img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:14px;display:block;background:var(--line)}
+  .slide figcaption{margin-top:8px;font-size:14px}
+  .slide figcaption b{display:block}
+  .slide figcaption span{color:var(--ink-2);font-size:13px}
+  .nav{position:absolute;top:calc(33.3% - 18px);width:38px;height:38px;border-radius:50%;border:0;background:rgba(255,255,255,.88);color:#222;font-size:22px;line-height:1;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.25)}
+  .nav.prev{left:10px}.nav.next{right:10px}
+  .nav[disabled]{opacity:0;pointer-events:none}
+  .dots{display:flex;gap:6px;justify-content:center;margin-top:10px;flex-wrap:wrap}
+  .dots button{width:8px;height:8px;border-radius:50%;border:0;padding:0;background:var(--line);cursor:pointer}
+  .dots button[aria-current="true"]{background:var(--accent)}
+  .sheet-box .slide img{border-radius:12px}
   .roomlink{border:0;background:none;padding:0;font:inherit;color:inherit;cursor:pointer;border-bottom:1px dotted currentColor}
   .roomlink:hover{color:var(--accent)}
   .ptoggle{border:0;background:none;padding:0;font:inherit;color:inherit;text-align:left;cursor:pointer;display:block;width:100%}
@@ -115,12 +143,9 @@
   .sheet{position:fixed;inset:0;background:rgba(20,16,12,.45);z-index:20;display:flex;align-items:center;justify-content:center;padding:16px}
   .sheet[hidden]{display:none}
   .sheet-box{background:var(--surface);color:var(--ink);border-radius:18px;max-width:560px;width:100%;max-height:90vh;overflow:auto;padding:22px 22px 24px;position:relative}
-  .sheet-box img{width:100%;border-radius:12px;display:block;margin:12px 0}
+  .sheet-box .slides{margin:12px 0 0}
   .sheet-x{position:absolute;right:12px;top:8px;border:0;background:none;font-size:26px;line-height:1;color:var(--ink-3);cursor:pointer}
   .sheet h3{margin:0 30px 4px 0;font-size:20px}
-  .maps{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
-  .maps a{display:inline-block;text-decoration:none;background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:999px;font-size:14px;font-weight:700}
-  .maps a.alt{background:var(--accent-soft);color:var(--ink)}
 </style>
 </head>
 <body>
@@ -130,7 +155,7 @@
     <div class="eyebrow" id="subtitle">3rd International Symposium on Coffee · 27–28 November 2026</div>
     <h1 id="title">Programme</h1>
     <div class="meta" id="venue"></div>
-    <div class="venues" id="venues" hidden></div>
+    <div class="where" id="where" hidden></div>
   </header>
   <div class="bar">
     <div class="days" id="days" role="tablist"></div>
@@ -138,6 +163,7 @@
     <div class="now" id="now" hidden></div>
   </div>
   <main id="main"><div class="empty" id="loading">Loading the programme…</div></main>
+  <section class="rooms-sec" id="rooms" hidden></section>
   <section class="sponsors" id="sponsors" hidden></section>
   <footer><span id="updated"></span> · <span data-t="subject">This schedule is subject to change.</span></footer>
 </div>
@@ -150,12 +176,12 @@
           none: 'Nothing matches that search.', subject: 'This schedule is subject to change.', updated: 'Updated', loading: 'Loading the programme…',
           kinds: { keynote: 'Keynote', plenary: 'Plenary discussion', concurrent: 'Concurrent sessions', roundtable: 'Roundtable', opening: 'Opening', closing: 'Closing', side: 'Side programme', open: 'Open session' },
           about: 'About this session', nowL: 'Now', next: 'Next', min: 'min', failed: 'The programme could not be loaded. Please try again in a moment.',
-          map: 'Open the map', mapCn: 'Map for China (Amap / Baidu)', keywords: 'Keywords', noAbstract: 'The abstract will be added soon.', rooms: 'Rooms' },
+          map: 'Map', mapCn: 'Map in China (Amap / Baidu)', seeRooms: 'See the rooms', roomsH: 'The rooms', prev: 'Previous photo', nextP: 'Next photo', keywords: 'Keywords', noAbstract: 'The abstract will be added soon.', papers: '{n} papers — titles and abstracts', inside: 'matches inside', rooms: 'Rooms' },
     zh: { search: '搜索姓名、题目或会议室', chair: '主持人', moderator: '主持人', online: '线上', also: '同时进行', copy: '链接已复制',
           none: '没有找到匹配的内容。', subject: '日程如有变动，以现场为准。', updated: '更新于', loading: '正在加载日程…',
           kinds: { keynote: '主旨演讲', plenary: '全体讨论', concurrent: '分会场', roundtable: '圆桌讨论', opening: '开幕式', closing: '闭幕式', side: '平行活动', open: '公开环节' },
           about: '简介', nowL: '正在进行', next: '下一项', min: '分钟', failed: '日程加载失败，请稍后再试。',
-          map: '打开地图', mapCn: '中国地图（高德 / 百度）', keywords: '关键词', noAbstract: '摘要即将补充。', rooms: '会议室' }
+          map: '地图', mapCn: '高德 / 百度地图', seeRooms: '查看会议室', roomsH: '会议室', prev: '上一张', nextP: '下一张', keywords: '关键词', noAbstract: '摘要即将补充。', papers: '{n} 篇论文 — 题目与摘要', inside: '内含匹配', rooms: '会议室' }
   };
   var DAYZH = { 'Day 1': '第一天', 'Day 2': '第二天', 'Day 3': '第三天' };
   var L = 'en', DATA = null, DAY = 0, Q = '', OPEN = {};
@@ -189,19 +215,71 @@
   }
   function dur(b) { var m = String(b.end).match(/(\d+):(\d+)\s*(AM|PM)/), s = b.startMin; if (!m) return 0; var e = (Number(m[1]) % 12 + (m[3] === 'PM' ? 12 : 0)) * 60 + Number(m[2]); return e - s; }
   function roomOf(key) { return ((DATA && DATA.rooms) || []).filter(function (r) { return r.key === key; })[0] || null; }
-  function hasInfo(r) { return r && (r.photo || r.map || r.mapCn || r.note); }
+  function hasInfo(r) { return r && ((r.photos && r.photos.length) || r.note); }
+  var PIN = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>';
+  function slidesHTML(list) {   // list: [{src, name, note, key}]
+    if (!list.length) return '';
+    return '<div class="slides"><div class="track">' + list.map(function (x, i) {
+      return '<figure class="slide" data-i="' + i + '"><img src="' + esc(x.src) + '" alt="' + esc(x.name) + '"' + (i ? ' loading="lazy"' : '') + '>' +
+        '<figcaption><b>' + esc(x.name) + '</b>' + (x.note ? '<span>' + esc(x.note) + '</span>' : '') + '</figcaption></figure>';
+    }).join('') + '</div>' + (list.length > 1 ? '<button class="nav prev" data-step="-1" aria-label="' + esc(t('prev')) + '" disabled>‹</button><button class="nav next" data-step="1" aria-label="' + esc(t('nextP')) + '">›</button>' +
+      '<div class="dots">' + list.map(function (x, i) { return '<button data-go="' + i + '" aria-label="' + (i + 1) + '" aria-current="' + (i === 0) + '"></button>'; }).join('') + '</div>' : '') + '</div>';
+  }
+  function slideList(rooms) {
+    var out = [];
+    rooms.forEach(function (r) { (r.photos || []).forEach(function (src) { out.push({ src: src, name: r.name, note: r.note, key: r.key }); }); });
+    return out;
+  }
+  function syncSlides(sl) {   // arrows and dots follow the scroll position
+    var tr = sl.querySelector('.track'), n = tr.children.length, i = Math.round(tr.scrollLeft / Math.max(1, tr.clientWidth + 12));
+    var pv = sl.querySelector('.prev'), nx = sl.querySelector('.next');
+    if (pv) pv.disabled = i <= 0; if (nx) nx.disabled = i >= n - 1;
+    Array.prototype.forEach.call(sl.querySelectorAll('.dots button'), function (d, k) { d.setAttribute('aria-current', String(k === i)); });
+  }
+  function goSlide(sl, i) { var tr = sl.querySelector('.track'); tr.scrollTo({ left: i * (tr.clientWidth + 12), behavior: 'smooth' }); }
+  document.addEventListener('scroll', function (e) { var sl = e.target && e.target.closest && e.target.closest('.slides'); if (sl) syncSlides(sl); }, true);
   function roomLink(key, name) {
     return hasInfo(roomOf(key)) ? '<button class="roomlink" data-room="' + esc(key) + '">' + mark(name) + '</button>' : mark(name);
+  }
+  function whereHTML() {
+    var m = (DATA && DATA.map) || {};
+    return (m.google ? '<a class="pin" href="' + esc(m.google) + '" target="_blank" rel="noopener">' + PIN + esc(t('map')) + '</a>' : '') +
+      (m.china ? '<a class="pin alt" href="' + esc(m.china) + '" target="_blank" rel="noopener">' + PIN + esc(t('mapCn')) + '</a>' : '');
+  }
+  var SESS = {};   // session id -> {b, s}
+  function sessId(b, s) { return s.code || (b.id + '-' + s.room); }
+  function papersHTML(b, s) {
+    return '<ol class="papers">' + (s.papers || []).map(function (p, k) {
+      var pid = (s.code || b.id) + '-' + (k + 1), open = OPEN[pid] || (Q && (String(p.abstract || '') + ' ' + (p.keywords || '')).toLowerCase().indexOf(Q.toLowerCase()) !== -1);
+      return '<li class="paper' + (open ? ' open' : '') + '" id="' + esc(pid) + '"><button class="ptoggle" data-paper="' + esc(pid) + '" aria-expanded="' + !!open + '"><div class="t">' + mark(p.title) + '</div></button>' +
+        '<div class="who"><b>' + mark(p.presenter) + '</b>' +
+        (p.online ? '<span class="online">' + esc(t('online')) + '</span>' : '') +
+        (p.affiliation || p.country ? ' <span class="aff">· ' + mark([p.affiliation, p.country && String(p.affiliation).toLowerCase().indexOf(String(p.country).toLowerCase()) === -1 ? p.country : ''].filter(Boolean).join(', ')) + '</span>' : '') + '</div>' +
+        '<div class="abs">' + (p.abstract ? mark(p.abstract) : '<i>' + esc(t('noAbstract')) + '</i>') + (p.keywords ? '<span class="kw">' + esc(t('keywords')) + ': ' + mark(p.keywords) + '</span>' : '') + '</div>' + '</li>';
+    }).join('') + '</ol>';
+  }
+  function showSheet(html, wide) {
+    $('sheetBody').innerHTML = html;
+    $('sheet').querySelector('.sheet-box').classList.toggle('wide', !!wide);
+    $('sheet').hidden = false;
+    $('sheet').querySelector('.sheet-box').scrollTop = 0;
+    var x = $('sheet').querySelector('.sheet-x'); if (x) x.focus();
+  }
+  function openSession(id, paper) {
+    var hit = SESS[id]; if (!hit) return;
+    var b = hit.b, s = hit.s;
+    showSheet('<div class="sh">' + (s.code ? '<span class="code">' + esc(s.code) + '</span>' : '') + '<span class="room">' + esc(b.start + '–' + b.end) + ' · ' + roomLink(s.roomKey, s.room) + '</span>' +
+      '<button class="link" style="opacity:.7" data-link="' + esc(id) + '" aria-label="Copy a link to this session">#</button></div>' +
+      '<h3 class="sname" id="sheetT">' + mark(s.name) + '</h3>' + (s.chair ? '<div class="chair"><span class="lab">' + esc(t('chair')) + ':</span> ' + mark(s.chair) + '</div>' : '') +
+      papersHTML(b, s), true);
+    if (paper) { var el = document.getElementById(paper); if (el) setTimeout(function () { el.scrollIntoView({ block: 'center' }); }, 30); }
   }
   function openRoom(key) {
     var r = roomOf(key); if (!r) return;
     $('sheetBody').innerHTML = '<h3 id="sheetT">' + esc(r.name) + '</h3>' + (DATA.venue ? '<div class="meta">' + esc(DATA.venue) + '</div>' : '') +
-      (r.photo ? '<img src="' + esc(r.photo) + '" alt="' + esc(r.name) + '">' : '') +
-      (r.note ? '<p style="margin:10px 0 0">' + esc(r.note) + '</p>' : '') +
-      ((r.map || r.mapCn) ? '<div class="maps">' + (r.map ? '<a href="' + esc(r.map) + '" target="_blank" rel="noopener">' + esc(t('map')) + '</a>' : '') +
-        (r.mapCn ? '<a class="alt" href="' + esc(r.mapCn) + '" target="_blank" rel="noopener">' + esc(t('mapCn')) + '</a>' : '') + '</div>' : '');
-    $('sheet').hidden = false;
-    var x = $('sheet').querySelector('.sheet-x'); if (x) x.focus();
+      ((r.photos || []).length ? slidesHTML(slideList([{ name: r.name, note: '', photos: r.photos }])) : '') +
+      (r.note ? '<p style="margin:10px 0 0">' + esc(r.note) + '</p>' : '') + whereHTML();
+    showSheet($('sheetBody').innerHTML, false);
   }
   function blockHTML(b, live) {
     var quiet = /^(break|lunch|registration|other)$/.test(b.type) && !(b.speakers && b.speakers.length);
@@ -216,17 +294,15 @@
     }).join('') + '</ul>';
     if (b.moderator && b.moderator.name) h += '<div class="mod"><span class="lab">' + esc(t('moderator')) + ':</span> ' + mark(b.moderator.name) + (b.moderator.affiliation ? ' <span class="aff">· ' + mark(b.moderator.affiliation) + '</span>' : '') + '</div>';
     if (b.sessions && b.sessions.length) h += '<div class="sessions">' + b.sessions.map(function (s) {
-      return '<article class="session" id="' + esc(s.code || (b.id + '-' + s.room)) + '"><div class="sh">' + (s.code ? '<span class="code">' + esc(s.code) + '</span>' : '') +
-        '<span class="room">' + roomLink(s.roomKey, s.room) + '</span><button class="link" data-link="' + esc(s.code || (b.id + '-' + s.room)) + '" aria-label="Copy a link to this session">#</button></div>' +
+      var id = sessId(b, s), ps = s.papers || [];
+      SESS[id] = { b: b, s: s };
+      var shown = [s.name, s.chair, s.room, s.code].concat(ps.map(function (p) { return p.presenter; })).join(' ').toLowerCase();
+      var inside = Q && shown.indexOf(Q.toLowerCase()) === -1;
+      return '<article class="session card" id="' + esc(id) + '" data-sess="' + esc(id) + '"><div class="sh">' + (s.code ? '<span class="code">' + esc(s.code) + '</span>' : '') +
+        '<span class="room">' + roomLink(s.roomKey, s.room) + '</span><button class="link" data-link="' + esc(id) + '" aria-label="Copy a link to this session">#</button></div>' +
         '<h3 class="sname">' + mark(s.name) + '</h3>' + (s.chair ? '<div class="chair"><span class="lab">' + esc(t('chair')) + ':</span> ' + mark(s.chair) + '</div>' : '') +
-        '<ol class="papers">' + (s.papers || []).map(function (p, k) {
-          var pid = (s.code || b.id) + '-' + (k + 1), open = OPEN[pid] || (Q && (String(p.abstract || '') + ' ' + (p.keywords || '')).toLowerCase().indexOf(Q.toLowerCase()) !== -1);
-          return '<li class="paper' + (open ? ' open' : '') + '" id="' + esc(pid) + '"><button class="ptoggle" data-paper="' + esc(pid) + '" aria-expanded="' + !!open + '"><div class="t">' + mark(p.title) + '</div></button>' +
-            '<div class="who"><b>' + mark(p.presenter) + '</b>' +
-            (p.online ? '<span class="online">' + esc(t('online')) + '</span>' : '') +
-            (p.affiliation || p.country ? ' <span class="aff">· ' + mark([p.affiliation, p.country && String(p.affiliation).toLowerCase().indexOf(String(p.country).toLowerCase()) === -1 ? p.country : ''].filter(Boolean).join(', ')) + '</span>' : '') + '</div>' +
-            '<div class="abs">' + (p.abstract ? mark(p.abstract) : '<i>' + esc(t('noAbstract')) + '</i>') + (p.keywords ? '<span class="kw">' + esc(t('keywords')) + ': ' + mark(p.keywords) + '</span>' : '') + '</div>' + '</li>';
-        }).join('') + '</ol></article>';
+        '<ul class="names">' + ps.map(function (p, k) { return '<li data-n="' + (k + 1) + '"><span>' + mark(p.presenter) + (p.online ? '<span class="online">' + esc(t('online')) + '</span>' : '') + '</span></li>'; }).join('') + '</ul>' +
+        '<button class="more" data-sess="' + esc(id) + '">' + esc(t('papers').replace('{n}', ps.length)) + ' ›</button>' + (inside ? '<span class="inside">' + esc(t('inside')) + '</span>' : '') + '</article>';
     }).join('') + '</div>';
     if (b.events && b.events.length) h += '<div class="side">' + b.events.map(function (e) {
       var same = String(e.name).toLowerCase() === String(b.title).toLowerCase();
@@ -254,9 +330,11 @@
         return x.url ? '<a class="' + esc(x.size) + '" href="' + esc(x.url) + '" target="_blank" rel="noopener">' + inner + '</a>' : '<span class="' + esc(x.size) + '">' + inner + '</span>';
       }).join('') + '</div></div>';
     }).join('');
-    var vs = (DATA.rooms || []).filter(hasInfo);
-    $('venues').hidden = !vs.length;
-    $('venues').innerHTML = vs.map(function (r) { return '<button class="venue" data-room="' + esc(r.key) + '">' + (r.photo ? '<img src="' + esc(r.photo) + '" alt="" loading="lazy">' : '') + '<span>' + esc(r.name) + '</span></button>'; }).join('');
+    var all = slideList(DATA.rooms || []), mapsH = whereHTML();
+    $('where').hidden = !mapsH && !all.length;
+    $('where').innerHTML = mapsH + (all.length ? '<button class="pin ghost" data-goto="rooms">' + esc(t('seeRooms')) + '</button>' : '');
+    $('rooms').hidden = !all.length;
+    $('rooms').innerHTML = all.length ? '<h2>' + esc(t('roomsH')) + '</h2>' + slidesHTML(all) : '';
     var clock = bkk();
     $('days').innerHTML = DATA.days.map(function (d, i) {
       return '<button role="tab" data-day="' + i + '" aria-pressed="' + (i === DAY && !Q) + '">' + esc(L === 'zh' ? (DAYZH[d.key] || d.key) : d.key) + '<span>' + esc(d.date) + '</span></button>';
@@ -281,7 +359,13 @@
   function toast(m) { var el = $('toast'); el.textContent = m; el.classList.add('on'); clearTimeout(el._t); el._t = setTimeout(function () { el.classList.remove('on'); }, 1600); }
   document.addEventListener('click', function (e) {
     var rm = e.target.closest('[data-room]');
+    if (!rm && !e.target.closest('[data-link]')) { var ss = e.target.closest('[data-sess]'); if (ss) { openSession(ss.getAttribute('data-sess')); return; } }
     if (rm) { openRoom(rm.getAttribute('data-room')); return; }
+    var st = e.target.closest('[data-step],[data-go]');
+    if (st) { var sl = st.closest('.slides'), tr = sl.querySelector('.track'), cur = Math.round(tr.scrollLeft / Math.max(1, tr.clientWidth + 12));
+      goSlide(sl, st.hasAttribute('data-go') ? Number(st.getAttribute('data-go')) : Math.max(0, Math.min(tr.children.length - 1, cur + Number(st.getAttribute('data-step'))))); return; }
+    var gt = e.target.closest('[data-goto]');
+    if (gt) { $(gt.getAttribute('data-goto')).scrollIntoView({ behavior: 'smooth' }); return; }
     if (e.target.closest('[data-close]') || e.target === $('sheet')) { $('sheet').hidden = true; return; }
     var pp = e.target.closest('[data-paper]');
     if (pp) { var id = pp.getAttribute('data-paper'), li = pp.closest('.paper'); OPEN[id] = !li.classList.contains('open'); li.classList.toggle('open', OPEN[id]); pp.setAttribute('aria-expanded', String(OPEN[id])); return; }
@@ -297,19 +381,25 @@
     }
   });
   $('q').addEventListener('input', function (e) { Q = e.target.value.trim(); render(); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') $('sheet').hidden = true; });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') $('sheet').hidden = true;
+    if ((e.key === 'Enter' || e.key === ' ') && e.target.matches && e.target.matches('article[data-sess]')) { e.preventDefault(); openSession(e.target.getAttribute('data-sess')); }
+  });
   function goHash() {
     var h = decodeURIComponent(location.hash.slice(1));
     if (!h || !DATA) return;
     var m = h.match(/^day(\d)$/i);
     if (m) { DAY = Math.max(0, Math.min(DATA.days.length - 1, Number(m[1]) - 1)); render(); return; }
+    var sid = null, pid = null;
     DATA.days.forEach(function (d, i) {
       d.blocks.forEach(function (b) {
-        (b.sessions || []).forEach(function (s) { (s.papers || []).forEach(function (p, k) { if ((s.code || b.id) + '-' + (k + 1) === h) { DAY = i; OPEN[h] = true; } }); });
-        if (b.id === h || (b.sessions || []).some(function (s) { return s.code === h || b.id + '-' + s.room === h; })) DAY = i;
+        (b.sessions || []).forEach(function (s) { (s.papers || []).forEach(function (p, k) { if ((s.code || b.id) + '-' + (k + 1) === h) { DAY = i; OPEN[h] = true; sid = sessId(b, s); pid = h; } }); });
+        (b.sessions || []).forEach(function (s) { if (sessId(b, s) === h) { DAY = i; sid = h; } });
+        if (b.id === h) DAY = i;
       });
     });
     render();
+    if (sid) { var card = document.getElementById(sid); if (card) card.scrollIntoView({ block: 'center' }); openSession(sid, pid); return; }
     var el = document.getElementById(h);
     if (el) setTimeout(function () { el.scrollIntoView({ block: 'start' }); el.style.transition = 'background .6s'; el.style.background = 'var(--accent-soft)'; setTimeout(function () { el.style.background = ''; }, 1400); }, 30);
   }
