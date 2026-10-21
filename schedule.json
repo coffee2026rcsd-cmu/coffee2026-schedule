@@ -24,7 +24,7 @@
   },
   {
    "key": "yard",
-   "name": "Rain Tree Yard",
+   "name": "Gandhi Yard",
    "note": "",
    "photos": []
   }
@@ -36,6 +36,41 @@
     {
      "name": "RCSD",
      "url": "https://rcsd.soc.cmu.ac.th/",
+     "logo": "logos/sp-mviccbmr890.png?v=mvid15yf",
+     "size": "l"
+    }
+   ]
+  },
+  {
+   "group": "Co-organised by",
+   "items": [
+    {
+     "name": "Yunnan University",
+     "url": "https://english.ynu.edu.cn/",
+     "logo": "logos/sp-mvid0z0k07y.png?v=mvid5v9p",
+     "size": "m"
+    },
+    {
+     "name": "School of Ethnology and Sociology, Yunnan Univeristy",
+     "url": "",
+     "logo": "logos/sp-mvid63y7bn4.png?v=mvid7cb6",
+     "size": "m"
+    },
+    {
+     "name": "",
+     "url": "",
+     "logo": "logos/sp-mvid78utt4g.png?v=mvid82pc",
+     "size": "m"
+    },
+    {
+     "name": "Chiang Mai University",
+     "url": "https://www.cmu.ac.th/",
+     "logo": "logos/sp-mvid9bjlfvu.png?v=mvidaqpm",
+     "size": "m"
+    },
+    {
+     "name": "Center for Ethnic Studies and Development",
+     "url": "https://cesd.soc.cmu.ac.th/",
      "logo": "",
      "size": "m"
     }
@@ -46,7 +81,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "21 Oct 2026, 23:47 (GMT+7)",
+ "updated": "22 Oct 2026, 00:16 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
@@ -184,7 +219,7 @@
      "type": "side",
      "title": "Roundtable 1 - New Generation Farmers and Women in Coffee Development",
      "about": "",
-     "room": "Rain Tree Yard",
+     "room": "Gandhi Yard",
      "roomKey": "yard",
      "events": [
       {
@@ -703,7 +738,7 @@
      "type": "side",
      "title": "Workshop - Cupping by SCATH",
      "about": "",
-     "room": "Rain Tree Yard",
+     "room": "Gandhi Yard",
      "roomKey": "yard",
      "events": [
       {
