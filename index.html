@@ -49,7 +49,7 @@
   .mod{margin-top:10px;font-size:14px;color:var(--ink-2)}
   .lab{color:var(--ink-3)}
   .sessions{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;margin-top:14px}
-  .session{scroll-margin-top:90px}
+  .session,.paper{scroll-margin-top:90px}
   @media (max-width:640px){.block,.session{scroll-margin-top:130px}}
   .sh{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
   .code{font:700 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--accent);background:var(--accent-soft);padding:4px 6px;border-radius:6px}
@@ -64,6 +64,7 @@
   .online{font-size:11px;font-weight:700;color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 6px;margin-left:6px;white-space:nowrap}
   .link{border:0;background:none;color:var(--ink-3);cursor:pointer;font:inherit;font-size:12px;padding:0 4px;opacity:.7}
   .link:hover{opacity:1;color:var(--accent)}
+  @media (hover:hover){.link{opacity:0}.block:hover>div>.bt .link,.session:hover .link,.link:focus{opacity:.7}}
   .side{margin-top:6px}
   .side .ev{margin-top:8px}
   .side .ev b{font-weight:700}
@@ -88,6 +89,38 @@
     .block{break-inside:avoid}
   }
   .day h2{display:none;font-size:20px;margin:24px 0 0}
+  .sponsors{padding:34px 0 26px;border-top:1px solid var(--line)}
+  .spg{margin-bottom:24px}
+  .spg h4{margin:0 0 12px;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+  .logos{display:flex;flex-wrap:wrap;gap:22px 34px;align-items:center}
+  .logos a,.logos span{display:inline-flex;align-items:center}
+  .logos img{display:block;width:auto;max-width:220px;object-fit:contain}
+  .logos .s img{height:34px}.logos .m img{height:54px}.logos .l img{height:84px;max-width:300px}
+  .logos .txt{font-weight:700;font-size:14px;color:var(--ink-2)}
+  @media (prefers-color-scheme:dark){.logos img{background:#fff;border-radius:6px;padding:4px}}
+  .venues{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px}
+  .venue{border:0;background:none;padding:0;text-align:left;cursor:pointer;font:inherit;color:inherit;display:flex;gap:10px;align-items:center}
+  .venue img{width:56px;height:40px;object-fit:cover;border-radius:6px;background:var(--line)}
+  .venue span{font-size:13px;border-bottom:1px solid var(--line)}
+  .venue:hover span{border-color:var(--accent);color:var(--accent)}
+  .roomlink{border:0;background:none;padding:0;font:inherit;color:inherit;cursor:pointer;border-bottom:1px dotted currentColor}
+  .roomlink:hover{color:var(--accent)}
+  .ptoggle{border:0;background:none;padding:0;font:inherit;color:inherit;text-align:left;cursor:pointer;display:block;width:100%}
+  .ptoggle:hover .t{color:var(--accent)}
+  .ptoggle .t::after{content:" +";color:var(--ink-3);font-weight:700}
+  .paper.open .ptoggle .t::after{content:" −"}
+  .abs{display:none;margin:8px 0 2px;font-size:13.5px;line-height:1.6;color:var(--ink-2);white-space:pre-line}
+  .paper.open .abs{display:block}
+  .abs .kw{display:block;margin-top:8px;color:var(--ink-3);font-size:12.5px}
+  .sheet{position:fixed;inset:0;background:rgba(20,16,12,.45);z-index:20;display:flex;align-items:center;justify-content:center;padding:16px}
+  .sheet[hidden]{display:none}
+  .sheet-box{background:var(--surface);color:var(--ink);border-radius:18px;max-width:560px;width:100%;max-height:90vh;overflow:auto;padding:22px 22px 24px;position:relative}
+  .sheet-box img{width:100%;border-radius:12px;display:block;margin:12px 0}
+  .sheet-x{position:absolute;right:12px;top:8px;border:0;background:none;font-size:26px;line-height:1;color:var(--ink-3);cursor:pointer}
+  .sheet h3{margin:0 30px 4px 0;font-size:20px}
+  .maps{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+  .maps a{display:inline-block;text-decoration:none;background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:999px;font-size:14px;font-weight:700}
+  .maps a.alt{background:var(--accent-soft);color:var(--ink)}
 </style>
 </head>
 <body>
@@ -97,6 +130,7 @@
     <div class="eyebrow" id="subtitle">3rd International Symposium on Coffee · 27–28 November 2026</div>
     <h1 id="title">Programme</h1>
     <div class="meta" id="venue"></div>
+    <div class="venues" id="venues" hidden></div>
   </header>
   <div class="bar">
     <div class="days" id="days" role="tablist"></div>
@@ -104,23 +138,27 @@
     <div class="now" id="now" hidden></div>
   </div>
   <main id="main"><div class="empty" id="loading">Loading the programme…</div></main>
+  <section class="sponsors" id="sponsors" hidden></section>
   <footer><span id="updated"></span> · <span data-t="subject">This schedule is subject to change.</span></footer>
 </div>
 <div class="toast" id="toast"></div>
+<div class="sheet" id="sheet" hidden><div class="sheet-box" role="dialog" aria-modal="true" aria-labelledby="sheetT"><button class="sheet-x" data-close aria-label="Close">×</button><div id="sheetBody"></div></div></div>
 <script>
 (function () {
   var T = {
     en: { search: 'Search a name, title or room', chair: 'Chair', moderator: 'Moderator', online: 'online', also: 'Also at the same time', copy: 'Link copied',
           none: 'Nothing matches that search.', subject: 'This schedule is subject to change.', updated: 'Updated', loading: 'Loading the programme…',
           kinds: { keynote: 'Keynote', plenary: 'Plenary discussion', concurrent: 'Concurrent sessions', roundtable: 'Roundtable', opening: 'Opening', closing: 'Closing', side: 'Side programme', open: 'Open session' },
-          about: 'About this session', nowL: 'Now', next: 'Next', min: 'min', failed: 'The programme could not be loaded. Please try again in a moment.' },
+          about: 'About this session', nowL: 'Now', next: 'Next', min: 'min', failed: 'The programme could not be loaded. Please try again in a moment.',
+          map: 'Open the map', mapCn: 'Map for China (Amap / Baidu)', keywords: 'Keywords', noAbstract: 'The abstract will be added soon.', rooms: 'Rooms' },
     zh: { search: '搜索姓名、题目或会议室', chair: '主持人', moderator: '主持人', online: '线上', also: '同时进行', copy: '链接已复制',
           none: '没有找到匹配的内容。', subject: '日程如有变动，以现场为准。', updated: '更新于', loading: '正在加载日程…',
           kinds: { keynote: '主旨演讲', plenary: '全体讨论', concurrent: '分会场', roundtable: '圆桌讨论', opening: '开幕式', closing: '闭幕式', side: '平行活动', open: '公开环节' },
-          about: '简介', nowL: '正在进行', next: '下一项', min: '分钟', failed: '日程加载失败，请稍后再试。' }
+          about: '简介', nowL: '正在进行', next: '下一项', min: '分钟', failed: '日程加载失败，请稍后再试。',
+          map: '打开地图', mapCn: '中国地图（高德 / 百度）', keywords: '关键词', noAbstract: '摘要即将补充。', rooms: '会议室' }
   };
   var DAYZH = { 'Day 1': '第一天', 'Day 2': '第二天', 'Day 3': '第三天' };
-  var L = 'en', DATA = null, DAY = 0, Q = '';
+  var L = 'en', DATA = null, DAY = 0, Q = '', OPEN = {};
   try { L = localStorage.getItem('lang') || (/^zh/i.test(navigator.language || '') ? 'zh' : 'en'); } catch (e) {}
   var $ = function (id) { return document.getElementById(id); };
   var esc = function (s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); };
@@ -135,7 +173,7 @@
     var p = [b.title, b.room, b.about];
     (b.speakers || []).forEach(function (s) { p.push(s.name, s.affiliation, s.talk); });
     if (b.moderator) p.push(b.moderator.name);
-    (b.sessions || []).forEach(function (s) { p.push(s.name, s.room, s.chair, s.code); (s.papers || []).forEach(function (x) { p.push(x.title, x.presenter, x.affiliation, x.country); }); });
+    (b.sessions || []).forEach(function (s) { p.push(s.name, s.room, s.chair, s.code); (s.papers || []).forEach(function (x) { p.push(x.title, x.presenter, x.affiliation, x.country, x.abstract, x.keywords); }); });
     (b.events || []).forEach(function (e) { p.push(e.name, e.org, e.moderator); p.push.apply(p, e.panellists || []); });
     return p.join(' ').toLowerCase();
   }
@@ -150,13 +188,28 @@
     return m[3] + '-' + ('0' + mo).slice(-2) + '-' + ('0' + m[1]).slice(-2);
   }
   function dur(b) { var m = String(b.end).match(/(\d+):(\d+)\s*(AM|PM)/), s = b.startMin; if (!m) return 0; var e = (Number(m[1]) % 12 + (m[3] === 'PM' ? 12 : 0)) * 60 + Number(m[2]); return e - s; }
+  function roomOf(key) { return ((DATA && DATA.rooms) || []).filter(function (r) { return r.key === key; })[0] || null; }
+  function hasInfo(r) { return r && (r.photo || r.map || r.mapCn || r.note); }
+  function roomLink(key, name) {
+    return hasInfo(roomOf(key)) ? '<button class="roomlink" data-room="' + esc(key) + '">' + mark(name) + '</button>' : mark(name);
+  }
+  function openRoom(key) {
+    var r = roomOf(key); if (!r) return;
+    $('sheetBody').innerHTML = '<h3 id="sheetT">' + esc(r.name) + '</h3>' + (DATA.venue ? '<div class="meta">' + esc(DATA.venue) + '</div>' : '') +
+      (r.photo ? '<img src="' + esc(r.photo) + '" alt="' + esc(r.name) + '">' : '') +
+      (r.note ? '<p style="margin:10px 0 0">' + esc(r.note) + '</p>' : '') +
+      ((r.map || r.mapCn) ? '<div class="maps">' + (r.map ? '<a href="' + esc(r.map) + '" target="_blank" rel="noopener">' + esc(t('map')) + '</a>' : '') +
+        (r.mapCn ? '<a class="alt" href="' + esc(r.mapCn) + '" target="_blank" rel="noopener">' + esc(t('mapCn')) + '</a>' : '') + '</div>' : '');
+    $('sheet').hidden = false;
+    var x = $('sheet').querySelector('.sheet-x'); if (x) x.focus();
+  }
   function blockHTML(b, live) {
     var quiet = /^(break|lunch|registration|other)$/.test(b.type) && !(b.speakers && b.speakers.length);
     var kind = t('kinds')[b.type] || '';
     var h = '<section class="block' + (quiet ? ' quiet' : '') + (live ? ' live' : '') + '" id="' + esc(b.id) + '">' +
       '<div class="time">' + esc(b.start) + '<small>– ' + esc(b.end) + '</small></div><div>';
-    if (kind && !quiet) h += '<div class="kind">' + esc(kind) + (b.room ? ' · ' + esc(b.room) : '') + '</div>';
-    h += '<p class="bt">' + mark(b.title) + ' <button class="link" data-link="' + esc(b.id) + '" title="Copy link" aria-label="Copy a link to this">#</button></p>';
+    if (kind && !quiet) h += '<div class="kind">' + esc(kind) + (b.room ? ' · ' + roomLink(b.roomKey, b.room) : '') + '</div>';
+    h += '<p class="bt">' + mark(b.title) + ' <button class="link" data-link="' + esc(b.id) + '" title="Copy a link to this part of the programme (for sharing or a QR code)" aria-label="Copy a link to this">#</button></p>';
     if (b.about) h += '<details class="about"><summary>' + esc(t('about')) + '</summary>' + mark(b.about) + '</details>';
     if (b.speakers && b.speakers.length) h += '<ul class="people">' + b.speakers.map(function (s) {
       return '<li><b>' + mark(s.name) + '</b>' + (s.affiliation ? ' <span class="aff">· ' + mark(s.affiliation) + '</span>' : '') + (s.talk ? '<span class="talk">' + mark(s.talk) + '</span>' : '') + '</li>';
@@ -164,17 +217,20 @@
     if (b.moderator && b.moderator.name) h += '<div class="mod"><span class="lab">' + esc(t('moderator')) + ':</span> ' + mark(b.moderator.name) + (b.moderator.affiliation ? ' <span class="aff">· ' + mark(b.moderator.affiliation) + '</span>' : '') + '</div>';
     if (b.sessions && b.sessions.length) h += '<div class="sessions">' + b.sessions.map(function (s) {
       return '<article class="session" id="' + esc(s.code || (b.id + '-' + s.room)) + '"><div class="sh">' + (s.code ? '<span class="code">' + esc(s.code) + '</span>' : '') +
-        '<span class="room">' + mark(s.room) + '</span><button class="link" data-link="' + esc(s.code || (b.id + '-' + s.room)) + '" aria-label="Copy a link to this session">#</button></div>' +
+        '<span class="room">' + roomLink(s.roomKey, s.room) + '</span><button class="link" data-link="' + esc(s.code || (b.id + '-' + s.room)) + '" aria-label="Copy a link to this session">#</button></div>' +
         '<h3 class="sname">' + mark(s.name) + '</h3>' + (s.chair ? '<div class="chair"><span class="lab">' + esc(t('chair')) + ':</span> ' + mark(s.chair) + '</div>' : '') +
-        '<ol class="papers">' + (s.papers || []).map(function (p) {
-          return '<li class="paper"><div class="t">' + mark(p.title) + '</div><div class="who"><b>' + mark(p.presenter) + '</b>' +
+        '<ol class="papers">' + (s.papers || []).map(function (p, k) {
+          var pid = (s.code || b.id) + '-' + (k + 1), open = OPEN[pid] || (Q && (String(p.abstract || '') + ' ' + (p.keywords || '')).toLowerCase().indexOf(Q.toLowerCase()) !== -1);
+          return '<li class="paper' + (open ? ' open' : '') + '" id="' + esc(pid) + '"><button class="ptoggle" data-paper="' + esc(pid) + '" aria-expanded="' + !!open + '"><div class="t">' + mark(p.title) + '</div></button>' +
+            '<div class="who"><b>' + mark(p.presenter) + '</b>' +
             (p.online ? '<span class="online">' + esc(t('online')) + '</span>' : '') +
-            (p.affiliation || p.country ? ' <span class="aff">· ' + mark([p.affiliation, p.country && String(p.affiliation).toLowerCase().indexOf(String(p.country).toLowerCase()) === -1 ? p.country : ''].filter(Boolean).join(', ')) + '</span>' : '') + '</div></li>';
+            (p.affiliation || p.country ? ' <span class="aff">· ' + mark([p.affiliation, p.country && String(p.affiliation).toLowerCase().indexOf(String(p.country).toLowerCase()) === -1 ? p.country : ''].filter(Boolean).join(', ')) + '</span>' : '') + '</div>' +
+            '<div class="abs">' + (p.abstract ? mark(p.abstract) : '<i>' + esc(t('noAbstract')) + '</i>') + (p.keywords ? '<span class="kw">' + esc(t('keywords')) + ': ' + mark(p.keywords) + '</span>' : '') + '</div>' + '</li>';
         }).join('') + '</ol></article>';
     }).join('') + '</div>';
     if (b.events && b.events.length) h += '<div class="side">' + b.events.map(function (e) {
       var same = String(e.name).toLowerCase() === String(b.title).toLowerCase();
-      return '<div class="ev">' + (same ? '' : '<b>' + mark(e.name) + '</b>') + (e.kind ? ' <span class="aff">· ' + esc(e.kind) + '</span>' : '') + (e.org ? ' <span class="aff">· ' + mark(e.org) + '</span>' : '') +
+      return '<div class="ev">' + (same ? '' : '<b>' + mark(e.name) + '</b>') + (e.kind ? ' <span class="aff">' + (same ? '' : '· ') + esc(e.kind) + '</span>' : '') + (e.org ? ' <span class="aff">· ' + mark(e.org) + '</span>' : '') +
         (e.panellists && e.panellists.length ? '<ul class="people">' + e.panellists.map(function (x) { return '<li>' + mark(x) + '</li>'; }).join('') + '</ul>' : '') +
         (e.moderator ? '<div class="mod"><span class="lab">' + esc(t('moderator')) + ':</span> ' + mark(e.moderator) + '</div>' : '') + '</div>';
     }).join('') + '</div>';
@@ -190,6 +246,17 @@
     $('subtitle').textContent = DATA.subtitle || '';
     $('venue').textContent = DATA.venue || '';
     $('updated').textContent = DATA.updated ? t('updated') + ' ' + DATA.updated : '';
+    var sp = DATA.sponsors || [];
+    $('sponsors').hidden = !sp.length;
+    $('sponsors').innerHTML = sp.map(function (g) {
+      return '<div class="spg"><h4>' + esc(g.group) + '</h4><div class="logos">' + g.items.map(function (x) {
+        var inner = x.logo ? '<img src="' + esc(x.logo) + '" alt="' + esc(x.name) + '" title="' + esc(x.name) + '" loading="lazy">' : '<span class="txt">' + esc(x.name) + '</span>';
+        return x.url ? '<a class="' + esc(x.size) + '" href="' + esc(x.url) + '" target="_blank" rel="noopener">' + inner + '</a>' : '<span class="' + esc(x.size) + '">' + inner + '</span>';
+      }).join('') + '</div></div>';
+    }).join('');
+    var vs = (DATA.rooms || []).filter(hasInfo);
+    $('venues').hidden = !vs.length;
+    $('venues').innerHTML = vs.map(function (r) { return '<button class="venue" data-room="' + esc(r.key) + '">' + (r.photo ? '<img src="' + esc(r.photo) + '" alt="" loading="lazy">' : '') + '<span>' + esc(r.name) + '</span></button>'; }).join('');
     var clock = bkk();
     $('days').innerHTML = DATA.days.map(function (d, i) {
       return '<button role="tab" data-day="' + i + '" aria-pressed="' + (i === DAY && !Q) + '">' + esc(L === 'zh' ? (DAYZH[d.key] || d.key) : d.key) + '<span>' + esc(d.date) + '</span></button>';
@@ -213,6 +280,11 @@
   }
   function toast(m) { var el = $('toast'); el.textContent = m; el.classList.add('on'); clearTimeout(el._t); el._t = setTimeout(function () { el.classList.remove('on'); }, 1600); }
   document.addEventListener('click', function (e) {
+    var rm = e.target.closest('[data-room]');
+    if (rm) { openRoom(rm.getAttribute('data-room')); return; }
+    if (e.target.closest('[data-close]') || e.target === $('sheet')) { $('sheet').hidden = true; return; }
+    var pp = e.target.closest('[data-paper]');
+    if (pp) { var id = pp.getAttribute('data-paper'), li = pp.closest('.paper'); OPEN[id] = !li.classList.contains('open'); li.classList.toggle('open', OPEN[id]); pp.setAttribute('aria-expanded', String(OPEN[id])); return; }
     var d = e.target.closest('[data-day]');
     if (d) { DAY = Number(d.getAttribute('data-day')); Q = ''; $('q').value = ''; history.replaceState(null, '', '#day' + (DAY + 1)); render(); window.scrollTo({ top: 0 }); return; }
     var l = e.target.closest('[data-lang]');
@@ -225,6 +297,7 @@
     }
   });
   $('q').addEventListener('input', function (e) { Q = e.target.value.trim(); render(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') $('sheet').hidden = true; });
   function goHash() {
     var h = decodeURIComponent(location.hash.slice(1));
     if (!h || !DATA) return;
@@ -232,6 +305,7 @@
     if (m) { DAY = Math.max(0, Math.min(DATA.days.length - 1, Number(m[1]) - 1)); render(); return; }
     DATA.days.forEach(function (d, i) {
       d.blocks.forEach(function (b) {
+        (b.sessions || []).forEach(function (s) { (s.papers || []).forEach(function (p, k) { if ((s.code || b.id) + '-' + (k + 1) === h) { DAY = i; OPEN[h] = true; } }); });
         if (b.id === h || (b.sessions || []).some(function (s) { return s.code === h || b.id + '-' + s.room === h; })) DAY = i;
       });
     });
