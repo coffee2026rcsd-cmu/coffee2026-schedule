@@ -105,8 +105,8 @@
   .spg h4{margin:0 0 12px;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
   .logos{display:flex;flex-wrap:wrap;gap:22px 34px;align-items:center}
   .logos a,.logos span{display:inline-flex;align-items:center}
-  .logos img{display:block;width:auto;max-width:220px;object-fit:contain}
-  .logos .s img{height:34px}.logos .m img{height:54px}.logos .l img{height:84px;max-width:300px}
+  .logos img{display:block;width:auto;height:calc(var(--h,54) * 1px);max-width:min(calc(var(--h,54) * 5px),100%);object-fit:contain}
+  @media (max-width:640px){.logos{gap:18px 26px}.logos img{height:calc(var(--h,54) * .78px)}}
   .logos .txt{font-weight:700;font-size:14px;color:var(--ink-2)}
   @media (prefers-color-scheme:dark){.logos img{background:#fff;border-radius:6px;padding:4px}}
   .where{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:12px}
@@ -131,6 +131,12 @@
   .dots button{width:8px;height:8px;border-radius:50%;border:0;padding:0;background:var(--line);cursor:pointer}
   .dots button[aria-current="true"]{background:var(--accent)}
   .sheet-box .slide img{border-radius:12px}
+  .slide img{cursor:zoom-in}
+  .zoom{position:fixed;inset:0;z-index:30;background:rgba(10,8,6,.92);display:flex;align-items:center;justify-content:center;padding:16px}
+  .zoom[hidden]{display:none}
+  .zoom img{max-width:100%;max-height:calc(100% - 40px);object-fit:contain;border-radius:8px;cursor:zoom-out}
+  .zoom figcaption{position:absolute;left:0;right:0;bottom:14px;text-align:center;color:#eee;font-size:14px}
+  .zoom .zx{position:absolute;right:14px;top:8px;border:0;background:none;color:#fff;font-size:30px;line-height:1;cursor:pointer}
   .roomlink{border:0;background:none;padding:0;font:inherit;color:inherit;cursor:pointer;border-bottom:1px dotted currentColor}
   .roomlink:hover{color:var(--accent)}
   .ptoggle{border:0;background:none;padding:0;font:inherit;color:inherit;text-align:left;cursor:pointer;display:block;width:100%}
@@ -168,6 +174,7 @@
   <footer><span id="updated"></span> · <span data-t="subject">This schedule is subject to change.</span></footer>
 </div>
 <div class="toast" id="toast"></div>
+<figure class="zoom" id="zoom" hidden><button class="zx" data-unzoom aria-label="Close">×</button><img alt=""><figcaption></figcaption></figure>
 <div class="sheet" id="sheet" hidden><div class="sheet-box" role="dialog" aria-modal="true" aria-labelledby="sheetT"><button class="sheet-x" data-close aria-label="Close">×</button><div id="sheetBody"></div></div></div>
 <script>
 (function () {
@@ -326,7 +333,8 @@
     $('sponsors').hidden = !sp.length;
     $('sponsors').innerHTML = sp.map(function (g) {
       return '<div class="spg"><h4>' + esc(g.group) + '</h4><div class="logos">' + g.items.map(function (x) {
-        var inner = x.logo ? '<img src="' + esc(x.logo) + '" alt="' + esc(x.name) + '" title="' + esc(x.name) + '" loading="lazy">' : '<span class="txt">' + esc(x.name) + '</span>';
+        var hh = Number(x.h) || ({ s: 34, m: 54, l: 84 })[x.size] || 54;
+        var inner = x.logo ? '<img src="' + esc(x.logo) + '" alt="' + esc(x.name) + '" title="' + esc(x.name) + '" loading="lazy" style="--h:' + hh + '">' : '<span class="txt">' + esc(x.name) + '</span>';
         return x.url ? '<a class="' + esc(x.size) + '" href="' + esc(x.url) + '" target="_blank" rel="noopener">' + inner + '</a>' : '<span class="' + esc(x.size) + '">' + inner + '</span>';
       }).join('') + '</div></div>';
     }).join('');
@@ -361,6 +369,11 @@
     var rm = e.target.closest('[data-room]');
     if (!rm && !e.target.closest('[data-link]')) { var ss = e.target.closest('[data-sess]'); if (ss) { openSession(ss.getAttribute('data-sess')); return; } }
     if (rm) { openRoom(rm.getAttribute('data-room')); return; }
+    if (e.target.closest('[data-unzoom]') || e.target === $('zoom') || e.target.closest('#zoom img')) { $('zoom').hidden = true; return; }
+    var zi = e.target.closest('.slide img');
+    if (zi) { var z = $('zoom'), cap = zi.closest('.slide').querySelector('figcaption');
+      z.querySelector('img').src = zi.getAttribute('src'); z.querySelector('img').alt = zi.alt; z.querySelector('figcaption').textContent = cap ? cap.textContent : '';
+      z.hidden = false; return; }
     var st = e.target.closest('[data-step],[data-go]');
     if (st) { var sl = st.closest('.slides'), tr = sl.querySelector('.track'), cur = Math.round(tr.scrollLeft / Math.max(1, tr.clientWidth + 12));
       goSlide(sl, st.hasAttribute('data-go') ? Number(st.getAttribute('data-go')) : Math.max(0, Math.min(tr.children.length - 1, cur + Number(st.getAttribute('data-step'))))); return; }
@@ -382,7 +395,7 @@
   });
   $('q').addEventListener('input', function (e) { Q = e.target.value.trim(); render(); });
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') $('sheet').hidden = true;
+    if (e.key === 'Escape') { if (!$('zoom').hidden) { $('zoom').hidden = true; return; } $('sheet').hidden = true; }
     if ((e.key === 'Enter' || e.key === ' ') && e.target.matches && e.target.matches('article[data-sess]')) { e.preventDefault(); openSession(e.target.getAttribute('data-sess')); }
   });
   function goHash() {
