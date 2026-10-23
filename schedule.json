@@ -87,7 +87,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "22 Oct 2026, 13:37 (GMT+7)",
+ "updated": "23 Oct 2026, 11:47 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
@@ -111,7 +111,7 @@
      "end": "9:45 AM",
      "startMin": 525,
      "type": "opening",
-     "title": "Opening remark",
+     "title": "Opening Session",
      "about": "",
      "room": "",
      "roomKey": "",
@@ -139,7 +139,7 @@
      "end": "10:30 AM",
      "startMin": 585,
      "type": "keynote",
-     "title": "Keynote I: Structural Constraints on Thai Coffee: Trade, Land and Global Markets",
+     "title": "Keynote I: Thai Coffee in Transition: Structural Challenges and Emerging Possibilities",
      "about": "",
      "room": "",
      "roomKey": "",
@@ -169,7 +169,7 @@
      "end": "12:30 PM",
      "startMin": 660,
      "type": "plenary",
-     "title": "Plenary Discussion I: State of coffee production and consumption in Southeast Asia and China (China/Vietnam/Thai/Indonesia)",
+     "title": "Plenary Discussion I: State of coffee production and consumption in Southeast Asia and China (China/Vietnam/Indonesia/Thailand)",
      "about": "Coffee was introduced into these four countries at different periods and for different purposes, and the resulting landscapes differ accordingly: an established export industry in Vietnam, a plateau economy originating in colonial plantations in Laos, a state-supported highland development crop in Thailand, and a rapid shift from bulk supply to specialty production in Yunnan. All four now face a period in which open trade cannot be assumed and domestic consumption is growing quickly. This plenary brings together perspectives from research, trade and roasting to review the current situation in each country, and to consider what would be required for the region to trade more directly within itself.",
      "room": "",
      "roomKey": "",
@@ -211,7 +211,7 @@
      "end": "1:30 PM",
      "startMin": 750,
      "type": "lunch",
-     "title": "Lunch",
+     "title": "Lunch & Roundtable I - New Generation Farmers and Women in Coffee Development (in Thai)",
      "about": "",
      "room": "",
      "roomKey": "",
@@ -247,14 +247,14 @@
      "end": "3:00 PM",
      "startMin": 810,
      "type": "concurrent",
-     "title": "Concurrent Session I (3 Session)",
+     "title": "Concurrent Session I (2 Sessions)",
      "about": "",
      "room": "",
      "roomKey": "",
      "sessions": [
       {
        "code": "P01",
-       "name": "Coffee Histories: Colonial legacies, Capital and Memory",
+       "name": "Coffee Histories: Colonial Legacies, Capital and Memory",
        "room": "Room 1 Auditorium",
        "roomKey": "dhani-room",
        "theme": "1. Southeast Asia coffee history",
@@ -346,10 +346,10 @@
       },
       {
        "code": "P03",
-       "name": "Coffee Tourism and Experiential Landscapes",
+       "name": "Coffee as Destinations: Experience, Value and Community",
        "room": "Room 3 4107 Meeting Room",
        "roomKey": "room-4107",
-       "theme": "4. Coffee culture",
+       "theme": "3. Coffee as commodity",
        "chair": "",
        "papers": [
         {
@@ -378,6 +378,15 @@
          "online": false,
          "abstract": "Coffee tourism is increasingly used by producing regions to connect agricultural production with visitor experience, cultural communication, and rural economic diversification. Existing studies have highlighted its contributions to visitor experience, destination branding, stakeholder cooperation, and sustainability. Much of this work, however, examines tourism outcomes or destination-level development, paying less attention to how coffee-producing enterprises organize place-specific resources and convert production and sensory knowledge into experiential and market value. This study addresses this process through an embedded comparative case study of Gongjiang Coffee Estate in Baoshan and Dakaihe Coffee Estate in Pu'er, Yunnan Province, China. It draws on field observations, preliminary interviews, and estate documents and promotional materials. Integrating resource orchestration, experiential value co-creation, and place branding, the study examines how production, ecological, cultural, and knowledge resources are selected, combined, and presented to visitors. Preliminary analysis suggests that both estates create value not simply by adding tourism services to coffee production, but by reorganizing production spaces, place narratives, and coffee knowledge into coherent visitor experiences. Gongjiang places relatively greater emphasis on production visibility and participatory “seed-to-cup” activities, which connect process knowledge with perceptions of authenticity, quality, and brand trust. Dakaihe draws more strongly on ecological cultivation, biodiversity, origin narratives, and sensory learning to reinforce place identity and the value of specialty coffee. The comparison also foregrounds the need to distinguish commercial value creation from the distribution of benefits among enterprises, farmers, and local communities. The study develops a management-oriented explanation of coffee landscape transformation and offers practical implications for coffee enterprises and producing regions in Southeast Asia seeking locally embedded pathways beyond raw-bean production.",
          "keywords": "coffee tourism · agritourism · experiential value · knowledge mediation · place branding · comparative case study"
+        },
+        {
+         "title": "Resilience of Coffee Communities: A hidden story of ethnic communities from Chiang Mai Province, Thailand",
+         "presenter": "Thant Zin Aung",
+         "affiliation": "Lund University",
+         "country": "Thailand",
+         "online": false,
+         "abstract": "This thesis explores the backgrounds and socio-ecological systems of ethnic communities in rapidly growing coffee destinations in Chiang Mai province, Thailand. Using a political ecology approach, it investigates the resilience of coffee-producing villages where ethnic minorities maintain unique cultures and identity. The study highlights ecological vulnerability and socio-political marginalisation providing multi-dimensional views of ethnic coffee communities. Employing qualitative methods, including observation and in-depth interviews, it examines land-use practices, agricultural management, and the impacts of conservation laws and traditional customs. The research captures local knowledge and perceptions of climate change, resilience, and adaptation strategies through observation and interviews with farmers, community members, and support institutions. By analysing the social and environmental conditions of these communities, the study addresses opportunities and challenges in implementing adaptation measures to strengthen resilience against the consequences of climate change.",
+         "keywords": "Adaptation Measures · Coffee · Community Resilience · Climate Change · Political Ecology"
         }
        ]
       }
@@ -401,54 +410,54 @@
      "end": "5:00 PM",
      "startMin": 930,
      "type": "concurrent",
-     "title": "Concurrent Session II (3 Session)",
+     "title": "Concurrent Session II (2 Sessions)",
      "about": "",
      "room": "",
      "roomKey": "",
      "sessions": [
       {
        "code": "P04",
-       "name": "Reimagining Coffee Culture: Image, Value and Identity",
+       "name": "Café Landscapes in Southeast Asian Cities",
        "room": "Room 1 Auditorium",
        "roomKey": "dhani-room",
        "theme": "4. Coffee culture",
        "chair": "",
        "papers": [
         {
-         "title": "Body, Nature, and the Gaze: A Study on the Cheat code forviews and Cultural Mechanisms of China's influencer Cafes",
-         "presenter": "Yanlan SHI",
-         "affiliation": "School of Law and Politics, Yunnan University of Finance and Economics",
-         "country": "China",
+         "title": "Producing Urban Space through Coffee Culture: The Transformation of Contemporary Bangkok",
+         "presenter": "Natharinee Neungchamnong",
+         "affiliation": "-",
+         "country": "Thailand",
          "online": false,
-         "abstract": "In recent years, various influencer Cafés that combine sensory experiences such as taste and sight have emerged in China, becoming a new form of tourism in the context of cultural and tourism integration. This study focuses on several\npopular and highly representative influencer Cafes in China, conducting an in-depth analysis to argue that visiting these cafés has become a cultural phenomenon reflecting nature, visual aesthetics, and bodily experience within tourism. Judging from\ncurrent forms—such as waterfall cafés and cave cafés—coffee consumption is deeply integrated with tourism experiences, involving observation, physical sensations, and people's exploration and aspirations toward nature. In today’s tourism consumption, gaze theory and embodiment theory alone are insufficient to fully explain the underlying cultural and social meanings and the mechanisms behind this phenomenon. Drawing on cultural sociology, this study attempts to analyze the cultural mechanisms emerging from the fusion of symbolic consumption and bodily experience, thereby proposing a new theoretical framework for understanding tourism experiences.",
-         "keywords": ""
+         "abstract": "The rapid growth of coffee culture in Bangkok has significantly reshaped the city’s urban landscape. This study examines how coffee culture participates in the transformation and production of urban space through a comparative study of Ari and Song Wat. Although both neighborhoods were historically shaped by local communities, the emergence of new forms of consumption and commercialization has transformed their physical, social, and cultural landscapes. Despite these similarities, the two areas differ in their historical development and social contexts. While Ari has developed as a residential area, Song Wat has emerged around its historical role as a riverside trading district. Drawing on Henri Lefebvre’s concept of the production of space, this study conceptualizes coffee shops not only as commercial establishments but as social and cultural spaces through which urban identities, practices, and meanings are produced and negotiated. This research employs a comparative qualitative case-study approach in order to examine changes in the physical environment and patterns of spatial uses, and the experiences of people within these neighborhoods. The study, hence, focuses on three dimensions of urban transformation: physical and commercial changes, changing social practices and experiences, and the symbolic representation of neighborhood identities. By comparing these areas, the research seeks to identify both similarities and differences in how coffee culture interacts with processes of commercialization and urban change. Rather than treating coffee culture as the sole cause of urban transformation, the study positions it as one of the cultural and economic forces that contribute to the reshaping of contemporary Bangkok. This research, therefore, aims to understand how everyday practices can participate in the production, negotiation, and reconfiguration of urban space.",
+         "keywords": "Coffee culture · Urban space · Commercialization · Identities"
         },
         {
-         "title": "INVENTING COFFEE CULTURE: SOCIAL SPACES, CONSUMPTION PRACTICES, AND ETHNIC IDENTITY AMONG THE Ê ĐÊ OF ĐẮK LẮK, VIETNAM",
-         "presenter": "Ly Doan",
-         "affiliation": "Asia Ingredients Group (AIG), Vietnam",
+         "title": "\"Going for Coffee\" in Coffee Country: Production, Consumption, and Place in Đà Lạt's Café Landscape",
+         "presenter": "Tran Que Tram Nguyen",
+         "affiliation": "Faculty of Social Work, Anthropology and Sociology University of Social Sciences and Humanities, Vietnam National University, Ho Chi Minh City",
          "country": "Vietnam",
          "online": false,
-         "abstract": "INVENTING COFFEE CULTURE: SOCIAL SPACES, CONSUMPTION PRACTICES, AND ETHNIC IDENTITY AMONG THE Ê ĐÊ OF ĐẮK LẮK, VIETNAM\nLy.D.T \nAbstract\nVietnam is one of the world’s major coffee-producing countries, yet discussions of coffee have largely emphasized its economic significance as a global commodity, with less attention to the local and Indigenous cultural processes through which coffee is appropriated and transformed. This paper examines the “invention of coffee culture” among the Ê Đê of Đắk Lắk, Vietnam, a major coffee-producing region.\nDrawing on more than three years of ethnographic fieldwork, including participant observation and approximately 15–20 in-depth interviews in Buôn Ma Thuột, Krông Ana, and Krông Pắc, the paper examines how coffee has been incorporated, reinterpreted, and localized within Ê Đê social and cultural life. It focuses on the emergence of new social spaces and everyday consumption practices; and the production and negotiation of Ê Đê cultural identity through coffee.\nDrawing on the concepts of “invented tradition” and cultural production, the paper argues that Ê Đê coffee culture is neither a simple adoption of an external commodity nor a straightforward continuation of an inherited tradition. Rather, it emerges through selective processes of cultural adaptation and reconfiguration, in which traditional communal values, cultural memories, ethnic identity, and contemporary market and tourism demands are continually negotiated.\nThe paper contributes to broader discussions of coffee culture in Southeast Asia by demonstrating how a global commodity becomes localized through Indigenous cultural practices while simultaneously reshaping social spaces, cultural meanings, and ethnic representation.",
-         "keywords": "Ê Đê · coffee culture · social space · consumption practices · cultural production · invented tradition · Đắk Lắk · Vietnam"
+         "abstract": "Đà Lạt–Lâm Đồng is both one of Vietnam's principal coffee-producing regions and a major tourist destination where \"going for coffee\" (đi cà phê) can foreground landscape, atmosphere, events, coffee craft, or production itself. Coffee-tourism scholarship has examined how coffee spaces may connect, decouple, or reconnect production and consumption. Building on this discussion, the paper asks where coffee as a locally produced commodity sits within Đà Lạt's café experiences, and how the geographical proximity of production and consumption relates to symbolic and experiential connections between coffee, production, and place.\nThe paper reports an ongoing comparative qualitative content analysis of 12–15 cafés and coffee venues in Đà Lạt, purposively sampled to capture variation among destination/check-in cafés, landscape/atmosphere cafés, farm- or production-linked cafés, and specialty roasteries. The corpus comprises café websites, product pages, and Facebook posts, alongside public customer reviews and tourism media, coded to distinguish what cafés foreground from what customers recount. Three dimensions are coded as independent rather than sequential: reported or documented origin; representational connections to farms, producers, and production; and experiential connections through tasting, brewing, roasting, or farm visits. Coding further separates the centrality of coffee from the centrality of local production.\nPreliminary coding of initial cases suggests that these dimensions need not move together. In one case, detailed Cầu Đất origins appear on a café's product pages while its social media foregrounds destination and atmosphere, positioning local production differently across platforms. In another, a specialty roastery keeps coffee central to its public presentation while linking customers to local, national, and transnational origins, showing that coffee centrality need not coincide with local-production centrality. The paper extends discussion of production–consumption relations by showing how a producing region's coffee landscape is configured through uneven connections among commodity, place, production, and experience across café forms and platforms.",
+         "keywords": "coffee tourism · production–consumption relations · café landscape · local production · Đà Lạt"
         },
         {
-         "title": "From Ritual Hospitality to Digital Distinction: Revaluing Coffee in Urban Indonesia",
-         "presenter": "Funco Tanipu",
-         "affiliation": "Universitas Negeri Gorontalo",
+         "title": "Dynamics of Coffee Consumption and the Development of Coffee Shops in Kendari, Southeast Sulawesi, Indonesia",
+         "presenter": "Benny Baskara",
+         "affiliation": "Halu Oleo University",
          "country": "Indonesia",
-         "online": false,
-         "abstract": "**From Ritual Hospitality to Digital Distinction: Revaluing Coffee in Urban Indonesia**\n\nCoffee in Indonesia is commonly described either as an agricultural commodity or as a rapidly expanding urban lifestyle. This paper argues that its contemporary social significance is better understood as a process of **revaluation**, through which inherited meanings of hospitality, ritual, locality, and sociality are selectively translated into new forms of commercial, symbolic, and digital value. Drawing on qualitative field research in Jakarta, Yogyakarta, and Makassar, including observations in traditional and modern coffee spaces and semi-structured interviews with fifteen consumers and five coffee-industry practitioners, the study compares how coffee acquires different meanings across three urban contexts.\n\nThe findings identify four interrelated modes of social valuation: religious and ritual hospitality, social relationship, life-cycle commemoration, and social distinction. In Makassar, coffee remains embedded in post-Ramadan religious gatherings while regional origins such as Toraja and Kalosi are simultaneously reformulated as markers of authenticity and local identity in modern cafés. In Yogyakarta, vernacular coffee practices coexist with specialty cafés, coffee catering, and creative communities, while in Jakarta coffee shops increasingly operate as spaces of professional networking, lifestyle performance, and status differentiation. Across the three cities, cafés, branding practices, origin narratives, visual aesthetics, and social media transform coffee from a beverage into a medium for constructing identity and distinction.\n\nRather than representing a linear shift from tradition to modernity, these processes demonstrate how local meanings are repeatedly reworked through commodity circulation and digital representation. The paper proposes the notion of **urban coffee landscapes as infrastructures of valuation**, where place, ritual, taste, class, and mediated visibility intersect. It contributes to understanding how Southeast Asian coffee cultures are being transformed not through the disappearance of local traditions, but through their selective incorporation into contemporary markets and regimes of distinction.",
-         "keywords": "Keywords: coffee landscape · social valuation · urban coffee culture · distinction · commodity · Indonesia"
+         "online": true,
+         "abstract": "Consuming coffee at coffee shops has become a growing lifestyle in Kendari, the capital city of Southeast Sulawesi Province, Indonesia. Coffee consumption at coffee shops is not merely drinking or enjoying coffee, but coffee shops serve as public spaces where consumers gather and engage in various activities. Coffee consumption patterns are not only determined by consumer demographics, such as age and gender, but also by the development of coffee processing technology. Therefore, besides long-established traditional coffee shops, various new formats have emerged, such as modern coffee shops, street-side coffee stalls, and mobile coffee vendors.\nBased on the background above, this paper will describe the dynamics of coffee consumption and the development of coffee shops in Kendari. The research adopts cultural anthropology perspectives and uses ethnographic methods with two main elements: participant observation and in-depth interviews. Participant observation is conducted at several coffee shops in Kendari, while in-depth interviews are conducted with both consumers and coffee shop owners or managers.\nThe research findings show that coffee shops in Kendari can be categorized into two general types: traditional and modern. Traditional coffee shops serve coffee using simple and traditional methods: brewing coffee grounds with hot water and filtering the mixture using a cloth filter. Meanwhile, modern coffee shops serve coffee using modern machines, resulting in various coffee types with contemporary names, such as espresso, caffè latte, or cappuccino. Based on demographic categories, the consumers of traditional coffee shops are mostly men above 40 years old, whereas consumers of modern coffee shops are mostly young people, both men and women, under 40 years old. In fact, coffee culture in Kendari has developed with a long-standing history rooted in the existence of traditional coffee shops, and later it underwent cultural reconstruction and reproduction with the emergence of modern coffee shops.",
+         "keywords": "coffee consumption · coffee shops · Kendari · cultural reproduction"
         },
         {
-         "title": "The Changing Trajectory of Community-Based Coffee Farming and Processing in Barangay Talbak, Doña Remedios Trinidad, Bulacan, Philippines",
-         "presenter": "ARVIN EBALLO",
-         "affiliation": "University of Santo Tomas",
-         "country": "Philippines",
+         "title": "Kopitiams across Southeast Asia: Visualising Space and Hainanese Identities through Documentary Practice",
+         "presenter": "Hanxiang Zhang",
+         "affiliation": "SOAS, University of London",
+         "country": "United Kingdom",
          "online": false,
-         "abstract": "This study explores the evolving landscape of community-based coffee farming and processing in Barangay Talbak, located in Doña Remedios Trinidad, Bulacan, Philippines. The history of coffee farming in this community is linked to the migration of families from Cavite, a region in the southern Philippines, during the 1960s and 1970s. These settlers moved to Talbak in search of agricultural land and brought with them the knowledge and practices associated with coffee cultivation. Over time, coffee farming has become an integral part of the community's agricultural livelihood and local knowledge. This qualitative study aims to understand how the coffee landscape has evolved by examining the experiences and perspectives of coffee farmers and other key community members. Using a historical-contextual approach, the study will conduct semi-structured interviews to explore the development of coffee farming and processing. It will investigate the factors that have influenced its changing trajectory, as well as the responses and adaptations of local farmers. The interviews will be analyzed thematically to identify patterns related to production, processing, livelihoods, markets, environmental conditions, agricultural knowledge, and other factors shaping the community’s coffee landscape. By documenting the experiences and perspectives of coffee-growing communities in Talbak, this study offers a localized perspective on broader discussions of coffee landscapes in Southeast Asia. It specifically addresses issues of migration, knowledge, livelihoods, and the evolving nature of community-based coffee production.",
-         "keywords": "coffee farming · coffee landscapes · coffee processing · migration · community-based agriculture"
+         "abstract": "Coffee culture and traditional coffee shops have long been important to Hainanese communities across Southeast Asia. The research begins with an examination of representations of coffee and traditional coffee shops in Southeast Asian visual art. Based on fieldwork conducted in Singapore, Malaysia and Thailand, it examines how kopi culture, kopitiam spaces and Hainanese identities can be represented through documentary filmmaking. The presentation includes selected sequences from an ongoing documentary project, featuring food, kopitiam spaces and interviews with kopitiam owners. The research investigates kopitiams as spaces shaped by memories and histories of Hainanese migration. Through visual practice, it explores how food, Hainanese communities and histories of migration are connected within these spaces, and how these connections contribute to the construction of Hainanese identities across Southeast Asia.",
+         "keywords": "Hainanese · Kopi Culture · Kopitiam · Filmmaking"
         }
        ]
       },
@@ -479,15 +488,6 @@
          "keywords": "Agrarian Capitalism · State Engagement · Zomia · Akha · Coffee"
         },
         {
-         "title": "When the Highlands Move: Coffee, Akha, Tai Dam, and the Shifting Geography of Belonging in Thailand",
-         "presenter": "Pheeraphong Jampee",
-         "affiliation": "Chiang Mai University",
-         "country": "Thailand",
-         "online": false,
-         "abstract": "Coffee cultivation in Thailand has transformed from a state-led development strategy associated with ethnic minority incorporation into a commodity through which ethnic and regional identities are produced, negotiated, and represented. This paper examines this transformation through two cases: Akha coffee production in the northern highlands and Tai Dam coffee initiatives in Loei Province, Isan. The first case examines Akha Ama Coffee, tracing how coffee cultivation became embedded in changing relationships among ethnic identity, state development, markets, and representations of the highlands. The second examines institutional operations and the promotion of coffee among Tai Dam communities in Loei, focusing on how coffee has become connected to regional development and the articulation of Tai Dam and Isan identities. Drawing on historical texts, secondary literature, institutional documents, and interviews with three coffee producers, the paper employs Benedict Anderson’s concept of the “imagined community” alongside Bourdieu’s concepts of habitus and hysteresis to examine relationships between ethnicity, place, and structures of power. Moving from ethnic highlands to an ethnic minority community in the Isan lowlands, the paper argues that the “center” of coffee production and identity-making is not fixed. Coffee landscapes reveal how ethnic and regional belonging are reconstructed through state policy, markets, institutions, and agency.",
-         "keywords": "Isan · Tai Dam · Akha"
-        },
-        {
          "title": "Coffee and Everyday World-Making among Akha in Northern Thailand",
          "presenter": "ZHEN LIAN",
          "affiliation": "Assumption University of Thailand",
@@ -495,12 +495,21 @@
          "online": false,
          "abstract": "正文 **285 词**，符合主办方个人／合著论文摘要不超过300词的要求；访谈保留计划时态。[投稿要求](https://rcsd.soc.cmu.ac.th/uncategorized/call-for-abstracts-coffee-landscapes-of-the-southeast-asia-region/)\n\nMarx’s (1859) proposition that “the mode of production of material life conditions the general process of social, political and intellectual life” frames this comparison of Hani rice cultivation in Honghe, Akha tea cultivation in Mengsong, Xishuangbanna, and Akha coffee production in northern Thailand. Drawing on Marx’s (1867) account of reproduction and Althusser’s (1971) analysis of education, the study examines how production relations shape cultural knowledge and identity.\n\nThe research is primarily qualitative. Planned interviews with Ardang, Jesada Netawong and members of Seeds Journey will be analysed alongside published ethnographies of Hani and Akha communities, research published by Chiang Mai University’s Regional Center for Social Science and Sustainable Development, and Chinese and Thai policy and development project documents. Comparative analysis will connect interview accounts of livelihood and cultural change with documented shifts in land governance and education.\n\nThe analysis approaches cultivation, ritual and learning as interconnected practices. It examines how land regulation, commodity markets and development programmes reorganise crop choices, labour, resource control and the distribution of returns, while schooling and project training reshape skills, aspirations and cultural judgements. These processes alter opportunities to learn ancestral languages, lineage histories and ritual practices, influencing what people regard as backward, useful or worth preserving.\n\nSuch changes also inform public cultural expression. Dress, performances and historical narratives can become ways of asserting distinctiveness, national belonging and rights. Cultural recognition, however, need not restore authority over knowledge or resources.\n\nThe study traces how these changing understandings subsequently inform cultivation, employment, education and ritual participation, thereby sustaining, revising or contesting production relations. It conceptualises knowledge production as a recurring interaction between material production, learning and subject formation, locating differences between Chinese and Thai trajectories within their specific historical and institutional conditions.",
          "keywords": "Coffee · Akha · world-making · knowledge production · social reproduction · northern Thailand."
+        },
+        {
+         "title": "Scaling Quality, Unevenly: Specialty Coffee and Agrarian Change in the Cordillera Highlands of the Philippines",
+         "presenter": "Gene Paolo Garcia",
+         "affiliation": "Hiroshima University",
+         "country": "Japan",
+         "online": false,
+         "abstract": "This paper examines how judgments of coffee quality travel back into production among Indigenous Ibaloi and Kankana-ey growers in Atok, Benguet, in the Philippine highlands. It traces a history of feedback between farmers and downstream actors: from Baguio traders advising farmers to dry coffee longer and returning wet lots, to government trainings that evaluated quality through bean appearance, and, more recently, to the cupping scores, defect classifications, moisture targets, and processing protocols of specialty coffee. It draws on ten months of fieldwork (2024–2026) with nine coffee-farming households, alongside interviews with buyers and evaluators and archival research.\nI argue that specialty coffee intensifies this process of feedback-driven recalibration. Evaluations made downstream return to farms as advice, incentives, and buyer expectations. Cherries that older farmers called ripe are now graded half-ripe, and sorters who once removed only black beans work through a taxonomy of defects. Farmers recalibrate their practices in pursuit of dependable buyers and recognition.\nThe outcomes are uneven. Coffee is grown on inherited land, often divided among heirs, depends on paid labor from kin and neighbors, and follows trees that bear heavily one year and lightly the next. Access to buyers, processing facilities, and evaluation differs across households. Whether coffee is recognized and sold as specialty may therefore depend as much on whether a buyer can observe and verify its processing as on farmers’ technical knowledge.\nDrawing on Anna Tsing’s concept of nonscalability, I describe relations among land, trees, and labor that cannot simply be reproduced in the same way across farms. The same quality standard can thus produce specialty, premium, and commercial coffee within one village. Following quality judgments upstream shows how changing systems of coffee knowledge reshape agricultural landscapes unevenly, offering a Philippine case for Southeast Asian discussions of specialty coffee, agrarian transition, and the production of value.",
+         "keywords": "Specialty coffee · coffee quality · Indigenous farmers · agrarian change · value"
         }
        ]
       },
       {
        "code": "P06",
-       "name": "Producing Coffee Knowledge in Highland Communities",
+       "name": "Coffee Knowledge in Community Practice",
        "room": "Room 3 4107 Meeting Room",
        "roomKey": "room-4107",
        "theme": "6. Coffee and knowledge production",
@@ -516,13 +525,22 @@
          "keywords": "Ethnobotany · Coffee culture · Karen ethnic group"
         },
         {
-         "title": "Producing Culture: The Inward Flow of Coffee Knowledge and the Transformation of Everyday and Ritual Practice in Doi Chang, a Coffee-Producing Community in Northern Thailand",
-         "presenter": "Miaomiao Lu",
-         "affiliation": "Yunnan University",
-         "country": "China",
+         "title": "Sensory Reconstruction: A Study on the \"Multi-level Translation\" and Embodied Practice of Yunnan Coffee within World Standard Language Context",
+         "presenter": "Mingxuan Sun",
+         "affiliation": "Department of Chinese Language and Literature, School of Humanities, Southwest Jiaotong University",
+         "country": "",
          "online": false,
-         "abstract": "Coffee travels from mountain villages to urban cafés as a tradable commodity, yet the culture that surrounds it moves in the opposite direction—flowing from consumer markets back into the communities where the beans are cultivated. Drawing on ethnographic fieldwork in Doi Chang, a highland ethnic minority village in northern Thailand, this paper examines how coffee culture has flowed back from consumer markets into the place of production since the industry's establishment in the region. The study finds that this inward cultural flow operates on two interconnected levels. First, villagers have acquired practical knowledge of post-harvest processing, roasting, and sensory evaluation through institutional training programs, on-site guidance from external coffee companies, and informal master-apprentice relationships within the village. These newly acquired skills have transformed them from growers who merely sell fresh cherries into practitioners capable of engaging in processing activities such as sorting, grading, and roasting. Second, coffee has entered the everyday social and ritual life of the community. Visiting a neighbor's house to share coffee and conversation has become a regular social practice, while coffee has also been incorporated into local ceremonial contexts, acquiring meanings that extend far beyond its economic value as a cash crop. This bidirectional movement reveals that producing communities are not merely passive starting points for raw materials flowing out along global value chains, but are also active sites where external coffee culture settles, is reabsorbed, and takes on locally specific forms. Consequently, the relationship between villagers and coffee has expanded from a simple grow-and-sell exchange into a complex interweaving of production, processing, tasting, social hospitality, and ritual consumption.",
-         "keywords": "knowledge flow · occupational change · Thailand coffee · coffee-producing community"
+         "abstract": "Rooted in the \"cultural turn\" of Translation Studies, this research addresses the fundamental question: How is \"beyond-text\" translation possible? To tackle the challenges of iinter-subjective transmission caused by the embodied nature of sensory experience, this study deploys sensory ethnography to examine the translation practices of Yunnan-based cultural enterprises within the global specialty coffee value chain. The findings reveal that the cross-cultural dissemination of specialty coffee manifests as a \"multi-level translation\" process: moving from pure physicochemical signals in scientific laboratories to the international standardized languages of SCA (Specialty Coffee Association) and CQI (Coffee Quality Institute), and ultimately into localized dietary and cultural experiences. This trajectory demonstrates that translation has evolved far beyond the substitution of linguistic symbols; it enables the reconstruction of abstract physicochemical signals into embodied cultural experiences. Through deep academia-industry synergies, this study asserts that within this unique translation paradigm, the success of translation no longer depends on \"equivalence\" or “same-ness” between ST (source text) and TT (target text), but rather on whether the act of translation can establish a shared sensory connection among different cultural subjects. Such collaborations—by empowering stakeholders at the origin—not only highlight the human-centric value of translation and diverse career pathways, but also reinforce the human dimensions of diversity, equity, and inclusion. Ultimately, this approach fosters a more context sensitive and inclusive knowledge system in the digital age. This approach not only benefits translation professionals in the specialty coffee sector but can also function as a model for other premium cultural and creative industries.",
+         "keywords": "Translation · Sensory Ethnography · Inter-subjectivity · Specialty Coffee · Creative Industry · Premium Industry"
+        },
+        {
+         "title": "The Changing Trajectory of Community-Based Coffee Farming and Processing in Barangay Talbak, Doña Remedios Trinidad, Bulacan, Philippines",
+         "presenter": "ARVIN EBALLO",
+         "affiliation": "University of Santo Tomas",
+         "country": "Philippines",
+         "online": false,
+         "abstract": "This study explores the evolving landscape of community-based coffee farming and processing in Barangay Talbak, located in Doña Remedios Trinidad, Bulacan, Philippines. The history of coffee farming in this community is linked to the migration of families from Cavite, a region in the southern Philippines, during the 1960s and 1970s. These settlers moved to Talbak in search of agricultural land and brought with them the knowledge and practices associated with coffee cultivation. Over time, coffee farming has become an integral part of the community's agricultural livelihood and local knowledge. This qualitative study aims to understand how the coffee landscape has evolved by examining the experiences and perspectives of coffee farmers and other key community members. Using a historical-contextual approach, the study will conduct semi-structured interviews to explore the development of coffee farming and processing. It will investigate the factors that have influenced its changing trajectory, as well as the responses and adaptations of local farmers. The interviews will be analyzed thematically to identify patterns related to production, processing, livelihoods, markets, environmental conditions, agricultural knowledge, and other factors shaping the community’s coffee landscape. By documenting the experiences and perspectives of coffee-growing communities in Talbak, this study offers a localized perspective on broader discussions of coffee landscapes in Southeast Asia. It specifically addresses issues of migration, knowledge, livelihoods, and the evolving nature of community-based coffee production.",
+         "keywords": "coffee farming · coffee landscapes · coffee processing · migration · community-based agriculture"
         },
         {
          "title": "Seeing Sustainability: A Participatory Visual Study of Coffee Farmers’ Knowledge, Negotiation, and Aspirations",
@@ -532,15 +550,6 @@
          "online": true,
          "abstract": "This paper examines how smallholder coffee farmers in Nan Province, Northern Thailand, produce, negotiate, and transmit knowledge about sustainable farming outside formal institutional channels. Using Photovoice, semi-structured interviews, and a focus group with seven farmers, the study investigates farming as a site of active knowledge production and informal pedagogy, not merely a technical or economic activity. Findings show farmers departing from standardised agricultural guidance in favour of experientially validated adaptations. For example, farmers modified planting techniques after observing that official recommendations reduced seedling survival in dry-season conditions. Such knowledge is generated through trial-and-error, peer exchange, and intergenerational transmission, circulating through informal networks such as farmer messaging groups, mentorship, and school partnerships rather than expert-led instruction. Farmers also position themselves explicitly as educators: training new growers, integrating coffee cultivation into school curricula, and treating farming itself as an experiential pedagogy for younger generations. These practices challenge the assumption, still embedded in agricultural extension and certification systems, that expertise flows primarily from institutions to farmers. By centring farmers' own images and narratives, the study documents them as knowledge holders and co-producers of expertise, whose innovations are frequently unrecognised within formal knowledge hierarchies. The paper contributes to discussions of epistemic justice in agricultural knowledge systems, arguing that participatory visual methods can surface locally legitimate expertise that conventional knowledge-transfer models overlook. It offers implications for how knowledge production in the coffee sector is understood beyond its commercial and technical dimensions to include the informal, experiential systems through which smallholders actually generate, validate, and pass on sustainability knowledge.",
          "keywords": "Knowledge Production · Coffee Farming · Thailand · Epistemic Justice · Participatory Visual Methods"
-        },
-        {
-         "title": "From Fresh Tea Leaves to Coffee Cherries: Remaking Practices and Knowledge in a Highland Borderland",
-         "presenter": "Omsin Boonleart",
-         "affiliation": "Mae Fah Luang University",
-         "country": "Thailand",
-         "online": false,
-         "abstract": "Over the past four decades, state-led development and market expansion have changed agricultural practices in the highlands of Northern Thailand. Previous highland agricultural development programs that promoted different crops in different areas, including vegetables, tea, and coffee, contributed to differentiated agricultural landscapes and crop-specific practices and knowledge. However, these agricultural landscapes are not fixed. Growing markets and private actors have increasingly influenced how new crops and practices enter areas with established crop patterns. This paper examines these changes through three neighboring ethnic highland communities in Chiang Rai, which share a similar tea-based agricultural history. While coffee is not new to all of these communities, it is becoming more visible even in areas well known for tea. Coffee has entered these communities through different pathways, which allows me to examine how farmers manage existing and new practices. This paper employs the concept of landscape plasticity to examine how farmers draw on different forms of agricultural and market knowledge as coffee enters existing tea-based landscapes. These practices differ depending on how coffee enters the community and farmers’ access to knowledge, networks and markets. Initial observations from fieldwork on tea production suggest that many farmers continue to rely on tea as a regular source of income, while introducing coffee as an additional crop. Many sell coffee cherries or parchment rather than processing it further, similar to how they sell fresh tea leaves. Others with more financial resources, stronger social networks, and greater market knowledge have more options to experiment with further processing, develop their own brands, explore specialty coffee markets, and continue supplying larger markets. These observations suggest that coffee does not simply replace tea but gradually remakes agricultural practices and knowledge. This process is uneven, showing how landscape plasticity can take different forms within the same highland borderland.",
-         "keywords": "Chiang Rai · Coffee · Landscape Plasticity · Agricultural Knowledge"
         }
        ]
       }
@@ -581,7 +590,7 @@
      "end": "10:30 AM",
      "startMin": 540,
      "type": "plenary",
-     "title": "Plenary discussion II: Coffee, Land and Forest: Climate and Livelihoods of Upland Growers in Southeast Asia: Cases from Indonesia, Viet Nam, Thailand and Laos PDR",
+     "title": "Plenary Discussion II: Coffee, Land and Forest: Climate and Livelihoods of Upland Growers in Southeast Asia: Cases from Indonesia, Viet Nam, and Thailand",
      "about": "Coffee has been promoted across the uplands of the region as a crop that increases household income while maintaining forest cover. The income gains are documented. The associated costs are less often recorded. This plenary presents four cases. In Manggarai, Indonesia, competing claims between customary cultivation and state-designated protected forest led to violence and a human rights investigation. In Dien Bien, Viet Nam, commercialisation has shifted land, labour and investment away from subsistence production, increasing cash income while raising exposure to price and climate risk. In Thailand, growers cultivate land within a forest zone without formal documentation, which limits what they can plan, sell and transfer. Speakers will discuss what households lose in these transitions and what is required for them to farm securely.",
      "room": "",
      "roomKey": "",
@@ -657,6 +666,15 @@
          "keywords": "Lao PDR · Livelihood strategies · Coffee · Economic disparity · Climate change"
         },
         {
+         "title": "From Fresh Tea Leaves to Coffee Cherries: Remaking Practices and Knowledge in a Highland Borderland",
+         "presenter": "Omsin Boonleart",
+         "affiliation": "Mae Fah Luang University",
+         "country": "Thailand",
+         "online": false,
+         "abstract": "Over the past four decades, state-led development and market expansion have changed agricultural practices in the highlands of Northern Thailand. Previous highland agricultural development programs that promoted different crops in different areas, including vegetables, tea, and coffee, contributed to differentiated agricultural landscapes and crop-specific practices and knowledge. However, these agricultural landscapes are not fixed. Growing markets and private actors have increasingly influenced how new crops and practices enter areas with established crop patterns. This paper examines these changes through three neighboring ethnic highland communities in Chiang Rai, which share a similar tea-based agricultural history. While coffee is not new to all of these communities, it is becoming more visible even in areas well known for tea. Coffee has entered these communities through different pathways, which allows me to examine how farmers manage existing and new practices. This paper employs the concept of landscape plasticity to examine how farmers draw on different forms of agricultural and market knowledge as coffee enters existing tea-based landscapes. These practices differ depending on how coffee enters the community and farmers’ access to knowledge, networks and markets. Initial observations from fieldwork on tea production suggest that many farmers continue to rely on tea as a regular source of income, while introducing coffee as an additional crop. Many sell coffee cherries or parchment rather than processing it further, similar to how they sell fresh tea leaves. Others with more financial resources, stronger social networks, and greater market knowledge have more options to experiment with further processing, develop their own brands, explore specialty coffee markets, and continue supplying larger markets. These observations suggest that coffee does not simply replace tea but gradually remakes agricultural practices and knowledge. This process is uneven, showing how landscape plasticity can take different forms within the same highland borderland.",
+         "keywords": "Chiang Rai · Coffee · Landscape Plasticity · Agricultural Knowledge"
+        },
+        {
          "title": "Coffee Agriculture and Agroforestry Under Climate Change in Laos: From History to Tasty Cup",
          "presenter": "Bae PHEAXAY",
          "affiliation": "Faculty of Environmental Sciences, National University of Laos",
@@ -664,15 +682,6 @@
          "online": false,
          "abstract": "Coffee (Coffea spp.) plays a critical socio-economic role in Laos, serving as a primary cash crop for smallholder farmers, particularly across the fertile, elevated expanse of the Bolaven Plateau. Introduced during the French colonial era in the early 20th century, Laotian coffee production has evolved from historic cultivations of Coffea canephora (Robusta) and Coffea liberica toward high-value Coffea arabica varieties. However, changing climatic conditions characterized by rising ambient temperatures, prolonged dry seasons, and erratic precipitation patterns increasingly threaten yield stability, bean quality, and the physiological suitability of traditional growing zones.\nAgroforestry systems present a key climate adaptation strategy for Laotian coffee agriculture. Integrating shade trees (e.g., Leguminosae species, fruit trees, and native forest canopy) into coffee plantations buffers microclimatic extremes by mitigating canopy temperatures, maintaining soil moisture, and suppressing pest and disease vectors such as the coffee berry borer (Hypothenemus hampei). Beyond microclimate thermal regulation, shaded agroecosystems enhance biodiversity, sequester carbon, and prevent soil erosion on sloped terrains.\nThis paper traces the historical trajectory of Laotian coffee cultivation, evaluates current climate vulnerability modeling across key production zones, and investigates how agroforestry management directly influences sensory profiles in the final cup. By prolonging fruit maturation cycles, shaded microenvironments foster optimum carbohydrate accumulation and organic acid synthesis within the coffee cherry. Embracing climate-resilient agroforestry models ensures sustainable livelihoods for smallholder farmers while preserving the distinct cup quality and origin identity of Laotian specialty coffee.",
          "keywords": "Bolaven Plateau · Smallholder Farmers · climate-resilient · Microclimate Management · Laotian coffee"
-        },
-        {
-         "title": "Resilience of Coffee Communities: A hidden story of ethnic communities from Chiang Mai Province, Thailand",
-         "presenter": "Thant Zin Aung",
-         "affiliation": "Lund University",
-         "country": "Thailand",
-         "online": false,
-         "abstract": "This thesis explores the backgrounds and socio-ecological systems of ethnic communities in rapidly growing coffee destinations in Chiang Mai province, Thailand. Using a political ecology approach, it investigates the resilience of coffee-producing villages where ethnic minorities maintain unique cultures and identity. The study highlights ecological vulnerability and socio-political marginalisation providing multi-dimensional views of ethnic coffee communities. Employing qualitative methods, including observation and in-depth interviews, it examines land-use practices, agricultural management, and the impacts of conservation laws and traditional customs. The research captures local knowledge and perceptions of climate change, resilience, and adaptation strategies through observation and interviews with farmers, community members, and support institutions. By analysing the social and environmental conditions of these communities, the study addresses opportunities and challenges in implementing adaptation measures to strengthen resilience against the consequences of climate change.",
-         "keywords": "Adaptation Measures · Coffee · Community Resilience · Climate Change · Political Ecology"
         }
        ]
       },
@@ -703,22 +712,22 @@
          "keywords": "coffee growers · livelihood · sustainable development"
         },
         {
-         "title": "Specialty Coffee Fermentation Technique \"Dopamine\" in Practice: A Case Study of Nandaohe Specialty Coffee Estate in Pu'er, Yunnan",
-         "presenter": "Mo Li",
-         "affiliation": "Yunnan Agricultural University",
-         "country": "China",
+         "title": "Transforming the Coffee Value Chain: Strengthening producers for Quality and Sustainability",
+         "presenter": "Kitiphong Khongphinitbunjong",
+         "affiliation": "Mae Fah Luang University",
+         "country": "Thailand",
          "online": false,
-         "abstract": "In the context of the \"Third Wave Coffee\" movement, the quest for diverse\nflavor profiles in China has spurred a proliferation of innovative fermentation\ntechniques. This article examines how coffee manor owners and visiting\nprofessionals in Pu’er, Yunnan, refine traditional methods (washed and\nnatural) and innovate through experimental fermentation to impart novel\nsensory characteristics. Drawing on ethnographic fieldwork at three specialty\ncoffee manors in the Nan Dao He region, the study explores the deployment of \"mētis\"—a form of practical, experiential knowledge—in the construction of unique fermentation techniques. It highlights the highly interactive nature of this process, where practitioners\nmodify fermentation parameters through cumulative experience and continuous calibration. Additionally, the paper evaluates the current trend of using laboratory based yeasts to achieve standardization and stability in flavor production. By contrasting these praxis-based interactive techniques with standardized fermentation technologies, the study elucidates the complex knowledge-technology assemblage within Yunnan's contemporary coffee industry.",
-         "keywords": ""
+         "abstract": "Arabica coffee producers have long been trapped in a cycle of low market prices driven by batch-to-batch quality inconsistencies and a limited understanding of global standards. To address these challenges, this study examined the transformation of coffee producers within the coffee value chain through the integration of scientific practices and standard. We demonstrate systematic change from the eleven coffee producers in Chiang Rai by implementing a standardized with  four-step scientific protocols; (1) a quality of cherry picking and testing, (2) pH-guided during fermentation (pH 4.0–4.5), (3) precision drying and monotoring, and (4) SCA-standard coffee green bean grading. Through cupping evaluations, interviews, and field visits following targeted workshops and training, we observed significant quality improvements. the cupping scores increased from 78 to 84 points, though one coffee producer showed no improvement and remained at 70 points. Furthermore, processing defect rates were reduced by approximately 20%. Notably, an increased proportion of lots scoring 75–84 points achieved a 20–25% price increase, while six producers utilizing natural and honey processes earned 20–40% premiums over washed lots. These results demonstrated that establishing measurable step controls through collaborative farmer-researcher-buyer knowledge enables quality reproducibility, offering a scalable model for extension services and graded purchasing programs.",
+         "keywords": "Arabica coffee · coffee value chain · coffee producers · quality standards"
         },
         {
-         "title": "Sensory Reconstruction: A Study on the \"Multi-level Translation\" and Embodied Practice of Yunnan Coffee within World Standard Language Context",
-         "presenter": "Mingxuan Sun",
-         "affiliation": "Department of Chinese Language and Literature, School of Humanities, Southwest Jiaotong University",
-         "country": "",
+         "title": "Producing Culture: The Inward Flow of Coffee Knowledge and the Transformation of Everyday and Ritual Practice in Doi Chang, a Coffee-Producing Community in Northern Thailand",
+         "presenter": "Miaomiao Lu",
+         "affiliation": "Yunnan University",
+         "country": "China",
          "online": false,
-         "abstract": "Rooted in the \"cultural turn\" of Translation Studies, this research addresses the fundamental question: How is \"beyond-text\" translation possible? To tackle the challenges of iinter-subjective transmission caused by the embodied nature of sensory experience, this study deploys sensory ethnography to examine the translation practices of Yunnan-based cultural enterprises within the global specialty coffee value chain. The findings reveal that the cross-cultural dissemination of specialty coffee manifests as a \"multi-level translation\" process: moving from pure physicochemical signals in scientific laboratories to the international standardized languages of SCA (Specialty Coffee Association) and CQI (Coffee Quality Institute), and ultimately into localized dietary and cultural experiences. This trajectory demonstrates that translation has evolved far beyond the substitution of linguistic symbols; it enables the reconstruction of abstract physicochemical signals into embodied cultural experiences. Through deep academia-industry synergies, this study asserts that within this unique translation paradigm, the success of translation no longer depends on \"equivalence\" or “same-ness” between ST (source text) and TT (target text), but rather on whether the act of translation can establish a shared sensory connection among different cultural subjects. Such collaborations—by empowering stakeholders at the origin—not only highlight the human-centric value of translation and diverse career pathways, but also reinforce the human dimensions of diversity, equity, and inclusion. Ultimately, this approach fosters a more context sensitive and inclusive knowledge system in the digital age. This approach not only benefits translation professionals in the specialty coffee sector but can also function as a model for other premium cultural and creative industries.",
-         "keywords": "Translation · Sensory Ethnography · Inter-subjectivity · Specialty Coffee · Creative Industry · Premium Industry"
+         "abstract": "Coffee travels from mountain villages to urban cafés as a tradable commodity, yet the culture that surrounds it moves in the opposite direction—flowing from consumer markets back into the communities where the beans are cultivated. Drawing on ethnographic fieldwork in Doi Chang, a highland ethnic minority village in northern Thailand, this paper examines how coffee culture has flowed back from consumer markets into the place of production since the industry's establishment in the region. The study finds that this inward cultural flow operates on two interconnected levels. First, villagers have acquired practical knowledge of post-harvest processing, roasting, and sensory evaluation through institutional training programs, on-site guidance from external coffee companies, and informal master-apprentice relationships within the village. These newly acquired skills have transformed them from growers who merely sell fresh cherries into practitioners capable of engaging in processing activities such as sorting, grading, and roasting. Second, coffee has entered the everyday social and ritual life of the community. Visiting a neighbor's house to share coffee and conversation has become a regular social practice, while coffee has also been incorporated into local ceremonial contexts, acquiring meanings that extend far beyond its economic value as a cash crop. This bidirectional movement reveals that producing communities are not merely passive starting points for raw materials flowing out along global value chains, but are also active sites where external coffee culture settles, is reabsorbed, and takes on locally specific forms. Consequently, the relationship between villagers and coffee has expanded from a simple grow-and-sell exchange into a complex interweaving of production, processing, tasting, social hospitality, and ritual consumption.",
+         "keywords": "knowledge flow · occupational change · Thailand coffee · coffee-producing community"
         }
        ]
       }
@@ -730,7 +739,7 @@
      "end": "1:30 PM",
      "startMin": 750,
      "type": "lunch",
-     "title": "Lunch Break",
+     "title": "Lunch and Public Cupping: Understanding the development and diversity of coffee varieties through the cup",
      "about": "",
      "room": "",
      "roomKey": "",
@@ -762,133 +771,53 @@
      "end": "3:00 PM",
      "startMin": 810,
      "type": "concurrent",
-     "title": "Concurrent Session IV (2 Session)",
+     "title": "Concurrent Session IV (2 Sessions)",
      "about": "",
      "room": "",
      "roomKey": "",
      "sessions": [
       {
        "code": "P09",
-       "name": "Café Landscapes in Southeast Asian Cities",
+       "name": "Reimagining Coffee Culture: Image, Value and Identity",
        "room": "Room 1 Auditorium",
        "roomKey": "dhani-room",
        "theme": "4. Coffee culture",
        "chair": "",
        "papers": [
         {
-         "title": "Producing Urban Space through Coffee Culture: The Transformation of Contemporary Bangkok",
-         "presenter": "Natharinee Neungchamnong",
-         "affiliation": "-",
+         "title": "Body, Nature, and the Gaze: A Study on the Cheat code forviews and Cultural Mechanisms of China's influencer Cafes",
+         "presenter": "Yanlan SHI",
+         "affiliation": "School of Law and Politics, Yunnan University of Finance and Economics",
+         "country": "China",
+         "online": false,
+         "abstract": "In recent years, various influencer Cafés that combine sensory experiences such as taste and sight have emerged in China, becoming a new form of tourism in the context of cultural and tourism integration. This study focuses on several\npopular and highly representative influencer Cafes in China, conducting an in-depth analysis to argue that visiting these cafés has become a cultural phenomenon reflecting nature, visual aesthetics, and bodily experience within tourism. Judging from\ncurrent forms—such as waterfall cafés and cave cafés—coffee consumption is deeply integrated with tourism experiences, involving observation, physical sensations, and people's exploration and aspirations toward nature. In today’s tourism consumption, gaze theory and embodiment theory alone are insufficient to fully explain the underlying cultural and social meanings and the mechanisms behind this phenomenon. Drawing on cultural sociology, this study attempts to analyze the cultural mechanisms emerging from the fusion of symbolic consumption and bodily experience, thereby proposing a new theoretical framework for understanding tourism experiences.",
+         "keywords": ""
+        },
+        {
+         "title": "When the Highlands Move: Coffee, Akha, Tai Dam, and the Shifting Geography of Belonging in Thailand",
+         "presenter": "Pheeraphong Jampee",
+         "affiliation": "Chiang Mai University",
          "country": "Thailand",
          "online": false,
-         "abstract": "The rapid growth of coffee culture in Bangkok has significantly reshaped the city’s urban landscape. This study examines how coffee culture participates in the transformation and production of urban space through a comparative study of Ari and Song Wat. Although both neighborhoods were historically shaped by local communities, the emergence of new forms of consumption and commercialization has transformed their physical, social, and cultural landscapes. Despite these similarities, the two areas differ in their historical development and social contexts. While Ari has developed as a residential area, Song Wat has emerged around its historical role as a riverside trading district. Drawing on Henri Lefebvre’s concept of the production of space, this study conceptualizes coffee shops not only as commercial establishments but as social and cultural spaces through which urban identities, practices, and meanings are produced and negotiated. This research employs a comparative qualitative case-study approach in order to examine changes in the physical environment and patterns of spatial uses, and the experiences of people within these neighborhoods. The study, hence, focuses on three dimensions of urban transformation: physical and commercial changes, changing social practices and experiences, and the symbolic representation of neighborhood identities. By comparing these areas, the research seeks to identify both similarities and differences in how coffee culture interacts with processes of commercialization and urban change. Rather than treating coffee culture as the sole cause of urban transformation, the study positions it as one of the cultural and economic forces that contribute to the reshaping of contemporary Bangkok. This research, therefore, aims to understand how everyday practices can participate in the production, negotiation, and reconfiguration of urban space.",
-         "keywords": "Coffee culture · Urban space · Commercialization · Identities"
+         "abstract": "Coffee cultivation in Thailand has transformed from a state-led development strategy associated with ethnic minority incorporation into a commodity through which ethnic and regional identities are produced, negotiated, and represented. This paper examines this transformation through two cases: Akha coffee production in the northern highlands and Tai Dam coffee initiatives in Loei Province, Isan. The first case examines Akha Ama Coffee, tracing how coffee cultivation became embedded in changing relationships among ethnic identity, state development, markets, and representations of the highlands. The second examines institutional operations and the promotion of coffee among Tai Dam communities in Loei, focusing on how coffee has become connected to regional development and the articulation of Tai Dam and Isan identities. Drawing on historical texts, secondary literature, institutional documents, and interviews with three coffee producers, the paper employs Benedict Anderson’s concept of the “imagined community” alongside Bourdieu’s concepts of habitus and hysteresis to examine relationships between ethnicity, place, and structures of power. Moving from ethnic highlands to an ethnic minority community in the Isan lowlands, the paper argues that the “center” of coffee production and identity-making is not fixed. Coffee landscapes reveal how ethnic and regional belonging are reconstructed through state policy, markets, institutions, and agency.",
+         "keywords": "Isan · Tai Dam · Akha"
         },
         {
-         "title": "\"Going for Coffee\" in Coffee Country: Production, Consumption, and Place in Đà Lạt's Café Landscape",
-         "presenter": "Tran Que Tram Nguyen",
-         "affiliation": "Faculty of Social Work, Anthropology and Sociology University of Social Sciences and Humanities, Vietnam National University, Ho Chi Minh City",
-         "country": "Vietnam",
-         "online": false,
-         "abstract": "Đà Lạt–Lâm Đồng is both one of Vietnam's principal coffee-producing regions and a major tourist destination where \"going for coffee\" (đi cà phê) can foreground landscape, atmosphere, events, coffee craft, or production itself. Coffee-tourism scholarship has examined how coffee spaces may connect, decouple, or reconnect production and consumption. Building on this discussion, the paper asks where coffee as a locally produced commodity sits within Đà Lạt's café experiences, and how the geographical proximity of production and consumption relates to symbolic and experiential connections between coffee, production, and place.\nThe paper reports an ongoing comparative qualitative content analysis of 12–15 cafés and coffee venues in Đà Lạt, purposively sampled to capture variation among destination/check-in cafés, landscape/atmosphere cafés, farm- or production-linked cafés, and specialty roasteries. The corpus comprises café websites, product pages, and Facebook posts, alongside public customer reviews and tourism media, coded to distinguish what cafés foreground from what customers recount. Three dimensions are coded as independent rather than sequential: reported or documented origin; representational connections to farms, producers, and production; and experiential connections through tasting, brewing, roasting, or farm visits. Coding further separates the centrality of coffee from the centrality of local production.\nPreliminary coding of initial cases suggests that these dimensions need not move together. In one case, detailed Cầu Đất origins appear on a café's product pages while its social media foregrounds destination and atmosphere, positioning local production differently across platforms. In another, a specialty roastery keeps coffee central to its public presentation while linking customers to local, national, and transnational origins, showing that coffee centrality need not coincide with local-production centrality. The paper extends discussion of production–consumption relations by showing how a producing region's coffee landscape is configured through uneven connections among commodity, place, production, and experience across café forms and platforms.",
-         "keywords": "coffee tourism · production–consumption relations · café landscape · local production · Đà Lạt"
-        },
-        {
-         "title": "Dynamics of Coffee Consumption and the Development of Coffee Shops in Kendari, Southeast Sulawesi, Indonesia",
-         "presenter": "Benny Baskara",
-         "affiliation": "Halu Oleo University",
+         "title": "From Ritual Hospitality to Digital Distinction: Revaluing Coffee in Urban Indonesia",
+         "presenter": "Funco Tanipu",
+         "affiliation": "Universitas Negeri Gorontalo",
          "country": "Indonesia",
-         "online": true,
-         "abstract": "Consuming coffee at coffee shops has become a growing lifestyle in Kendari, the capital city of Southeast Sulawesi Province, Indonesia. Coffee consumption at coffee shops is not merely drinking or enjoying coffee, but coffee shops serve as public spaces where consumers gather and engage in various activities. Coffee consumption patterns are not only determined by consumer demographics, such as age and gender, but also by the development of coffee processing technology. Therefore, besides long-established traditional coffee shops, various new formats have emerged, such as modern coffee shops, street-side coffee stalls, and mobile coffee vendors.\nBased on the background above, this paper will describe the dynamics of coffee consumption and the development of coffee shops in Kendari. The research adopts cultural anthropology perspectives and uses ethnographic methods with two main elements: participant observation and in-depth interviews. Participant observation is conducted at several coffee shops in Kendari, while in-depth interviews are conducted with both consumers and coffee shop owners or managers.\nThe research findings show that coffee shops in Kendari can be categorized into two general types: traditional and modern. Traditional coffee shops serve coffee using simple and traditional methods: brewing coffee grounds with hot water and filtering the mixture using a cloth filter. Meanwhile, modern coffee shops serve coffee using modern machines, resulting in various coffee types with contemporary names, such as espresso, caffè latte, or cappuccino. Based on demographic categories, the consumers of traditional coffee shops are mostly men above 40 years old, whereas consumers of modern coffee shops are mostly young people, both men and women, under 40 years old. In fact, coffee culture in Kendari has developed with a long-standing history rooted in the existence of traditional coffee shops, and later it underwent cultural reconstruction and reproduction with the emergence of modern coffee shops.",
-         "keywords": "coffee consumption · coffee shops · Kendari · cultural reproduction"
-        },
-        {
-         "title": "Kopitiams across Southeast Asia: Visualising Space and Hainanese Identities through Documentary Practice",
-         "presenter": "Hanxiang Zhang",
-         "affiliation": "SOAS, University of London",
-         "country": "United Kingdom",
          "online": false,
-         "abstract": "Coffee culture and traditional coffee shops have long been important to Hainanese communities across Southeast Asia. The research begins with an examination of representations of coffee and traditional coffee shops in Southeast Asian visual art. Based on fieldwork conducted in Singapore, Malaysia and Thailand, it examines how kopi culture, kopitiam spaces and Hainanese identities can be represented through documentary filmmaking. The presentation includes selected sequences from an ongoing documentary project, featuring food, kopitiam spaces and interviews with kopitiam owners. The research investigates kopitiams as spaces shaped by memories and histories of Hainanese migration. Through visual practice, it explores how food, Hainanese communities and histories of migration are connected within these spaces, and how these connections contribute to the construction of Hainanese identities across Southeast Asia.",
-         "keywords": "Hainanese · Kopi Culture · Kopitiam · Filmmaking"
+         "abstract": "**From Ritual Hospitality to Digital Distinction: Revaluing Coffee in Urban Indonesia**\n\nCoffee in Indonesia is commonly described either as an agricultural commodity or as a rapidly expanding urban lifestyle. This paper argues that its contemporary social significance is better understood as a process of **revaluation**, through which inherited meanings of hospitality, ritual, locality, and sociality are selectively translated into new forms of commercial, symbolic, and digital value. Drawing on qualitative field research in Jakarta, Yogyakarta, and Makassar, including observations in traditional and modern coffee spaces and semi-structured interviews with fifteen consumers and five coffee-industry practitioners, the study compares how coffee acquires different meanings across three urban contexts.\n\nThe findings identify four interrelated modes of social valuation: religious and ritual hospitality, social relationship, life-cycle commemoration, and social distinction. In Makassar, coffee remains embedded in post-Ramadan religious gatherings while regional origins such as Toraja and Kalosi are simultaneously reformulated as markers of authenticity and local identity in modern cafés. In Yogyakarta, vernacular coffee practices coexist with specialty cafés, coffee catering, and creative communities, while in Jakarta coffee shops increasingly operate as spaces of professional networking, lifestyle performance, and status differentiation. Across the three cities, cafés, branding practices, origin narratives, visual aesthetics, and social media transform coffee from a beverage into a medium for constructing identity and distinction.\n\nRather than representing a linear shift from tradition to modernity, these processes demonstrate how local meanings are repeatedly reworked through commodity circulation and digital representation. The paper proposes the notion of **urban coffee landscapes as infrastructures of valuation**, where place, ritual, taste, class, and mediated visibility intersect. It contributes to understanding how Southeast Asian coffee cultures are being transformed not through the disappearance of local traditions, but through their selective incorporation into contemporary markets and regimes of distinction.",
+         "keywords": "Keywords: coffee landscape · social valuation · urban coffee culture · distinction · commodity · Indonesia"
         }
        ]
       },
       {
        "code": "P10",
-       "name": "Coffee as Commodity: Prices, Middlemen and Value Chains",
+       "name": "Coffee Science: Grafting, Processing and Food Safety",
        "room": "Room 2 Co-working Space",
        "roomKey": "co-working-space",
-       "theme": "3. Coffee as commodity",
-       "chair": "",
-       "papers": [
-        {
-         "title": "Producing the “Sustainable” Coffee Landscape: Political Ecology, Value Chains, and Smallholder Livelihoods in the Gayo Highlands of Aceh, Indonesia",
-         "presenter": "Sukumar Babu Ramapuram Samuel Vijay",
-         "affiliation": "Goethe University in Germany",
-         "country": "Indonesia",
-         "online": false,
-         "abstract": "Southeast Asia's coffee landscapes are being changed by the combination of global specialty-coffee markets, sustainability interventions, climate change, and evolving rural governance. This research investigates these processes in the Gayo Highlands of Aceh, Indonesia, where smallholder Arabica production is both rooted in global value chains and contested local landscapes of land, forest, and livelihoods. Using political ecology and a critical global value chain (GVC) perspective, the paper investigates how sustainability interventions and global coffee markets reshape smallholder producers' access to land, resources, knowledge, and value, and what the implications are for livelihood and environmental justice. Existing research has demonstrated that coffee upgrading and sustainability programs can create new market opportunities, but they can also perpetuate local inequalities by limiting access to money, markets, institutions, and decision-making. Research on Indonesian coffee shows that the benefits of \"relationship coffee\" and value-chain upgrading are frequently reaped by locally powerful players, but sustainability programs may have limited compatibility with current livelihoods. However, little attention has been paid to how environmental governance, gendered interactions, climate adaptation, and value-chain reconfiguration intersect geographically within the same coffee landscape. The study's methodology is a qualitative, multi-scalar approach that includes semi-structured interviews with farmers, cooperatives, traders, government and development actors, participant observation, life histories, and analysis of coffee certification, land-use, and policy papers. By linking everyday livelihood practices to larger commodity governance processes, the paper contends that \"sustainable coffee\" should be viewed as a contested political process in which value, environmental responsibility, and resource access are negotiated. It thus combines studies on political ecology, agrarian change, and GVCs to demonstrate how sustainability is produced and unevenly distributed across the Gayo coffee landscape.",
-         "keywords": "Political Ecology · Coffee Landscapes · Global Value Chains · Smallholder Livelihoods · Environmental Justice"
-        },
-        {
-         "title": "Between Field and Market: How Middlemen Shape the Sustainable Choices of Coffee Smallholders in Vietnam's Central Highlands",
-         "presenter": "Thi To Ngoc Do",
-         "affiliation": "Phuoc Son Agricultural Trading Ltd. Company",
-         "country": "Vietnam",
-         "online": false,
-         "abstract": "In Vietnam's Central Highlands, the first link in the coffee value chain is rarely a cooperative or a program officer. It is the middleman: the local trader who provides credit before harvest, supplies inputs on deferred payment, shares price information, and guarantees a buyer at the farm gate. These relationships, often maintained across generations, reduce risk for households in a landscape where formal finance is distant and land rights are insecure. Yet the same relationships may quietly narrow the sustainable choices smallholders can make: a household dependent on its trader's input loans may hesitate to plant shade trees or diversify, because agroforestry returns arrive slowly while the debt arrives at harvest.\nThis paper examines the double-edged role of middlemen in the sustainable coffee transition. Drawing on the author's ongoing work inside a coffee trading and 4C-certification operation in Lam Ha District, Lam Dong Province, it analyses how trader dependency interacts with tenure insecurity, the 2024 coffee-price surge, EUDR traceability requirements, and Lam Dong's new geographical indication. The paper develops trader dependency as one pathway of a broader tenure-insecurity trap, alongside shortened investment horizons and exclusion from programs requiring recognized land rights, and asks when middlemen enable investment through credit and market access and when they lock households into intensive, debt-linked production.\nIt concludes with an agenda for research combining household surveys, trader interviews, and participatory methods, and with design implications: sustainability programs that treat traders as rivals will miss the farmers; programs that work through or with them may reach the households certification has not.",
-         "keywords": "Middleman · Coffee Certification · Sustainability"
-        },
-        {
-         "title": "Brewing inequality in Flores Coffee: Entrepreneurial Mediation, Logistics, and Unequal Value Chains",
-         "presenter": "Putri Agustina Poerwanti",
-         "affiliation": "Linnaeus University",
-         "country": "Indonesia",
-         "online": false,
-         "abstract": "This paper examines how coffee farmers in Flores, Indonesia, experience participation in specialty and sustainability-oriented markets. It asks how logistics, harvest timing, and buyer and certification requirements shape farmers’ ability to capture value and exercise agency within the coffee value chain. The study draws on qualitative interviews with ten coffee farmers in Flores, complemented by the author’s reflexive account as a coffee entrepreneur and intermediary in the region. The analysis focuses on three connected issues: inter-island transport and freight costs; constraints associated with a concentrated annual harvest; and certification and traceability requirements that privilege documented evidence. It considers how these conditions shape farmers’ bargaining room, the distribution of costs and risks, and the representation of local production practices to distant buyers. The analysis suggests that access to specialty markets can create opportunities while leaving farmers exposed to logistical, temporal, and compliance burdens shaped beyond the place of production. By foregrounding farmers’ accounts and linking them to the wider organization of the coffee trade, the paper offers a place-based perspective on coffee as a commodity. It argues for greater transparency in the allocation of logistics and compliance costs and for recognition of producer-defined priorities in market relationships.",
-         "keywords": "Flores coffee · coffee value chains · smallholder farmers · market access · certification"
-        },
-        {
-         "title": "Study on the Coffee Price",
-         "presenter": "Zhang Jianfeng",
-         "affiliation": "Distinguished Researcher, National Centre for Borderlands Ethnic Studies in Southwest China at Yunnan University",
-         "country": "China",
-         "online": false,
-         "abstract": "Green coffee beans constitute one of the most significant agricultural commodities in global trade, characterized by pronounced price volatility. This volatility originates primarily from the inherent biological and agronomic characteristics of the coffee production cycle; however, over the past five decades, the increasing financialization of coffee markets—through futures trading, index-based investment, and speculative activity—has substantially amplified price fluctuations, thereby reinforcing cyclical instability. On the demand side, global coffee consumption exhibits strong price inelasticity, reflecting its status as a staple beverage with limited substitution options. Consequently, the resulting structural asymmetry in the global coffee value chain—marked by disproportionate value capture at the upstream (producer) versus downstream (roasting, branding,retail) stages—has exacerbated socioeconomic disparities between producing (predominantly Global South) and consuming (predominantly Global North) countries, prompting sustained academic, policy, and civil society attention.",
-         "keywords": ""
-        }
-       ]
-      }
-     ]
-    },
-    {
-     "id": "S19-Day2",
-     "start": "3:00 PM",
-     "end": "3:15 PM",
-     "startMin": 900,
-     "type": "break",
-     "title": "Break",
-     "about": "",
-     "room": "",
-     "roomKey": "",
-     "speakers": []
-    },
-    {
-     "id": "SMUF1HAO3GT7",
-     "start": "3:15 PM",
-     "end": "4:45 PM",
-     "startMin": 915,
-     "type": "concurrent",
-     "title": "Concurrent Session V (2 Session)",
-     "about": "",
-     "room": "",
-     "roomKey": "",
-     "sessions": [
-      {
-       "code": "P11",
-       "name": "Coffee Science: Grafting, Processing and Food Safety",
-       "room": "Room 1 Auditorium",
-       "roomKey": "dhani-room",
        "theme": "6. Coffee and knowledge production",
        "chair": "",
        "papers": [
@@ -920,13 +849,84 @@
          "keywords": "Controlled environment drying · Cupping · Drying characteristic · Volatile compounds"
         },
         {
-         "title": "Transforming the Coffee Value Chain: Strengthening producers for Quality and Sustainability",
-         "presenter": "Kitiphong Khongphinitbunjong",
-         "affiliation": "Mae Fah Luang University",
-         "country": "Thailand",
+         "title": "Specialty Coffee Fermentation Technique \"Dopamine\" in Practice: A Case Study of Nandaohe Specialty Coffee Estate in Pu'er, Yunnan",
+         "presenter": "Mo Li",
+         "affiliation": "Yunnan Agricultural University",
+         "country": "China",
          "online": false,
-         "abstract": "Arabica coffee producers have long been trapped in a cycle of low market prices driven by batch-to-batch quality inconsistencies and a limited understanding of global standards. To address these challenges, this study examined the transformation of coffee producers within the coffee value chain through the integration of scientific practices and standard. We demonstrate systematic change from the eleven coffee producers in Chiang Rai by implementing a standardized with  four-step scientific protocols; (1) a quality of cherry picking and testing, (2) pH-guided during fermentation (pH 4.0–4.5), (3) precision drying and monotoring, and (4) SCA-standard coffee green bean grading. Through cupping evaluations, interviews, and field visits following targeted workshops and training, we observed significant quality improvements. the cupping scores increased from 78 to 84 points, though one coffee producer showed no improvement and remained at 70 points. Furthermore, processing defect rates were reduced by approximately 20%. Notably, an increased proportion of lots scoring 75–84 points achieved a 20–25% price increase, while six producers utilizing natural and honey processes earned 20–40% premiums over washed lots. These results demonstrated that establishing measurable step controls through collaborative farmer-researcher-buyer knowledge enables quality reproducibility, offering a scalable model for extension services and graded purchasing programs.",
-         "keywords": "Arabica coffee · coffee value chain · coffee producers · quality standards"
+         "abstract": "In the context of the \"Third Wave Coffee\" movement, the quest for diverse\nflavor profiles in China has spurred a proliferation of innovative fermentation\ntechniques. This article examines how coffee manor owners and visiting\nprofessionals in Pu’er, Yunnan, refine traditional methods (washed and\nnatural) and innovate through experimental fermentation to impart novel\nsensory characteristics. Drawing on ethnographic fieldwork at three specialty\ncoffee manors in the Nan Dao He region, the study explores the deployment of \"mētis\"—a form of practical, experiential knowledge—in the construction of unique fermentation techniques. It highlights the highly interactive nature of this process, where practitioners\nmodify fermentation parameters through cumulative experience and continuous calibration. Additionally, the paper evaluates the current trend of using laboratory based yeasts to achieve standardization and stability in flavor production. By contrasting these praxis-based interactive techniques with standardized fermentation technologies, the study elucidates the complex knowledge-technology assemblage within Yunnan's contemporary coffee industry.",
+         "keywords": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "S19-Day2",
+     "start": "3:00 PM",
+     "end": "3:15 PM",
+     "startMin": 900,
+     "type": "break",
+     "title": "Break",
+     "about": "",
+     "room": "",
+     "roomKey": "",
+     "speakers": []
+    },
+    {
+     "id": "SMUF1HAO3GT7",
+     "start": "3:15 PM",
+     "end": "4:45 PM",
+     "startMin": 915,
+     "type": "concurrent",
+     "title": "Concurrent Session V (1 Sessions)",
+     "about": "",
+     "room": "",
+     "roomKey": "",
+     "sessions": [
+      {
+       "code": "P11",
+       "name": "Coffee as Commodity: Prices, Middlemen and Value Chains",
+       "room": "Room 1 Auditorium",
+       "roomKey": "dhani-room",
+       "theme": "3. Coffee as commodity",
+       "chair": "",
+       "papers": [
+        {
+         "title": "Producing the “Sustainable” Coffee Landscape: Political Ecology, Value Chains, and Smallholder Livelihoods in the Gayo Highlands of Aceh, Indonesia",
+         "presenter": "Sukumar Babu Ramapuram Samuel Vijay",
+         "affiliation": "Goethe University in Germany",
+         "country": "Indonesia",
+         "online": true,
+         "abstract": "Southeast Asia's coffee landscapes are being changed by the combination of global specialty-coffee markets, sustainability interventions, climate change, and evolving rural governance. This research investigates these processes in the Gayo Highlands of Aceh, Indonesia, where smallholder Arabica production is both rooted in global value chains and contested local landscapes of land, forest, and livelihoods. Using political ecology and a critical global value chain (GVC) perspective, the paper investigates how sustainability interventions and global coffee markets reshape smallholder producers' access to land, resources, knowledge, and value, and what the implications are for livelihood and environmental justice. Existing research has demonstrated that coffee upgrading and sustainability programs can create new market opportunities, but they can also perpetuate local inequalities by limiting access to money, markets, institutions, and decision-making. Research on Indonesian coffee shows that the benefits of \"relationship coffee\" and value-chain upgrading are frequently reaped by locally powerful players, but sustainability programs may have limited compatibility with current livelihoods. However, little attention has been paid to how environmental governance, gendered interactions, climate adaptation, and value-chain reconfiguration intersect geographically within the same coffee landscape. The study's methodology is a qualitative, multi-scalar approach that includes semi-structured interviews with farmers, cooperatives, traders, government and development actors, participant observation, life histories, and analysis of coffee certification, land-use, and policy papers. By linking everyday livelihood practices to larger commodity governance processes, the paper contends that \"sustainable coffee\" should be viewed as a contested political process in which value, environmental responsibility, and resource access are negotiated. It thus combines studies on political ecology, agrarian change, and GVCs to demonstrate how sustainability is produced and unevenly distributed across the Gayo coffee landscape.",
+         "keywords": "Political Ecology · Coffee Landscapes · Global Value Chains · Smallholder Livelihoods · Environmental Justice"
+        },
+        {
+         "title": "Between Field and Market: How Middlemen Shape the Sustainable Choices of Coffee Smallholders in Vietnam's Central Highlands",
+         "presenter": "Thi To Ngoc Do",
+         "affiliation": "Phuoc Son Agricultural Trading Ltd. Company",
+         "country": "Vietnam",
+         "online": false,
+         "abstract": "In Vietnam's Central Highlands, the first link in the coffee value chain is rarely a cooperative or a program officer. It is the middleman: the local trader who provides credit before harvest, supplies inputs on deferred payment, shares price information, and guarantees a buyer at the farm gate. These relationships, often maintained across generations, reduce risk for households in a landscape where formal finance is distant and land rights are insecure. Yet the same relationships may quietly narrow the sustainable choices smallholders can make: a household dependent on its trader's input loans may hesitate to plant shade trees or diversify, because agroforestry returns arrive slowly while the debt arrives at harvest.\nThis paper examines the double-edged role of middlemen in the sustainable coffee transition. Drawing on the author's ongoing work inside a coffee trading and 4C-certification operation in Lam Ha District, Lam Dong Province, it analyses how trader dependency interacts with tenure insecurity, the 2024 coffee-price surge, EUDR traceability requirements, and Lam Dong's new geographical indication. The paper develops trader dependency as one pathway of a broader tenure-insecurity trap, alongside shortened investment horizons and exclusion from programs requiring recognized land rights, and asks when middlemen enable investment through credit and market access and when they lock households into intensive, debt-linked production.\nIt concludes with an agenda for research combining household surveys, trader interviews, and participatory methods, and with design implications: sustainability programs that treat traders as rivals will miss the farmers; programs that work through or with them may reach the households certification has not.",
+         "keywords": "Middleman · Coffee Certification · Sustainability"
+        },
+        {
+         "title": "Brewing inequality in Flores Coffee: Entrepreneurial Mediation, Logistics, and Unequal Value Chains",
+         "presenter": "Putri Agustina Poerwanti",
+         "affiliation": "Linnaeus University",
+         "country": "Indonesia",
+         "online": false,
+         "abstract": "This paper examines how coffee farmers in Flores, Indonesia, experience participation in specialty and sustainability-oriented markets. It asks how logistics, harvest timing, and buyer and certification requirements shape farmers’ ability to capture value and exercise agency within the coffee value chain. The study draws on qualitative interviews with ten coffee farmers in Flores, complemented by the author’s reflexive account as a coffee entrepreneur and intermediary in the region. The analysis focuses on three connected issues: inter-island transport and freight costs; constraints associated with a concentrated annual harvest; and certification and traceability requirements that privilege documented evidence. It considers how these conditions shape farmers’ bargaining room, the distribution of costs and risks, and the representation of local production practices to distant buyers. The analysis suggests that access to specialty markets can create opportunities while leaving farmers exposed to logistical, temporal, and compliance burdens shaped beyond the place of production. By foregrounding farmers’ accounts and linking them to the wider organization of the coffee trade, the paper offers a place-based perspective on coffee as a commodity. It argues for greater transparency in the allocation of logistics and compliance costs and for recognition of producer-defined priorities in market relationships.",
+         "keywords": "Flores coffee · coffee value chains · smallholder farmers · market access · certification"
+        },
+        {
+         "title": "Study on the Coffee Price",
+         "presenter": "Zhang Jianfeng",
+         "affiliation": "Distinguished Researcher, National Centre for Borderlands Ethnic Studies in Southwest China at Yunnan University",
+         "country": "China",
+         "online": false,
+         "abstract": "Green coffee beans constitute one of the most significant agricultural commodities in global trade, characterized by pronounced price volatility. This volatility originates primarily from the inherent biological and agronomic characteristics of the coffee production cycle; however, over the past five decades, the increasing financialization of coffee markets—through futures trading, index-based investment, and speculative activity—has substantially amplified price fluctuations, thereby reinforcing cyclical instability. On the demand side, global coffee consumption exhibits strong price inelasticity, reflecting its status as a staple beverage with limited substitution options. Consequently, the resulting structural asymmetry in the global coffee value chain—marked by disproportionate value capture at the upstream (producer) versus downstream (roasting, branding,retail) stages—has exacerbated socioeconomic disparities between producing (predominantly Global South) and consuming (predominantly Global North) countries, prompting sustained academic, policy, and civil society attention.",
+         "keywords": ""
         }
        ]
       }
