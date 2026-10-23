@@ -28,7 +28,36 @@
   .days button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
   .search{flex:1;min-width:180px;max-width:360px;margin-left:auto;font:inherit;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
   .search:focus{outline:2px solid var(--accent);outline-offset:1px}
-  .now{font-size:13px;color:var(--live);font-weight:700;width:100%}
+  .now{display:none}
+  .views{display:flex;gap:2px;padding-left:10px;margin-left:4px;border-left:1px solid var(--line)}
+  .views button{border:0;background:none;font:inherit;font-weight:700;color:var(--ink-3);padding:8px 12px;border-radius:999px;cursor:pointer;white-space:nowrap}
+  .views button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+  .views .n{display:inline-block;min-width:18px;font-size:11px;line-height:18px;border-radius:999px;background:var(--accent);color:#fff;margin-left:5px;text-align:center}
+  .chips{display:flex;gap:6px;flex-wrap:wrap;width:100%}
+  .chips[hidden]{display:none}
+  .chips button{border:1px solid var(--line);background:var(--surface);color:var(--ink-2);border-radius:999px;padding:4px 11px;font:inherit;font-size:12.5px;cursor:pointer;white-space:nowrap}
+  .chips button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#fff}
+  .glance{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px 28px;margin-top:22px;font-size:13.5px}
+  .glance b{display:block;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-bottom:3px}
+  .glance span{display:block;color:var(--ink-2)}
+  .glance button{border:0;background:none;padding:0;font:inherit;color:inherit;text-align:left;cursor:pointer}
+  .glance button:hover b{color:var(--accent)}
+  .nownext{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px;background:var(--ink);color:var(--bg);border-radius:16px;padding:12px}
+  .nownext[hidden]{display:none}
+  .nownext button{border:0;font:inherit;color:inherit;text-align:left;background:rgba(255,255,255,.08);border-radius:10px;padding:10px 12px;cursor:pointer}
+  .nownext small{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#d9a46c}
+  .nownext b{display:block;margin:3px 0 1px;line-height:1.3}
+  .nownext span{font-size:12.5px;opacity:.75}
+  .star{border:0;background:none;cursor:pointer;font-size:17px;line-height:1;color:var(--ink-3);padding:2px 4px;vertical-align:-1px}
+  .star[aria-pressed=true]{color:var(--accent)}
+  .session .star{position:absolute;right:6px;top:6px}
+  .session.card{position:relative}
+  .people-ix{columns:2;column-gap:36px;margin-top:6px}
+  .people-ix .letter{font-weight:700;color:var(--accent);margin:16px 0 2px;break-after:avoid}
+  .people-ix button{display:block;width:100%;text-align:left;border:0;background:none;font:inherit;color:inherit;padding:7px 0;border-top:1px solid var(--line);cursor:pointer;break-inside:avoid}
+  .people-ix button:hover b{color:var(--accent)}
+  .people-ix .mt{display:block;font-size:12.5px;color:var(--ink-3)}
+  .mine-empty{padding:40px 0;color:var(--ink-3);max-width:520px}
   main{padding:8px 0 80px}
   .block{display:grid;grid-template-columns:118px 1fr;gap:24px;padding:22px 0;border-top:1px solid var(--line);scroll-margin-top:90px}
   .block:first-child{border-top:0}
@@ -85,6 +114,11 @@
   .toast.on{opacity:.95}
   footer{color:var(--ink-3);font-size:12.5px;padding:24px 0 40px;border-top:1px solid var(--line)}
   @media (max-width:640px){
+    .nownext{grid-template-columns:1fr}
+    .bar{position:static}
+    .views{border-left:0;padding-left:0;margin-left:0;width:100%}
+    .chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+    .people-ix{columns:1}
     header{padding:28px 0 10px}
     .block{grid-template-columns:1fr;gap:6px}
     .block.live .time::after{display:inline;margin-left:8px}
@@ -162,10 +196,14 @@
     <h1 id="title">Programme</h1>
     <div class="meta" id="venue"></div>
     <div class="where" id="where" hidden></div>
+    <div class="nownext" id="nownext" hidden></div>
+    <div class="glance" id="glance"></div>
   </header>
   <div class="bar">
     <div class="days" id="days" role="tablist"></div>
+    <div class="views" id="views"></div>
     <input class="search" id="q" type="search" placeholder="Search a name, title or room" aria-label="Search">
+    <div class="chips" id="chips" hidden></div>
     <div class="now" id="now" hidden></div>
   </div>
   <main id="main"><div class="empty" id="loading">Loading the programme…</div></main>
@@ -183,15 +221,34 @@
           none: 'Nothing matches that search.', subject: 'This schedule is subject to change.', updated: 'Updated', loading: 'Loading the programme…',
           kinds: { keynote: 'Keynote', plenary: 'Plenary discussion', concurrent: 'Concurrent sessions', roundtable: 'Roundtable', opening: 'Opening', closing: 'Closing', side: 'Side programme', open: 'Open session' },
           about: 'About this session', nowL: 'Now', next: 'Next', min: 'min', failed: 'The programme could not be loaded. Please try again in a moment.',
-          map: 'Map', mapCn: 'Map in China (Amap / Baidu)', seeRooms: 'See the rooms', roomsH: 'The rooms', prev: 'Previous photo', nextP: 'Next photo', keywords: 'Keywords', noAbstract: 'The abstract will be added soon.', papers: '{n} papers — titles and abstracts', inside: 'matches inside', rooms: 'Rooms' },
+          map: 'Map', mapCn: 'Map in China (Amap / Baidu)', seeRooms: 'See the rooms', roomsH: 'The rooms', prev: 'Previous photo', nextP: 'Next photo', keywords: 'Keywords', noAbstract: 'The abstract will be added soon.', papers: '{n} papers — titles and abstracts', inside: 'matches inside', rooms: 'Rooms',
+          mine: 'My programme', people: 'People', onlineTalks: 'Online talks', star: 'Keep in my programme', unstar: 'Remove from my programme',
+          mineEmpty: 'Tap ☆ on a session or a talk to keep it here. It stays in this browser on this phone or computer — no account needed.',
+          parallel: 'rounds of parallel sessions', papersN: 'papers', nowNext: 'Next', thenNothing: 'That is all for today', roles: { presenter: 'Presenter', speaker: 'Speaker', chair: 'Chair', moderator: 'Moderator' } },
     zh: { search: '搜索姓名、题目或会议室', chair: '主持人', moderator: '主持人', online: '线上', also: '同时进行', copy: '链接已复制',
           none: '没有找到匹配的内容。', subject: '日程如有变动，以现场为准。', updated: '更新于', loading: '正在加载日程…',
           kinds: { keynote: '主旨演讲', plenary: '全体讨论', concurrent: '分会场', roundtable: '圆桌讨论', opening: '开幕式', closing: '闭幕式', side: '平行活动', open: '公开环节' },
           about: '简介', nowL: '正在进行', next: '下一项', min: '分钟', failed: '日程加载失败，请稍后再试。',
-          map: '地图', mapCn: '高德 / 百度地图', seeRooms: '查看会议室', roomsH: '会议室', prev: '上一张', nextP: '下一张', keywords: '关键词', noAbstract: '摘要即将补充。', papers: '{n} 篇论文 — 题目与摘要', inside: '内含匹配', rooms: '会议室' }
+          map: '地图', mapCn: '高德 / 百度地图', seeRooms: '查看会议室', roomsH: '会议室', prev: '上一张', nextP: '下一张', keywords: '关键词', noAbstract: '摘要即将补充。', papers: '{n} 篇论文 — 题目与摘要', inside: '内含匹配', rooms: '会议室',
+          mine: '我的日程', people: '人员', onlineTalks: '线上报告', star: '加入我的日程', unstar: '从我的日程移除',
+          mineEmpty: '点击任意环节旁的 ☆ 即可加入这里。只保存在这台手机或电脑的浏览器中，无需注册。',
+          parallel: '轮分会场', papersN: '篇论文', nowNext: '下一项', thenNothing: '今天的日程已结束', roles: { presenter: '报告人', speaker: '发言人', chair: '主持人', moderator: '主持人' } }
   };
   var DAYZH = { 'Day 1': '第一天', 'Day 2': '第二天', 'Day 3': '第三天' };
-  var L = 'en', DATA = null, DAY = 0, Q = '', OPEN = {};
+  var L = 'en', DATA = null, DAY = 0, Q = '', OPEN = {}, VIEW = 'day', CHIP = {}, STAR = {};
+  try { STAR = JSON.parse(localStorage.getItem('stars') || '{}') || {}; } catch (e) { STAR = {}; }
+  function saveStars() { try { localStorage.setItem('stars', JSON.stringify(STAR)); } catch (e) {} }
+  var THEME_SHORT = { 1: 'Coffee history', 2: 'Agriculture & climate', 3: 'Coffee as commodity', 4: 'Coffee culture', 5: 'Agrarian transition', 6: 'Knowledge production' };
+  function themeNo(s) { var m = String((s && s.theme) || '').match(/^\s*(?:Theme\s*)?(\d)/i); return m ? m[1] : ''; }
+  function starBtn(id) { return '<button class="star" data-star="' + esc(id) + '" aria-pressed="' + !!STAR[id] + '" title="' + esc(t(STAR[id] ? 'unstar' : 'star')) + '" aria-label="' + esc(t(STAR[id] ? 'unstar' : 'star')) + '">' + (STAR[id] ? '★' : '☆') + '</button>'; }
+  function chipsOn() { return Object.keys(CHIP).filter(function (k) { return CHIP[k]; }); }
+  function sessOK(s) {   // the theme / online chips
+    var on = chipsOn(); if (!on.length) return true;
+    var th = on.filter(function (k) { return k !== 'online'; });
+    if (th.length && th.indexOf(themeNo(s)) === -1) return false;
+    if (CHIP.online && !(s.papers || []).some(function (p) { return p.online; })) return false;
+    return true;
+  }
   try { L = localStorage.getItem('lang') || (/^zh/i.test(navigator.language || '') ? 'zh' : 'en'); } catch (e) {}
   var $ = function (id) { return document.getElementById(id); };
   var esc = function (s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); };
@@ -210,7 +267,9 @@
     (b.events || []).forEach(function (e) { p.push(e.name, e.org, e.moderator); p.push.apply(p, e.panellists || []); });
     return p.join(' ').toLowerCase();
   }
-  function bkk() {   // minutes since midnight and the date, in Chiang Mai time
+  function bkk() {   // minutes since midnight and the date, in Chiang Mai time (?now=2026-11-27T14:10 to try it out)
+    var fake = (location.search.match(/[?&]now=(\d{4}-\d{2}-\d{2})T(\d{1,2}):(\d{2})/) || []);
+    if (fake[1]) return { date: fake[1], min: Number(fake[2]) * 60 + Number(fake[3]) };
     var now = new Date(Date.now() + 7 * 3600000);
     return { date: now.toISOString().slice(0, 10), min: now.getUTCHours() * 60 + now.getUTCMinutes() };
   }
@@ -276,7 +335,7 @@
     var hit = SESS[id]; if (!hit) return;
     var b = hit.b, s = hit.s;
     showSheet('<div class="sh">' + (s.code ? '<span class="code">' + esc(s.code) + '</span>' : '') + '<span class="room">' + esc(b.start + '–' + b.end) + ' · ' + roomLink(s.roomKey, s.room) + '</span>' +
-      '<button class="link" style="opacity:.7" data-link="' + esc(id) + '" aria-label="Copy a link to this session">#</button></div>' +
+      '<button class="link" style="opacity:.7" data-link="' + esc(id) + '" aria-label="Copy a link to this session">#</button>' + starBtn(id) + '</div>' +
       '<h3 class="sname" id="sheetT">' + mark(s.name) + '</h3>' + (s.chair ? '<div class="chair"><span class="lab">' + esc(t('chair')) + ':</span> ' + mark(s.chair) + '</div>' : '') +
       papersHTML(b, s), true);
     if (paper) { var el = document.getElementById(paper); if (el) setTimeout(function () { el.scrollIntoView({ block: 'center' }); }, 30); }
@@ -288,28 +347,29 @@
       (r.note ? '<p style="margin:10px 0 0">' + esc(r.note) + '</p>' : '') + whereHTML();
     showSheet($('sheetBody').innerHTML, false);
   }
-  function blockHTML(b, live) {
+  function blockHTML(b, live, only) {   // only: { sessionId: true } — show just these sessions (My programme)
     var quiet = /^(break|lunch|registration|other)$/.test(b.type) && !(b.speakers && b.speakers.length);
     var kind = t('kinds')[b.type] || '';
     var h = '<section class="block' + (quiet ? ' quiet' : '') + (live ? ' live' : '') + '" id="' + esc(b.id) + '">' +
       '<div class="time">' + esc(b.start) + '<small>– ' + esc(b.end) + '</small></div><div>';
     if (kind && !quiet) h += '<div class="kind">' + esc(kind) + (b.room ? ' · ' + roomLink(b.roomKey, b.room) : '') + '</div>';
-    h += '<p class="bt">' + mark(b.title) + ' <button class="link" data-link="' + esc(b.id) + '" title="Copy a link to this part of the programme (for sharing or a QR code)" aria-label="Copy a link to this">#</button></p>';
+    h += '<p class="bt">' + mark(b.title) + (!quiet && !(b.sessions && b.sessions.length) ? ' ' + starBtn(b.id) : '') + ' <button class="link" data-link="' + esc(b.id) + '" title="Copy a link to this part of the programme (for sharing or a QR code)" aria-label="Copy a link to this">#</button></p>';
     if (b.about) h += '<details class="about"><summary>' + esc(t('about')) + '</summary>' + mark(b.about) + '</details>';
     if (b.speakers && b.speakers.length) h += '<ul class="people">' + b.speakers.map(function (s) {
       return '<li><b>' + mark(s.name) + '</b>' + (s.affiliation ? ' <span class="aff">· ' + mark(s.affiliation) + '</span>' : '') + (s.talk ? '<span class="talk">' + mark(s.talk) + '</span>' : '') + '</li>';
     }).join('') + '</ul>';
     if (b.moderator && b.moderator.name) h += '<div class="mod"><span class="lab">' + esc(t('moderator')) + ':</span> ' + mark(b.moderator.name) + (b.moderator.affiliation ? ' <span class="aff">· ' + mark(b.moderator.affiliation) + '</span>' : '') + '</div>';
-    if (b.sessions && b.sessions.length) h += '<div class="sessions">' + b.sessions.map(function (s) {
+    var shownSess = (b.sessions || []).filter(function (s) { return only ? only[sessId(b, s)] : sessOK(s); });
+    (b.sessions || []).forEach(function (s) { SESS[sessId(b, s)] = { b: b, s: s }; });
+    if (shownSess.length) h += '<div class="sessions">' + shownSess.map(function (s) {
       var id = sessId(b, s), ps = s.papers || [];
-      SESS[id] = { b: b, s: s };
       var shown = [s.name, s.chair, s.room, s.code].concat(ps.map(function (p) { return p.presenter; })).join(' ').toLowerCase();
       var inside = Q && shown.indexOf(Q.toLowerCase()) === -1;
       return '<article class="session card" id="' + esc(id) + '" data-sess="' + esc(id) + '"><div class="sh">' + (s.code ? '<span class="code">' + esc(s.code) + '</span>' : '') +
         '<span class="room">' + roomLink(s.roomKey, s.room) + '</span><button class="link" data-link="' + esc(id) + '" aria-label="Copy a link to this session">#</button></div>' +
         '<h3 class="sname">' + mark(s.name) + '</h3>' + (s.chair ? '<div class="chair"><span class="lab">' + esc(t('chair')) + ':</span> ' + mark(s.chair) + '</div>' : '') +
         '<ul class="names">' + ps.map(function (p, k) { return '<li data-n="' + (k + 1) + '"><span>' + mark(p.presenter) + (p.online ? '<span class="online">' + esc(t('online')) + '</span>' : '') + '</span></li>'; }).join('') + '</ul>' +
-        '<button class="more" data-sess="' + esc(id) + '">' + esc(t('papers').replace('{n}', ps.length)) + ' ›</button>' + (inside ? '<span class="inside">' + esc(t('inside')) + '</span>' : '') + '</article>';
+        '<button class="more" data-sess="' + esc(id) + '">' + esc(t('papers').replace('{n}', ps.length)) + ' ›</button>' + (inside ? '<span class="inside">' + esc(t('inside')) + '</span>' : '') + starBtn(id) + '</article>';
     }).join('') + '</div>';
     if (b.events && b.events.length) h += '<div class="side">' + b.events.map(function (e) {
       var same = String(e.name).toLowerCase() === String(b.title).toLowerCase();
@@ -344,30 +404,131 @@
     $('rooms').hidden = !all.length;
     $('rooms').innerHTML = all.length ? '<h2>' + esc(t('roomsH')) + '</h2>' + slidesHTML(all) : '';
     var clock = bkk();
-    $('days').innerHTML = DATA.days.map(function (d, i) {
-      return '<button role="tab" data-day="' + i + '" aria-pressed="' + (i === DAY && !Q) + '">' + esc(L === 'zh' ? (DAYZH[d.key] || d.key) : d.key) + '<span>' + esc(d.date) + '</span></button>';
+    var dayName = function (d) { return L === 'zh' ? (DAYZH[d.key] || d.key) : d.key; };
+    // at a glance: each day's main moments; Now / Next on the event days
+    $('glance').innerHTML = DATA.days.map(function (d, i) {
+      var key = d.blocks.filter(function (b) { return /keynote|plenary|opening|closing|roundtable/.test(b.type); })
+        .map(function (b) { return b.start.replace(/:00 /, ' ') + ' ' + String(b.title).split(/[:–—-]/)[0].trim(); });
+      var rounds = d.blocks.filter(function (b) { return b.sessions && b.sessions.length; }).length;
+      return '<button data-day="' + i + '"><b>' + esc(dayName(d) + ' · ' + d.date) + '</b><span>' + esc(key.join(' · ')) + '</span>' +
+        (rounds ? '<span class="muted" style="color:var(--ink-3)">' + rounds + ' ' + esc(t('parallel')) + '</span>' : '') + '</button>';
     }).join('');
+    var today = DATA.days.filter(function (d) { return isoOf(d) === clock.date; })[0];
+    var nn = '';
+    if (today) {
+      var main = today.blocks.filter(function (b) { return b.type !== 'side'; });
+      var cur = main.filter(function (b) { return clock.min >= b.startMin && clock.min < b.startMin + dur(b); })[0];
+      var nxt = main.filter(function (b) { return b.startMin > clock.min; })[0];
+      var line = function (b) {
+        if (!b) return '';
+        if (b.sessions && b.sessions.length) return b.sessions.map(function (s) { return s.room; }).join(' · ');
+        return b.room || ((b.speakers || []).slice(0, 3).map(function (x) { return x.name; }).join(', '));
+      };
+      var box = function (lab, b, empty) {
+        return '<button' + (b ? ' data-jump="' + esc(b.id) + '"' : '') + '><small>' + (lab === 'now' ? '● ' + esc(t('nowL')) : esc(t('nowNext'))) + (b ? ' · ' + esc(b.start) : '') + '</small>' +
+          '<b>' + esc(b ? b.title : empty) + '</b><span>' + esc(line(b)) + '</span></button>';
+      };
+      if (cur || nxt) nn = box('now', cur, '—') + box('next', nxt, t('thenNothing'));
+    }
+    $('nownext').hidden = !nn; $('nownext').innerHTML = nn;
+
+    $('days').innerHTML = DATA.days.map(function (d, i) {
+      return '<button role="tab" data-day="' + i + '" aria-pressed="' + (VIEW === 'day' && i === DAY && !Q) + '">' + esc(dayName(d)) + '<span>' + esc(d.date) + '</span></button>';
+    }).join('');
+    var nStar = Object.keys(STAR).filter(function (k) { return STAR[k]; }).length;
+    $('views').innerHTML = '<button data-view="mine" aria-pressed="' + (VIEW === 'mine') + '">★ ' + esc(t('mine')) + (nStar ? '<span class="n">' + nStar + '</span>' : '') + '</button>' +
+      '<button data-view="people" aria-pressed="' + (VIEW === 'people') + '">' + esc(t('people')) + '</button>';
+    // theme and online chips (for the programme view)
+    var nos = {}, anyOnline = false;
+    DATA.days.forEach(function (d) { d.blocks.forEach(function (b) { (b.sessions || []).forEach(function (s) { var n = themeNo(s); if (n) nos[n] = true; if ((s.papers || []).some(function (p) { return p.online; })) anyOnline = true; }); }); });
+    var chipList = (anyOnline ? [['online', t('onlineTalks')]] : []).concat(Object.keys(nos).sort().map(function (n) { return [n, THEME_SHORT[n] || ('Theme ' + n)]; }));
+    $('chips').hidden = VIEW !== 'day' || !chipList.length;
+    $('chips').innerHTML = chipList.map(function (c) { return '<button data-chip="' + esc(c[0]) + '" aria-pressed="' + !!CHIP[c[0]] + '">' + esc(c[1]) + '</button>'; }).join('');
+
     var html = '', any = false, nowTxt = '';
+    var chips = chipsOn().length;
+    if (VIEW === 'people') { $('main').innerHTML = peopleHTML(); $('now').hidden = true; return; }
     DATA.days.forEach(function (d, i) {
-      var today = isoOf(d) === clock.date;
-      var list = d.blocks.filter(function (b) { return !Q || text(b).indexOf(Q.toLowerCase()) !== -1; });
-      if (Q ? !list.length : i !== DAY) return;
-      any = any || list.length > 0;
-      // side programme items that share a time with a main block are shown under their own time
-      html += '<div class="day"><h2>' + esc(d.key + ' · ' + d.date) + '</h2>' + (Q ? '<div class="kind" style="margin-top:20px">' + esc((L === 'zh' ? (DAYZH[d.key] || d.key) : d.key) + ' · ' + d.date) + '</div>' : '') +
+      var isToday = isoOf(d) === clock.date;
+      var list;
+      if (VIEW === 'mine') {
+        list = d.blocks.filter(function (b) { return STAR[b.id] || (b.sessions || []).some(function (s) { return STAR[sessId(b, s)]; }); });
+      } else {
+        list = d.blocks.filter(function (b) {
+          if (Q && text(b).indexOf(Q.toLowerCase()) === -1) return false;
+          if (chips) return (b.sessions || []).some(sessOK);
+          return true;
+        });
+        if ((Q || chips) ? !list.length : i !== DAY) return;
+      }
+      if (!list.length) return;
+      any = true;
+      html += '<div class="day"><h2>' + esc(d.key + ' · ' + d.date) + '</h2>' + ((Q || chips || VIEW === 'mine') ? '<div class="kind" style="margin-top:20px">' + esc(dayName(d) + ' · ' + d.date) + '</div>' : '') +
         list.map(function (b) {
-          var live = today && clock.min >= b.startMin && clock.min < b.startMin + dur(b) && b.type !== 'side';
+          var live = isToday && clock.min >= b.startMin && clock.min < b.startMin + dur(b) && b.type !== 'side';
           if (live) nowTxt = t('nowL') + ': ' + b.start + ' ' + b.title;
-          return blockHTML(b, live);
+          var only = null;
+          if (VIEW === 'mine' && !STAR[b.id]) { only = {}; (b.sessions || []).forEach(function (s) { if (STAR[sessId(b, s)]) only[sessId(b, s)] = true; }); }
+          return blockHTML(b, live, only);
         }).join('') + '</div>';
     });
-    $('main').innerHTML = any ? html : '<div class="empty">' + esc(t('none')) + '</div>';
+    $('main').innerHTML = any ? html : '<div class="' + (VIEW === 'mine' ? 'mine-empty' : 'empty') + '">' + esc(t(VIEW === 'mine' ? 'mineEmpty' : 'none')) + '</div>';
     $('now').hidden = !nowTxt; $('now').textContent = nowTxt ? '● ' + nowTxt : '';
+  }
+  /** Everyone on the programme, A–Z: presenters, speakers, chairs and moderators, each with where and when. */
+  function peopleHTML() {
+    var R = t('roles'), list = [];
+    DATA.days.forEach(function (d) {
+      d.blocks.forEach(function (b) {
+        var when = (L === 'zh' ? (DAYZH[d.key] || d.key) : d.key) + ' ' + b.start;
+        (b.speakers || []).forEach(function (x) { if (x.name && !/to be confirmed/i.test(x.name)) list.push({ n: x.name, r: R.speaker, w: when + ' · ' + b.title, go: b.id }); });
+        if (b.moderator && b.moderator.name) list.push({ n: b.moderator.name, r: R.moderator, w: when + ' · ' + b.title, go: b.id });
+        (b.sessions || []).forEach(function (s) {
+          var id = sessId(b, s);
+          SESS[id] = { b: b, s: s };
+          if (s.chair) list.push({ n: s.chair, r: R.chair, w: when + ' · ' + s.room + (s.code ? ' · ' + s.code : ''), sess: id });
+          (s.papers || []).forEach(function (p, k) {
+            String(p.presenter || '').split(/\s*,\s*|\s+&\s+|\s+and\s+/).filter(Boolean).forEach(function (nm) {
+              list.push({ n: nm, r: R.presenter, w: when + ' · ' + s.room + (s.code ? ' · ' + s.code : ''), sess: id, paper: (s.code || b.id) + '-' + (k + 1), online: p.online });
+            });
+          });
+        });
+      });
+    });
+    var q = Q.toLowerCase();
+    list = list.filter(function (x) { return !q || (x.n + ' ' + x.w).toLowerCase().indexOf(q) !== -1; });
+    list.sort(function (a, b) { return a.n.localeCompare(b.n, undefined, { sensitivity: 'base' }); });
+    if (!list.length) return '<div class="empty">' + esc(t('none')) + '</div>';
+    var last = '';
+    return '<div class="people-ix">' + list.map(function (x) {
+      var L0 = x.n.charAt(0).toUpperCase(), head = '';
+      if (L0 !== last) { head = '<div class="letter">' + esc(L0) + '</div>'; last = L0; }
+      return head + '<button ' + (x.sess ? 'data-sess="' + esc(x.sess) + '"' + (x.paper ? ' data-p="' + esc(x.paper) + '"' : '') : 'data-jump="' + esc(x.go) + '"') + '><b>' + mark(x.n) + '</b>' +
+        (x.online ? '<span class="online">' + esc(t('online')) + '</span>' : '') + ' <span class="aff">· ' + esc(x.r) + '</span><span class="mt">' + mark(x.w) + '</span></button>';
+    }).join('') + '</div>';
   }
   function toast(m) { var el = $('toast'); el.textContent = m; el.classList.add('on'); clearTimeout(el._t); el._t = setTimeout(function () { el.classList.remove('on'); }, 1600); }
   document.addEventListener('click', function (e) {
+    var sb = e.target.closest('[data-star]');
+    if (sb) {
+      var sid0 = sb.getAttribute('data-star');
+      STAR[sid0] = !STAR[sid0]; if (!STAR[sid0]) delete STAR[sid0]; saveStars();
+      var inSheet = !!sb.closest('#sheet');
+      render();
+      if (inSheet) { var nb = $('sheet').querySelector('[data-star]'); if (nb) { nb.setAttribute('aria-pressed', String(!!STAR[sid0])); nb.textContent = STAR[sid0] ? '★' : '☆'; } }
+      toast(STAR[sid0] ? '★ ' + t('mine') : t('unstar'));
+      return;
+    }
+    var vw = e.target.closest('[data-view]');
+    if (vw) { var v = vw.getAttribute('data-view'); VIEW = VIEW === v ? 'day' : v; Q = ''; $('q').value = ''; render(); window.scrollTo({ top: Math.min(window.scrollY, $('main').offsetTop - 80) }); return; }
+    var ch = e.target.closest('[data-chip]');
+    if (ch) { var ck = ch.getAttribute('data-chip'); CHIP[ck] = !CHIP[ck]; render(); return; }
+    var jp = e.target.closest('[data-jump]');
+    if (jp) { var jid = jp.getAttribute('data-jump'); VIEW = 'day'; Q = ''; $('q').value = '';
+      DATA.days.forEach(function (d, i) { d.blocks.forEach(function (b) { if (b.id === jid) DAY = i; }); }); render();
+      var el0 = document.getElementById(jid); if (el0) el0.scrollIntoView({ block: 'center' }); return; }
     var rm = e.target.closest('[data-room]');
-    if (!rm && !e.target.closest('[data-link]')) { var ss = e.target.closest('[data-sess]'); if (ss) { openSession(ss.getAttribute('data-sess')); return; } }
+    if (!rm && !e.target.closest('[data-link]')) { var ss = e.target.closest('[data-sess]'); if (ss) { var pq = ss.getAttribute('data-p'); if (pq) OPEN[pq] = true; openSession(ss.getAttribute('data-sess'), pq); return; } }
     if (rm) { openRoom(rm.getAttribute('data-room')); return; }
     if (e.target.closest('[data-unzoom]') || e.target === $('zoom') || e.target.closest('#zoom img')) { $('zoom').hidden = true; return; }
     var zi = e.target.closest('.slide img');
@@ -383,7 +544,8 @@
     var pp = e.target.closest('[data-paper]');
     if (pp) { var id = pp.getAttribute('data-paper'), li = pp.closest('.paper'); OPEN[id] = !li.classList.contains('open'); li.classList.toggle('open', OPEN[id]); pp.setAttribute('aria-expanded', String(OPEN[id])); return; }
     var d = e.target.closest('[data-day]');
-    if (d) { DAY = Number(d.getAttribute('data-day')); Q = ''; $('q').value = ''; history.replaceState(null, '', '#day' + (DAY + 1)); render(); window.scrollTo({ top: 0 }); return; }
+    if (d) { DAY = Number(d.getAttribute('data-day')); VIEW = 'day'; Q = ''; $('q').value = ''; history.replaceState(null, '', '#day' + (DAY + 1)); render();
+      if (d.closest('#glance')) $('main').scrollIntoView({ behavior: 'smooth' }); else window.scrollTo({ top: Math.min(window.scrollY, $('main').offsetTop - 80) }); return; }
     var l = e.target.closest('[data-lang]');
     if (l) { L = l.getAttribute('data-lang'); try { localStorage.setItem('lang', L); } catch (x) {} render(); return; }
     var k = e.target.closest('[data-link]');
@@ -402,7 +564,8 @@
     var h = decodeURIComponent(location.hash.slice(1));
     if (!h || !DATA) return;
     var m = h.match(/^day(\d)$/i);
-    if (m) { DAY = Math.max(0, Math.min(DATA.days.length - 1, Number(m[1]) - 1)); render(); return; }
+    if (m) { DAY = Math.max(0, Math.min(DATA.days.length - 1, Number(m[1]) - 1)); VIEW = 'day'; render(); return; }
+    if (/^(mine|people)$/.test(h)) { VIEW = h; render(); return; }
     var sid = null, pid = null;
     DATA.days.forEach(function (d, i) {
       d.blocks.forEach(function (b) {
@@ -430,7 +593,7 @@
       .catch(function () { $('main').innerHTML = '<div class="empty">' + esc(t('failed')) + '</div>'; });
   }
   window.addEventListener('hashchange', goHash);
-  setInterval(function () { if (DATA && !Q) render(); }, 60000);   // keep "now" in step
+  setInterval(function () { if (DATA && !Q && $('sheet').hidden && document.activeElement !== $('q')) render(); }, 60000);   // keep "now" in step
   render(); load();
 })();
 </script>
