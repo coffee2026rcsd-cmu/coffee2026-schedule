@@ -6,19 +6,19 @@
  "rooms": [
   {
    "key": "dhani-room",
-   "name": "Room 1 Auditorium",
+   "name": "Room 1: Dhani Room",
    "note": "",
    "photos": []
   },
   {
    "key": "co-working-space",
-   "name": "Room 2 Co-working Space",
+   "name": "Room 2: Co-working Space",
    "note": "",
    "photos": []
   },
   {
    "key": "room-4107",
-   "name": "Room 3 4107 Meeting Room",
+   "name": "Room 3: Social Science Library",
    "note": "",
    "photos": []
   },
@@ -104,7 +104,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "28 Oct 2026, 16:26 (GMT+7)",
+ "updated": "28 Oct 2026, 16:29 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
@@ -272,7 +272,7 @@
       {
        "code": "P01",
        "name": "Coffee Histories: Colonial Legacies, Capital and Memory",
-       "room": "Room 1 Auditorium",
+       "room": "Room 1: Dhani Room",
        "roomKey": "dhani-room",
        "theme": "1. Southeast Asia coffee history",
        "chair": "",
@@ -318,7 +318,7 @@
       {
        "code": "P02",
        "name": "Coffee in Social Life and Cultural Landscape",
-       "room": "Room 2 Co-working Space",
+       "room": "Room 2: Co-working Space",
        "roomKey": "co-working-space",
        "theme": "4. Coffee culture",
        "chair": "",
@@ -364,7 +364,7 @@
       {
        "code": "P03",
        "name": "Coffee as Destinations: Experience, Value and Community",
-       "room": "Room 3 4107 Meeting Room",
+       "room": "Room 3: Social Science Library",
        "roomKey": "room-4107",
        "theme": "3. Coffee as commodity",
        "chair": "",
@@ -435,7 +435,7 @@
       {
        "code": "P04",
        "name": "Café Landscapes in Southeast Asian Cities",
-       "room": "Room 1 Auditorium",
+       "room": "Room 1: Dhani Room",
        "roomKey": "dhani-room",
        "theme": "4. Coffee culture",
        "chair": "",
@@ -472,7 +472,7 @@
       {
        "code": "P05",
        "name": "Ethnicity and Agrarian Transition in the Highlands",
-       "room": "Room 2 Co-working Space",
+       "room": "Room 2: Co-working Space",
        "roomKey": "co-working-space",
        "theme": "5. Coffee in agrarian transition",
        "chair": "",
@@ -518,7 +518,7 @@
       {
        "code": "P06",
        "name": "Coffee Knowledge in Community Practice",
-       "room": "Room 3 4107 Meeting Room",
+       "room": "Room 3: Social Science Library",
        "roomKey": "room-4107",
        "theme": "6. Coffee and knowledge production",
        "chair": "",
@@ -650,7 +650,7 @@
       {
        "code": "P07",
        "name": "Livelihoods and Food Security under Climate Change",
-       "room": "Room 1 Auditorium",
+       "room": "Room 1: Dhani Room",
        "roomKey": "dhani-room",
        "theme": "2. Coffee agriculture and agroforestry under climate change",
        "chair": "",
@@ -696,7 +696,7 @@
       {
        "code": "P08",
        "name": "Constructing Quality: Taste, Fermentation and Sensory Knowledge",
-       "room": "Room 2 Co-working Space",
+       "room": "Room 2: Co-working Space",
        "roomKey": "co-working-space",
        "theme": "6. Coffee and knowledge production",
        "chair": "",
@@ -787,7 +787,7 @@
       {
        "code": "P09",
        "name": "Reimagining Coffee Culture: Image, Value and Identity",
-       "room": "Room 1 Auditorium",
+       "room": "Room 1: Dhani Room",
        "roomKey": "dhani-room",
        "theme": "4. Coffee culture",
        "chair": "",
@@ -824,7 +824,7 @@
       {
        "code": "P10",
        "name": "Coffee Science: Grafting, Processing and Food Safety",
-       "room": "Room 2 Co-working Space",
+       "room": "Room 2: Co-working Space",
        "roomKey": "co-working-space",
        "theme": "6. Coffee and knowledge production",
        "chair": "",
@@ -895,7 +895,7 @@
       {
        "code": "P11",
        "name": "Coffee as Commodity: Prices, Middlemen and Value Chains",
-       "room": "Room 1 Auditorium",
+       "room": "Room 1: Dhani Room",
        "roomKey": "dhani-room",
        "theme": "3. Coffee as commodity",
        "chair": "",
