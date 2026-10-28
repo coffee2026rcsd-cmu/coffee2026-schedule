@@ -58,6 +58,17 @@
   .people-ix button:hover b{color:var(--accent)}
   .people-ix .mt{display:block;font-size:12.5px;color:var(--ink-3)}
   .mine-empty{padding:40px 0;color:var(--ink-3);max-width:520px}
+  .mtnote{font-size:12.5px;color:var(--ink-3);margin-top:8px}
+  .sitenote{margin-top:6px}
+  .about-page{max-width:760px;padding:26px 0 10px}
+  .about-page h2{font-size:22px;line-height:1.25;margin:0 0 4px}
+  .about-page h3{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin:30px 0 8px}
+  .about-page p{margin:14px 0;color:var(--ink-2)}
+  .ab-g h4{margin:14px 0 6px;font-size:13px;color:var(--accent)}
+  .ab-g ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+  .ab-g li{display:flex;align-items:center;gap:12px}
+  .ab-g img{height:34px;width:auto;max-width:120px;object-fit:contain}
+  .ab-note{font-size:13px;color:var(--ink-3);border-top:1px solid var(--line);padding-top:14px;margin-top:30px}
   main{padding:8px 0 80px}
   .block{display:grid;grid-template-columns:118px 1fr;gap:24px;padding:22px 0;border-top:1px solid var(--line);scroll-margin-top:90px}
   .block:first-child{border-top:0}
@@ -191,10 +202,11 @@
 <body>
 <div class="wrap">
   <header>
-    <div class="lang" role="group" aria-label="Language"><button data-lang="en" aria-pressed="true">EN</button><button data-lang="zh" aria-pressed="false">中文</button></div>
+    <div class="lang" role="group" aria-label="Language"><button data-lang="en" aria-pressed="true">EN</button><button data-lang="zh" aria-pressed="false">中文</button><button data-lang="th" aria-pressed="false">ไทย</button></div>
     <div class="eyebrow" id="subtitle">3rd International Symposium on Coffee · 27–28 November 2026</div>
     <h1 id="title">Programme</h1>
     <div class="meta" id="venue"></div>
+    <div class="mtnote" id="mt" hidden></div>
     <div class="where" id="where" hidden></div>
     <div class="nownext" id="nownext" hidden></div>
     <div class="glance" id="glance"></div>
@@ -209,7 +221,7 @@
   <main id="main"><div class="empty" id="loading">Loading the programme…</div></main>
   <section class="rooms-sec" id="rooms" hidden></section>
   <section class="sponsors" id="sponsors" hidden></section>
-  <footer><span id="updated"></span> · <span data-t="subject">This schedule is subject to change.</span></footer>
+  <footer><span id="updated"></span> · <span data-t="subject">This schedule is subject to change.</span><div id="sitenote" class="sitenote"></div></footer>
 </div>
 <div class="toast" id="toast"></div>
 <figure class="zoom" id="zoom" hidden><button class="zx" data-unzoom aria-label="Close">×</button><img alt=""><figcaption></figcaption></figure>
@@ -224,7 +236,8 @@
           map: 'Map', mapCn: 'Map in China (Amap / Baidu)', seeRooms: 'See the rooms', roomsH: 'The rooms', prev: 'Previous photo', nextP: 'Next photo', keywords: 'Keywords', noAbstract: 'The abstract will be added soon.', papers: '{n} papers — titles and abstracts', inside: 'matches inside', rooms: 'Rooms',
           mine: 'My programme', people: 'People', onlineTalks: 'Online talks', star: 'Keep in my programme', unstar: 'Remove from my programme',
           mineEmpty: 'Tap ☆ on a session or a talk to keep it here. It stays in this browser on this phone or computer — no account needed.',
-          parallel: 'rounds of parallel sessions', papersN: 'papers', nowNext: 'Next', thenNothing: 'That is all for today', roles: { presenter: 'Presenter', speaker: 'Speaker', chair: 'Chair', moderator: 'Moderator' } },
+          parallel: 'rounds of parallel sessions', papersN: 'papers', nowNext: 'Next', thenNothing: 'That is all for today', roles: { presenter: 'Presenter', speaker: 'Speaker', chair: 'Chair', moderator: 'Moderator' },
+          aboutV: 'About', organisers: 'Organisers and partners', contact: 'Contact', mt: 'Machine translation (Google Translate). Names are as written; the English original is under EN.' },
     zh: { search: '搜索姓名、题目或会议室', chair: '主持人', moderator: '主持人', online: '线上', also: '同时进行', copy: '链接已复制',
           none: '没有找到匹配的内容。', subject: '日程如有变动，以现场为准。', updated: '更新于', loading: '正在加载日程…',
           kinds: { keynote: '主旨演讲', plenary: '全体讨论', concurrent: '分会场', roundtable: '圆桌讨论', opening: '开幕式', closing: '闭幕式', side: '平行活动', open: '公开环节' },
@@ -232,9 +245,28 @@
           map: '地图', mapCn: '高德 / 百度地图', seeRooms: '查看会议室', roomsH: '会议室', prev: '上一张', nextP: '下一张', keywords: '关键词', noAbstract: '摘要即将补充。', papers: '{n} 篇论文 — 题目与摘要', inside: '内含匹配', rooms: '会议室',
           mine: '我的日程', people: '人员', onlineTalks: '线上报告', star: '加入我的日程', unstar: '从我的日程移除',
           mineEmpty: '点击任意环节旁的 ☆ 即可加入这里。只保存在这台手机或电脑的浏览器中，无需注册。',
-          parallel: '轮分会场', papersN: '篇论文', nowNext: '下一项', thenNothing: '今天的日程已结束', roles: { presenter: '报告人', speaker: '发言人', chair: '主持人', moderator: '主持人' } }
+          parallel: '轮分会场', papersN: '篇论文', nowNext: '下一项', thenNothing: '今天的日程已结束', roles: { presenter: '报告人', speaker: '发言人', chair: '主持人', moderator: '主持人' },
+          aboutV: '关于', organisers: '主办与合作单位', contact: '联系方式', mt: '机器翻译（Google 翻译）。人名保持原文；英文原文请点 EN。' },
+    th: { search: 'ค้นหาชื่อ หัวข้อ หรือห้อง', chair: 'ประธาน', moderator: 'ผู้ดำเนินรายการ', online: 'ออนไลน์', also: 'ในเวลาเดียวกัน', copy: 'คัดลอกลิงก์แล้ว',
+          none: 'ไม่พบรายการที่ค้นหา', subject: 'กำหนดการอาจมีการเปลี่ยนแปลง', updated: 'อัปเดต', loading: 'กำลังโหลดกำหนดการ…',
+          kinds: { keynote: 'ปาฐกถาหลัก', plenary: 'เสวนารวม', concurrent: 'ห้องย่อยคู่ขนาน', roundtable: 'โต๊ะกลม', opening: 'พิธีเปิด', closing: 'พิธีปิด', side: 'กิจกรรมคู่ขนาน', open: 'ช่วงเปิด' },
+          about: 'เกี่ยวกับช่วงนี้', nowL: 'ตอนนี้', next: 'ถัดไป', min: 'นาที', failed: 'โหลดกำหนดการไม่สำเร็จ กรุณาลองใหม่อีกครั้ง',
+          map: 'แผนที่', mapCn: 'แผนที่สำหรับจีน (Amap / Baidu)', seeRooms: 'ดูห้องประชุม', roomsH: 'ห้องประชุม', prev: 'รูปก่อนหน้า', nextP: 'รูปถัดไป', keywords: 'คำสำคัญ', noAbstract: 'บทคัดย่อจะเพิ่มเร็ว ๆ นี้', papers: '{n} บทความ — ชื่อเรื่องและบทคัดย่อ', inside: 'พบในเนื้อหา', rooms: 'ห้อง',
+          mine: 'ตารางของฉัน', people: 'รายชื่อ', onlineTalks: 'นำเสนอออนไลน์', star: 'เก็บไว้ในตารางของฉัน', unstar: 'นำออกจากตารางของฉัน',
+          mineEmpty: 'กด ☆ ที่ช่วงที่สนใจเพื่อเก็บไว้ที่นี่ ข้อมูลเก็บในเบราว์เซอร์ของเครื่องนี้เท่านั้น ไม่ต้องสมัครสมาชิก',
+          parallel: 'รอบห้องย่อยคู่ขนาน', papersN: 'บทความ', nowNext: 'ถัดไป', thenNothing: 'จบกำหนดการวันนี้แล้ว', roles: { presenter: 'ผู้นำเสนอ', speaker: 'วิทยากร', chair: 'ประธาน', moderator: 'ผู้ดำเนินรายการ' },
+          aboutV: 'เกี่ยวกับงาน', organisers: 'ผู้จัดและหน่วยงานร่วม', contact: 'ติดต่อ', mt: 'แปลด้วยเครื่อง (Google Translate) ชื่อบุคคลคงตามต้นฉบับ ดูต้นฉบับภาษาอังกฤษได้ที่ EN' }
   };
-  var DAYZH = { 'Day 1': '第一天', 'Day 2': '第二天', 'Day 3': '第三天' };
+  var DAYZH = { 'Day 1': '第一天', 'Day 2': '第二天', 'Day 3': '第三天' }, DAYTH = { 'Day 1': 'วันที่ 1', 'Day 2': 'วันที่ 2', 'Day 3': 'วันที่ 3' };
+  var I18N = {}, I18N_BASE = '';
+  function tr(x) { if (!x || L === 'en') return x; var m = I18N[L]; return (m && m[String(x).trim()]) || x; }
+  function dn(key) { return L === 'zh' ? (DAYZH[key] || key) : L === 'th' ? (DAYTH[key] || key) : key; }
+  function loadLang() {   // the translations sit next to schedule.json; English needs none
+    if (L === 'en' || I18N[L] || window.__SCHEDULE__) return;
+    I18N[L] = {};
+    fetch(I18N_BASE + 'i18n-' + L + '.json?t=' + Math.floor(Date.now() / 60000), { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : {}; })
+      .then(function (m) { I18N[L] = m || {}; render(); }).catch(function () {});
+  }
   var L = 'en', DATA = null, DAY = 0, Q = '', OPEN = {}, VIEW = 'day', CHIP = {}, STAR = {};
   try { STAR = JSON.parse(localStorage.getItem('stars') || '{}') || {}; } catch (e) { STAR = {}; }
   function saveStars() { try { localStorage.setItem('stars', JSON.stringify(STAR)); } catch (e) {} }
@@ -249,7 +281,8 @@
     if (CHIP.online && !(s.papers || []).some(function (p) { return p.online; })) return false;
     return true;
   }
-  try { L = localStorage.getItem('lang') || (/^zh/i.test(navigator.language || '') ? 'zh' : 'en'); } catch (e) {}
+  try { L = localStorage.getItem('lang') || (/^zh/i.test(navigator.language || '') ? 'zh' : /^th/i.test(navigator.language || '') ? 'th' : 'en'); } catch (e) {}
+  if (!T[L]) L = 'en';
   var $ = function (id) { return document.getElementById(id); };
   var esc = function (s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); };
   var t = function (k) { return T[L][k]; };
@@ -260,10 +293,10 @@
     return h.replace(new RegExp('(' + esc(q) + ')', 'gi'), '<span class="hit">$1</span>');
   }
   function text(b) {
-    var p = [b.title, b.room, b.about];
+    var p = [b.title, tr(b.title), b.room, b.about, tr(b.about)];
     (b.speakers || []).forEach(function (s) { p.push(s.name, s.affiliation, s.talk); });
     if (b.moderator) p.push(b.moderator.name);
-    (b.sessions || []).forEach(function (s) { p.push(s.name, s.room, s.chair, s.code); (s.papers || []).forEach(function (x) { p.push(x.title, x.presenter, x.affiliation, x.country, x.abstract, x.keywords); }); });
+    (b.sessions || []).forEach(function (s) { p.push(s.name, s.room, s.chair, s.code); p.push(tr(s.name)); (s.papers || []).forEach(function (x) { p.push(x.title, x.presenter, x.affiliation, x.country, x.abstract, x.keywords, tr(x.title), tr(x.abstract)); }); });
     (b.events || []).forEach(function (e) { p.push(e.name, e.org, e.moderator); p.push.apply(p, e.panellists || []); });
     return p.join(' ').toLowerCase();
   }
@@ -317,11 +350,11 @@
   function papersHTML(b, s) {
     return '<ol class="papers">' + (s.papers || []).map(function (p, k) {
       var pid = (s.code || b.id) + '-' + (k + 1), open = OPEN[pid] || (Q && (String(p.abstract || '') + ' ' + (p.keywords || '')).toLowerCase().indexOf(Q.toLowerCase()) !== -1);
-      return '<li class="paper' + (open ? ' open' : '') + '" id="' + esc(pid) + '"><button class="ptoggle" data-paper="' + esc(pid) + '" aria-expanded="' + !!open + '"><div class="t">' + mark(p.title) + '</div></button>' +
+      return '<li class="paper' + (open ? ' open' : '') + '" id="' + esc(pid) + '"><button class="ptoggle" data-paper="' + esc(pid) + '" aria-expanded="' + !!open + '"><div class="t">' + mark(tr(p.title)) + '</div></button>' +
         '<div class="who"><b>' + mark(p.presenter) + '</b>' +
         (p.online ? '<span class="online">' + esc(t('online')) + '</span>' : '') +
         (p.affiliation || p.country ? ' <span class="aff">· ' + mark([p.affiliation, p.country && String(p.affiliation).toLowerCase().indexOf(String(p.country).toLowerCase()) === -1 ? p.country : ''].filter(Boolean).join(', ')) + '</span>' : '') + '</div>' +
-        '<div class="abs">' + (p.abstract ? mark(p.abstract) : '<i>' + esc(t('noAbstract')) + '</i>') + (p.keywords ? '<span class="kw">' + esc(t('keywords')) + ': ' + mark(p.keywords) + '</span>' : '') + '</div>' + '</li>';
+        '<div class="abs">' + (p.abstract ? mark(tr(p.abstract)) : '<i>' + esc(t('noAbstract')) + '</i>') + (p.keywords ? '<span class="kw">' + esc(t('keywords')) + ': ' + mark(tr(p.keywords)) + '</span>' : '') + '</div>' + '</li>';
     }).join('') + '</ol>';
   }
   function showSheet(html, wide) {
@@ -336,15 +369,15 @@
     var b = hit.b, s = hit.s;
     showSheet('<div class="sh">' + (s.code ? '<span class="code">' + esc(s.code) + '</span>' : '') + '<span class="room">' + esc(b.start + '–' + b.end) + ' · ' + roomLink(s.roomKey, s.room) + '</span>' +
       '<button class="link" style="opacity:.7" data-link="' + esc(id) + '" aria-label="Copy a link to this session">#</button>' + starBtn(id) + '</div>' +
-      '<h3 class="sname" id="sheetT">' + mark(s.name) + '</h3>' + (s.chair ? '<div class="chair"><span class="lab">' + esc(t('chair')) + ':</span> ' + mark(s.chair) + '</div>' : '') +
+      '<h3 class="sname" id="sheetT">' + mark(tr(s.name)) + '</h3>' + (s.chair ? '<div class="chair"><span class="lab">' + esc(t('chair')) + ':</span> ' + mark(s.chair) + '</div>' : '') +
       papersHTML(b, s), true);
     if (paper) { var el = document.getElementById(paper); if (el) setTimeout(function () { el.scrollIntoView({ block: 'center' }); }, 30); }
   }
   function openRoom(key) {
     var r = roomOf(key); if (!r) return;
-    $('sheetBody').innerHTML = '<h3 id="sheetT">' + esc(r.name) + '</h3>' + (DATA.venue ? '<div class="meta">' + esc(DATA.venue) + '</div>' : '') +
+    $('sheetBody').innerHTML = '<h3 id="sheetT">' + esc(tr(r.name)) + '</h3>' + (DATA.venue ? '<div class="meta">' + esc(tr(DATA.venue)) + '</div>' : '') +
       ((r.photos || []).length ? slidesHTML(slideList([{ name: r.name, note: '', photos: r.photos }])) : '') +
-      (r.note ? '<p style="margin:10px 0 0">' + esc(r.note) + '</p>' : '') + whereHTML();
+      (r.note ? '<p style="margin:10px 0 0">' + esc(tr(r.note)) + '</p>' : '') + whereHTML();
     showSheet($('sheetBody').innerHTML, false);
   }
   function blockHTML(b, live, only) {   // only: { sessionId: true } — show just these sessions (My programme)
@@ -353,10 +386,10 @@
     var h = '<section class="block' + (quiet ? ' quiet' : '') + (live ? ' live' : '') + '" id="' + esc(b.id) + '">' +
       '<div class="time">' + esc(b.start) + '<small>– ' + esc(b.end) + '</small></div><div>';
     if (kind && !quiet) h += '<div class="kind">' + esc(kind) + (b.room ? ' · ' + roomLink(b.roomKey, b.room) : '') + '</div>';
-    h += '<p class="bt">' + mark(b.title) + (!quiet && !(b.sessions && b.sessions.length) ? ' ' + starBtn(b.id) : '') + ' <button class="link" data-link="' + esc(b.id) + '" title="Copy a link to this part of the programme (for sharing or a QR code)" aria-label="Copy a link to this">#</button></p>';
-    if (b.about) h += '<details class="about"><summary>' + esc(t('about')) + '</summary>' + mark(b.about) + '</details>';
+    h += '<p class="bt">' + mark(tr(b.title)) + (!quiet && !(b.sessions && b.sessions.length) ? ' ' + starBtn(b.id) : '') + ' <button class="link" data-link="' + esc(b.id) + '" title="Copy a link to this part of the programme (for sharing or a QR code)" aria-label="Copy a link to this">#</button></p>';
+    if (b.about) h += '<details class="about"><summary>' + esc(t('about')) + '</summary>' + mark(tr(b.about)) + '</details>';
     if (b.speakers && b.speakers.length) h += '<ul class="people">' + b.speakers.map(function (s) {
-      return '<li><b>' + mark(s.name) + '</b>' + (s.affiliation ? ' <span class="aff">· ' + mark(s.affiliation) + '</span>' : '') + (s.talk ? '<span class="talk">' + mark(s.talk) + '</span>' : '') + '</li>';
+      return '<li><b>' + mark(s.name) + '</b>' + (s.affiliation ? ' <span class="aff">· ' + mark(s.affiliation) + '</span>' : '') + (s.talk ? '<span class="talk">' + mark(tr(s.talk)) + '</span>' : '') + '</li>';
     }).join('') + '</ul>';
     if (b.moderator && b.moderator.name) h += '<div class="mod"><span class="lab">' + esc(t('moderator')) + ':</span> ' + mark(b.moderator.name) + (b.moderator.affiliation ? ' <span class="aff">· ' + mark(b.moderator.affiliation) + '</span>' : '') + '</div>';
     var shownSess = (b.sessions || []).filter(function (s) { return only ? only[sessId(b, s)] : sessOK(s); });
@@ -367,32 +400,35 @@
       var inside = Q && shown.indexOf(Q.toLowerCase()) === -1;
       return '<article class="session card" id="' + esc(id) + '" data-sess="' + esc(id) + '"><div class="sh">' + (s.code ? '<span class="code">' + esc(s.code) + '</span>' : '') +
         '<span class="room">' + roomLink(s.roomKey, s.room) + '</span><button class="link" data-link="' + esc(id) + '" aria-label="Copy a link to this session">#</button></div>' +
-        '<h3 class="sname">' + mark(s.name) + '</h3>' + (s.chair ? '<div class="chair"><span class="lab">' + esc(t('chair')) + ':</span> ' + mark(s.chair) + '</div>' : '') +
+        '<h3 class="sname">' + mark(tr(s.name)) + '</h3>' + (s.chair ? '<div class="chair"><span class="lab">' + esc(t('chair')) + ':</span> ' + mark(s.chair) + '</div>' : '') +
         '<ul class="names">' + ps.map(function (p, k) { return '<li data-n="' + (k + 1) + '"><span>' + mark(p.presenter) + (p.online ? '<span class="online">' + esc(t('online')) + '</span>' : '') + '</span></li>'; }).join('') + '</ul>' +
         '<button class="more" data-sess="' + esc(id) + '">' + esc(t('papers').replace('{n}', ps.length)) + ' ›</button>' + (inside ? '<span class="inside">' + esc(t('inside')) + '</span>' : '') + starBtn(id) + '</article>';
     }).join('') + '</div>';
     if (b.events && b.events.length) h += '<div class="side">' + b.events.map(function (e) {
       var same = String(e.name).toLowerCase() === String(b.title).toLowerCase();
-      return '<div class="ev">' + (same ? '' : '<b>' + mark(e.name) + '</b>') + (e.kind ? ' <span class="aff">' + (same ? '' : '· ') + esc(e.kind) + '</span>' : '') + (e.org ? ' <span class="aff">· ' + mark(e.org) + '</span>' : '') +
+      return '<div class="ev">' + (same ? '' : '<b>' + mark(tr(e.name)) + '</b>') + (e.kind ? ' <span class="aff">' + (same ? '' : '· ') + esc(tr(e.kind)) + '</span>' : '') + (e.org ? ' <span class="aff">· ' + mark(e.org) + '</span>' : '') +
         (e.panellists && e.panellists.length ? '<ul class="people">' + e.panellists.map(function (x) { return '<li>' + mark(x) + '</li>'; }).join('') + '</ul>' : '') +
         (e.moderator ? '<div class="mod"><span class="lab">' + esc(t('moderator')) + ':</span> ' + mark(e.moderator) + '</div>' : '') + '</div>';
     }).join('') + '</div>';
     return h + '</div></section>';
   }
   function render() {
-    document.documentElement.lang = L === 'zh' ? 'zh-CN' : 'en';
+    document.documentElement.lang = L === 'zh' ? 'zh-CN' : L === 'th' ? 'th' : 'en';
     Array.prototype.forEach.call(document.querySelectorAll('[data-lang]'), function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-lang') === L)); });
     Array.prototype.forEach.call(document.querySelectorAll('[data-t]'), function (el) { el.textContent = t(el.getAttribute('data-t')); });
     $('q').placeholder = t('search');
     if (!DATA) return;
-    $('title').textContent = DATA.title || 'Programme';
-    $('subtitle').textContent = DATA.subtitle || '';
-    $('venue').textContent = DATA.venue || '';
+    loadLang();
+    $('title').textContent = tr(DATA.title) || 'Programme';
+    $('subtitle').textContent = tr(DATA.subtitle) || '';
+    $('venue').textContent = tr(DATA.venue) || '';
+    $('mt').hidden = L === 'en'; $('mt').textContent = t('mt');
+    $('sitenote').textContent = DATA.about && DATA.about.note ? tr(DATA.about.note) : '';
     $('updated').textContent = DATA.updated ? t('updated') + ' ' + DATA.updated : '';
     var sp = DATA.sponsors || [];
     $('sponsors').hidden = !sp.length;
     $('sponsors').innerHTML = sp.map(function (g) {
-      return '<div class="spg"><h4>' + esc(g.group) + '</h4><div class="logos">' + g.items.map(function (x) {
+      return '<div class="spg"><h4>' + esc(tr(g.group)) + '</h4><div class="logos">' + g.items.map(function (x) {
         var hh = Number(x.h) || ({ s: 34, m: 54, l: 84 })[x.size] || 54;
         var inner = x.logo ? '<img src="' + esc(x.logo) + '" alt="' + esc(x.name) + '" title="' + esc(x.name) + '" loading="lazy" style="--h:' + hh + '">' : '<span class="txt">' + esc(x.name) + '</span>';
         return x.url ? '<a class="' + esc(x.size) + '" href="' + esc(x.url) + '" target="_blank" rel="noopener">' + inner + '</a>' : '<span class="' + esc(x.size) + '">' + inner + '</span>';
@@ -404,11 +440,11 @@
     $('rooms').hidden = !all.length;
     $('rooms').innerHTML = all.length ? '<h2>' + esc(t('roomsH')) + '</h2>' + slidesHTML(all) : '';
     var clock = bkk();
-    var dayName = function (d) { return L === 'zh' ? (DAYZH[d.key] || d.key) : d.key; };
+    var dayName = function (d) { return dn(d.key); };
     // at a glance: each day's main moments; Now / Next on the event days
     $('glance').innerHTML = DATA.days.map(function (d, i) {
       var key = d.blocks.filter(function (b) { return /keynote|plenary|opening|closing|roundtable/.test(b.type); })
-        .map(function (b) { return b.start.replace(/:00 /, ' ') + ' ' + String(b.title).split(/[:–—-]/)[0].trim(); });
+        .map(function (b) { return b.start.replace(/:00 /, ' ') + ' ' + String(tr(b.title)).split(/[:：–—-]/)[0].trim(); });
       var rounds = d.blocks.filter(function (b) { return b.sessions && b.sessions.length; }).length;
       return '<button data-day="' + i + '"><b>' + esc(dayName(d) + ' · ' + d.date) + '</b><span>' + esc(key.join(' · ')) + '</span>' +
         (rounds ? '<span class="muted" style="color:var(--ink-3)">' + rounds + ' ' + esc(t('parallel')) + '</span>' : '') + '</button>';
@@ -426,7 +462,7 @@
       };
       var box = function (lab, b, empty) {
         return '<button' + (b ? ' data-jump="' + esc(b.id) + '"' : '') + '><small>' + (lab === 'now' ? '● ' + esc(t('nowL')) : esc(t('nowNext'))) + (b ? ' · ' + esc(b.start) : '') + '</small>' +
-          '<b>' + esc(b ? b.title : empty) + '</b><span>' + esc(line(b)) + '</span></button>';
+          '<b>' + esc(b ? tr(b.title) : empty) + '</b><span>' + esc(line(b)) + '</span></button>';
       };
       if (cur || nxt) nn = box('now', cur, '—') + box('next', nxt, t('thenNothing'));
     }
@@ -437,7 +473,8 @@
     }).join('');
     var nStar = Object.keys(STAR).filter(function (k) { return STAR[k]; }).length;
     $('views').innerHTML = '<button data-view="mine" aria-pressed="' + (VIEW === 'mine') + '">★ ' + esc(t('mine')) + (nStar ? '<span class="n">' + nStar + '</span>' : '') + '</button>' +
-      '<button data-view="people" aria-pressed="' + (VIEW === 'people') + '">' + esc(t('people')) + '</button>';
+      '<button data-view="people" aria-pressed="' + (VIEW === 'people') + '">' + esc(t('people')) + '</button>' +
+      '<button data-view="about" aria-pressed="' + (VIEW === 'about') + '">' + esc(t('aboutV')) + '</button>';
     // theme and online chips (for the programme view)
     var nos = {}, anyOnline = false;
     DATA.days.forEach(function (d) { d.blocks.forEach(function (b) { (b.sessions || []).forEach(function (s) { var n = themeNo(s); if (n) nos[n] = true; if ((s.papers || []).some(function (p) { return p.online; })) anyOnline = true; }); }); });
@@ -448,6 +485,7 @@
     var html = '', any = false, nowTxt = '';
     var chips = chipsOn().length;
     if (VIEW === 'people') { $('main').innerHTML = peopleHTML(); $('now').hidden = true; return; }
+    if (VIEW === 'about') { $('main').innerHTML = aboutHTML(); $('now').hidden = true; return; }
     DATA.days.forEach(function (d, i) {
       var isToday = isoOf(d) === clock.date;
       var list;
@@ -475,12 +513,27 @@
     $('main').innerHTML = any ? html : '<div class="' + (VIEW === 'mine' ? 'mine-empty' : 'empty') + '">' + esc(t(VIEW === 'mine' ? 'mineEmpty' : 'none')) + '</div>';
     $('now').hidden = !nowTxt; $('now').textContent = nowTxt ? '● ' + nowTxt : '';
   }
+  /** The symposium in short, who organises it with whom, and whose site this is. */
+  function aboutHTML() {
+    var a = DATA.about || {};
+    var paras = String(tr(a.text) || '').split(/\n{2,}/).filter(Boolean).map(function (x) { return '<p>' + esc(x) + '</p>'; }).join('');
+    var orgs = (DATA.sponsors || []).map(function (g) {
+      return '<div class="ab-g"><h4>' + esc(tr(g.group)) + '</h4><ul>' + g.items.map(function (x) {
+        var nm = esc(x.name || '');
+        return '<li>' + (x.logo ? '<img src="' + esc(x.logo) + '" alt="" loading="lazy">' : '') + (x.url ? '<a href="' + esc(x.url) + '" target="_blank" rel="noopener">' + nm + '</a>' : nm) + '</li>';
+      }).join('') + '</ul></div>';
+    }).join('');
+    return '<article class="about-page"><h2>' + esc(tr(DATA.title)) + '</h2><div class="meta">' + esc(tr(DATA.subtitle)) + ' · ' + esc(tr(DATA.venue)) + '</div>' + paras +
+      (orgs ? '<h3>' + esc(t('organisers')) + '</h3>' + orgs : '') +
+      (a.contact ? '<h3>' + esc(t('contact')) + '</h3><p><a href="mailto:' + esc(a.contact) + '">' + esc(a.contact) + '</a></p>' : '') +
+      (a.note ? '<p class="ab-note">' + esc(tr(a.note)) + '</p>' : '') + '</article>';
+  }
   /** Everyone on the programme, A–Z: presenters, speakers, chairs and moderators, each with where and when. */
   function peopleHTML() {
     var R = t('roles'), list = [];
     DATA.days.forEach(function (d) {
       d.blocks.forEach(function (b) {
-        var when = (L === 'zh' ? (DAYZH[d.key] || d.key) : d.key) + ' ' + b.start;
+        var when = dn(d.key) + ' ' + b.start;
         (b.speakers || []).forEach(function (x) { if (x.name && !/to be confirmed/i.test(x.name)) list.push({ n: x.name, r: R.speaker, w: when + ' · ' + b.title, go: b.id }); });
         if (b.moderator && b.moderator.name) list.push({ n: b.moderator.name, r: R.moderator, w: when + ' · ' + b.title, go: b.id });
         (b.sessions || []).forEach(function (s) {
@@ -565,7 +618,7 @@
     if (!h || !DATA) return;
     var m = h.match(/^day(\d)$/i);
     if (m) { DAY = Math.max(0, Math.min(DATA.days.length - 1, Number(m[1]) - 1)); VIEW = 'day'; render(); return; }
-    if (/^(mine|people)$/.test(h)) { VIEW = h; render(); return; }
+    if (/^(mine|people|about)$/.test(h)) { VIEW = h; render(); return; }
     var sid = null, pid = null;
     DATA.days.forEach(function (d, i) {
       d.blocks.forEach(function (b) {
@@ -582,6 +635,7 @@
   function load() {
     if (window.__SCHEDULE__) { DATA = window.__SCHEDULE__; render(); goHash(); return; }   // a preview with the data built in
     var src = (location.search.match(/[?&]data=([^&]+)/) || [])[1] || 'schedule.json';
+    I18N_BASE = decodeURIComponent(src).replace(/[^/]*$/, '');
     fetch(decodeURIComponent(src) + (src.indexOf('?') === -1 ? '?' : '&') + 't=' + Math.floor(Date.now() / 60000), { cache: 'no-store' })
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(function (d) {
