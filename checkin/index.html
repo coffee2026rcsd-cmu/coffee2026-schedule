@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#f7f5f1" id="tc">
 <title>Check-in · 3rd International Symposium on Coffee</title>
 <style>
   :root{--bg:#f7f5f1;--surface:#fff;--ink:#1d1a16;--ink-2:#4b443c;--ink-3:#8b8279;--line:#e8e2d9;--accent:#8a5a2b;--soft:#f2e9df;--ok:#2f7a4a;--okbg:#e6f3ea;--warn:#9a6b10;--warnbg:#fbf1dc;--bad:#9b2c2c;--badbg:#f8e3e3}
@@ -54,8 +55,28 @@
   .row .sm{font-size:13px;color:var(--ink-3)}
   .tag{font-size:11px;font-weight:700;border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:1px}
   .tag.yes{background:var(--okbg);color:var(--ok)}.tag.no{background:#eee;color:var(--ink-3)}
-  .in{color:var(--ok);font-weight:700;font-size:13px}
+  .in{display:block;color:var(--ok);font-weight:700;font-size:13px}
+  .row .sm{display:block}
   .foot{font-size:12px;color:var(--ink-3);margin-top:30px;text-align:center}
+  /* each role has its own colour and icon, so a glance tells which page this is */
+  body{--role:#1d1a16;--rolebg:#f7f5f1;--roleink:#fff}
+  body.k-scan{--role:#1f7a5a;--rolebg:#e7f4ee;--bg:#eef6f2;--soft:#d9eee4}
+  body.k-data{--role:#4b3fb5;--rolebg:#ecebfa;--bg:#f1f0fb;--soft:#e0ddf7}
+  body.k-scan .btn,body.k-data .btn{background:var(--role)}
+  body.k-scan .btn.ghost,body.k-data .btn.ghost{background:transparent;color:var(--ink)}
+  .roleband{display:flex;align-items:center;gap:14px;background:var(--role);color:var(--roleink);border-radius:18px;padding:14px 16px;margin-bottom:14px}
+  .roleband svg{width:38px;height:38px;flex:0 0 38px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .roleband b{display:block;font-size:19px;line-height:1.2}
+  .roleband span{font-size:13px;opacity:.85}
+  body .roleband .btn.ghost{margin-left:auto;color:#fff;border-color:rgba(255,255,255,.55);white-space:nowrap}
+  .stats b{color:var(--role)}
+  .modes button[aria-pressed=true]{background:var(--role);color:#fff}
+  .tag.walk{background:var(--rolebg);color:var(--role)}
+  .help{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--surface);border-radius:14px;padding:12px 14px;margin-top:16px;font-size:14px;color:var(--ink-2)}
+  .chips{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 4px}
+  .chips button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 12px;font-size:14px;font-weight:700;color:var(--ink-2);cursor:pointer}
+  .chips button[aria-pressed=true]{background:var(--role);border-color:var(--role);color:#fff}
+  .count{font-size:13px;color:var(--ink-3);margin:6px 0 0}
   [hidden]{display:none!important}
 </style>
 </head>
@@ -72,12 +93,9 @@
   </form>
 
   <div id="app" hidden>
-    <div class="top">
-      <div class="days" id="days"></div>
-      <div class="who"><span id="who"></span> · <button class="btn ghost small" id="out" type="button">Sign out</button></div>
-    </div>
+    <div class="roleband" id="band"><span id="ricon"></span><div><b id="rtitle"></b><span id="who"></span></div><button class="btn ghost small" id="out" type="button">Sign out</button></div>
     <div class="stats" id="stats"></div>
-    <div class="modes" id="modes" hidden><button data-mode="scan" aria-pressed="true">Scan QR</button><button data-mode="find" aria-pressed="false">Find by name / email</button></div>
+    <div class="modes" id="modes" hidden><button data-mode="scan" aria-pressed="true">Scan QR</button><button data-mode="find" aria-pressed="false">Participant list</button></div>
 
     <section id="scan">
       <div class="cam" id="cam">
@@ -89,18 +107,25 @@
     </section>
 
     <section id="find" hidden>
-      <input type="search" id="q" placeholder="Name, email or organization">
+      <input type="search" id="q" placeholder="Search name, email, organization or code">
+      <div class="chips" id="chips"><button data-f="" aria-pressed="true">All</button><button data-f="not" aria-pressed="false">Not checked in</button><button data-f="in" aria-pressed="false">Checked in</button><button data-f="walk" aria-pressed="false">Walk-ins</button><button data-f="lunch" aria-pressed="false">Lunch</button></div>
+      <div class="count" id="count"></div>
       <div class="list" id="list"></div>
+      <div class="help">Not on the list? Register them with the walk-in form — the QR code arrives by email within a minute or two, or tick them here once they appear. <a class="btn small" id="walkin" target="_blank" rel="noopener" href="https://tally.so/r/4aaOOo">Open walk-in form ↗</a></div>
     </section>
   </div>
-  <div class="foot">For registration staff only · RCSD, Faculty of Social Sciences, Chiang Mai University</div>
+  <div class="foot">Each person checks in once for the whole event · For registration staff only · RCSD, Faculty of Social Sciences, Chiang Mai University</div>
 </div>
 <div class="result" id="result" role="status" aria-live="assertive"></div>
 
 <script>
 (function () {
   var API = 'https://script.google.com/macros/s/AKfycbxX_SZjeewSaR6e5FmH4Kvwq-iw9PWhLZSzk18p_3Hp5ATs8v8xcxHJqdWfollVmS0m/exec';
-  var S = { token: '', kind: '', label: '', day: 'Day 1', days: ['Day 1', 'Day 2'], busy: false, last: '', lastAt: 0, stream: null, detector: null };
+  var S = { token: '', kind: '', label: '', busy: false, last: '', lastAt: 0, stream: null, detector: null };
+  var ROLE = {
+    scan: { title: 'Registration desk · Scan', color: '#1f7a5a', icon: '<svg viewBox="0 0 24 24"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2"/><path d="M8 9.5h1.5l1-1.5h3l1 1.5H16a1 1 0 0 1 1 1V15a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-4.5a1 1 0 0 1 1-1z"/><circle cx="12" cy="12.6" r="1.8"/></svg>' },
+    data: { title: 'Help desk · Find & tick', color: '#4b3fb5', icon: '<svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="5.5"/><path d="M15 15l5 5"/><path d="M8 10.5l1.8 1.8 3.2-3.3"/></svg>' }
+  };
   var $ = function (id) { return document.getElementById(id); };
   var esc = function (s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); };
   function store(k, v) { try { if (v === null) localStorage.removeItem(k); else localStorage.setItem(k, v); } catch (e) {} }
@@ -121,8 +146,8 @@
     $('lbtn').disabled = true; $('lerr').textContent = '';
     call({ op: 'login', user: $('u').value.trim(), pass: $('p').value }).then(function (d) {
       if (!d.token) throw new Error(d.error || 'Could not sign in.');
-      S.token = d.token; S.kind = d.kind; S.label = d.label; S.days = d.days || S.days; S.day = d.today || load('ck-day') || 'Day 1';
-      store('ck-session', JSON.stringify({ token: S.token, kind: S.kind, label: S.label, days: S.days }));
+      S.token = d.token; S.kind = d.kind; S.label = d.label;
+      store('ck-session', JSON.stringify({ token: S.token, kind: S.kind, label: S.label }));
       $('p').value = ''; start();
     }).catch(function (err) { $('lerr').textContent = err.message || 'Could not sign in.'; })
       .then(function () { $('lbtn').disabled = false; });
@@ -130,33 +155,31 @@
   function signOut() {
     store('ck-session', null); S.token = '';
     stopCam(); $('app').hidden = true; $('login').hidden = false;
+    document.body.className = ''; $('tc').setAttribute('content', '#f7f5f1'); document.title = 'Check-in · 3rd International Symposium on Coffee';
   }
   $('out').addEventListener('click', signOut);
   function start() {
     $('login').hidden = true; $('app').hidden = false;
-    $('who').textContent = S.label;
+    var R = ROLE[S.kind] || ROLE.scan;
+    document.body.className = 'k-' + (S.kind === 'data' ? 'data' : 'scan');
+    $('tc').setAttribute('content', R.color);
+    $('ricon').innerHTML = R.icon; $('rtitle').textContent = R.title; $('who').textContent = 'Signed in as ' + S.label;
+    document.title = R.title + ' · Check-in';
     $('modes').hidden = S.kind !== 'data';
-    paintDays(); stats(); mode(S.kind === 'data' && load('ck-mode') === 'find' ? 'find' : 'scan');
+    stats(); mode(S.kind === 'data' && load('ck-mode-data') !== 'scan' ? 'find' : 'scan');
   }
-  function paintDays() {
-    $('days').innerHTML = S.days.map(function (d) { return '<button type="button" data-day="' + esc(d) + '" aria-pressed="' + (d === S.day) + '">' + esc(d) + '</button>'; }).join('');
-  }
-  $('days').addEventListener('click', function (e) {
-    var b = e.target.closest('[data-day]'); if (!b) return;
-    S.day = b.getAttribute('data-day'); store('ck-day', S.day); paintDays(); stats(); if ($('q').value) search();
-  });
   function stats() {
-    call({ op: 'stats', day: S.day }).then(function (d) {
-      $('stats').innerHTML = '<b>' + d.in + '</b> of ' + d.total + ' checked in for ' + esc(d.day) + ' · <b>' + d.meals + '</b> with lunch';
+    call({ op: 'stats' }).then(function (d) {
+      $('stats').innerHTML = '<b>' + d.in + '</b> of ' + d.total + ' checked in · <b>' + d.meals + '</b> with lunch' + (d.walkins ? ' · ' + d.walkins + ' walk-ins registered' : '');
     }).catch(function () {});
   }
   setInterval(function () { if (S.token && !document.hidden) stats(); }, 30000);
   function mode(m) {
     $('scan').hidden = m !== 'scan'; $('find').hidden = m !== 'find';
     Array.prototype.forEach.call(document.querySelectorAll('[data-mode]'), function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-mode') === m)); });
-    store('ck-mode', m);
+    store('ck-mode-' + S.kind, m);
     if (m !== 'scan') stopCam(); else if (S.stream === null && load('ck-cam') === '1') startCam();
-    if (m === 'find') setTimeout(function () { $('q').focus(); }, 50);
+    if (m === 'find') { loadList(); setTimeout(function () { $('q').focus(); }, 50); }
   }
   $('modes').addEventListener('click', function (e) { var b = e.target.closest('[data-mode]'); if (b) mode(b.getAttribute('data-mode')); });
 
@@ -177,14 +200,14 @@
   function answer(d) {
     if (!d.ok) { show('bad', '<div class="st">Not found</div><div class="big">' + esc(d.error || 'This code is not on the list.') + '</div><div class="sm">' + esc(d.code || '') + ' — ask the data staff to look the person up.</div>', 5000); return; }
     if (d.already) show('warn', personHTML(d.person, 'Already checked in · ' + d.already), 5000);
-    else show('ok', personHTML(d.person, '✓ Checked in · ' + d.day), 3500);
+    else show('ok', personHTML(d.person, '✓ Checked in'), 3500);
     stats();
   }
   function check(code) {
     code = String(code || '').trim(); if (!code || S.busy) return;
     if (code === S.last && Date.now() - S.lastAt < 6000) return;   // the same code still in front of the camera
     S.last = code; S.lastAt = Date.now(); S.busy = true;
-    call({ op: 'scan', code: code, day: S.day }).then(answer)
+    call({ op: 'scan', code: code }).then(answer)
       .catch(function (err) { show('bad', '<div class="st">Error</div><div class="big">' + esc(err.message || 'No connection') + '</div>', 5000); })
       .then(function () { S.busy = false; });
   }
@@ -236,34 +259,55 @@
   $('go').addEventListener('click', startCam);
   document.addEventListener('visibilitychange', function () { if (document.hidden) stopCam(); });
 
-  /* ---- find by name (data staff) ---- */
-  var qT = null;
-  $('q').addEventListener('input', function () { clearTimeout(qT); qT = setTimeout(search, 300); });
-  function search() {
-    var q = $('q').value.trim();
-    if (q.length < 2) { $('list').innerHTML = ''; return; }
-    call({ op: 'search', q: q, day: S.day }).then(function (d) {
-      var k = S.day === 'Day 2' ? 'in2' : 'in1';
-      $('list').innerHTML = d.rows.length ? d.rows.map(function (p) {
-        return '<div class="row"><div><b>' + esc(p.name) + '<span class="tag ' + (p.meals ? 'yes' : 'no') + '">' + (p.meals ? 'lunch' : 'no lunch') + '</span></b>' +
-          '<span class="sm">' + esc([p.type, p.affiliation, p.email].filter(Boolean).join(' · ')) + '</span>' +
-          (p[k] ? '<span class="in">✓ In · ' + esc(p[k]) + '</span>' : '') + '</div>' +
-          (p[k] ? '<button class="btn ghost small" data-undo="' + esc(p.pid) + '">Undo</button>' : '<button class="btn small" data-mark="' + esc(p.pid) + '">Check in</button>') + '</div>';
-      }).join('') : '<div class="row"><div class="sm">Nobody matches. Check the spelling, or try the email.</div></div>';
-    }).catch(function (err) { $('list').innerHTML = '<div class="err">' + esc(err.message) + '</div>'; });
+  /* ---- the participant list (data staff): everyone, filtered here as you type ---- */
+  var LIST = { rows: [], f: '', at: 0 };
+  function loadList() {
+    return call({ op: 'list' }).then(function (d) { LIST.rows = d.rows || []; LIST.at = Date.now(); renderList(); })
+      .catch(function (err) { $('list').innerHTML = '<div class="err">' + esc(err.message) + '</div>'; });
   }
+  function renderList() {
+    var q = $('q').value.trim().toLowerCase(), f = LIST.f;
+    var rows = LIST.rows.filter(function (p) {
+      if (f === 'not' && p.in) return false;
+      if (f === 'in' && !p.in) return false;
+      if (f === 'walk' && !/walk-in/i.test(p.source || '')) return false;
+      if (f === 'lunch' && !p.meals) return false;
+      return !q || (p.name + ' ' + (p.email || '') + ' ' + (p.affiliation || '') + ' ' + (p.type || '')).toLowerCase().indexOf(q) !== -1;
+    });
+    var nin = LIST.rows.filter(function (p) { return p.in; }).length;
+    $('count').textContent = rows.length + ' shown · ' + nin + ' of ' + LIST.rows.length + ' checked in';
+    var show = rows.slice(0, 300);
+    $('list').innerHTML = show.length ? show.map(function (p) {
+      return '<div class="row"><div><b>' + esc(p.name) + '<span class="tag ' + (p.meals ? 'yes' : 'no') + '">' + (p.meals ? 'lunch' : 'no lunch') + '</span>' + (/walk-in/i.test(p.source || '') ? '<span class="tag walk">walk-in</span>' : '') + '</b>' +
+        '<span class="sm">' + esc([p.type, p.affiliation, p.email].filter(Boolean).join(' · ')) + '</span>' +
+        (p.in ? '<span class="in">✓ In · ' + esc(p.in) + '</span>' : '') + '</div>' +
+        (p.in ? '<button class="btn ghost small" data-undo="' + esc(p.pid) + '">Undo</button>' : '<button class="btn small" data-mark="' + esc(p.pid) + '">Check in</button>') + '</div>';
+    }).join('') + (rows.length > show.length ? '<div class="row"><div class="sm">' + (rows.length - show.length) + ' more — type to narrow the list.</div></div>' : '')
+      : '<div class="row"><div class="sm">' + (LIST.rows.length ? 'Nobody matches. Check the spelling, or try the email.' : 'Loading the list…') + '</div></div>';
+  }
+  var qT = null;
+  $('q').addEventListener('input', function () { clearTimeout(qT); qT = setTimeout(renderList, 120); });
+  $('chips').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-f]'); if (!b) return;
+    LIST.f = b.getAttribute('data-f');
+    Array.prototype.forEach.call(document.querySelectorAll('[data-f]'), function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+    renderList();
+  });
+  setInterval(function () { if (S.token && S.kind === 'data' && !$('find').hidden && !document.hidden) loadList(); }, 45000);
   $('list').addEventListener('click', function (e) {
     var m = e.target.closest('[data-mark]'), u = e.target.closest('[data-undo]');
     if (!m && !u) return;
     var b = m || u; b.disabled = true;
-    call({ op: 'mark', pid: b.getAttribute(m ? 'data-mark' : 'data-undo'), on: !!m, day: S.day }).then(function (d) {
+    if (u && !confirm('Undo this check-in?')) { b.disabled = false; return; }
+    call({ op: 'mark', pid: b.getAttribute(m ? 'data-mark' : 'data-undo'), on: !!m }).then(function (d) {
       if (m) answer(d); else stats();
-      search();
+      LIST.rows.forEach(function (p) { if (p.pid === d.person.pid) { p.in = d.person.in; p.inBy = d.person.inBy; } });
+      renderList();
     }).catch(function (err) { b.disabled = false; show('bad', '<div class="st">Error</div><div class="big">' + esc(err.message) + '</div>'); });
   });
 
   /* ---- back from a reload ---- */
-  try { var saved = JSON.parse(load('ck-session') || 'null'); if (saved && saved.token) { S.token = saved.token; S.kind = saved.kind; S.label = saved.label; S.days = saved.days || S.days; S.day = load('ck-day') || 'Day 1'; start(); } } catch (e) {}
+  try { var saved = JSON.parse(load('ck-session') || 'null'); if (saved && saved.token) { S.token = saved.token; S.kind = saved.kind; S.label = saved.label; start(); } } catch (e) {}
   if (!/^https:/.test(API)) { $('lerr').textContent = 'This page is not connected yet — publish the website from the app.'; }
 })();
 </script>
