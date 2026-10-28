@@ -81,6 +81,18 @@
      "h": 106
     }
    ]
+  },
+  {
+   "group": "Sponsored by",
+   "items": [
+    {
+     "name": "Art Farmer",
+     "url": "https://www.facebook.com/ArtFarmerCafe/",
+     "logo": "logos/sp-mvrwl84qt3l.png?v=mvrwrndd",
+     "size": "m",
+     "h": 54
+    }
+   ]
   }
  ],
  "about": {
@@ -92,7 +104,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "28 Oct 2026, 16:19 (GMT+7)",
+ "updated": "28 Oct 2026, 16:26 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
