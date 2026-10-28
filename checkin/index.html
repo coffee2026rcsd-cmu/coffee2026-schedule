@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Check-in · 3rd International Symposium on Coffee</title>
+<style>
+  :root{--bg:#f7f5f1;--surface:#fff;--ink:#1d1a16;--ink-2:#4b443c;--ink-3:#8b8279;--line:#e8e2d9;--accent:#8a5a2b;--soft:#f2e9df;--ok:#2f7a4a;--okbg:#e6f3ea;--warn:#9a6b10;--warnbg:#fbf1dc;--bad:#9b2c2c;--badbg:#f8e3e3}
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%}
+  body{background:var(--bg);color:var(--ink);font:16px/1.5 "Helvetica Neue",Helvetica,Arial,"PingFang SC","Noto Sans Thai",sans-serif;-webkit-tap-highlight-color:transparent}
+  button,input{font:inherit;color:inherit}
+  .wrap{max-width:720px;margin:0 auto;padding:max(18px,env(safe-area-inset-top)) 18px 40px}
+  .eyebrow{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700}
+  h1{font-size:24px;margin:6px 0 18px;line-height:1.2}
+  .card{background:var(--surface);border-radius:18px;padding:20px}
+  label{display:block;font-size:13px;color:var(--ink-3);margin:12px 0 4px}
+  input[type=text],input[type=password],input[type=search]{width:100%;padding:13px 14px;border-radius:12px;border:1px solid var(--line);background:#fff;font-size:17px}
+  .btn{border:0;border-radius:999px;padding:12px 20px;font-weight:700;cursor:pointer;background:var(--ink);color:#fff}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .btn.small{padding:7px 14px;font-size:14px}
+  .btn:disabled{opacity:.5}
+  .err{color:var(--bad);font-size:14px;margin-top:10px;min-height:20px}
+  .top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+  .who{font-size:13px;color:var(--ink-3)}
+  .days{display:flex;gap:4px}
+  .days button{border:0;background:none;font-weight:700;color:var(--ink-3);padding:8px 14px;border-radius:999px;cursor:pointer}
+  .days button[aria-pressed=true]{background:var(--ink);color:#fff}
+  .stats{font-size:14px;color:var(--ink-2);margin:4px 0 14px}
+  .stats b{font-size:20px;color:var(--ink)}
+  .modes{display:flex;gap:4px;margin-bottom:12px}
+  .modes button{flex:1;border:0;background:var(--surface);padding:12px;border-radius:12px;font-weight:700;color:var(--ink-3);cursor:pointer}
+  .modes button[aria-pressed=true]{background:var(--soft);color:var(--ink)}
+  .cam{position:relative;background:#111;border-radius:18px;overflow:hidden;aspect-ratio:3/4;max-height:62vh;width:100%}
+  @media (min-width:700px){.cam{aspect-ratio:4/3}}
+  .cam video{width:100%;height:100%;object-fit:cover;display:block}
+  .cam .frame{position:absolute;inset:18%;border:3px solid rgba(255,255,255,.85);border-radius:18px;pointer-events:none}
+  .cam .start{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;color:#eee;text-align:center;padding:20px}
+  .result{position:fixed;left:0;right:0;bottom:0;padding:22px 20px max(26px,env(safe-area-inset-bottom));border-radius:22px 22px 0 0;box-shadow:0 -10px 30px rgba(0,0,0,.18);transform:translateY(110%);transition:transform .2s;z-index:10}
+  .result.on{transform:none}
+  .result.ok{background:var(--okbg)}.result.warn{background:var(--warnbg)}.result.bad{background:var(--badbg)}
+  .result .big{font-size:26px;font-weight:700;line-height:1.2;margin:4px 0}
+  .result .st{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+  .result.ok .st{color:var(--ok)}.result.warn .st{color:var(--warn)}.result.bad .st{color:var(--bad)}
+  .result .meal{display:inline-block;margin-top:10px;padding:6px 12px;border-radius:999px;font-weight:700;font-size:15px}
+  .meal.yes{background:var(--ok);color:#fff}.meal.no{background:#fff;color:var(--ink-2);border:1px solid var(--line)}
+  .result .sm{font-size:14px;color:var(--ink-2)}
+  .manual{display:flex;gap:8px;margin-top:12px}
+  .manual input{flex:1}
+  .list{margin-top:12px}
+  .row{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:12px 0;border-top:1px solid var(--line)}
+  .row b{display:block}
+  .row .sm{font-size:13px;color:var(--ink-3)}
+  .tag{font-size:11px;font-weight:700;border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:1px}
+  .tag.yes{background:var(--okbg);color:var(--ok)}.tag.no{background:#eee;color:var(--ink-3)}
+  .in{color:var(--ok);font-weight:700;font-size:13px}
+  .foot{font-size:12px;color:var(--ink-3);margin-top:30px;text-align:center}
+  [hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">3rd International Symposium on Coffee · 27–28 Nov 2026</div>
+  <h1>Check-in</h1>
+
+  <form class="card" id="login" autocomplete="off">
+    <label for="u">User</label><input type="text" id="u" autocapitalize="off" autocorrect="off" spellcheck="false" required>
+    <label for="p">Password</label><input type="password" id="p" required>
+    <div class="err" id="lerr"></div>
+    <button class="btn" type="submit" id="lbtn" style="width:100%;margin-top:6px">Sign in</button>
+  </form>
+
+  <div id="app" hidden>
+    <div class="top">
+      <div class="days" id="days"></div>
+      <div class="who"><span id="who"></span> · <button class="btn ghost small" id="out" type="button">Sign out</button></div>
+    </div>
+    <div class="stats" id="stats"></div>
+    <div class="modes" id="modes" hidden><button data-mode="scan" aria-pressed="true">Scan QR</button><button data-mode="find" aria-pressed="false">Find by name / email</button></div>
+
+    <section id="scan">
+      <div class="cam" id="cam">
+        <video id="video" playsinline muted></video>
+        <div class="frame" hidden id="frame"></div>
+        <div class="start" id="start"><button class="btn" type="button" id="go">Start the camera</button><div style="font-size:13px;opacity:.8">Allow the camera when asked. Hold the QR code inside the frame.</div></div>
+      </div>
+      <form class="manual" id="manual"><input type="text" id="code" placeholder="Or type the code, e.g. C26-ABCD2345" autocapitalize="characters"><button class="btn small" type="submit">Check</button></form>
+    </section>
+
+    <section id="find" hidden>
+      <input type="search" id="q" placeholder="Name, email or organization">
+      <div class="list" id="list"></div>
+    </section>
+  </div>
+  <div class="foot">For registration staff only · RCSD, Faculty of Social Sciences, Chiang Mai University</div>
+</div>
+<div class="result" id="result" role="status" aria-live="assertive"></div>
+
+<script>
+(function () {
+  var API = 'https://script.google.com/macros/s/AKfycbxX_SZjeewSaR6e5FmH4Kvwq-iw9PWhLZSzk18p_3Hp5ATs8v8xcxHJqdWfollVmS0m/exec';
+  var S = { token: '', kind: '', label: '', day: 'Day 1', days: ['Day 1', 'Day 2'], busy: false, last: '', lastAt: 0, stream: null, detector: null };
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); };
+  function store(k, v) { try { if (v === null) localStorage.removeItem(k); else localStorage.setItem(k, v); } catch (e) {} }
+  function load(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function call(req) {
+    if (S.token && req.op !== 'login') req.token = S.token;
+    return fetch(API, { method: 'POST', body: JSON.stringify(req) })   // text/plain: no preflight
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        if (d && d.ok === false && /sign in again/i.test(d.error || '')) { signOut(); throw new Error(d.error); }
+        if (d && d.error && d.ok === false && req.op !== 'scan') throw new Error(d.error);
+        return d;
+      });
+  }
+  /* ---- sign in ---- */
+  $('login').addEventListener('submit', function (e) {
+    e.preventDefault();
+    $('lbtn').disabled = true; $('lerr').textContent = '';
+    call({ op: 'login', user: $('u').value.trim(), pass: $('p').value }).then(function (d) {
+      if (!d.token) throw new Error(d.error || 'Could not sign in.');
+      S.token = d.token; S.kind = d.kind; S.label = d.label; S.days = d.days || S.days; S.day = d.today || load('ck-day') || 'Day 1';
+      store('ck-session', JSON.stringify({ token: S.token, kind: S.kind, label: S.label, days: S.days }));
+      $('p').value = ''; start();
+    }).catch(function (err) { $('lerr').textContent = err.message || 'Could not sign in.'; })
+      .then(function () { $('lbtn').disabled = false; });
+  });
+  function signOut() {
+    store('ck-session', null); S.token = '';
+    stopCam(); $('app').hidden = true; $('login').hidden = false;
+  }
+  $('out').addEventListener('click', signOut);
+  function start() {
+    $('login').hidden = true; $('app').hidden = false;
+    $('who').textContent = S.label;
+    $('modes').hidden = S.kind !== 'data';
+    paintDays(); stats(); mode(S.kind === 'data' && load('ck-mode') === 'find' ? 'find' : 'scan');
+  }
+  function paintDays() {
+    $('days').innerHTML = S.days.map(function (d) { return '<button type="button" data-day="' + esc(d) + '" aria-pressed="' + (d === S.day) + '">' + esc(d) + '</button>'; }).join('');
+  }
+  $('days').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-day]'); if (!b) return;
+    S.day = b.getAttribute('data-day'); store('ck-day', S.day); paintDays(); stats(); if ($('q').value) search();
+  });
+  function stats() {
+    call({ op: 'stats', day: S.day }).then(function (d) {
+      $('stats').innerHTML = '<b>' + d.in + '</b> of ' + d.total + ' checked in for ' + esc(d.day) + ' · <b>' + d.meals + '</b> with lunch';
+    }).catch(function () {});
+  }
+  setInterval(function () { if (S.token && !document.hidden) stats(); }, 30000);
+  function mode(m) {
+    $('scan').hidden = m !== 'scan'; $('find').hidden = m !== 'find';
+    Array.prototype.forEach.call(document.querySelectorAll('[data-mode]'), function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-mode') === m)); });
+    store('ck-mode', m);
+    if (m !== 'scan') stopCam(); else if (S.stream === null && load('ck-cam') === '1') startCam();
+    if (m === 'find') setTimeout(function () { $('q').focus(); }, 50);
+  }
+  $('modes').addEventListener('click', function (e) { var b = e.target.closest('[data-mode]'); if (b) mode(b.getAttribute('data-mode')); });
+
+  /* ---- result card ---- */
+  var hideT = null;
+  function show(kind, html, ms) {
+    var r = $('result'); r.className = 'result on ' + kind; r.innerHTML = html;
+    clearTimeout(hideT); hideT = setTimeout(function () { r.className = 'result'; }, ms || 3500);
+    try { if (navigator.vibrate) navigator.vibrate(kind === 'ok' ? 80 : [60, 60, 60]); } catch (e) {}
+  }
+  $('result').addEventListener('click', function () { this.className = 'result'; });
+  function personHTML(p, status, kindCls) {
+    return '<div class="st">' + esc(status) + '</div><div class="big">' + esc(p.name) + '</div>' +
+      '<div class="sm">' + esc([p.type, p.affiliation].filter(Boolean).join(' · ')) + '</div>' +
+      '<span class="meal ' + (p.meals ? 'yes' : 'no') + '">' + (p.meals ? '🍽 Lunch provided' : 'No lunch (audience)') + '</span>' +
+      (p.meals && p.dietary ? '<div class="sm" style="margin-top:6px">Dietary: ' + esc(p.dietary) + '</div>' : '');
+  }
+  function answer(d) {
+    if (!d.ok) { show('bad', '<div class="st">Not found</div><div class="big">' + esc(d.error || 'This code is not on the list.') + '</div><div class="sm">' + esc(d.code || '') + ' — ask the data staff to look the person up.</div>', 5000); return; }
+    if (d.already) show('warn', personHTML(d.person, 'Already checked in · ' + d.already), 5000);
+    else show('ok', personHTML(d.person, '✓ Checked in · ' + d.day), 3500);
+    stats();
+  }
+  function check(code) {
+    code = String(code || '').trim(); if (!code || S.busy) return;
+    if (code === S.last && Date.now() - S.lastAt < 6000) return;   // the same code still in front of the camera
+    S.last = code; S.lastAt = Date.now(); S.busy = true;
+    call({ op: 'scan', code: code, day: S.day }).then(answer)
+      .catch(function (err) { show('bad', '<div class="st">Error</div><div class="big">' + esc(err.message || 'No connection') + '</div>', 5000); })
+      .then(function () { S.busy = false; });
+  }
+  $('manual').addEventListener('submit', function (e) { e.preventDefault(); check($('code').value); $('code').value = ''; });
+
+  /* ---- camera ---- */
+  function loadJsQR() {
+    if (window.jsQR) return Promise.resolve();
+    return new Promise(function (ok, fail) {
+      var s = document.createElement('script'); s.src = 'https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js';
+      s.onload = ok; s.onerror = function () { fail(new Error('Could not load the QR reader — check the internet connection.')); }; document.head.appendChild(s);
+    });
+  }
+  function startCam() {
+    var v = $('video');
+    var prep = ('BarcodeDetector' in window) ? window.BarcodeDetector.getSupportedFormats().then(function (f) { if (f.indexOf('qr_code') !== -1) S.detector = new window.BarcodeDetector({ formats: ['qr_code'] }); else return loadJsQR(); }).catch(loadJsQR) : loadJsQR();
+    prep.then(function () { return navigator.mediaDevices.getUserMedia({ video: { facingMode: { ideal: 'environment' }, width: { ideal: 1280 } }, audio: false }); })
+      .then(function (stream) {
+        S.stream = stream; v.srcObject = stream; v.play();
+        $('start').hidden = true; $('frame').hidden = false; store('ck-cam', '1');
+        loop();
+      }).catch(function (err) {
+        $('start').innerHTML = '<div>' + esc(err.message || 'The camera could not start.') + '</div><button class="btn" type="button" id="go2">Try again</button>';
+        $('go2').onclick = startCam; $('start').hidden = false;
+      });
+  }
+  function stopCam() {
+    if (S.stream) { S.stream.getTracks().forEach(function (t) { t.stop(); }); }
+    S.stream = null; $('frame').hidden = true; $('start').hidden = false;
+  }
+  var canvas = document.createElement('canvas'), ctx = canvas.getContext('2d', { willReadFrequently: true });
+  function loop() {
+    if (!S.stream) return;
+    var v = $('video');
+    if (v.readyState >= 2 && !S.busy) {
+      if (S.detector) {
+        S.detector.detect(v).then(function (codes) { if (codes && codes[0]) check(codes[0].rawValue); }).catch(function () {});
+      } else if (window.jsQR) {
+        var w = Math.min(640, v.videoWidth), h = Math.round(v.videoHeight * w / v.videoWidth);
+        if (w && h) {
+          canvas.width = w; canvas.height = h; ctx.drawImage(v, 0, 0, w, h);
+          var img = ctx.getImageData(0, 0, w, h), qr = window.jsQR(img.data, w, h, { inversionAttempts: 'dontInvert' });
+          if (qr && qr.data) check(qr.data);
+        }
+      }
+    }
+    setTimeout(function () { requestAnimationFrame(loop); }, 180);
+  }
+  $('go').addEventListener('click', startCam);
+  document.addEventListener('visibilitychange', function () { if (document.hidden) stopCam(); });
+
+  /* ---- find by name (data staff) ---- */
+  var qT = null;
+  $('q').addEventListener('input', function () { clearTimeout(qT); qT = setTimeout(search, 300); });
+  function search() {
+    var q = $('q').value.trim();
+    if (q.length < 2) { $('list').innerHTML = ''; return; }
+    call({ op: 'search', q: q, day: S.day }).then(function (d) {
+      var k = S.day === 'Day 2' ? 'in2' : 'in1';
+      $('list').innerHTML = d.rows.length ? d.rows.map(function (p) {
+        return '<div class="row"><div><b>' + esc(p.name) + '<span class="tag ' + (p.meals ? 'yes' : 'no') + '">' + (p.meals ? 'lunch' : 'no lunch') + '</span></b>' +
+          '<span class="sm">' + esc([p.type, p.affiliation, p.email].filter(Boolean).join(' · ')) + '</span>' +
+          (p[k] ? '<span class="in">✓ In · ' + esc(p[k]) + '</span>' : '') + '</div>' +
+          (p[k] ? '<button class="btn ghost small" data-undo="' + esc(p.pid) + '">Undo</button>' : '<button class="btn small" data-mark="' + esc(p.pid) + '">Check in</button>') + '</div>';
+      }).join('') : '<div class="row"><div class="sm">Nobody matches. Check the spelling, or try the email.</div></div>';
+    }).catch(function (err) { $('list').innerHTML = '<div class="err">' + esc(err.message) + '</div>'; });
+  }
+  $('list').addEventListener('click', function (e) {
+    var m = e.target.closest('[data-mark]'), u = e.target.closest('[data-undo]');
+    if (!m && !u) return;
+    var b = m || u; b.disabled = true;
+    call({ op: 'mark', pid: b.getAttribute(m ? 'data-mark' : 'data-undo'), on: !!m, day: S.day }).then(function (d) {
+      if (m) answer(d); else stats();
+      search();
+    }).catch(function (err) { b.disabled = false; show('bad', '<div class="st">Error</div><div class="big">' + esc(err.message) + '</div>'); });
+  });
+
+  /* ---- back from a reload ---- */
+  try { var saved = JSON.parse(load('ck-session') || 'null'); if (saved && saved.token) { S.token = saved.token; S.kind = saved.kind; S.label = saved.label; S.days = saved.days || S.days; S.day = load('ck-day') || 'Day 1'; start(); } } catch (e) {}
+  if (!/^https:/.test(API)) { $('lerr').textContent = 'This page is not connected yet — publish the website from the app.'; }
+})();
+</script>
+</body>
+</html>
