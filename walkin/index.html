@@ -5,55 +5,110 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#8a5a2b">
-<title>Your QR code · 3rd International Symposium on Coffee</title>
+<title>Walk-in registration · 3rd International Symposium on Coffee</title>
 <style>
-  :root{--bg:#f5f3f0;--surface:#fff;--ink:#1c1c1c;--ink-2:#4b443c;--ink-3:#8b8279;--accent:#8a5a2b;--ok:#1f7a4a}
+  :root{--bg:#f5f3f0;--surface:#fff;--ink:#1c1c1c;--ink-2:#4b443c;--ink-3:#8b8279;--line:#e6ded3;--accent:#8a5a2b;--soft:#f2e9df;--bad:#b42318}
   *{box-sizing:border-box}
   html,body{margin:0}
-  body{background:var(--bg);color:var(--ink);font:16px/1.5 "Helvetica Neue",Helvetica,Arial,"PingFang SC","Noto Sans Thai",sans-serif;min-height:100vh}
-  .wrap{max-width:480px;margin:0 auto;padding:max(28px,env(safe-area-inset-top)) 20px 40px;text-align:center}
+  body{background:var(--bg);color:var(--ink);font:16px/1.5 "Helvetica Neue",Helvetica,Arial,"PingFang SC","Microsoft YaHei","Noto Sans Thai",sans-serif;min-height:100vh}
+  button,input,select{font:inherit;color:inherit}
+  .wrap{max-width:520px;margin:0 auto;padding:max(22px,env(safe-area-inset-top)) 20px 48px}
+  .top{display:flex;justify-content:space-between;align-items:center;gap:10px}
   .eyebrow{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700}
-  h1{font-size:26px;line-height:1.2;margin:10px 0 6px}
+  .langs{display:flex;gap:2px;flex:0 0 auto}
+  .langs button{border:0;background:none;padding:6px 9px;border-radius:999px;font-size:14px;font-weight:700;color:var(--ink-3);cursor:pointer}
+  .langs button[aria-pressed=true]{background:var(--ink);color:#fff}
+  h1{font-size:27px;line-height:1.2;margin:16px 0 6px}
   p{color:var(--ink-2);margin:6px 0}
-  .card{background:var(--surface);border-radius:22px;padding:22px 18px;margin-top:20px}
+  .note{font-size:14px;background:var(--soft);border-radius:14px;padding:10px 14px;margin:14px 0 4px;color:var(--ink-2)}
+  label{display:block;font-size:14px;font-weight:700;margin:16px 0 6px}
+  label .opt{font-weight:400;color:var(--ink-3)}
+  input[type=text],input[type=email],input[type=tel]{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:12px;background:#fff;font-size:17px}
+  input:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:transparent}
+  .days{display:grid;gap:8px}
+  .days label,.consent{display:flex;gap:10px;align-items:flex-start;font-weight:400;margin:0;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;cursor:pointer}
+  .days input,.consent input{margin-top:4px;accent-color:var(--accent);width:18px;height:18px;flex:0 0 18px}
+  .consent{margin-top:18px;font-size:14.5px;color:var(--ink-2)}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  .err{color:var(--bad);font-size:14px;min-height:20px;margin-top:10px}
+  .bad input[type=text],.bad input[type=email]{border-color:var(--bad)}
+  .btn{display:block;width:100%;border:0;border-radius:999px;padding:15px 22px;font-weight:700;font-size:17px;background:var(--accent);color:#fff;cursor:pointer;margin-top:18px;text-align:center;text-decoration:none}
+  .btn:disabled{opacity:.6}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .card{background:var(--surface);border-radius:22px;padding:22px 18px;margin-top:18px;text-align:center}
   .qr{width:min(78vw,300px);height:auto;image-rendering:pixelated;display:block;margin:6px auto}
   .code{font:700 18px/1.4 ui-monospace,Menlo,monospace;letter-spacing:.06em}
   .name{font-size:21px;font-weight:700;margin-top:8px}
   .meta{font-size:14px;color:var(--ink-3)}
-  .tag{display:inline-block;margin-top:10px;padding:5px 12px;border-radius:999px;font-weight:700;font-size:14px;background:#f2e9df;color:var(--accent)}
-  .btn{display:inline-block;border:0;border-radius:999px;padding:12px 22px;font:inherit;font-weight:700;background:var(--accent);color:#fff;text-decoration:none;margin-top:16px;cursor:pointer}
+  .tag{display:inline-block;margin-top:10px;padding:5px 12px;border-radius:999px;font-weight:700;font-size:14px;background:var(--soft);color:var(--accent)}
+  .tip{font-size:13px;color:var(--ink-3);margin-top:12px;text-align:center}
+  .center{text-align:center}
   .spin{width:42px;height:42px;border-radius:50%;border:4px solid #e8dccd;border-top-color:var(--accent);margin:26px auto 10px;animation:s 1s linear infinite}
   @keyframes s{to{transform:rotate(360deg)}}
-  .tip{font-size:13px;color:var(--ink-3);margin-top:16px}
   [hidden]{display:none!important}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div class="eyebrow">3rd International Symposium on Coffee · 27–28 Nov 2026</div>
-  <section id="wait">
-    <h1>Thank you — you are registered</h1>
-    <div class="spin" aria-hidden="true"></div>
-    <p id="wmsg">Preparing your QR code… this takes a few seconds.</p>
+  <div class="top"><div class="eyebrow" data-t="eyebrow">3rd International Symposium on Coffee · 27–28 Nov 2026</div>
+    <div class="langs" id="langs"><button data-l="en" aria-pressed="true">EN</button><button data-l="zh" aria-pressed="false">中文</button><button data-l="th" aria-pressed="false">ไทย</button></div></div>
+
+  <section id="loading" class="center"><div class="spin" aria-hidden="true"></div></section>
+
+  <section id="closed" hidden>
+    <h1 data-t="closedT">Walk-in registration</h1>
+    <p data-t="closedP">Walk-in registration opens on the symposium days, 27–28 November 2026, at the Faculty of Social Sciences, Chiang Mai University.</p>
+    <a class="btn ghost" href="../" data-t="prog">See the programme</a>
   </section>
+
+  <form id="form" hidden novalidate autocomplete="on">
+    <h1 data-t="formT">Walk-in registration</h1>
+    <p data-t="formP">Fill in this short form — your QR code appears right away and is also sent to your email. Show it at the registration desk.</p>
+    <div class="note" data-t="noLunch">Attendance is free. Lunch and refreshments are not provided for walk-in registrations.</div>
+    <div id="f-name"><label for="name" data-t="name">Full name</label><input type="text" id="name" autocomplete="name" maxlength="120" required></div>
+    <div id="f-email"><label for="email" data-t="email">Email</label><input type="email" id="email" autocomplete="email" inputmode="email" maxlength="160" required></div>
+    <div id="f-affiliation"><label for="affiliation" data-t="aff">Affiliation / organization</label><input type="text" id="affiliation" autocomplete="organization" maxlength="200" required></div>
+    <label for="role"><span data-t="role">Role</span> <span class="opt" data-t="optional">(optional)</span></label><input type="text" id="role" maxlength="120" data-ph="rolePh" placeholder="e.g. researcher, farmer, entrepreneur, student">
+    <label for="country"><span data-t="country">Country</span> <span class="opt" data-t="optional">(optional)</span></label><input type="text" id="country" autocomplete="country-name" maxlength="80">
+    <label for="phone"><span data-t="phone">Phone / WeChat / LINE</span> <span class="opt" data-t="optional">(optional)</span></label><input type="tel" id="phone" maxlength="60">
+    <label data-t="days">Days attending</label>
+    <div class="days">
+      <label><input type="radio" name="days" value="Both days" checked><span data-t="both">Both days</span></label>
+      <label><input type="radio" name="days" value="27 November only"><span data-t="d1">27 November only</span></label>
+      <label><input type="radio" name="days" value="28 November only"><span data-t="d2">28 November only</span></label>
+    </div>
+    <div class="hp" aria-hidden="true"><label for="website">Website</label><input type="text" id="website" tabindex="-1" autocomplete="off"></div>
+    <label class="consent" id="f-consent"><input type="checkbox" id="consent"><span data-t="consent">I agree that my data is used for registration and event management only.</span></label>
+    <div class="err" id="err" role="alert"></div>
+    <button class="btn" type="submit" id="go" data-t="submit">Register and get my QR code</button>
+  </form>
+
+  <section id="wait" hidden class="center">
+    <h1 data-t="thanks">Thank you — you are registered</h1>
+    <div class="spin" aria-hidden="true"></div>
+    <p id="wmsg" data-t="preparing">Preparing your QR code…</p>
+  </section>
+
   <section id="done" hidden>
-    <h1>Your QR code</h1>
-    <p>Show this at the registration desk.</p>
+    <h1 class="center" data-t="yourQr">Your QR code</h1>
+    <p class="center" id="doneP" data-t="showDesk">Show this at the registration desk.</p>
     <div class="card">
-      <img class="qr" id="qr" alt="Your QR code">
+      <img class="qr" id="qr" alt="QR code">
       <div class="code" id="code"></div>
-      <div class="name" id="name"></div>
+      <div class="name" id="pname"></div>
       <div class="meta" id="meta"></div>
       <span class="tag" id="meal"></span>
     </div>
-    <a class="btn" id="save" download="coffee-symposium-qr.png">Save the image</a>
+    <a class="btn" id="save" download="coffee-symposium-qr.png" data-t="save">Save the image</a>
     <p class="tip" id="mail"></p>
-    <p class="tip">Tip: take a screenshot too.</p>
+    <p class="tip" data-t="shot">Tip: take a screenshot too.</p>
+    <button class="btn ghost" type="button" id="again" data-t="again">Register another person</button>
   </section>
+
   <section id="late" hidden>
-    <h1>Thank you — you are registered</h1>
-    <div class="card"><p id="lmsg">Your QR code will arrive <b>by email</b> in a few minutes (check Spam/Junk too).</p>
-    <p>No email? Go to the <b>Help desk</b> and give your name — staff can check you in by hand.</p></div>
+    <h1 data-t="thanks">Thank you — you are registered</h1>
+    <div class="card"><p data-t="lateP">Your QR code will arrive by email in a few minutes (check Spam/Junk too).</p>
+    <p data-t="helpP">No email? Go to the Help desk and give your name — staff can check you in by hand.</p></div>
   </section>
 </div>
 <script>
@@ -2347,11 +2402,47 @@ var qrcode = function() {
 (function () {
   var API = 'https://script.google.com/macros/s/AKfycbxX_SZjeewSaR6e5FmH4Kvwq-iw9PWhLZSzk18p_3Hp5ATs8v8xcxHJqdWfollVmS0m/exec';
   var $ = function (id) { return document.getElementById(id); };
-  var sid = (location.search.match(/[?&]sid=([A-Za-z0-9]+)/) || [])[1] || '';
-  var started = Date.now(), tries = 0;
-  function late(msg) { $('wait').hidden = true; $('late').hidden = false; if (msg) $('lmsg').textContent = msg; }
-  if (!sid || !/^https:/.test(API)) { late(); return; }
-  function draw(d) {
+  var T = {
+    zh: { eyebrow: '第三届国际咖啡研讨会 · 2026年11月27–28日', closedT: '现场登记', closedP: '现场登记将于研讨会举办期间（2026年11月27–28日）在清迈大学社会科学学院开放。', prog: '查看会议日程',
+      formT: '现场登记', formP: '请填写以下简短表格——提交后您的二维码会立即显示，并同时发送到您的电子邮箱。请在登记处出示。', noLunch: '参会免费。现场登记者不提供午餐和茶点。',
+      name: '姓名', email: '电子邮箱', aff: '单位 / 机构', role: '身份', optional: '（选填）', rolePh: '例如：研究人员、咖啡农、企业家、学生', country: '国家', phone: '电话 / 微信 / LINE',
+      days: '参会日期', both: '两天都参加', d1: '仅11月27日', d2: '仅11月28日', consent: '我同意我的信息仅用于会议登记和会务管理。', submit: '登记并获取二维码',
+      thanks: '谢谢——您已登记成功', preparing: '正在生成您的二维码……', yourQr: '您的二维码', showDesk: '请在登记处出示此二维码。', already: '您已登记过——这是您的二维码。',
+      save: '保存图片', shot: '提示：也可以截图保存。', again: '为另一位参会者登记', lateP: '您的二维码将在几分钟内通过电子邮件发送（请同时查看垃圾邮件）。',
+      helpP: '没有收到邮件？请到服务台报上姓名，工作人员可为您手动签到。', mailTo: '二维码副本已发送至 ', lunchYes: '提供午餐', lunchNo: '不含午餐（听众）',
+      eName: '请填写姓名。', eEmail: '请检查电子邮箱地址。', eAff: '请填写单位或机构。', eConsent: '请勾选同意事项。', eNet: '网络连接失败，请重试。', checkedIn: '已签到 · ' },
+    th: { eyebrow: 'การประชุมวิชาการนานาชาติเรื่องกาแฟ ครั้งที่ 3 · 27–28 พ.ย. 2569', closedT: 'ลงทะเบียนหน้างาน', closedP: 'การลงทะเบียนหน้างานเปิดในวันจัดงาน 27–28 พฤศจิกายน 2569 ณ คณะสังคมศาสตร์ มหาวิทยาลัยเชียงใหม่', prog: 'ดูกำหนดการ',
+      formT: 'ลงทะเบียนหน้างาน', formP: 'กรอกแบบฟอร์มสั้นๆ นี้ — QR code จะขึ้นทันทีและส่งไปที่อีเมลของคุณด้วย แสดง QR ที่โต๊ะลงทะเบียน', noLunch: 'เข้าร่วมฟรี ผู้ลงทะเบียนหน้างานไม่มีอาหารกลางวันและอาหารว่าง',
+      name: 'ชื่อ–นามสกุล', email: 'อีเมล', aff: 'สังกัด / หน่วยงาน', role: 'บทบาท', optional: '(ไม่บังคับ)', rolePh: 'เช่น นักวิจัย เกษตรกร ผู้ประกอบการ นักศึกษา', country: 'ประเทศ', phone: 'โทรศัพท์ / WeChat / LINE',
+      days: 'วันที่เข้าร่วม', both: 'ทั้งสองวัน', d1: 'เฉพาะ 27 พฤศจิกายน', d2: 'เฉพาะ 28 พฤศจิกายน', consent: 'ข้าพเจ้ายินยอมให้ใช้ข้อมูลเพื่อการลงทะเบียนและการจัดงานเท่านั้น', submit: 'ลงทะเบียนและรับ QR code',
+      thanks: 'ขอบคุณ — ลงทะเบียนเรียบร้อยแล้ว', preparing: 'กำลังเตรียม QR code…', yourQr: 'QR code ของคุณ', showDesk: 'แสดง QR นี้ที่โต๊ะลงทะเบียน', already: 'คุณลงทะเบียนไว้แล้ว — นี่คือ QR code ของคุณ',
+      save: 'บันทึกรูป', shot: 'แนะนำ: แคปหน้าจอเก็บไว้ด้วย', again: 'ลงทะเบียนให้คนต่อไป', lateP: 'QR code จะส่งไปทางอีเมลภายในไม่กี่นาที (ดูในโฟลเดอร์ Spam/Junk ด้วย)',
+      helpP: 'ไม่ได้รับอีเมล? ไปที่โต๊ะ Help desk แล้วแจ้งชื่อ เจ้าหน้าที่เช็คอินให้ได้', mailTo: 'ส่งสำเนาไปที่ ', lunchYes: 'มีอาหารกลางวัน', lunchNo: 'ไม่มีอาหารกลางวัน (ผู้ฟัง)',
+      eName: 'กรุณากรอกชื่อ', eEmail: 'กรุณาตรวจสอบอีเมล', eAff: 'กรุณากรอกสังกัดหรือหน่วยงาน', eConsent: 'กรุณาติ๊กช่องยินยอม', eNet: 'เชื่อมต่อไม่ได้ กรุณาลองใหม่', checkedIn: 'เช็คอินแล้ว · ' }
+  };
+  var EN = {};
+  Array.prototype.forEach.call(document.querySelectorAll('[data-t]'), function (el) { EN[el.getAttribute('data-t')] = el.textContent; });
+  Array.prototype.forEach.call(document.querySelectorAll('[data-ph]'), function (el) { EN[el.getAttribute('data-ph')] = el.placeholder; });
+  Object.assign(EN, { already: 'You were already registered — here is your QR code.', mailTo: 'A copy is on its way to ', lunchYes: 'Lunch provided', lunchNo: 'No lunch (audience)',
+    eName: 'Please write your name.', eEmail: 'Please check your email address.', eAff: 'Please write your organization.', eConsent: 'Please tick the consent box.', eNet: 'No connection — please try again.', checkedIn: 'Checked in · ' });
+  var lang = 'en';
+  try { lang = localStorage.getItem('walkin-lang') || ''; } catch (e) {}
+  if (!lang) { var nl = (navigator.language || 'en').toLowerCase(); lang = /^zh/.test(nl) ? 'zh' : /^th/.test(nl) ? 'th' : 'en'; }
+  var t = function (k) { return (T[lang] && T[lang][k]) || EN[k] || k; };
+  function paint() {
+    document.documentElement.lang = lang === 'zh' ? 'zh-CN' : lang;
+    Array.prototype.forEach.call(document.querySelectorAll('[data-t]'), function (el) { el.textContent = t(el.getAttribute('data-t')); });
+    Array.prototype.forEach.call(document.querySelectorAll('[data-ph]'), function (el) { el.placeholder = t(el.getAttribute('data-ph')); });
+    Array.prototype.forEach.call(document.querySelectorAll('[data-l]'), function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-l') === lang)); });
+    if (LAST) fill(LAST);
+  }
+  $('langs').addEventListener('click', function (e) { var b = e.target.closest('[data-l]'); if (!b) return; lang = b.getAttribute('data-l'); try { localStorage.setItem('walkin-lang', lang); } catch (x) {} paint(); });
+  function show(id) { ['loading', 'closed', 'form', 'wait', 'done', 'late'].forEach(function (k) { $(k).hidden = k !== id; }); window.scrollTo(0, 0); }
+  function post(req) { return fetch(API, { method: 'POST', body: JSON.stringify(req) }).then(function (r) { return r.json(); }); }
+
+  /* the QR code, drawn here */
+  var LAST = null;
+  function fill(d) {
     var q = qrcode(0, 'M'); q.addData(d.token); q.make();
     var n = q.getModuleCount(), quiet = 4, cell = 10, c = document.createElement('canvas');
     c.width = c.height = (n + quiet * 2) * cell;
@@ -2359,28 +2450,68 @@ var qrcode = function() {
     for (var y = 0; y < n; y++) for (var x = 0; x < n; x++) if (q.isDark(y, x)) g.fillRect((x + quiet) * cell, (y + quiet) * cell, cell, cell);
     var url = c.toDataURL('image/png');
     $('qr').src = url; $('save').href = url;
-    $('code').textContent = d.token; $('name').textContent = d.name; $('meta').textContent = d.type || '';
-    $('meal').textContent = d.meals ? 'Lunch provided' : 'No lunch (audience)';
-    $('mail').textContent = d.email ? 'A copy is on its way to ' + d.email + '.' : '';
-    $('wait').hidden = true; $('done').hidden = false;
+    $('code').textContent = d.token; $('pname').textContent = d.name; $('meta').textContent = (d.checkedIn ? t('checkedIn') + d.checkedIn + ' · ' : '') + (d.type || '');
+    $('meal').textContent = d.meals ? t('lunchYes') : t('lunchNo');
+    $('mail').textContent = d.email ? t('mailTo') + d.email : '';
+    $('doneP').textContent = d.already ? t('already') : t('showDesk');
   }
-  function ask() {
-    tries++;
-    fetch(API, { method: 'POST', body: JSON.stringify({ op: 'walkin', sid: sid }) })
-      .then(function (r) { return r.json(); })
-      .then(function (d) {
-        if (d && d.ok && d.token) { draw(d); return; }
-        if (d && d.ok === false) { late(); return; }
+  function done(d) { LAST = d; fill(d); show('done'); }
+
+  /* the form */
+  var opened = Date.now(), busy = false;
+  function fieldErr(f, msg) {
+    ['name', 'email', 'affiliation', 'consent'].forEach(function (k) { var w = $('f-' + k); if (w) w.classList.toggle('bad', k === f); });
+    $('err').textContent = msg || '';
+    if (f && $(f)) $(f).focus();
+  }
+  $('form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (busy) return;
+    var v = { name: $('name').value.trim(), email: $('email').value.trim(), affiliation: $('affiliation').value.trim(), role: $('role').value.trim(),
+              country: $('country').value.trim(), phone: $('phone').value.trim(), consent: $('consent').checked,
+              days: (document.querySelector('input[name=days]:checked') || {}).value || 'Both days' };
+    if (v.name.length < 2) return fieldErr('name', t('eName'));
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.email)) return fieldErr('email', t('eEmail'));
+    if (!v.affiliation) return fieldErr('affiliation', t('eAff'));
+    if (!v.consent) return fieldErr('consent', t('eConsent'));
+    fieldErr(null, '');
+    busy = true; $('go').disabled = true;
+    post(Object.assign({ op: 'register', website: $('website').value, ms: Date.now() - opened, lang: lang, staff: /[?&]desk=1/.test(location.search) }, v)).then(function (d) {
+      if (d && d.ok && d.token) { done(d); return; }
+      if (d && d.closed) { show('closed'); return; }
+      var map = { name: 'eName', email: 'eEmail', affiliation: 'eAff', consent: 'eConsent' };
+      fieldErr(d && d.field, d && d.field ? t(map[d.field]) : ((d && d.error) || t('eNet')));
+    }).catch(function () { fieldErr(null, t('eNet')); })
+      .then(function () { busy = false; $('go').disabled = false; });
+  });
+  $('again').addEventListener('click', function () {
+    LAST = null; $('form').reset(); fieldErr(null, ''); opened = Date.now(); show('form'); setTimeout(function () { $('name').focus(); }, 50);
+  });
+
+  /* arriving from the earlier Tally walk-in form (?sid=…): wait for its answer, then show the code */
+  var sid = (location.search.match(/[?&]sid=([A-Za-z0-9]+)/) || [])[1] || '';
+  paint();
+  if (!/^https:/.test(API)) { show('late'); return; }
+  if (sid) {
+    var started = Date.now(), tries = 0;
+    show('wait');
+    var ask = function () {
+      tries++;
+      post({ op: 'walkin', sid: sid }).then(function (d) {
+        if (d && d.ok && d.token) { done(d); return; }
+        if (d && d.ok === false) { show('late'); return; }
         next();
       }).catch(next);
+    };
+    var next = function () {
+      if (Date.now() - started > 90000) { show('late'); return; }
+      setTimeout(ask, tries < 6 ? 2500 : 5000);
+    };
+    ask();
+    return;
   }
-  function next() {
-    var t = Date.now() - started;
-    if (t > 20000) $('wmsg').textContent = 'Almost there… still preparing your QR code.';
-    if (t > 90000) { late(); return; }
-    setTimeout(ask, tries < 6 ? 2500 : 5000);
-  }
-  ask();
+  post({ op: 'walkinStatus' }).then(function (d) { show(d && d.open ? 'form' : 'closed'); opened = Date.now(); })
+    .catch(function () { show('form'); });
 })();
 </script>
 </body>
