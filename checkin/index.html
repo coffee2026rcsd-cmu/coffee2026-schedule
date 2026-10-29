@@ -68,7 +68,9 @@
   .roleband svg{width:38px;height:38px;flex:0 0 38px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
   .roleband b{display:block;font-size:19px;line-height:1.2}
   .roleband span{font-size:13px;opacity:.85}
-  body .roleband .btn.ghost{margin-left:auto;color:#fff;border-color:rgba(255,255,255,.55);white-space:nowrap}
+  body .roleband .btn.ghost{color:#fff;border-color:rgba(255,255,255,.55);white-space:nowrap}
+  body .roleband #snd{margin-left:auto}
+  @media (max-width:480px){body .roleband{flex-wrap:wrap} body .roleband #snd{margin-left:52px}}
   .stats b{color:var(--role)}
   .modes button[aria-pressed=true]{background:var(--role);color:#fff}
   .tag.walk{background:var(--rolebg);color:var(--role)}
@@ -76,7 +78,10 @@
   .chips{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 4px}
   .chips button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 12px;font-size:14px;font-weight:700;color:var(--ink-2);cursor:pointer}
   .chips button[aria-pressed=true]{background:var(--role);border-color:var(--role);color:#fff}
-  .count{font-size:13px;color:var(--ink-3);margin:6px 0 0}
+  .count{font-size:13px;color:var(--ink-3);margin:6px 0 0;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+  .count select{font-size:13px;border:1px solid var(--line);border-radius:999px;padding:4px 10px;background:var(--surface)}
+  .sync{font-size:12px;font-weight:700;border-radius:999px;padding:2px 9px;margin-left:4px;white-space:nowrap}
+  .sync.ok{color:var(--ok);background:var(--okbg)}.sync.wait{color:var(--warn);background:var(--warnbg)}.sync.off{color:var(--bad);background:var(--badbg)}
   [hidden]{display:none!important}
 </style>
 </head>
@@ -93,8 +98,8 @@
   </form>
 
   <div id="app" hidden>
-    <div class="roleband" id="band"><span id="ricon"></span><div><b id="rtitle"></b><span id="who"></span></div><button class="btn ghost small" id="out" type="button">Sign out</button></div>
-    <div class="stats" id="stats"></div>
+    <div class="roleband" id="band"><span id="ricon"></span><div><b id="rtitle"></b><span id="who"></span></div><button class="btn ghost small" id="snd" type="button" title="Beep on each scan">🔊 Sound</button><button class="btn ghost small" id="out" type="button">Sign out</button></div>
+    <div class="stats"><span id="stats"></span> <span class="sync" id="sync"></span></div>
     <div class="modes" id="modes" hidden><button data-mode="scan" aria-pressed="true">Scan QR</button><button data-mode="find" aria-pressed="false">Participant list</button></div>
 
     <section id="scan">
@@ -109,7 +114,7 @@
     <section id="find" hidden>
       <input type="search" id="q" placeholder="Search name, email, organization or code">
       <div class="chips" id="chips"><button data-f="" aria-pressed="true">All</button><button data-f="not" aria-pressed="false">Not checked in</button><button data-f="in" aria-pressed="false">Checked in</button><button data-f="walk" aria-pressed="false">Walk-ins</button><button data-f="lunch" aria-pressed="false">Lunch</button></div>
-      <div class="count" id="count"></div>
+      <div class="count"><span id="count"></span><select id="lsort" aria-label="Sort"><option value="name">Sort: name A–Z</option><option value="latest">Sort: latest check-in</option><option value="org">Sort: organization</option><option value="not">Sort: not checked in first</option></select></div>
       <div class="list" id="list"></div>
       <div class="help">Not on the list? Register them with the walk-in form — their QR code appears at once (and goes by email); they are on this list straight away. <a class="btn small" id="walkin" target="_blank" rel="noopener" href="../walkin/?desk=1">Open walk-in form ↗</a></div>
     </section>
@@ -153,6 +158,7 @@
       .then(function () { $('lbtn').disabled = false; });
   });
   function signOut() {
+    if (Q.length && !confirm(Q.length + ' check-ins are not saved yet (no connection). Sign out anyway? They stay on this device and are sent when someone signs in here again.')) return;
     store('ck-session', null); S.token = '';
     stopCam(); $('app').hidden = true; $('login').hidden = false;
     document.body.className = ''; $('tc').setAttribute('content', '#f7f5f1'); document.title = 'Check-in · 3rd International Symposium on Coffee';
@@ -166,26 +172,105 @@
     $('ricon').innerHTML = R.icon; $('rtitle').textContent = R.title; $('who').textContent = 'Signed in as ' + S.label;
     document.title = R.title + ' · Check-in';
     $('modes').hidden = S.kind !== 'data';
-    stats(); mode(S.kind === 'data' && load('ck-mode-data') !== 'scan' ? 'find' : 'scan');
+    try { var kept = JSON.parse(load('ck-roster-' + S.kind) || 'null'); if (kept && kept.rows) { setRoster(kept.rows); } } catch (e) {}
+    stats(); paintSync(); mode(S.kind === 'data' && load('ck-mode-data') !== 'scan' ? 'find' : 'scan');
+    loadRoster(true); flush();
+  }
+  /* ---- the list on this device: every scan and tick shows at once; the server gets them in the background ---- */
+  var R = { rows: [], byT: {}, byP: {}, rev: null, at: 0 };
+  var Q = [];                     // ticks not saved yet: [{ pid, on }]
+  try { Q = JSON.parse(load('ck-queue') || '[]') || []; } catch (e) { Q = []; }
+  function saveQ() { store('ck-queue', JSON.stringify(Q)); paintSync(); }
+  function nowHM() { var d = new Date(); return d.getDate() + ' ' + ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][d.getMonth()] + ' ' + ('0' + d.getHours()).slice(-2) + ':' + ('0' + d.getMinutes()).slice(-2); }
+  function person(o) { return { pid: o.p, token: o.t, name: o.n, type: o.ty, affiliation: o.a, meals: !!o.m, dietary: o.d, in: o.i, walk: !!o.w, removed: !!o.x, email: o.e || '' }; }
+  function setRoster(rows) {
+    R.rows = rows.map(person); R.byT = {}; R.byP = {};
+    R.rows.forEach(function (p) { R.byT[p.token] = p; R.byP[p.pid] = p; });
+    Q.forEach(function (q) { var p = R.byP[q.pid]; if (p) p.in = q.on ? (p.in || nowHM()) : ''; });   // what is still waiting wins
+  }
+  /* this device's copy is kept, so a reload without connection still knows everyone (and the ticks made here) */
+  function keepRoster() {
+    store('ck-roster-' + S.kind, JSON.stringify({ rev: R.rev, rows: R.rows.map(function (p) {
+      var o = { p: p.pid, t: p.token, n: p.name, ty: p.type, a: p.affiliation, m: p.meals ? 1 : 0, d: p.dietary, i: p.in, w: p.walk ? 1 : 0 };
+      if (p.removed) o.x = 1; if (p.email) o.e = p.email; return o; }) }));
+  }
+  function loadRoster(force) {
+    return call({ op: 'roster', rev: force ? undefined : (R.rev === null ? undefined : R.rev) }).then(function (d) {
+      if (!d.same) { setRoster(d.rows || []); store('ck-roster-' + S.kind, JSON.stringify({ rev: d.rev, rows: d.rows })); }
+      R.rev = d.rev; R.at = Date.now(); stats(); if (!$('find').hidden) renderList(); paintSync();
+    }).catch(function () { paintSync(); });
   }
   function stats() {
-    call({ op: 'stats' }).then(function (d) {
-      $('stats').innerHTML = '<b>' + d.in + '</b> of ' + d.total + ' checked in · <b>' + d.meals + '</b> with lunch' + (d.walkins ? ' · ' + d.walkins + ' walk-ins registered' : '');
-    }).catch(function () {});
+    var rows = R.rows.filter(function (p) { return !p.removed; }), here = rows.filter(function (p) { return p.in; });
+    $('stats').innerHTML = rows.length ? '<b>' + here.length + '</b> of ' + rows.length + ' checked in · <b>' + here.filter(function (p) { return p.meals; }).length + '</b> with lunch' +
+      (rows.filter(function (p) { return p.walk; }).length ? ' · ' + rows.filter(function (p) { return p.walk; }).length + ' walk-ins' : '') : 'Loading the list…';
   }
-  setInterval(function () { if (S.token && !document.hidden) stats(); }, 30000);
+  var flushing = false, offline = false, backoff = 1500;
+  function paintSync() {
+    var el = $('sync');
+    if (offline && Q.length) { el.className = 'sync off'; el.textContent = '⚠ No connection · ' + Q.length + ' waiting'; }
+    else if (Q.length) { el.className = 'sync wait'; el.textContent = '⟳ Saving ' + Q.length + '…'; }
+    else if (R.rows.length) { el.className = 'sync ok'; el.textContent = '✓ Saved'; }
+    else el.textContent = '';
+  }
+  function flush() {
+    if (flushing || !Q.length || !S.token) return;
+    flushing = true;
+    var batch = Q.slice(0, 20);
+    call({ op: 'markMany', items: batch }).then(function (d) {
+      offline = false; backoff = 1500;
+      Q = Q.slice(batch.length);
+      (d.results || []).forEach(function (x) {
+        var p = R.byP[x.pid]; if (!p) return;
+        if (x.cancelled) { p.removed = true; p.in = ''; show('bad', '<div class="st">Registration cancelled</div><div class="big">' + esc(p.name) + '</div><div class="sm">Removed from the list by the organizers — please ask them.</div>', 7000); }
+        else if (!Q.some(function (q) { return q.pid === x.pid; })) p.in = x.in || '';
+      });
+      if (d.rev !== undefined) R.rev = null;   // the server changed: fetch the list again soon
+      saveQ(); keepRoster(); stats(); if (!$('find').hidden) renderList();
+    }).catch(function () { offline = true; backoff = Math.min(backoff * 2, 15000); paintSync(); })
+      .then(function () { flushing = false; setTimeout(flush, Q.length ? (offline ? backoff : 200) : 0); });
+  }
+  setInterval(flush, 3000);
+  setInterval(function () { if (S.token && !document.hidden && !flushing) loadRoster(false); }, 20000);
+  function tick(p, on) {
+    p.in = on ? nowHM() : '';
+    Q = Q.filter(function (q) { return q.pid !== p.pid; }).concat([{ pid: p.pid, on: on }]);
+    saveQ(); keepRoster(); stats(); flush();
+  }
   function mode(m) {
     $('scan').hidden = m !== 'scan'; $('find').hidden = m !== 'find';
     Array.prototype.forEach.call(document.querySelectorAll('[data-mode]'), function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-mode') === m)); });
     store('ck-mode-' + S.kind, m);
     if (m !== 'scan') stopCam(); else if (S.stream === null && load('ck-cam') === '1') startCam();
-    if (m === 'find') { loadList(); setTimeout(function () { $('q').focus(); }, 50); }
+    if (m === 'find') { renderList(); setTimeout(function () { $('q').focus(); }, 50); }
   }
   $('modes').addEventListener('click', function (e) { var b = e.target.closest('[data-mode]'); if (b) mode(b.getAttribute('data-mode')); });
+
+  /* ---- sound: a short beep for each result (high = in, double = already, low buzz = problem) ---- */
+  var AC = null, SOUND = load('ck-sound') !== 'off';
+  function unlockAudio() {   // phones only allow sound after a tap: the first tap anywhere opens it
+    try { if (!AC) AC = new (window.AudioContext || window.webkitAudioContext)(); if (AC.state === 'suspended') AC.resume(); } catch (e) {}
+  }
+  document.addEventListener('pointerdown', unlockAudio, { passive: true });
+  function beep(kind) {
+    if (!SOUND) return;
+    unlockAudio(); if (!AC) return;
+    var seq = kind === 'ok' ? [[1320, .10]] : kind === 'warn' ? [[880, .09], [880, .09]] : [[200, .38]], t = AC.currentTime + .01;
+    seq.forEach(function (x) {
+      var o = AC.createOscillator(), g = AC.createGain();
+      o.type = kind === 'bad' ? 'square' : 'sine'; o.frequency.value = x[0];
+      g.gain.setValueAtTime(.0001, t); g.gain.exponentialRampToValueAtTime(kind === 'bad' ? .25 : .5, t + .01); g.gain.exponentialRampToValueAtTime(.0001, t + x[1]);
+      o.connect(g); g.connect(AC.destination); o.start(t); o.stop(t + x[1] + .02); t += x[1] + .07;
+    });
+  }
+  function paintSound() { $('snd').textContent = SOUND ? '🔊 Sound' : '🔇 Muted'; }
+  $('snd').addEventListener('click', function () { SOUND = !SOUND; store('ck-sound', SOUND ? 'on' : 'off'); paintSound(); if (SOUND) beep('ok'); });
+  paintSound();
 
   /* ---- result card ---- */
   var hideT = null;
   function show(kind, html, ms) {
+    beep(kind);
     var r = $('result'); r.className = 'result on ' + kind; r.innerHTML = html;
     clearTimeout(hideT); hideT = setTimeout(function () { r.className = 'result'; }, ms || 3500);
     try { if (navigator.vibrate) navigator.vibrate(kind === 'ok' ? 80 : [60, 60, 60]); } catch (e) {}
@@ -198,17 +283,27 @@
       (p.meals && p.dietary ? '<div class="sm" style="margin-top:6px">Dietary: ' + esc(p.dietary) + '</div>' : '');
   }
   function answer(d) {
+    if (!d.ok && d.cancelled) { show('bad', '<div class="st">Registration cancelled</div><div class="big">' + esc((d.person || {}).name || '') + '</div><div class="sm">Removed from the list — please send them to the Help desk.</div>', 6000); return; }
     if (!d.ok) { show('bad', '<div class="st">Not found</div><div class="big">' + esc(d.error || 'This code is not on the list.') + '</div><div class="sm">' + esc(d.code || '') + ' — ask the data staff to look the person up.</div>', 5000); return; }
     if (d.already) show('warn', personHTML(d.person, 'Already checked in · ' + d.already), 5000);
     else show('ok', personHTML(d.person, '✓ Checked in'), 3500);
-    stats();
   }
   function check(code) {
     code = String(code || '').trim(); if (!code || S.busy) return;
     if (code === S.last && Date.now() - S.lastAt < 6000) return;   // the same code still in front of the camera
-    S.last = code; S.lastAt = Date.now(); S.busy = true;
-    call({ op: 'scan', code: code }).then(answer)
-      .catch(function (err) { show('bad', '<div class="st">Error</div><div class="big">' + esc(err.message || 'No connection') + '</div>', 5000); })
+    S.last = code; S.lastAt = Date.now();
+    var tok = code.toUpperCase().replace(/^.*?(C26-[A-Z0-9]{8}).*$/, '$1'), p = R.byT[tok];
+    if (p) {                                                      // on this device's list: answer at once
+      if (p.removed) { show('bad', '<div class="st">Registration cancelled</div><div class="big">' + esc(p.name) + '</div><div class="sm">Removed from the list — please send them to the Help desk.</div>', 6000); return; }
+      if (p.in) { show('warn', personHTML(p, 'Already checked in · ' + p.in), 5000); return; }
+      tick(p, true);
+      show('ok', personHTML(p, '✓ Checked in'), 3000);
+      return;
+    }
+    // not on this device's list (registered a moment ago?): ask the server
+    S.busy = true;
+    call({ op: 'scan', code: code }).then(function (d) { answer(d); if (d.ok) loadRoster(true); })
+      .catch(function (err) { show('bad', '<div class="st">' + (R.rows.length ? 'Not found' : 'Error') + '</div><div class="big">' + esc(R.rows.length ? 'This code is not on the list.' : (err.message || 'No connection')) + '</div><div class="sm">' + esc(tok) + ' — ask the Help desk to look the person up.</div>', 5000); })
       .then(function () { S.busy = false; });
   }
   $('manual').addEventListener('submit', function (e) { e.preventDefault(); check($('code').value); $('code').value = ''; });
@@ -259,52 +354,55 @@
   $('go').addEventListener('click', startCam);
   document.addEventListener('visibilitychange', function () { if (document.hidden) stopCam(); });
 
-  /* ---- the participant list (data staff): everyone, filtered here as you type ---- */
-  var LIST = { rows: [], f: '', at: 0 };
-  function loadList() {
-    return call({ op: 'list' }).then(function (d) { LIST.rows = d.rows || []; LIST.at = Date.now(); renderList(); })
-      .catch(function (err) { $('list').innerHTML = '<div class="err">' + esc(err.message) + '</div>'; });
-  }
+  /* ---- the participant list (data staff): everyone, from this device's list, filtered and sorted as you like ---- */
+  var LIST = { f: '', sort: load('ck-lsort') || 'name' };
+  $('lsort').value = LIST.sort;
+  $('lsort').addEventListener('change', function () { LIST.sort = this.value; store('ck-lsort', LIST.sort); renderList(); });
+  var stripT = function (n) { return String(n || '').replace(/^(dr|mr|mrs|ms|prof(essor)?|assoc(iate)?|asst|assistant)\.?\s+/i, '').toLowerCase(); };
+  var inTime = function (p) { return p.in ? (Date.parse(p.in + ' 2026') || 1) : 0; };
   function renderList() {
-    var q = $('q').value.trim().toLowerCase(), f = LIST.f;
-    var rows = LIST.rows.filter(function (p) {
+    var q = $('q').value.trim().toLowerCase(), f = LIST.f, all = R.rows.filter(function (p) { return !p.removed; });
+    var rows = all.filter(function (p) {
       if (f === 'not' && p.in) return false;
       if (f === 'in' && !p.in) return false;
-      if (f === 'walk' && !/walk-in/i.test(p.source || '')) return false;
+      if (f === 'walk' && !p.walk) return false;
       if (f === 'lunch' && !p.meals) return false;
-      return !q || (p.name + ' ' + (p.email || '') + ' ' + (p.affiliation || '') + ' ' + (p.type || '')).toLowerCase().indexOf(q) !== -1;
+      return !q || (p.name + ' ' + p.email + ' ' + (p.affiliation || '') + ' ' + (p.type || '') + ' ' + p.token).toLowerCase().indexOf(q) !== -1;
     });
-    var nin = LIST.rows.filter(function (p) { return p.in; }).length;
-    $('count').textContent = rows.length + ' shown · ' + nin + ' of ' + LIST.rows.length + ' checked in';
+    var by = { name: function (a, b) { return stripT(a.name).localeCompare(stripT(b.name)); },
+               latest: function (a, b) { return inTime(b) - inTime(a) || stripT(a.name).localeCompare(stripT(b.name)); },
+               org: function (a, b) { return String(a.affiliation || '~').localeCompare(String(b.affiliation || '~')) || stripT(a.name).localeCompare(stripT(b.name)); },
+               not: function (a, b) { return (a.in ? 1 : 0) - (b.in ? 1 : 0) || stripT(a.name).localeCompare(stripT(b.name)); } }[LIST.sort] || null;
+    if (by) rows.sort(by);
+    var nin = all.filter(function (p) { return p.in; }).length;
+    $('count').textContent = rows.length + ' shown · ' + nin + ' of ' + all.length + ' checked in';
     var show = rows.slice(0, 300);
     $('list').innerHTML = show.length ? show.map(function (p) {
-      return '<div class="row"><div><b>' + esc(p.name) + '<span class="tag ' + (p.meals ? 'yes' : 'no') + '">' + (p.meals ? 'lunch' : 'no lunch') + '</span>' + (/walk-in/i.test(p.source || '') ? '<span class="tag walk">walk-in</span>' : '') + '</b>' +
+      return '<div class="row"><div><b>' + esc(p.name) + '<span class="tag ' + (p.meals ? 'yes' : 'no') + '">' + (p.meals ? 'lunch' : 'no lunch') + '</span>' + (p.walk ? '<span class="tag walk">walk-in</span>' : '') + '</b>' +
         '<span class="sm">' + esc([p.type, p.affiliation, p.email].filter(Boolean).join(' · ')) + '</span>' +
         (p.in ? '<span class="in">✓ In · ' + esc(p.in) + '</span>' : '') + '</div>' +
         (p.in ? '<button class="btn ghost small" data-undo="' + esc(p.pid) + '">Undo</button>' : '<button class="btn small" data-mark="' + esc(p.pid) + '">Check in</button>') + '</div>';
     }).join('') + (rows.length > show.length ? '<div class="row"><div class="sm">' + (rows.length - show.length) + ' more — type to narrow the list.</div></div>' : '')
-      : '<div class="row"><div class="sm">' + (LIST.rows.length ? 'Nobody matches. Check the spelling, or try the email.' : 'Loading the list…') + '</div></div>';
+      : '<div class="row"><div class="sm">' + (R.rows.length ? 'Nobody matches. Check the spelling, or try the email.' : 'Loading the list…') + '</div></div>';
   }
   var qT = null;
-  $('q').addEventListener('input', function () { clearTimeout(qT); qT = setTimeout(renderList, 120); });
+  $('q').addEventListener('input', function () { clearTimeout(qT); qT = setTimeout(renderList, 80); });
   $('chips').addEventListener('click', function (e) {
     var b = e.target.closest('[data-f]'); if (!b) return;
     LIST.f = b.getAttribute('data-f');
     Array.prototype.forEach.call(document.querySelectorAll('[data-f]'), function (x) { x.setAttribute('aria-pressed', String(x === b)); });
     renderList();
   });
-  setInterval(function () { if (S.token && S.kind === 'data' && !$('find').hidden && !document.hidden) loadList(); }, 45000);
   $('list').addEventListener('click', function (e) {
     var m = e.target.closest('[data-mark]'), u = e.target.closest('[data-undo]');
     if (!m && !u) return;
-    var b = m || u; b.disabled = true;
-    if (u && !confirm('Undo this check-in?')) { b.disabled = false; return; }
-    call({ op: 'mark', pid: b.getAttribute(m ? 'data-mark' : 'data-undo'), on: !!m }).then(function (d) {
-      if (m) answer(d); else stats();
-      LIST.rows.forEach(function (p) { if (p.pid === d.person.pid) { p.in = d.person.in; p.inBy = d.person.inBy; } });
-      renderList();
-    }).catch(function (err) { b.disabled = false; show('bad', '<div class="st">Error</div><div class="big">' + esc(err.message) + '</div>'); });
+    var p = R.byP[(m || u).getAttribute(m ? 'data-mark' : 'data-undo')]; if (!p) return;
+    if (u && !confirm('Undo ' + p.name + '’s check-in?')) return;
+    tick(p, !!m);
+    if (m) show('ok', personHTML(p, '✓ Checked in'), 3000);
+    renderList();
   });
+  window.addEventListener('online', function () { offline = false; flush(); });
 
   /* ---- back from a reload ---- */
   try { var saved = JSON.parse(load('ck-session') || 'null'); if (saved && saved.token) { S.token = saved.token; S.kind = saved.kind; S.label = saved.label; start(); } } catch (e) {}
