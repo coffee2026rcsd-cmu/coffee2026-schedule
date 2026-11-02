@@ -38,14 +38,26 @@
      "url": "https://rcsd.soc.cmu.ac.th/",
      "logo": "logos/sp-mviccbmr890.png?v=mvidmbay",
      "size": "l",
-     "h": 114
+     "h": 140
     },
+    {
+     "name": "The Rotate (The Pgakenyaw Association for Sustainable Development)",
+     "url": "https://therotate.co/",
+     "logo": "logos/c-rotate.png?v=mvz4fw3o",
+     "size": "l",
+     "h": 72
+    }
+   ]
+  },
+  {
+   "group": "Co-organised by",
+   "items": [
     {
      "name": "Center for Ethnic Studies and Development",
      "url": "https://cesd.soc.cmu.ac.th/",
      "logo": "logos/sp-mvidakp70gn.png?v=mvidmjbu",
      "size": "l",
-     "h": 74
+     "h": 118
     },
     {
      "name": "Faculty of Social Sciences, Chiang Mai University",
@@ -53,12 +65,7 @@
      "logo": "logos/c-soc-cmu.png?v=mvz4fjec",
      "size": "m",
      "h": 54
-    }
-   ]
-  },
-  {
-   "group": "Co-organised by",
-   "items": [
+    },
     {
      "name": "Yunnan University",
      "url": "https://english.ynu.edu.cn/",
@@ -107,18 +114,6 @@
      "logo": "logos/sp-mvz4jl8nt9h.png?v=mvz4kmcz",
      "size": "m",
      "h": 54
-    }
-   ]
-  },
-  {
-   "group": "Supported by",
-   "items": [
-    {
-     "name": "The Rotate (The Pgakenyaw Association for Sustainable Development)",
-     "url": "https://therotate.co/",
-     "logo": "logos/c-rotate.png?v=mvz4fw3o",
-     "size": "m",
-     "h": 54
     },
     {
      "name": "Chiang Mai University",
@@ -154,7 +149,12 @@
      "logo": "logos/c-coffee-sciences.png?v=mvz4fuk5",
      "size": "m",
      "h": 54
-    },
+    }
+   ]
+  },
+  {
+   "group": "Supported by",
+   "items": [
     {
      "name": "Art Farmer",
      "url": "https://www.facebook.com/ArtFarmerCafe/",
@@ -166,13 +166,6 @@
      "name": "Office of Research Administration, Chiang Mai University",
      "url": "https://ora.oou.cmu.ac.th/",
      "logo": "logos/c-ora.png?v=mvz4fo3y",
-     "size": "m",
-     "h": 54
-    },
-    {
-     "name": "Agri Chapter: Art Farmer",
-     "url": "https://www.facebook.com/Agrichapterartfarmer/",
-     "logo": "logos/c-agri-chapter.png?v=mvz4fxmr",
      "size": "m",
      "h": 54
     },
@@ -195,7 +188,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "2 Nov 2026, 17:38 (GMT+7)",
+ "updated": "2 Nov 2026, 17:43 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
