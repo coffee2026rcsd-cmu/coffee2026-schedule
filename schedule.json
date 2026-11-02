@@ -79,11 +79,18 @@
      "logo": "logos/sp-mvidakp70gn.png?v=mvidmjbu",
      "size": "l",
      "h": 106
+    },
+    {
+     "name": "The Center for ASEAN Studies: CAS",
+     "url": "https://www.facebook.com/asean.cmu#",
+     "logo": "logos/sp-mvz32vh3o5d.png?v=mvz34dk3",
+     "size": "m",
+     "h": 54
     }
    ]
   },
   {
-   "group": "Sponsored by",
+   "group": "Supported by",
    "items": [
     {
      "name": "Art Farmer",
@@ -104,7 +111,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "2 Nov 2026, 16:33 (GMT+7)",
+ "updated": "2 Nov 2026, 17:07 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
