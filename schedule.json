@@ -39,19 +39,26 @@
      "logo": "logos/sp-mviccbmr890.png?v=mvidmbay",
      "size": "l",
      "h": 114
+    },
+    {
+     "name": "Center for Ethnic Studies and Development",
+     "url": "https://cesd.soc.cmu.ac.th/",
+     "logo": "logos/sp-mvidakp70gn.png?v=mvidmjbu",
+     "size": "l",
+     "h": 74
+    },
+    {
+     "name": "Faculty of Social Sciences, Chiang Mai University",
+     "url": "https://www.soc.cmu.ac.th/",
+     "logo": "logos/c-soc-cmu.png?v=mvz4fjec",
+     "size": "m",
+     "h": 54
     }
    ]
   },
   {
    "group": "Co-organised by",
    "items": [
-    {
-     "name": "Chiang Mai University",
-     "url": "https://www.cmu.ac.th/",
-     "logo": "logos/sp-mvid9bjlfvu.png?v=mvidaqpm",
-     "size": "s",
-     "h": 36
-    },
     {
      "name": "Yunnan University",
      "url": "https://english.ynu.edu.cn/",
@@ -74,16 +81,30 @@
      "h": 44
     },
     {
-     "name": "Center for Ethnic Studies and Development",
-     "url": "https://cesd.soc.cmu.ac.th/",
-     "logo": "logos/sp-mvidakp70gn.png?v=mvidmjbu",
-     "size": "l",
-     "h": 106
+     "name": "School of Ethnology and Sociology, Yunnan University",
+     "url": "http://english.ynu.edu.cn/2024-01/25/c_958706.htm",
+     "logo": "logos/c-ses-ynu.png?v=mvz4fkyd",
+     "size": "m",
+     "h": 54
     },
     {
-     "name": "The Center for ASEAN Studies: CAS",
+     "name": "National Centre for Borderland Ethnic Studies in Southwest China",
+     "url": "",
+     "logo": "logos/c-ncbes.png?v=mvz4fmgz",
+     "size": "m",
+     "h": 54
+    },
+    {
+     "name": "Center for ASEAN Studies: CAS",
      "url": "https://www.facebook.com/asean.cmu#",
      "logo": "logos/sp-mvz32vh3o5d.png?v=mvz34dk3",
+     "size": "m",
+     "h": 54
+    },
+    {
+     "name": "Faculty of Agriculture, Chiang Mai University",
+     "url": "https://www.agri.cmu.ac.th/",
+     "logo": "logos/sp-mvz4jl8nt9h.png?v=mvz4kmcz",
      "size": "m",
      "h": 54
     }
@@ -93,9 +114,72 @@
    "group": "Supported by",
    "items": [
     {
+     "name": "The Rotate (The Pgakenyaw Association for Sustainable Development)",
+     "url": "https://therotate.co/",
+     "logo": "logos/c-rotate.png?v=mvz4fw3o",
+     "size": "m",
+     "h": 54
+    },
+    {
+     "name": "Chiang Mai University",
+     "url": "https://www.cmu.ac.th/",
+     "logo": "logos/sp-mvid9bjlfvu.png?v=mvidaqpm",
+     "size": "s",
+     "h": 36
+    },
+    {
+     "name": "CMU Coffee, Faculty of Agriculture, Chiang Mai University",
+     "url": "",
+     "logo": "logos/c-cmu-coffee.png?v=mvz4fzc2",
+     "size": "m",
+     "h": 54
+    },
+    {
+     "name": "Specialty Coffee Association of Thailand (SCATH)",
+     "url": "https://www.scath.org/",
+     "logo": "logos/c-scath.png?v=mvz4fr6r",
+     "size": "m",
+     "h": 54
+    },
+    {
+     "name": "Tea and Coffee Institute, Mae Fah Luang University",
+     "url": "http://teacoffee.mfu.ac.th/tc-main.html",
+     "logo": "logos/c-tci-mfu.png?v=mvz4fsvi",
+     "size": "m",
+     "h": 54
+    },
+    {
+     "name": "Coffee Sciences (Din Fah Coffee)",
+     "url": "https://www.facebook.com/Dinfacaffee/",
+     "logo": "logos/c-coffee-sciences.png?v=mvz4fuk5",
+     "size": "m",
+     "h": 54
+    },
+    {
      "name": "Art Farmer",
      "url": "https://www.facebook.com/ArtFarmerCafe/",
      "logo": "logos/sp-mvrwl84qt3l.png?v=mvrwrndd",
+     "size": "m",
+     "h": 54
+    },
+    {
+     "name": "Office of Research Administration, Chiang Mai University",
+     "url": "https://ora.oou.cmu.ac.th/",
+     "logo": "logos/c-ora.png?v=mvz4fo3y",
+     "size": "m",
+     "h": 54
+    },
+    {
+     "name": "Agri Chapter: Art Farmer",
+     "url": "https://www.facebook.com/Agrichapterartfarmer/",
+     "logo": "logos/c-agri-chapter.png?v=mvz4fxmr",
+     "size": "m",
+     "h": 54
+    },
+    {
+     "name": "Center for ASEAN Studies (CAS), Chiang Mai University",
+     "url": "https://www.facebook.com/asean.cmu",
+     "logo": "logos/c-cas.png?v=mvz4l5g7",
      "size": "m",
      "h": 54
     }
@@ -111,7 +195,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "2 Nov 2026, 17:07 (GMT+7)",
+ "updated": "2 Nov 2026, 17:38 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
