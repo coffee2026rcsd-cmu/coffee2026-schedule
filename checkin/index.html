@@ -359,7 +359,20 @@
   var LIST = { f: '', sort: load('ck-lsort') || 'name' };
   $('lsort').value = LIST.sort;
   $('lsort').addEventListener('change', function () { LIST.sort = this.value; store('ck-lsort', LIST.sort); renderList(); });
-  var stripT = function (n) { return String(n || '').replace(/^(dr|mr|mrs|ms|prof(essor)?|assoc(iate)?|asst|assistant)\.?\s+/i, '').toLowerCase(); };
+  // names sort without titles or positions (the same rule as the app's Schedule)
+  var TITLE_RES = [
+    /^(?:(?:associate|assistant|adjunct|emeritus|visiting|distinguished|full)\s+)?prof(?:essor)?(?:\.\s*|\s+)/i,
+    /^(?:assoc|asst|ass't)\.?\s*prof\.?\s*/i,
+    /^(?:dr|mr|mrs|ms|miss|mx|sir|madam|prof|ajarn|ajahn|instructor|lecturer|researcher|rev|fr)(?:\.\s*|\s+)/i,
+    /^(?:m\.\s?a|m\.\s?sc|m\.\s?phil|ph\.\s?d|b\.\s?a|b\.\s?sc)\.?(?:\s+in\s+[A-Z][\w&-]*(?:\s+(?:and|&)\s+[A-Z][\w-]*)?)?\s+(?=\S)/i,
+    /^(?:MA|MSc|MPhil|PhD|BA|BSc)\.?(?:\s+in\s+[A-Z][\w&-]*(?:\s+(?:and|&)\s+[A-Z][\w-]*)?)?\s+(?=\S)/,
+    /^(?:ศ\.|รศ\.|ผศ\.|ดร\.|อ\.|นพ\.|พญ\.|นาย|นางสาว|นาง)\s*/
+  ];
+  var stripT = function (n) {
+    var t = String(n || '').trim(), was;
+    do { was = t; TITLE_RES.forEach(function (re) { t = t.replace(re, ''); }); } while (t !== was && t);
+    return (t.replace(/[\s\-–—,]+$/, '') || String(n || '')).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  };
   var inTime = function (p) { return p.in ? (Date.parse(p.in + ' 2026') || 1) : 0; };
   function renderList() {
     var q = $('q').value.trim().toLowerCase(), f = LIST.f, all = R.rows.filter(function (p) { return !p.removed; });
