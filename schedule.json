@@ -188,7 +188,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "2 Nov 2026, 17:43 (GMT+7)",
+ "updated": "2 Nov 2026, 18:05 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
@@ -831,31 +831,11 @@
      "end": "1:30 PM",
      "startMin": 750,
      "type": "lunch",
-     "title": "Lunch and Public Cupping: Understanding the development and diversity of coffee varieties through the cup",
+     "title": "Lunch",
      "about": "",
      "room": "",
      "roomKey": "",
      "speakers": []
-    },
-    {
-     "id": "S23-Day2",
-     "start": "12:30 PM",
-     "end": "1:30 PM",
-     "startMin": 750,
-     "type": "side",
-     "title": "Workshop - Cupping by SCATH",
-     "about": "",
-     "room": "Gandhi Yard",
-     "roomKey": "yard",
-     "events": [
-      {
-       "name": "Public Cupping",
-       "kind": "Workshop",
-       "org": "School Coffee",
-       "panellists": [],
-       "moderator": ""
-      }
-     ]
     },
     {
      "id": "S18-Day2",
@@ -950,6 +930,26 @@
          "keywords": ""
         }
        ]
+      }
+     ]
+    },
+    {
+     "id": "S23-Day2",
+     "start": "1:30 PM",
+     "end": "3:00 PM",
+     "startMin": 810,
+     "type": "side",
+     "title": "Workshop - Cupping by SCATH",
+     "about": "",
+     "room": "Gandhi Yard",
+     "roomKey": "yard",
+     "events": [
+      {
+       "name": "Public Cupping: Understanding the development and diversity of coffee varieties through the cup",
+       "kind": "Workshop",
+       "org": "Highland Coffee Research and Development Center CMU and School Coffee",
+       "panellists": [],
+       "moderator": ""
       }
      ]
     },
