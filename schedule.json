@@ -188,7 +188,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "3 Nov 2026, 17:07 (GMT+7)",
+ "updated": "3 Nov 2026, 19:15 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
@@ -219,7 +219,7 @@
      "speakers": [
       {
        "name": "Dr. Wasan Panyakaew",
-       "affiliation": "Dean of the Faculty of Social Sciences",
+       "affiliation": "Dean of the Faculty of Social Sciences, Chiang Mai University",
        "talk": "Welcome Remark"
       },
       {
@@ -247,7 +247,7 @@
      "speakers": [
       {
        "name": "Fuadi Pitsuwan",
-       "affiliation": "",
+       "affiliation": "Vice President of Specialty Coffee Association of Thailand",
        "talk": ""
       }
      ]
@@ -291,13 +291,13 @@
        "talk": ""
       },
       {
-       "name": "Lee Ayu Cheupa",
-       "affiliation": "Akha Ama",
+       "name": "Jittima Singvejsakul",
+       "affiliation": "Faculty of Agriculture, Chiang Mai University",
        "talk": ""
       },
       {
-       "name": "Jittima Singvejsakul",
-       "affiliation": "Chiang Mai University",
+       "name": "Lee Ayu Cheupa",
+       "affiliation": "Akha Ama",
        "talk": ""
       }
      ],
@@ -331,14 +331,14 @@
      "events": [
       {
        "name": "New Generation Coffee Farmers and Women in Coffee Development/ กาแฟกรรุ่นใหม่และผู้หญิงกับการพัฒนากาแฟไทย",
-       "kind": "Panel discussion",
+       "kind": "Roundtable",
        "org": "Faculty of Social Sciences",
        "panellists": [
-        "Melanee Laechoeku, Baan Sip Lang, Chiang Rai, Thailand",
-        "Namwhan Nanthana, Huay Nam Khuan, Chiang Rai, Thailand",
-        "Chukait Hongarthan (Toki), Galyani Vadhana, Chiang Mai"
+        "Ms. Melanee Laechoeku (Baan Sip Lang, Chiang Rai)",
+        "Ms. Nanthana Chantavee (Huay Nam Khuan, Chiang Rai)",
+        "Mr. Chukait Hongarthan (Galyani Vadhana, Chiang Mai)"
        ],
-       "moderator": "Arratee Ayuttacorn"
+       "moderator": "Arratee Ayuttacorn (Faculty of Social Sciences, Chiang Mai University)"
       }
      ]
     },
@@ -660,13 +660,14 @@
      "events": [
       {
        "name": "Coffee Varieties and Soil Improvement for Adapting to Climate Change",
-       "kind": "Panel discussion",
+       "kind": "Roundtable",
        "org": "",
        "panellists": [
-        "TBC, Center of Coffee Research and Development, Department of Highland Agriculture and Natural Resources, Faculty of Agriculture, CMU",
-        "Dr. Vassana Viroonrat, Maejo University"
+        "Mr. Pong Luangmoon (Center of Coffee Research and Development, Department of Highland Agriculture and Natural Resources, Faculty of Agriculture, CMU)",
+        "Dr. Nipon Mawan (Center of Coffee Research and Development, Department of Highland Agriculture and Natural Resources, Faculty of Agriculture, CMU)",
+        "Dr. Vassana Viroonrat (Maejo University)"
        ],
-       "moderator": "Visut Asanavijit"
+       "moderator": "Visut Asanavijit (Rajamangala University of Technology Lanna)"
       }
      ]
     }
@@ -705,7 +706,7 @@
      ],
      "moderator": {
       "name": "Borirak Aphikhantikul",
-      "affiliation": "School coffee"
+      "affiliation": "Vice President of Specialty Coffee Association of Thailand, and School coffee"
      }
     },
     {
@@ -939,7 +940,7 @@
      "end": "3:00 PM",
      "startMin": 810,
      "type": "side",
-     "title": "Workshop - Cupping by SCATH",
+     "title": "Public Cupping",
      "about": "",
      "room": "Gandhi Yard",
      "roomKey": "yard",
