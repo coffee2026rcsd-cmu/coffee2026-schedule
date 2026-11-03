@@ -362,6 +362,8 @@
   // names sort without titles or positions (the same rule as the app's Schedule)
   var TITLE_RES = [
     /^(?:(?:associate|assistant|adjunct|emeritus|visiting|distinguished|full)\s+)?prof(?:essor)?(?:\.\s*|\s+)/i,
+  /^(?:adjunct|visiting|distinguished|senior|special|clinical|principal)\s+(?=(?:lecturer|professor|prof\b|researcher|research\s+fellow|fellow|scholar)\b)/i,
+  /^(?:emerit(?:us|a)|honorary|hon\.|his\s+excellency|her\s+excellency|h\.\s?e\.|ven\.|venerable|khun|ศ\.?\s*เกียรติคุณ|เกียรติคุณ|\(พิเศษ\))(?:\.\s*|\s+|(?=[฀-๿]))/i,   // the words around a title: "Professor Emeritus Dr.", "H.E.", "Khun"
     /^(?:assoc|asst|ass't)\.?\s*prof\.?\s*/i,
     /^(?:dr|mr|mrs|ms|miss|mx|sir|madam|prof|ajarn|ajahn|instructor|lecturer|researcher|rev|fr)(?:\.\s*|\s+)/i,
     /^(?:m\.\s?a|m\.\s?sc|m\.\s?phil|ph\.\s?d|b\.\s?a|b\.\s?sc)\.?(?:\s+in\s+[A-Z][\w&-]*(?:\s+(?:and|&)\s+[A-Z][\w-]*)?)?\s+(?=\S)/i,
