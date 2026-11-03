@@ -188,7 +188,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "3 Nov 2026, 15:20 (GMT+7)",
+ "updated": "3 Nov 2026, 17:07 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
@@ -277,8 +277,8 @@
      "speakers": [
       {
        "name": "Fan Xu",
-       "affiliation": "Guangzhou Yinshu Coffee Management Co., Ltd., Guangzhou, China",
-       "talk": "The Yunnan Terroir Archive: A Proposed Framework for Lot-Level Origin Documentation"
+       "affiliation": "Lecturer in the coffee training system of Yunnan Agricultural University; Founder, Coffactor OÜ.",
+       "talk": "One Object at Three Speeds: Coffee as Commodity, Culture and Knowledge in Transition"
       },
       {
        "name": "Nguyễn Văn Chính",
@@ -1048,8 +1048,8 @@
      "roomKey": "",
      "speakers": [
       {
-       "name": "Dr. Pongsak Aungasith",
-       "affiliation": "Formal Dean, Faculty of Agriculture",
+       "name": "Professor Emeritus Dr. Pongsak Angkasith",
+       "affiliation": "Former Director of Highland Coffee Research and Development Center CMU",
        "talk": ""
       }
      ]
