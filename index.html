@@ -155,6 +155,11 @@
   }
   .day h2{display:none;font-size:20px;margin:24px 0 0}
   .sponsors{padding:34px 0 26px;border-top:1px solid var(--line)}
+  /* the headline sponsors, under the symposium logo (Website settings › Sponsor and partner logos) */
+  .hsp{margin:0 0 22px}
+  .hsp[hidden]{display:none}
+  .hsp h4{margin:0 0 10px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+  .hsp .logos{gap:18px 40px}
   .spg{margin-bottom:24px}
   .spg h4{margin:0 0 12px;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
   .logos{display:flex;flex-wrap:wrap;gap:22px 34px;align-items:center}
@@ -213,6 +218,7 @@
   <header>
     <div class="lang" role="group" aria-label="Language"><button data-lang="en" aria-pressed="true">EN</button><button data-lang="zh" aria-pressed="false">中文</button><button data-lang="th" aria-pressed="false">ไทย</button></div>
     <img class="brandlogo" src="brand/logo.png" alt="3rd International Symposium on Coffee — Coffee Landscape of Southeast Asia" onerror="this.remove()">
+    <div class="hsp" id="hsp" hidden></div>
     <div class="eyebrow" id="subtitle">3rd International Symposium on Coffee · 27–28 November 2026</div>
     <h1 id="title">Programme</h1>
     <div class="meta" id="venue"></div>
@@ -435,15 +441,20 @@
     $('mt').hidden = L === 'en'; $('mt').textContent = t('mt');
     $('sitenote').textContent = DATA.about && DATA.about.note ? tr(DATA.about.note) : '';
     $('updated').textContent = DATA.updated ? t('updated') + ' ' + DATA.updated : '';
-    var sp = DATA.sponsors || [];
-    $('sponsors').hidden = !sp.length;
-    $('sponsors').innerHTML = sp.map(function (g) {
+    var spAll = DATA.sponsors || [], head = DATA.headline || '';
+    var spGroup = function (g, top) {
       return '<div class="spg"><h4>' + esc(tr(g.group)) + '</h4><div class="logos">' + g.items.map(function (x) {
         var hh = Number(x.h) || ({ s: 34, m: 54, l: 84 })[x.size] || 54;
-        var inner = x.logo ? '<img src="' + esc(x.logo) + '" alt="' + esc(x.name) + '" title="' + esc(x.name) + '" loading="lazy" style="--h:' + hh + '">' : '<span class="txt">' + esc(x.name) + '</span>';
+        var inner = x.logo ? '<img src="' + esc(x.logo) + '" alt="' + esc(x.name) + '" title="' + esc(x.name) + '"' + (top ? '' : ' loading="lazy"') + ' style="--h:' + hh + '">' : '<span class="txt">' + esc(x.name) + '</span>';
         return x.url ? '<a class="' + esc(x.size) + '" href="' + esc(x.url) + '" target="_blank" rel="noopener">' + inner + '</a>' : '<span class="' + esc(x.size) + '">' + inner + '</span>';
       }).join('') + '</div></div>';
-    }).join('');
+    };
+    var headG = head ? spAll.filter(function (g) { return g.group === head; })[0] : null;
+    $('hsp').hidden = !headG;
+    $('hsp').innerHTML = headG ? spGroup(headG, true) : '';
+    var sp = spAll.filter(function (g) { return g !== headG; });   // the headline group is not repeated at the foot
+    $('sponsors').hidden = !sp.length;
+    $('sponsors').innerHTML = sp.map(function (g) { return spGroup(g, false); }).join('');
     var all = slideList(DATA.rooms || []), mapsH = whereHTML();
     $('where').hidden = !mapsH && !all.length;
     $('where').innerHTML = mapsH + (all.length ? '<button class="pin ghost" data-goto="rooms">' + esc(t('seeRooms')) + '</button>' : '');
