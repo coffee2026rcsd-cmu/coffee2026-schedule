@@ -24,7 +24,7 @@
   },
   {
    "key": "yard",
-   "name": "Gandhi Yard",
+   "name": "Chamchuri Court",
    "note": "",
    "photos": []
   }
@@ -200,7 +200,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "5 Nov 2026, 10:38 (GMT+7)",
+ "updated": "5 Nov 2026, 14:30 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
@@ -338,7 +338,7 @@
      "type": "side",
      "title": "Roundtable 1 - New Generation Farmers and Women in Coffee Development",
      "about": "",
-     "room": "Gandhi Yard",
+     "room": "Chamchuri Court",
      "roomKey": "yard",
      "events": [
       {
@@ -954,7 +954,7 @@
      "type": "side",
      "title": "Public Cupping",
      "about": "",
-     "room": "Gandhi Yard",
+     "room": "Chamchuri Court",
      "roomKey": "yard",
      "events": [
       {
