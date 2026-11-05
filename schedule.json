@@ -201,7 +201,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "5 Nov 2026, 18:19 (GMT+7)",
+ "updated": "5 Nov 2026, 18:43 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
@@ -294,11 +294,6 @@
        "talk": "One Object at Three Speeds: Coffee as Commodity, Culture and Knowledge in Transition"
       },
       {
-       "name": "Nguyễn Văn Chính",
-       "affiliation": "Department of Anthropology and Religious Studies, University of Social Sciences and Humanities, VNU Hanoi",
-       "talk": "From \"Drinking Coffee\" to \"Going for Coffee\": Coffee Shops, Social Spaces, and Beverage culture in Urban VIetnam"
-      },
-      {
        "name": "Adi Taroepratjeka",
        "affiliation": "5758 Coffee Lab",
        "talk": ""
@@ -347,9 +342,9 @@
        "kind": "Roundtable",
        "org": "Faculty of Social Sciences",
        "panellists": [
-        "Ms. Melanee Laechoeku (Baan Sip Lang, Chiang Rai)",
-        "Ms. Nanthana Chantavee (Huay Nam Khuan, Chiang Rai)",
-        "Mr. Chukait Hongarthan (Galyani Vadhana, Chiang Mai)"
+        "Melanee Laechoeku (Baan Sip Lang, Chiang Rai)",
+        "Nanthana Chantavee (Huay Nam Khuan, Chiang Rai)",
+        "Chukait Hongarthan (Galyani Vadhana, Chiang Mai)"
        ],
        "moderator": "Arratee Ayuttacorn (Faculty of Social Sciences, Chiang Mai University)"
       }
@@ -361,7 +356,7 @@
      "end": "3:00 PM",
      "startMin": 810,
      "type": "concurrent",
-     "title": "Concurrent Session I (2 Sessions)",
+     "title": "Concurrent Session I (3 Sessions)",
      "about": "",
      "room": "",
      "roomKey": "",
@@ -515,7 +510,7 @@
      "end": "5:00 PM",
      "startMin": 930,
      "type": "concurrent",
-     "title": "Concurrent Session II (2 Sessions)",
+     "title": "Concurrent Session II (3 Sessions)",
      "about": "",
      "room": "",
      "roomKey": "",
@@ -667,9 +662,9 @@
        "kind": "Roundtable",
        "org": "",
        "panellists": [
-        "Mr. Pong Luangmoon (Center of Coffee Research and Development, Department of Highland Agriculture and Natural Resources, Faculty of Agriculture, CMU)",
-        "Dr. Nipon Mawan (Center of Coffee Research and Development, Department of Highland Agriculture and Natural Resources, Faculty of Agriculture, CMU)",
-        "Dr. Vassana Viroonrat (Maejo University)"
+        "Pong Luangmoon (Coffee Research and Development Center, Department of Highland Agriculture and Natural Resources, Faculty of Agriculture, Chiang Mai University)",
+        "Nipon Mawan (Coffee Research and Development Center, Department of Highland Agriculture and Natural Resources, Faculty of Agriculture, CMU)",
+        "Vassana Viroonrat (Maejo University)"
        ],
        "moderator": "Visut Asanavijit (Rajamangala University of Technology Lanna)"
       }
@@ -961,7 +956,7 @@
       {
        "name": "Public Cupping: Understanding the development and diversity of coffee varieties through the cup",
        "kind": "Workshop",
-       "org": "Highland Coffee Research and Development Center CMU and School Coffee",
+       "org": "Coffee Research and Development Center and School Coffee",
        "panellists": [],
        "moderator": ""
       }
