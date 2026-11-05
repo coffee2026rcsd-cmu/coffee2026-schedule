@@ -191,6 +191,7 @@
    ]
   }
  ],
+ "headline": "",
  "about": {
   "text": "The Regional Center for Social Science and Sustainable Development (RCSD) and the Center for Ethnic Studies and Development (CESD), Faculty of Social Sciences, Chiang Mai University, together with the National Centre for Borderlands Ethnic Studies in Southwest China and the School of Ethnology and Sociology at Yunnan University, are pleased to host the 3rd International Symposium on Coffee, Constructing the Coffee Landscape in the Southeast Asia Region: Commodity, Culture, and Knowledge in Transition, on 27–28 November 2026 at Chiang Mai University.\n\nCoffee in Southeast Asia has a long and uneven history. It began with colonial and missionary experiments and grew into a major export crop, from the plantation landscapes of Indonesia and Vietnam to state-led highland development in Thailand and Yunnan, and to the newer, small-scale production now emerging in Myanmar and Cambodia. Across these places, coffee is at once a global commodity, a crop shaped by local communities and ecologies, and an urban culture that is changing quickly. The symposium looks at how this landscape has been built, and how it continues to change, through the legacies of colonial and missionary history, the agrarian transitions of upland and lowland farming communities, and the pressures of climate change and the search for adaptation in agroforestry and farming systems.\n\nOver two days, scholars, coffee growers and producers, development practitioners and entrepreneurs will exchange research and practice-based knowledge across six themes: coffee history; agriculture and agroforestry under climate change; coffee as commodity; coffee culture; agrarian transition; and knowledge production. Alongside paper sessions, panels and a roundtable, the programme includes exhibitions and hands-on activities such as public cupping.",
   "note": "This website is run by the Regional Center for Social Science and Sustainable Development (RCSD), Faculty of Social Sciences, Chiang Mai University, for the 3rd International Symposium on Coffee only.",
@@ -200,7 +201,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "5 Nov 2026, 14:30 (GMT+7)",
+ "updated": "5 Nov 2026, 18:19 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
@@ -562,7 +563,7 @@
        "room": "Room 2: Co-working Space",
        "roomKey": "co-working-space",
        "theme": "5. Coffee in agrarian transition",
-       "chair": "Arratee Ayuttacorn",
+       "chair": "Paul T. Cohen",
        "papers": [
         {
          "title": "Bean Sourcing, Taking Root, and Co-building: The Practices and Contributions of \"New Yunnanese\" in Menglian's Coffee Industry from a Broker Perspective",
