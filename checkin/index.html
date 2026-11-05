@@ -142,6 +142,7 @@
       .then(function (r) { return r.json(); })
       .then(function (d) {
         if (d && d.ok === false && /sign in again/i.test(d.error || '')) { signOut(); throw new Error(d.error); }
+        if (d && d.busy) return d;   // the sheet was busy: the page keeps what it has and tries again
         if (d && d.error && d.ok === false && req.op !== 'scan') throw new Error(d.error);
         return d;
       });
@@ -206,11 +207,13 @@
     $('stats').innerHTML = rows.length ? '<b>' + here.length + '</b> of ' + rows.length + ' checked in · <b>' + here.filter(function (p) { return p.meals; }).length + '</b> with lunch' +
       (rows.filter(function (p) { return p.walk; }).length ? ' · ' + rows.filter(function (p) { return p.walk; }).length + ' walk-ins' : '') : 'Loading the list…';
   }
-  var flushing = false, offline = false, backoff = 1500;
+  var flushing = false, offline = false, backoff = 1500, busyNow = false, flushT = null;
+  /* ticks made close together go in one request (the server writes them in one go) */
+  function flushSoon() { if (!flushT) flushT = setTimeout(function () { flushT = null; flush(); }, 1500); }
   function paintSync() {
     var el = $('sync');
     if (offline && Q.length) { el.className = 'sync off'; el.textContent = '⚠ No connection · ' + Q.length + ' waiting'; }
-    else if (Q.length) { el.className = 'sync wait'; el.textContent = '⟳ Saving ' + Q.length + '…'; }
+    else if (Q.length) { el.className = 'sync wait'; el.textContent = '⟳ Saving ' + Q.length + '…' + (busyNow ? ' (busy, retrying)' : ''); }
     else if (R.rows.length) { el.className = 'sync ok'; el.textContent = '✓ Saved'; }
     else el.textContent = '';
   }
@@ -218,8 +221,11 @@
     if (flushing || !Q.length || !S.token) return;
     flushing = true;
     var batch = Q.slice(0, 20);
+    var retryIn = 0;
     call({ op: 'markMany', items: batch }).then(function (d) {
-      offline = false; backoff = 1500;
+      offline = false;
+      if (d && d.busy) { busyNow = true; retryIn = 2000 + Math.random() * 2000; paintSync(); return; }   // kept; sent again shortly
+      busyNow = false; backoff = 1500;
       Q = Q.slice(batch.length);
       (d.results || []).forEach(function (x) {
         var p = R.byP[x.pid]; if (!p) return;
@@ -229,14 +235,14 @@
       if (d.rev !== undefined) R.rev = null;   // the server changed: fetch the list again soon
       saveQ(); keepRoster(); stats(); if (!$('find').hidden) renderList();
     }).catch(function () { offline = true; backoff = Math.min(backoff * 2, 15000); paintSync(); })
-      .then(function () { flushing = false; setTimeout(flush, Q.length ? (offline ? backoff : 200) : 0); });
+      .then(function () { flushing = false; if (Q.length) setTimeout(flush, retryIn || (offline ? backoff : 1500)); });
   }
-  setInterval(flush, 3000);
+  setInterval(function () { if (!flushT) flush(); }, 3000);   // a safety net; ticks just made wait for their 1.5 s window
   setInterval(function () { if (S.token && !document.hidden && !flushing) loadRoster(false); }, 20000);
   function tick(p, on) {
     p.in = on ? nowHM() : '';
     Q = Q.filter(function (q) { return q.pid !== p.pid; }).concat([{ pid: p.pid, on: on }]);
-    saveQ(); keepRoster(); stats(); flush();
+    saveQ(); keepRoster(); stats(); paintSync(); flushSoon();
   }
   function mode(m) {
     $('scan').hidden = m !== 'scan'; $('find').hidden = m !== 'find';
