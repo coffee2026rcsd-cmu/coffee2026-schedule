@@ -39,7 +39,12 @@
      "logo": "logos/sp-mviccbmr890.png?v=mvidmbay",
      "size": "l",
      "h": 140
-    },
+    }
+   ]
+  },
+  {
+   "group": "In partnership with",
+   "items": [
     {
      "name": "The Rotate (The Pgakenyaw Association for Sustainable Development)",
      "url": "https://therotate.co/",
@@ -144,6 +149,13 @@
      "h": 54
     },
     {
+     "name": "School Coffee",
+     "url": "https://www.facebook.com/schoolcoffee/?locale=th_TH",
+     "logo": "logos/sp-mw2yxvi043v.png?v=mw2yylb5",
+     "size": "m",
+     "h": 54
+    },
+    {
      "name": "Coffee Sciences (Din Fah Coffee)",
      "url": "https://www.facebook.com/Dinfacaffee/",
      "logo": "logos/c-coffee-sciences.png?v=mvz4fuk5",
@@ -188,7 +200,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "3 Nov 2026, 19:15 (GMT+7)",
+ "updated": "5 Nov 2026, 10:12 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
@@ -229,7 +241,7 @@
       },
       {
        "name": "Dr. Chayan Vaddhanaphuti",
-       "affiliation": "RCSD Director",
+       "affiliation": "RCSD",
        "talk": "Expectation and Objectives of the Symposium"
       }
      ]
@@ -640,8 +652,8 @@
          "affiliation": "The University of Manchester",
          "country": "United Kingdom",
          "online": true,
-         "abstract": "This paper examines how smallholder coffee farmers in Nan Province, Northern Thailand, produce, negotiate, and transmit knowledge about sustainable farming outside formal institutional channels. Using Photovoice, semi-structured interviews, and a focus group with seven farmers, the study investigates farming as a site of active knowledge production and informal pedagogy, not merely a technical or economic activity. Findings show farmers departing from standardised agricultural guidance in favour of experientially validated adaptations. For example, farmers modified planting techniques after observing that official recommendations reduced seedling survival in dry-season conditions. Such knowledge is generated through trial-and-error, peer exchange, and intergenerational transmission, circulating through informal networks such as farmer messaging groups, mentorship, and school partnerships rather than expert-led instruction. Farmers also position themselves explicitly as educators: training new growers, integrating coffee cultivation into school curricula, and treating farming itself as an experiential pedagogy for younger generations. These practices challenge the assumption, still embedded in agricultural extension and certification systems, that expertise flows primarily from institutions to farmers. By centring farmers' own images and narratives, the study documents them as knowledge holders and co-producers of expertise, whose innovations are frequently unrecognised within formal knowledge hierarchies. The paper contributes to discussions of epistemic justice in agricultural knowledge systems, arguing that participatory visual methods can surface locally legitimate expertise that conventional knowledge-transfer models overlook. It offers implications for how knowledge production in the coffee sector is understood beyond its commercial and technical dimensions to include the informal, experiential systems through which smallholders actually generate, validate, and pass on sustainability knowledge.",
-         "keywords": "Knowledge Production · Coffee Farming · Thailand · Epistemic Justice · Participatory Visual Methods"
+         "abstract": "This paper examines how smallholder coffee farmers in Nan Province, Thailand, define, enact, and transmit sustainability through their everyday practices. Drawing on agroecology (Altieri, 2004; Gliessman, 2018) and Dobson's (2007) relational theory of environmental citizenship, the paper argues that farmers are not passive recipients of expert knowledge but active producers, interpreters, and transmitters of it. Using participatory visual methods, including Photovoice, semi-structured interviews, and a focus group, seven coffee farmers in Nan documented and discussed their own definitions of sustainability, the local knowledge underpinning their practices, the challenges they face, and their aspirations for their land and communities. Findings show that farmers hold relational, holistic definitions of sustainability centered on care, intergenerational responsibility, and livelihood security, definitions that routinely exceed narrow, metric-driven institutional framings. Farmers also generate adaptive agroecological knowledge through experience and peer exchange, at times departing from official agricultural guidance to better suit local conditions. Despite significant structural and social challenges, including isolation from conventional farming neighbors and limited market access, farmers sustain strong aspirations for their land and communities, and many actively position themselves as informal educators, mentoring younger farmers and partnering with local schools. The paper concludes that coffee farmers in Nan are already enacting agroecology and environmental citizenship in practice and connects this to a broader concern with epistemic justice (Fricker, 2007) in agricultural knowledge systems, arguing that recognizing farmers as legitimate knowledge-holders is a necessary step toward sustainability education and policy that works with, rather than against, local realities.",
+         "keywords": "Agroecology · Environmental Citizenship · Participatory Visual Methods · Coffee Farming · Thailand"
         }
        ]
       }
@@ -857,6 +869,15 @@
        "theme": "4. Coffee culture",
        "chair": "",
        "papers": [
+        {
+         "title": "Localized globalization: The Heritagization and Decolonization of Vietnamese Coffee Culture",
+         "presenter": "Yueping Wang",
+         "affiliation": "School of Ethnology and Sociology, Yunnan University",
+         "country": "China",
+         "online": true,
+         "abstract": "For a long time, Vietnamese coffee culture, as a colonial legacy, has been widely embraced by the Vietnamese people and deeply embedded in their everyday life, giving rise to a distinctively Vietnamese style of phin drip-filter coffee. In recent years, however, amid the transformation of Vietnam’s coffee industry, both the Vietnamese government and domestic coffee enterprises have been actively promoting the re-creation of indigenous coffee culture. Notably, in 2025, the inscription of the Knowledge of Coffee Cultivation and Processing in Đắk Lắk Province onto Vietnam’s National List of Intangible Cultural Heritage represents an outcome of the state’s drive toward the heritagization of coffee culture. Meanwhile, Vietnamese coffee enterprises, most notably Trung Nguyên Coffee, have been reshaping the image and positioning of Vietnamese coffee in both domestic and international markets by establishing the “Coffee Dao” (the Way of Coffee) and founding coffee museums. This top-down heritagization of Vietnamese coffee culture and the concomitant construction of “localized globalization” demonstrate the translation and re-creation of Vietnamese coffee culture against the backdrop of global connectivity, while simultaneously constituting a decolonizing engagement with colonial heritage.",
+         "keywords": ""
+        },
         {
          "title": "Body, Nature, and the Gaze: A Study on the Cheat code forviews and Cultural Mechanisms of China's influencer Cafes",
          "presenter": "Yanlan SHI",
