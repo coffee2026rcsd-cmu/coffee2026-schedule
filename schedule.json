@@ -201,7 +201,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "9 Nov 2026, 09:41 (GMT+7)",
+ "updated": "9 Nov 2026, 16:06 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
@@ -468,7 +468,7 @@
          "country": "Vietnam",
          "online": false,
          "abstract": "Historically, health and wellness tourism has been dominated by spas and clinical settings, yet emerging evidence suggests that craft-based food tourism may offer meaningful mental wellness outcomes outside conventional therapeutic contexts. This case study examines how a Vietnamese coffee brand leverages farm-to-cup tourism to foster mindfulness, sensory awareness, and intellectual wellbeing among visitors. Drawing on semi-structured interviews with the founder and participant observation at the farm's roastery and café, the study explores the intersection of food tourism and individual wellbeing. Findings reveal that the multisensory experience of observing coffee beans, engaging with varying roasting profiles, and participating in cupping (tasting) rituals cultivates a mindfulness practice of slowing down and sensory attunement. This experience counteracts the negative effects of consumerism on tourists' intellectual wellbeing by fostering pride and knowledge of product provenance, while also serving as a partial healing mechanism outside clinical settings (Zheng et al., 2025). From a supply-side perspective, the case highlights significant governance challenges, including the owner's commitment to maintaining a quality, authentic, non-scaled product at the expense of digital marketing, and the absence of state acknowledgment of \"wellness food tourism.\" These dynamics illuminate broader issues of inequality and care commodification: while wealthy international tourists constitute the target market, local community members and poorer travelers are largely excluded. Moreover, local tourism boards lack the coordination necessary to integrate wellness tourism and craft producers into broader destination strategies. The study concludes by offering governance recommendations for destination managers to develop \"wellness routes\"—networks connecting diverse producers to different traveler segments—to ensure that the mental health benefits of craft tourism are sustained and equitably distributed. This case contributes to emerging discourse on alternative wellness tourism models and their potential for inclusive, community-oriented mental health promotion.",
-         "keywords": "wellness tourism · food tourism · mental health · Vietnam · craft coffee · governance · mindfulness"
+         "keywords": "wellness tourism · food tourism · mental health · Vietnam · craft coffee"
         },
         {
          "title": "From Coffee Production to Experiential Landscapes: Resource Orchestration and Value Co-creation in Baoshan and Pu’er, Yunnan",
@@ -783,7 +783,7 @@
        "room": "Room 2: Co-working Space",
        "roomKey": "co-working-space",
        "theme": "6. Coffee and knowledge production",
-       "chair": "Mukdawan Sakboon",
+       "chair": "Kengkij Kitirianglarp",
        "papers": [
         {
          "title": "The Making of a New \"Taste of Yunnan\": Quality Construction and Industrial Reorganization of Coffee as a Development Project",
@@ -900,7 +900,7 @@
        "room": "Room 2: Co-working Space",
        "roomKey": "co-working-space",
        "theme": "6. Coffee and knowledge production",
-       "chair": "Fan Xu",
+       "chair": "",
        "papers": [
         {
          "title": "Success and Early Growth Performance of Hypocotyl Mini-Grafting on Elite Robusta Coffee (Coffea canephora) Clones in the Western Highlands of Vietnam",
