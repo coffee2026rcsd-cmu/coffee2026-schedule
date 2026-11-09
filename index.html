@@ -245,32 +245,32 @@
 <script>
 (function () {
   var T = {
-    en: { search: 'Search a name, title or room', chair: 'Chair', moderator: 'Moderator', online: 'online', also: 'Also at the same time', copy: 'Link copied',
+    en: { search: 'Search a name, title or room', chair: 'Chair and discussant', moderator: 'Moderator', online: 'online', also: 'Also at the same time', copy: 'Link copied',
           none: 'Nothing matches that search.', subject: 'This schedule is subject to change.', updated: 'Updated', loading: 'Loading the programme…',
           kinds: { keynote: 'Keynote', plenary: 'Plenary discussion', concurrent: 'Concurrent sessions', roundtable: 'Roundtable', opening: 'Opening', closing: 'Closing', side: 'Side programme', open: 'Open session' },
           about: 'About this session', nowL: 'Now', next: 'Next', min: 'min', failed: 'The programme could not be loaded. Please try again in a moment.',
           map: 'Map', mapCn: 'Map in China (Amap / Baidu)', seeRooms: 'See the rooms', roomsH: 'The rooms', prev: 'Previous photo', nextP: 'Next photo', keywords: 'Keywords', noAbstract: 'The abstract will be added soon.', papers: '{n} papers — titles and abstracts', inside: 'matches inside', rooms: 'Rooms',
           mine: 'My programme', people: 'People', onlineTalks: 'Online talks', star: 'Keep in my programme', unstar: 'Remove from my programme',
           mineEmpty: 'Tap ☆ on a session or a talk to keep it here. It stays in this browser on this phone or computer — no account needed.',
-          parallel: 'rounds of parallel sessions', papersN: 'papers', nowNext: 'Next', thenNothing: 'That is all for today', roles: { presenter: 'Presenter', speaker: 'Speaker', chair: 'Chair', moderator: 'Moderator' },
+          parallel: 'rounds of parallel sessions', papersN: 'papers', nowNext: 'Next', thenNothing: 'That is all for today', roles: { presenter: 'Presenter', speaker: 'Speaker', chair: 'Chair and discussant', moderator: 'Moderator' },
           aboutV: 'About', organisers: 'Organisers and partners', contact: 'Contact', mt: 'Machine translation (Google Translate). Names are as written; the English original is under EN.' },
-    zh: { search: '搜索姓名、题目或会议室', chair: '主持人', moderator: '主持人', online: '线上', also: '同时进行', copy: '链接已复制',
+    zh: { search: '搜索姓名、题目或会议室', chair: '主持人兼评议人', moderator: '主持人', online: '线上', also: '同时进行', copy: '链接已复制',
           none: '没有找到匹配的内容。', subject: '日程如有变动，以现场为准。', updated: '更新于', loading: '正在加载日程…',
           kinds: { keynote: '主旨演讲', plenary: '全体讨论', concurrent: '分会场', roundtable: '圆桌讨论', opening: '开幕式', closing: '闭幕式', side: '平行活动', open: '公开环节' },
           about: '简介', nowL: '正在进行', next: '下一项', min: '分钟', failed: '日程加载失败，请稍后再试。',
           map: '地图', mapCn: '高德 / 百度地图', seeRooms: '查看会议室', roomsH: '会议室', prev: '上一张', nextP: '下一张', keywords: '关键词', noAbstract: '摘要即将补充。', papers: '{n} 篇论文 — 题目与摘要', inside: '内含匹配', rooms: '会议室',
           mine: '我的日程', people: '人员', onlineTalks: '线上报告', star: '加入我的日程', unstar: '从我的日程移除',
           mineEmpty: '点击任意环节旁的 ☆ 即可加入这里。只保存在这台手机或电脑的浏览器中，无需注册。',
-          parallel: '轮分会场', papersN: '篇论文', nowNext: '下一项', thenNothing: '今天的日程已结束', roles: { presenter: '报告人', speaker: '发言人', chair: '主持人', moderator: '主持人' },
+          parallel: '轮分会场', papersN: '篇论文', nowNext: '下一项', thenNothing: '今天的日程已结束', roles: { presenter: '报告人', speaker: '发言人', chair: '主持人兼评议人', moderator: '主持人' },
           aboutV: '关于', organisers: '主办与合作单位', contact: '联系方式', mt: '机器翻译（Google 翻译）。人名保持原文；英文原文请点 EN。' },
-    th: { search: 'ค้นหาชื่อ หัวข้อ หรือห้อง', chair: 'ประธาน', moderator: 'ผู้ดำเนินรายการ', online: 'ออนไลน์', also: 'ในเวลาเดียวกัน', copy: 'คัดลอกลิงก์แล้ว',
+    th: { search: 'ค้นหาชื่อ หัวข้อ หรือห้อง', chair: 'ประธานและผู้วิพากษ์', moderator: 'ผู้ดำเนินรายการ', online: 'ออนไลน์', also: 'ในเวลาเดียวกัน', copy: 'คัดลอกลิงก์แล้ว',
           none: 'ไม่พบรายการที่ค้นหา', subject: 'กำหนดการอาจมีการเปลี่ยนแปลง', updated: 'อัปเดต', loading: 'กำลังโหลดกำหนดการ…',
           kinds: { keynote: 'ปาฐกถาหลัก', plenary: 'เสวนารวม', concurrent: 'ห้องย่อยคู่ขนาน', roundtable: 'โต๊ะกลม', opening: 'พิธีเปิด', closing: 'พิธีปิด', side: 'กิจกรรมคู่ขนาน', open: 'ช่วงเปิด' },
           about: 'เกี่ยวกับช่วงนี้', nowL: 'ตอนนี้', next: 'ถัดไป', min: 'นาที', failed: 'โหลดกำหนดการไม่สำเร็จ กรุณาลองใหม่อีกครั้ง',
           map: 'แผนที่', mapCn: 'แผนที่สำหรับจีน (Amap / Baidu)', seeRooms: 'ดูห้องประชุม', roomsH: 'ห้องประชุม', prev: 'รูปก่อนหน้า', nextP: 'รูปถัดไป', keywords: 'คำสำคัญ', noAbstract: 'บทคัดย่อจะเพิ่มเร็ว ๆ นี้', papers: '{n} บทความ — ชื่อเรื่องและบทคัดย่อ', inside: 'พบในเนื้อหา', rooms: 'ห้อง',
           mine: 'ตารางของฉัน', people: 'รายชื่อ', onlineTalks: 'นำเสนอออนไลน์', star: 'เก็บไว้ในตารางของฉัน', unstar: 'นำออกจากตารางของฉัน',
           mineEmpty: 'กด ☆ ที่ช่วงที่สนใจเพื่อเก็บไว้ที่นี่ ข้อมูลเก็บในเบราว์เซอร์ของเครื่องนี้เท่านั้น ไม่ต้องสมัครสมาชิก',
-          parallel: 'รอบห้องย่อยคู่ขนาน', papersN: 'บทความ', nowNext: 'ถัดไป', thenNothing: 'จบกำหนดการวันนี้แล้ว', roles: { presenter: 'ผู้นำเสนอ', speaker: 'วิทยากร', chair: 'ประธาน', moderator: 'ผู้ดำเนินรายการ' },
+          parallel: 'รอบห้องย่อยคู่ขนาน', papersN: 'บทความ', nowNext: 'ถัดไป', thenNothing: 'จบกำหนดการวันนี้แล้ว', roles: { presenter: 'ผู้นำเสนอ', speaker: 'วิทยากร', chair: 'ประธานและผู้วิพากษ์', moderator: 'ผู้ดำเนินรายการ' },
           aboutV: 'เกี่ยวกับงาน', organisers: 'ผู้จัดและหน่วยงานร่วม', contact: 'ติดต่อ', mt: 'แปลด้วยเครื่อง (Google Translate) ชื่อบุคคลคงตามต้นฉบับ ดูต้นฉบับภาษาอังกฤษได้ที่ EN' }
   };
   var DAYZH = { 'Day 1': '第一天', 'Day 2': '第二天', 'Day 3': '第三天' }, DAYTH = { 'Day 1': 'วันที่ 1', 'Day 2': 'วันที่ 2', 'Day 3': 'วันที่ 3' };
