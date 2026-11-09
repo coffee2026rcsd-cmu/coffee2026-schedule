@@ -121,6 +121,7 @@
   .paper::before{content:counter(p);position:absolute;left:0;top:9px;font-size:12px;font-weight:700;color:var(--ink-3);font-variant-numeric:tabular-nums}
   .paper .t{font-size:14px;line-height:1.4}
   .paper .who{font-size:13.5px;margin-top:2px}
+  .paper .who .co{font-weight:400}
   .online{font-size:11px;font-weight:700;color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 6px;margin-left:6px;white-space:nowrap}
   .link{border:0;background:none;color:var(--ink-3);cursor:pointer;font:inherit;font-size:12px;padding:0 4px;opacity:.7}
   .link:hover{opacity:1;color:var(--accent)}
@@ -252,7 +253,7 @@
           map: 'Map', mapCn: 'Map in China (Amap / Baidu)', seeRooms: 'See the rooms', roomsH: 'The rooms', prev: 'Previous photo', nextP: 'Next photo', keywords: 'Keywords', noAbstract: 'The abstract will be added soon.', papers: '{n} papers — titles and abstracts', inside: 'matches inside', rooms: 'Rooms',
           mine: 'My programme', people: 'People', onlineTalks: 'Online talks', star: 'Keep in my programme', unstar: 'Remove from my programme',
           mineEmpty: 'Tap ☆ on a session or a talk to keep it here. It stays in this browser on this phone or computer — no account needed.',
-          parallel: 'rounds of parallel sessions', papersN: 'papers', nowNext: 'Next', thenNothing: 'That is all for today', roles: { presenter: 'Presenter', speaker: 'Speaker', chair: 'Chair and discussant', moderator: 'Moderator' },
+          parallel: 'rounds of parallel sessions', papersN: 'papers', nowNext: 'Next', thenNothing: 'That is all for today', roles: { presenter: 'Presenter', coauthor: 'Co-author', speaker: 'Speaker', chair: 'Chair and discussant', moderator: 'Moderator' },
           aboutV: 'About', organisers: 'Organisers and partners', contact: 'Contact', mt: 'Machine translation (Google Translate). Names are as written; the English original is under EN.' },
     zh: { search: '搜索姓名、题目或会议室', chair: '主持人兼评议人', moderator: '主持人', online: '线上', also: '同时进行', copy: '链接已复制',
           none: '没有找到匹配的内容。', subject: '日程如有变动，以现场为准。', updated: '更新于', loading: '正在加载日程…',
@@ -261,7 +262,7 @@
           map: '地图', mapCn: '高德 / 百度地图', seeRooms: '查看会议室', roomsH: '会议室', prev: '上一张', nextP: '下一张', keywords: '关键词', noAbstract: '摘要即将补充。', papers: '{n} 篇论文 — 题目与摘要', inside: '内含匹配', rooms: '会议室',
           mine: '我的日程', people: '人员', onlineTalks: '线上报告', star: '加入我的日程', unstar: '从我的日程移除',
           mineEmpty: '点击任意环节旁的 ☆ 即可加入这里。只保存在这台手机或电脑的浏览器中，无需注册。',
-          parallel: '轮分会场', papersN: '篇论文', nowNext: '下一项', thenNothing: '今天的日程已结束', roles: { presenter: '报告人', speaker: '发言人', chair: '主持人兼评议人', moderator: '主持人' },
+          parallel: '轮分会场', papersN: '篇论文', nowNext: '下一项', thenNothing: '今天的日程已结束', roles: { presenter: '报告人', coauthor: '合著者', speaker: '发言人', chair: '主持人兼评议人', moderator: '主持人' },
           aboutV: '关于', organisers: '主办与合作单位', contact: '联系方式', mt: '机器翻译（Google 翻译）。人名保持原文；英文原文请点 EN。' },
     th: { search: 'ค้นหาชื่อ หัวข้อ หรือห้อง', chair: 'ประธานและผู้วิพากษ์', moderator: 'ผู้ดำเนินรายการ', online: 'ออนไลน์', also: 'ในเวลาเดียวกัน', copy: 'คัดลอกลิงก์แล้ว',
           none: 'ไม่พบรายการที่ค้นหา', subject: 'กำหนดการอาจมีการเปลี่ยนแปลง', updated: 'อัปเดต', loading: 'กำลังโหลดกำหนดการ…',
@@ -270,7 +271,7 @@
           map: 'แผนที่', mapCn: 'แผนที่สำหรับจีน (Amap / Baidu)', seeRooms: 'ดูห้องประชุม', roomsH: 'ห้องประชุม', prev: 'รูปก่อนหน้า', nextP: 'รูปถัดไป', keywords: 'คำสำคัญ', noAbstract: 'บทคัดย่อจะเพิ่มเร็ว ๆ นี้', papers: '{n} บทความ — ชื่อเรื่องและบทคัดย่อ', inside: 'พบในเนื้อหา', rooms: 'ห้อง',
           mine: 'ตารางของฉัน', people: 'รายชื่อ', onlineTalks: 'นำเสนอออนไลน์', star: 'เก็บไว้ในตารางของฉัน', unstar: 'นำออกจากตารางของฉัน',
           mineEmpty: 'กด ☆ ที่ช่วงที่สนใจเพื่อเก็บไว้ที่นี่ ข้อมูลเก็บในเบราว์เซอร์ของเครื่องนี้เท่านั้น ไม่ต้องสมัครสมาชิก',
-          parallel: 'รอบห้องย่อยคู่ขนาน', papersN: 'บทความ', nowNext: 'ถัดไป', thenNothing: 'จบกำหนดการวันนี้แล้ว', roles: { presenter: 'ผู้นำเสนอ', speaker: 'วิทยากร', chair: 'ประธานและผู้วิพากษ์', moderator: 'ผู้ดำเนินรายการ' },
+          parallel: 'รอบห้องย่อยคู่ขนาน', papersN: 'บทความ', nowNext: 'ถัดไป', thenNothing: 'จบกำหนดการวันนี้แล้ว', roles: { presenter: 'ผู้นำเสนอ', coauthor: 'ผู้เขียนร่วม', speaker: 'วิทยากร', chair: 'ประธานและผู้วิพากษ์', moderator: 'ผู้ดำเนินรายการ' },
           aboutV: 'เกี่ยวกับงาน', organisers: 'ผู้จัดและหน่วยงานร่วม', contact: 'ติดต่อ', mt: 'แปลด้วยเครื่อง (Google Translate) ชื่อบุคคลคงตามต้นฉบับ ดูต้นฉบับภาษาอังกฤษได้ที่ EN' }
   };
   var DAYZH = { 'Day 1': '第一天', 'Day 2': '第二天', 'Day 3': '第三天' }, DAYTH = { 'Day 1': 'วันที่ 1', 'Day 2': 'วันที่ 2', 'Day 3': 'วันที่ 3' };
@@ -312,7 +313,7 @@
     var p = [b.title, tr(b.title), b.room, b.about, tr(b.about)];
     (b.speakers || []).forEach(function (s) { p.push(s.name, s.affiliation, s.talk); });
     if (b.moderator) p.push(b.moderator.name);
-    (b.sessions || []).forEach(function (s) { p.push(s.name, s.room, s.chair, s.code); p.push(tr(s.name)); (s.papers || []).forEach(function (x) { p.push(x.title, x.presenter, x.affiliation, x.country, x.abstract, x.keywords, tr(x.title), tr(x.abstract)); }); });
+    (b.sessions || []).forEach(function (s) { p.push(s.name, s.room, s.chair, s.code); p.push(tr(s.name)); (s.papers || []).forEach(function (x) { p.push(x.title, x.presenter, x.coAuthors, x.affiliation, x.country, x.abstract, x.keywords, tr(x.title), tr(x.abstract)); }); });
     (b.events || []).forEach(function (e) { p.push(e.name, e.org, e.moderator); p.push.apply(p, e.panellists || []); });
     return p.join(' ').toLowerCase();
   }
@@ -367,7 +368,7 @@
     return '<ol class="papers">' + (s.papers || []).map(function (p, k) {
       var pid = (s.code || b.id) + '-' + (k + 1), open = OPEN[pid] || (Q && (String(p.abstract || '') + ' ' + (p.keywords || '')).toLowerCase().indexOf(Q.toLowerCase()) !== -1);
       return '<li class="paper' + (open ? ' open' : '') + '" id="' + esc(pid) + '"><button class="ptoggle" data-paper="' + esc(pid) + '" aria-expanded="' + !!open + '"><div class="t">' + mark(tr(p.title)) + '</div></button>' +
-        '<div class="who"><b>' + mark(p.presenter) + '</b>' +
+        '<div class="who"><b>' + mark(p.presenter) + '</b>' + (p.coAuthors ? '<span class="co">, ' + mark(p.coAuthors) + '</span>' : '') +
         (p.online ? '<span class="online">' + esc(t('online')) + '</span>' : '') +
         (p.affiliation || p.country ? ' <span class="aff">· ' + mark([p.affiliation, p.country && String(p.affiliation).toLowerCase().indexOf(String(p.country).toLowerCase()) === -1 ? p.country : ''].filter(Boolean).join(', ')) + '</span>' : '') + '</div>' +
         '<div class="abs">' + (p.abstract ? mark(tr(p.abstract)) : '<i>' + esc(t('noAbstract')) + '</i>') + (p.keywords ? '<span class="kw">' + esc(t('keywords')) + ': ' + mark(tr(p.keywords)) + '</span>' : '') + '</div>' + '</li>';
@@ -564,6 +565,9 @@
           (s.papers || []).forEach(function (p, k) {
             String(p.presenter || '').split(/\s*,\s*|\s+&\s+|\s+and\s+/).filter(Boolean).forEach(function (nm) {
               list.push({ n: nm, r: R.presenter, w: when + ' · ' + s.room + (s.code ? ' · ' + s.code : ''), sess: id, paper: (s.code || b.id) + '-' + (k + 1), online: p.online });
+            });
+            (p.coming || []).forEach(function (nm) {
+              list.push({ n: nm, r: R.coauthor || R.presenter, w: when + ' · ' + s.room + (s.code ? ' · ' + s.code : ''), sess: id, paper: (s.code || b.id) + '-' + (k + 1) });
             });
           });
         });
