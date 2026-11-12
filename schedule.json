@@ -8,25 +8,33 @@
    "key": "dhani-room",
    "name": "Room 1: Dhani Room",
    "note": "",
-   "photos": []
+   "photos": [
+    "rooms/dhani-room-mwd1p6wrziw.jpg"
+   ]
   },
   {
    "key": "co-working-space",
    "name": "Room 2: Co-working Space",
    "note": "",
-   "photos": []
+   "photos": [
+    "rooms/co-working-space-mwd1pi52lg4.jpg"
+   ]
   },
   {
    "key": "room-4107",
    "name": "Room 3: Social Science Library",
    "note": "",
-   "photos": []
+   "photos": [
+    "rooms/room-4107-mwd1pw30e8d.jpg"
+   ]
   },
   {
    "key": "yard",
    "name": "Chamchuri Court",
    "note": "",
-   "photos": []
+   "photos": [
+    "rooms/yard-mwd1q9aamgj.jpg"
+   ]
   }
  ],
  "sponsors": [
@@ -201,7 +209,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "12 Nov 2026, 10:22 (GMT+7)",
+ "updated": "12 Nov 2026, 11:27 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
@@ -972,7 +980,7 @@
        "room": "Room 2: Co-working Space",
        "roomKey": "co-working-space",
        "theme": "6. Coffee and knowledge production",
-       "chair": "",
+       "chair": "Rajnibhas Sukeaw Samakradhamrongthai",
        "papers": [
         {
          "title": "Success and Early Growth Performance of Hypocotyl Mini-Grafting on Elite Robusta Coffee (Coffea canephora) Clones in the Western Highlands of Vietnam",
