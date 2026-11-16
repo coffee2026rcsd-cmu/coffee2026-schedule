@@ -209,7 +209,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "16 Nov 2026, 15:04 (GMT+7)",
+ "updated": "16 Nov 2026, 18:43 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
@@ -592,9 +592,54 @@
       },
       {
        "code": "P05",
-       "name": "Ethnicity and Agrarian Transition in the Highlands",
+       "name": "Coffee Knowledge in Community Practice",
        "room": "Room 2: Co-working Space",
        "roomKey": "co-working-space",
+       "theme": "6. Coffee and knowledge production",
+       "chair": "Mukdawan Sakboon",
+       "papers": [
+        {
+         "title": "Tracing Coffee’s Place in Ethnobotanical Practice: case study from Mae Klang Luang Karen Village, Chiang Mai",
+         "presenter": "Matahari Irandiputri",
+         "affiliation": "Chiang Mai University",
+         "coAuthors": "",
+         "coming": [],
+         "country": "Thailand",
+         "online": false,
+         "abstract": "Despite its non-native origins, coffee has established a cultivated relationship with highland ethnic groups in northern Thailand. In Chiang Mai province, the Karen highland ethnic group is widely recognized for their coffee-crafting practices. This paper applies an ethnobotanical lens and discussion to explore how coffee as both a plant and an economic product continuously reshapes social and cultural dynamics in Mae Klang Luang Karen Village. Four decades after its introduction as a substitute to opium through King Rama IX’s Royal Project, coffee has evolved from an unfamiliar cash crop into the village’s signature. Through institutional sharing knowledge from the Royal Project and other institutions, Mae Klang Luang has transformed coffee into a cultural tradition and tourism experience by serving coffee as a welcome drink. This study employs qualitative fieldwork including in-depth and semi-structured interviews as well as participant’s observation. The study finds a threefold impact: ecologically, a shade-grown coffee practice enhances forest conservation, economically, coffee shops serve as the hub for selling local products such as local fruits and vegetables and handicrafts such as hand-woven clothes and bags, and culturally, nature trail tourism led by local Karen guides turn coffee origin stories into immersive ethnobotanical learning for tourists. These findings demonstrate how a single plant species can reshape a community’s development path, highlighting the role of ethnobotanical traditions in contemporary highland livelihoods.",
+         "keywords": "Ethnobotany · Coffee culture · Karen ethnic group"
+        },
+        {
+         "title": "The Changing Trajectory of Community-Based Coffee Farming and Processing in Barangay Talbak, Doña Remedios Trinidad, Bulacan, Philippines",
+         "presenter": "ARVIN EBALLO",
+         "affiliation": "University of Santo Tomas",
+         "coAuthors": "MIA EBALLO",
+         "coming": [
+          "MIA EBALLO"
+         ],
+         "country": "Philippines",
+         "online": false,
+         "abstract": "This study explores the evolving landscape of community-based coffee farming and processing in Barangay Talbak, located in Doña Remedios Trinidad, Bulacan, Philippines. The history of coffee farming in this community is linked to the migration of families from Cavite, a region in the southern Philippines, during the 1960s and 1970s. These settlers moved to Talbak in search of agricultural land and brought with them the knowledge and practices associated with coffee cultivation. Over time, coffee farming has become an integral part of the community's agricultural livelihood and local knowledge. This qualitative study aims to understand how the coffee landscape has evolved by examining the experiences and perspectives of coffee farmers and other key community members. Using a historical-contextual approach, the study will conduct semi-structured interviews to explore the development of coffee farming and processing. It will investigate the factors that have influenced its changing trajectory, as well as the responses and adaptations of local farmers. The interviews will be analyzed thematically to identify patterns related to production, processing, livelihoods, markets, environmental conditions, agricultural knowledge, and other factors shaping the community’s coffee landscape. By documenting the experiences and perspectives of coffee-growing communities in Talbak, this study offers a localized perspective on broader discussions of coffee landscapes in Southeast Asia. It specifically addresses issues of migration, knowledge, livelihoods, and the evolving nature of community-based coffee production.",
+         "keywords": "coffee farming · coffee landscapes · coffee processing · migration · community-based agriculture"
+        },
+        {
+         "title": "Seeing Sustainability: A Participatory Visual Study of Coffee Farmers’ Knowledge, Negotiation, and Aspirations",
+         "presenter": "Panisa Songsithichoke",
+         "affiliation": "The University of Manchester",
+         "coAuthors": "",
+         "coming": [],
+         "country": "United Kingdom",
+         "online": true,
+         "abstract": "This paper examines how smallholder coffee farmers in Nan Province, Thailand, define, enact, and transmit sustainability through their everyday practices. Drawing on agroecology (Altieri, 2004; Gliessman, 2018) and Dobson's (2007) relational theory of environmental citizenship, the paper argues that farmers are not passive recipients of expert knowledge but active producers, interpreters, and transmitters of it. Using participatory visual methods, including Photovoice, semi-structured interviews, and a focus group, seven coffee farmers in Nan documented and discussed their own definitions of sustainability, the local knowledge underpinning their practices, the challenges they face, and their aspirations for their land and communities. Findings show that farmers hold relational, holistic definitions of sustainability centered on care, intergenerational responsibility, and livelihood security, definitions that routinely exceed narrow, metric-driven institutional framings. Farmers also generate adaptive agroecological knowledge through experience and peer exchange, at times departing from official agricultural guidance to better suit local conditions. Despite significant structural and social challenges, including isolation from conventional farming neighbors and limited market access, farmers sustain strong aspirations for their land and communities, and many actively position themselves as informal educators, mentoring younger farmers and partnering with local schools. The paper concludes that coffee farmers in Nan are already enacting agroecology and environmental citizenship in practice and connects this to a broader concern with epistemic justice (Fricker, 2007) in agricultural knowledge systems, arguing that recognizing farmers as legitimate knowledge-holders is a necessary step toward sustainability education and policy that works with, rather than against, local realities.",
+         "keywords": "Agroecology · Environmental Citizenship · Participatory Visual Methods · Coffee Farming · Thailand"
+        }
+       ]
+      },
+      {
+       "code": "P06",
+       "name": "Ethnicity and Agrarian Transition in the Highlands",
+       "room": "Room 3: Social Science Library",
+       "roomKey": "room-4107",
        "theme": "5. Coffee in agrarian transition",
        "chair": "Paul T. Cohen",
        "papers": [
@@ -641,51 +686,6 @@
          "online": false,
          "abstract": "This paper examines how specialty coffee standards reorganize agrarian relations among Indigenous Ibaloi and Kankana-ey farmers in Atok, Benguet, and why these changes remain uneven. Drawing on ten months of multi-sited ethnographic fieldwork (2024–2026) centered on nine coffee-farming households, interviews with downstream coffee actors, and historical materials, I situate contemporary specialty production within an Indigenous coffee world shaped by inherited land, locally embedded labor, and longstanding trading relationships. Earlier assessments by Baguio coffee traders and government-linked agricultural training already informed how farmers processed and sold coffee. Contemporary specialty markets extend these evaluative practices through cupping and more closely specified processing standards.\nDrawing on political ecology and Anna Tsing's concept of nonscalability, I show how quality requirements enter cultivation and postharvest work under conditions that cannot be standardized uniformly. Farmers recalibrate judgments of ripeness and drying while negotiating limited land and uneven access to processing infrastructure. A coffee's classification also depends partly on whether buyers can verify its processing history; comparable care or cupping scores do not necessarily yield the same market recognition. Following Thiers's account of changing disciplinary logics, I understand specialty coffee as a mutation of earlier market disciplines.\nI develop disciplined aspiration to describe how farmers pursue dependable buyers and recognition through standards that simultaneously reorganize their work. Specialty, premium, and commercial coffee continue to circulate within the same ili (village), revealing how shared standards encounter different agrarian conditions. The paper contributes to debates on agrarian change and the politics of value in Southeast Asian coffee production.",
          "keywords": "Specialty coffee · coffee quality · Indigenous farmers · agrarian change · value"
-        }
-       ]
-      },
-      {
-       "code": "P06",
-       "name": "Coffee Knowledge in Community Practice",
-       "room": "Room 3: Social Science Library",
-       "roomKey": "room-4107",
-       "theme": "6. Coffee and knowledge production",
-       "chair": "Mukdawan Sakboon",
-       "papers": [
-        {
-         "title": "Tracing Coffee’s Place in Ethnobotanical Practice: case study from Mae Klang Luang Karen Village, Chiang Mai",
-         "presenter": "Matahari Irandiputri",
-         "affiliation": "Chiang Mai University",
-         "coAuthors": "",
-         "coming": [],
-         "country": "Thailand",
-         "online": false,
-         "abstract": "Despite its non-native origins, coffee has established a cultivated relationship with highland ethnic groups in northern Thailand. In Chiang Mai province, the Karen highland ethnic group is widely recognized for their coffee-crafting practices. This paper applies an ethnobotanical lens and discussion to explore how coffee as both a plant and an economic product continuously reshapes social and cultural dynamics in Mae Klang Luang Karen Village. Four decades after its introduction as a substitute to opium through King Rama IX’s Royal Project, coffee has evolved from an unfamiliar cash crop into the village’s signature. Through institutional sharing knowledge from the Royal Project and other institutions, Mae Klang Luang has transformed coffee into a cultural tradition and tourism experience by serving coffee as a welcome drink. This study employs qualitative fieldwork including in-depth and semi-structured interviews as well as participant’s observation. The study finds a threefold impact: ecologically, a shade-grown coffee practice enhances forest conservation, economically, coffee shops serve as the hub for selling local products such as local fruits and vegetables and handicrafts such as hand-woven clothes and bags, and culturally, nature trail tourism led by local Karen guides turn coffee origin stories into immersive ethnobotanical learning for tourists. These findings demonstrate how a single plant species can reshape a community’s development path, highlighting the role of ethnobotanical traditions in contemporary highland livelihoods.",
-         "keywords": "Ethnobotany · Coffee culture · Karen ethnic group"
-        },
-        {
-         "title": "The Changing Trajectory of Community-Based Coffee Farming and Processing in Barangay Talbak, Doña Remedios Trinidad, Bulacan, Philippines",
-         "presenter": "ARVIN EBALLO",
-         "affiliation": "University of Santo Tomas",
-         "coAuthors": "MIA EBALLO",
-         "coming": [
-          "MIA EBALLO"
-         ],
-         "country": "Philippines",
-         "online": false,
-         "abstract": "This study explores the evolving landscape of community-based coffee farming and processing in Barangay Talbak, located in Doña Remedios Trinidad, Bulacan, Philippines. The history of coffee farming in this community is linked to the migration of families from Cavite, a region in the southern Philippines, during the 1960s and 1970s. These settlers moved to Talbak in search of agricultural land and brought with them the knowledge and practices associated with coffee cultivation. Over time, coffee farming has become an integral part of the community's agricultural livelihood and local knowledge. This qualitative study aims to understand how the coffee landscape has evolved by examining the experiences and perspectives of coffee farmers and other key community members. Using a historical-contextual approach, the study will conduct semi-structured interviews to explore the development of coffee farming and processing. It will investigate the factors that have influenced its changing trajectory, as well as the responses and adaptations of local farmers. The interviews will be analyzed thematically to identify patterns related to production, processing, livelihoods, markets, environmental conditions, agricultural knowledge, and other factors shaping the community’s coffee landscape. By documenting the experiences and perspectives of coffee-growing communities in Talbak, this study offers a localized perspective on broader discussions of coffee landscapes in Southeast Asia. It specifically addresses issues of migration, knowledge, livelihoods, and the evolving nature of community-based coffee production.",
-         "keywords": "coffee farming · coffee landscapes · coffee processing · migration · community-based agriculture"
-        },
-        {
-         "title": "Seeing Sustainability: A Participatory Visual Study of Coffee Farmers’ Knowledge, Negotiation, and Aspirations",
-         "presenter": "Panisa Songsithichoke",
-         "affiliation": "The University of Manchester",
-         "coAuthors": "",
-         "coming": [],
-         "country": "United Kingdom",
-         "online": true,
-         "abstract": "This paper examines how smallholder coffee farmers in Nan Province, Thailand, define, enact, and transmit sustainability through their everyday practices. Drawing on agroecology (Altieri, 2004; Gliessman, 2018) and Dobson's (2007) relational theory of environmental citizenship, the paper argues that farmers are not passive recipients of expert knowledge but active producers, interpreters, and transmitters of it. Using participatory visual methods, including Photovoice, semi-structured interviews, and a focus group, seven coffee farmers in Nan documented and discussed their own definitions of sustainability, the local knowledge underpinning their practices, the challenges they face, and their aspirations for their land and communities. Findings show that farmers hold relational, holistic definitions of sustainability centered on care, intergenerational responsibility, and livelihood security, definitions that routinely exceed narrow, metric-driven institutional framings. Farmers also generate adaptive agroecological knowledge through experience and peer exchange, at times departing from official agricultural guidance to better suit local conditions. Despite significant structural and social challenges, including isolation from conventional farming neighbors and limited market access, farmers sustain strong aspirations for their land and communities, and many actively position themselves as informal educators, mentoring younger farmers and partnering with local schools. The paper concludes that coffee farmers in Nan are already enacting agroecology and environmental citizenship in practice and connects this to a broader concern with epistemic justice (Fricker, 2007) in agricultural knowledge systems, arguing that recognizing farmers as legitimate knowledge-holders is a necessary step toward sustainability education and policy that works with, rather than against, local realities.",
-         "keywords": "Agroecology · Environmental Citizenship · Participatory Visual Methods · Coffee Farming · Thailand"
         }
        ]
       }
