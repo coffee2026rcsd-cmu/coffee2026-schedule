@@ -207,7 +207,7 @@
   "dates": "27–28 November 2026",
   "language": "English (some roundtables in Thai)",
   "fee": "Free · registration required",
-  "getting": "The Faculty of Social Sciences is on Chiang Mai University's main campus, on Suthep Road. Rooms: Room 1 Auditorium, Room 2 Co-working Space, Room 3 4107 Meeting Room, and Chamchuri Yard for the exhibition and outdoor activities.",
+  "getting": "",
   "phone": "",
   "line": "",
   "themes": [
@@ -218,16 +218,7 @@
    "Coffee in agrarian transition",
    "Coffee and knowledge production"
   ],
-  "faq": [
-   {
-    "q": "Is lunch provided?",
-    "a": "Lunch is provided for presenters, chairs and invited guests. Audience members are welcome to the food stalls near the venue."
-   },
-   {
-    "q": "How do I check in?",
-    "a": "Show the QR code we emailed you at the registration desk. No code? The desk can look you up by name or email."
-   }
-  ]
+  "faq": []
  },
  "acts": {
   "reg": [
