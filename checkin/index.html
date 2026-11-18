@@ -83,6 +83,23 @@
   .count select{font-size:13px;border:1px solid var(--line);border-radius:999px;padding:4px 10px;background:var(--surface)}
   .sync{font-size:12px;font-weight:700;border-radius:999px;padding:2px 9px;margin-left:4px;white-space:nowrap}
   .sync.ok{color:var(--ok);background:var(--okbg)}.sync.wait{color:var(--warn);background:var(--warnbg)}.sync.off{color:var(--bad);background:var(--badbg)}
+  /* confirm pop-up: nothing is ticked until the staff press Confirm */
+  .ask{position:fixed;inset:0;z-index:20;background:rgba(20,16,12,.45);display:flex;align-items:flex-end;justify-content:center}
+  @media (min-width:700px){.ask{align-items:center}}
+  .ask .box{background:var(--surface);width:100%;max-width:520px;border-radius:22px 22px 0 0;padding:22px 20px max(22px,env(safe-area-inset-bottom))}
+  @media (min-width:700px){.ask .box{border-radius:22px}}
+  .ask.ok .box{background:var(--okbg)}.ask.warn .box{background:var(--warnbg)}.ask.bad .box{background:var(--badbg)}
+  .ask .big{font-size:26px;font-weight:700;line-height:1.2;margin:4px 0}
+  .ask .st{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--role)}
+  .ask.warn .st{color:var(--warn)}.ask.bad .st{color:var(--bad)}.ask.ok .st{color:var(--ok)}
+  .ask .sm{font-size:14px;color:var(--ink-2)}
+  .ask .meal{display:inline-block;margin-top:10px;padding:6px 12px;border-radius:999px;font-weight:700;font-size:15px}
+  .ask .acts{display:flex;gap:10px;margin-top:18px}
+  .ask .acts .btn{flex:1;padding:15px 18px;font-size:17px}
+  .lookup{margin-top:18px}
+  .lookup h2{font-size:15px;margin:0 0 6px}
+  .lookup .manual{margin-top:0}
+  .lookup .row button{min-width:96px}
   [hidden]{display:none!important}
 </style>
 </head>
@@ -110,6 +127,11 @@
         <div class="start" id="start"><button class="btn" type="button" id="go">Start the camera</button><div style="font-size:13px;opacity:.8">Allow the camera when asked. Hold the QR code inside the frame.</div></div>
       </div>
       <form class="manual" id="manual"><input type="text" id="code" placeholder="Or type the code, e.g. C26-ABCD2345" autocapitalize="characters"><button class="btn small" type="submit">Check</button></form>
+      <div class="lookup">
+        <h2>No QR code? Find them by name or email</h2>
+        <form class="manual" id="lkForm"><input type="search" id="lkQ" placeholder="Name or registered email" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search"><button class="btn small" type="submit" id="lkBtn">Search</button></form>
+        <div class="list" id="lkList"></div>
+      </div>
     </section>
 
     <section id="find" hidden>
@@ -123,6 +145,7 @@
   <div class="foot">Each person checks in once for the whole event · For registration staff only · RCSD, Faculty of Social Sciences, Chiang Mai University</div>
 </div>
 <div class="result" id="result" role="status" aria-live="assertive"></div>
+<div class="ask" id="ask" hidden role="dialog" aria-modal="true" aria-labelledby="askName"><div class="box" id="askBox"></div></div>
 
 <script>
 (function () {
@@ -143,7 +166,7 @@
       .then(function (d) {
         if (d && d.ok === false && /sign in again/i.test(d.error || '')) { signOut(); throw new Error(d.error); }
         if (d && d.busy) return d;   // the sheet was busy: the page keeps what it has and tries again
-        if (d && d.error && d.ok === false && req.op !== 'scan') throw new Error(d.error);
+        if (d && d.error && d.ok === false && req.op !== 'scan' && req.op !== 'lookup') throw new Error(d.error);
         return d;
       });
   }
@@ -295,24 +318,101 @@
     if (d.already) show('warn', personHTML(d.person, 'Already checked in · ' + d.already), 5000);
     else show('ok', personHTML(d.person, '✓ Checked in'), 3500);
   }
+  /* ---- the pop-up: a scan or a search only shows the person; Confirm is what checks them in ---- */
+  var ASK = null;
+  function closeAsk() {
+    $('ask').hidden = true; $('askBox').innerHTML = ''; ASK = null;
+    S.busy = false; S.lastAt = Date.now();   // the same code still in front of the camera is not asked again at once
+  }
+  function popup(kind, html, buttons) {
+    $('askBox').innerHTML = html + '<div class="acts">' + buttons + '</div>';
+    $('ask').className = 'ask ' + kind; $('ask').hidden = false; S.busy = true;
+    var r = $('result'); r.className = 'result';
+    var b = $('askBox').querySelector('[data-a=yes]') || $('askBox').querySelector('[data-a=no]'); if (b) b.focus();
+  }
+  function askIn(p) {
+    if (p.removed) { beep('bad'); popup('bad', '<div class="st">Registration cancelled</div><div class="big" id="askName">' + esc(p.name) + '</div><div class="sm">Removed from the list — please send them to the Help desk.</div>', '<button class="btn" type="button" data-a="no">OK</button>'); return; }
+    if (p.in) { beep('warn'); try { if (navigator.vibrate) navigator.vibrate([60, 60, 60]); } catch (e) {}
+      popup('warn', personHTML(p, 'Already checked in · ' + p.in).replace('<div class="big">', '<div class="big" id="askName">'), '<button class="btn" type="button" data-a="no">OK</button>'); return; }
+    ASK = p;
+    popup('', personHTML(p, 'Check in this person?').replace('<div class="big">', '<div class="big" id="askName">'),
+      '<button class="btn ghost" type="button" data-a="no">Cancel</button><button class="btn" type="button" data-a="yes">✓ Check in</button>');
+  }
+  $('ask').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-a]');
+    if (!b && e.target !== $('ask')) return;
+    var p = ASK, yes = b && b.getAttribute('data-a') === 'yes';
+    closeAsk();
+    if (yes && p) {
+      if (!R.byP[p.pid]) { R.rows.push(p); R.byP[p.pid] = p; if (p.token) R.byT[p.token] = p; }
+      tick(p, true);
+      show('ok', personHTML(p, '✓ Checked in'), 3000);
+      if (!$('find').hidden) renderList();
+      if (LK.rows.length) paintLookup();
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if ($('ask').hidden) return;
+    if (e.key === 'Escape') closeAsk();
+  });
   function check(code) {
     code = String(code || '').trim(); if (!code || S.busy) return;
     if (code === S.last && Date.now() - S.lastAt < 6000) return;   // the same code still in front of the camera
     S.last = code; S.lastAt = Date.now();
     var tok = code.toUpperCase().replace(/^.*?(C26-[A-Z0-9]{8}).*$/, '$1'), p = R.byT[tok];
-    if (p) {                                                      // on this device's list: answer at once
-      if (p.removed) { show('bad', '<div class="st">Registration cancelled</div><div class="big">' + esc(p.name) + '</div><div class="sm">Removed from the list — please send them to the Help desk.</div>', 6000); return; }
-      if (p.in) { show('warn', personHTML(p, 'Already checked in · ' + p.in), 5000); return; }
-      tick(p, true);
-      show('ok', personHTML(p, '✓ Checked in'), 3000);
-      return;
-    }
-    // not on this device's list (registered a moment ago?): ask the server
+    if (p) { askIn(p); return; }                                  // on this device's list: ask at once
+    // not on this device's list (registered a moment ago?): look it up on the server, without ticking
     S.busy = true;
-    call({ op: 'scan', code: code }).then(function (d) { answer(d); if (d.ok) loadRoster(true); })
-      .catch(function (err) { show('bad', '<div class="st">' + (R.rows.length ? 'Not found' : 'Error') + '</div><div class="big">' + esc(R.rows.length ? 'This code is not on the list.' : (err.message || 'No connection')) + '</div><div class="sm">' + esc(tok) + ' — ask the Help desk to look the person up.</div>', 5000); })
-      .then(function () { S.busy = false; });
+    call({ op: 'lookup', code: code }).then(function (d) {
+      S.busy = false;
+      if (d.ok && d.person) { askIn(fromServer(d.person)); return; }
+      answer(d);
+    }).catch(function (err) { S.busy = false; show('bad', '<div class="st">' + (R.rows.length ? 'Not found' : 'Error') + '</div><div class="big">' + esc(R.rows.length ? 'This code is not on the list.' : (err.message || 'No connection')) + '</div><div class="sm">' + esc(tok) + ' — search by name below, or ask the Help desk.</div>', 5000); });
   }
+  /* a person as the server sends one (lookup / find), joined to this device's list */
+  function fromServer(o) {
+    var p = R.byP[o.pid];
+    if (p) { if (o.in && !Q.some(function (q) { return q.pid === p.pid; })) p.in = o.in; if (o.removed) p.removed = true; if (o.emailShown) p.emailShown = o.emailShown; return p; }
+    return { pid: o.pid, token: o.token || '', name: o.name, type: o.type, affiliation: o.affiliation, meals: !!o.meals, dietary: o.dietary || '', in: o.in || '',
+             walk: /walk-in/i.test(o.source || ''), removed: !!o.removed, email: o.email || '', emailShown: o.emailShown || o.email || '' };
+  }
+
+  /* ---- find by name or email: nothing shows until Search is pressed ---- */
+  var LK = { rows: [], q: '' };
+  function norm(t) { return String(t || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); }
+  function localFind(q) {
+    var words = norm(q).split(/\s+/).filter(Boolean);
+    return R.rows.filter(function (p) {
+      var hay = norm(p.name + ' ' + (p.email || '') + ' ' + p.token);
+      return words.every(function (w) { return hay.indexOf(w) !== -1; });
+    }).slice(0, 20);
+  }
+  function paintLookup(msg) {
+    var el = $('lkList');
+    if (msg) { el.innerHTML = '<div class="row"><div class="sm">' + msg + '</div></div>'; return; }
+    el.innerHTML = LK.rows.length ? LK.rows.map(function (p, i) {
+      return '<div class="row"><div><b>' + esc(p.name) + '<span class="tag ' + (p.meals ? 'yes' : 'no') + '">' + (p.meals ? 'lunch' : 'no lunch') + '</span></b>' +
+        '<span class="sm">' + esc([p.type, p.affiliation, p.emailShown || p.email].filter(Boolean).join(' · ')) + '</span>' +
+        (p.removed ? '<span class="in" style="color:var(--bad)">Registration cancelled</span>' : p.in ? '<span class="in">✓ In · ' + esc(p.in) + '</span>' : '') + '</div>' +
+        (p.in || p.removed ? '<button class="btn ghost small" type="button" data-lk="' + i + '">View</button>' : '<button class="btn small" type="button" data-lk="' + i + '">Check in</button>') + '</div>';
+    }).join('') : '<div class="row"><div class="sm">Nobody found for “' + esc(LK.q) + '”. Check the spelling, try part of the name or the full email — or register them with the walk-in form.</div></div>';
+  }
+  $('lkForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var q = $('lkQ').value.trim();
+    if (q.length < 3) { paintLookup('Type at least 3 letters of the name, or the email.'); return; }
+    LK.q = q; $('lkBtn').disabled = true; paintLookup('Searching…');
+    call({ op: 'find', q: q }).then(function (d) {
+      LK.rows = (d.rows || []).map(fromServer); paintLookup();
+    }).catch(function () {
+      LK.rows = localFind(q); paintLookup();   // no connection: this device's list (names and codes)
+    }).then(function () { $('lkBtn').disabled = false; });
+  });
+  $('lkQ').addEventListener('input', function () { if (!this.value.trim()) { LK.rows = []; $('lkList').innerHTML = ''; } });
+  $('lkList').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-lk]'); if (!b) return;
+    var p = LK.rows[Number(b.getAttribute('data-lk'))]; if (p) askIn(p);
+  });
   $('manual').addEventListener('submit', function (e) { e.preventDefault(); check($('code').value); $('code').value = ''; });
 
   /* ---- camera ---- */
@@ -419,9 +519,9 @@
     var m = e.target.closest('[data-mark]'), u = e.target.closest('[data-undo]');
     if (!m && !u) return;
     var p = R.byP[(m || u).getAttribute(m ? 'data-mark' : 'data-undo')]; if (!p) return;
-    if (u && !confirm('Undo ' + p.name + '’s check-in?')) return;
-    tick(p, !!m);
-    if (m) show('ok', personHTML(p, '✓ Checked in'), 3000);
+    if (m) { askIn(p); return; }
+    if (!confirm('Undo ' + p.name + '’s check-in?')) return;
+    tick(p, false);
     renderList();
   });
   window.addEventListener('online', function () { offline = false; flush(); });
