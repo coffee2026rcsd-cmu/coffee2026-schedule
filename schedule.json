@@ -209,7 +209,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "17 Nov 2026, 19:27 (GMT+7)",
+ "updated": "18 Nov 2026, 21:42 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
@@ -565,17 +565,6 @@
          "online": false,
          "abstract": "The rapid growth of coffee culture in Bangkok has significantly reshaped the city’s urban landscape. This study examines how coffee culture participates in the transformation and production of urban space through a comparative study of Ari and Song Wat. Although both neighborhoods were historically shaped by local communities, the emergence of new forms of consumption and commercialization has transformed their physical, social, and cultural landscapes. Despite these similarities, the two areas differ in their historical development and social contexts. While Ari has developed as a residential area, Song Wat has emerged around its historical role as a riverside trading district. Drawing on Henri Lefebvre’s concept of the production of space, this study conceptualizes coffee shops not only as commercial establishments but as social and cultural spaces through which urban identities, practices, and meanings are produced and negotiated. This research employs a comparative qualitative case-study approach in order to examine changes in the physical environment and patterns of spatial uses, and the experiences of people within these neighborhoods. The study, hence, focuses on three dimensions of urban transformation: physical and commercial changes, changing social practices and experiences, and the symbolic representation of neighborhood identities. By comparing these areas, the research seeks to identify both similarities and differences in how coffee culture interacts with processes of commercialization and urban change. Rather than treating coffee culture as the sole cause of urban transformation, the study positions it as one of the cultural and economic forces that contribute to the reshaping of contemporary Bangkok. This research, therefore, aims to understand how everyday practices can participate in the production, negotiation, and reconfiguration of urban space.",
          "keywords": "Coffee culture · Urban space · Commercialization · Identities"
-        },
-        {
-         "title": "\"Going for Coffee\" in Coffee Country: Production, Consumption, and Place in Đà Lạt's Café Landscape",
-         "presenter": "Tran Que Tram Nguyen",
-         "affiliation": "Faculty of Social Work, Anthropology and Sociology University of Social Sciences and Humanities, Vietnam National University, Ho Chi Minh City",
-         "coAuthors": "Nu Nguyet Anh Nguyen",
-         "coming": [],
-         "country": "Vietnam",
-         "online": false,
-         "abstract": "Đà Lạt–Lâm Đồng is both one of Vietnam's principal coffee-producing regions and a major tourist destination where \"going for coffee\" (đi cà phê) can foreground landscape, atmosphere, events, coffee craft, or production itself. Coffee-tourism scholarship has examined how coffee spaces may connect, decouple, or reconnect production and consumption. Building on this discussion, the paper asks where coffee as a locally produced commodity sits within Đà Lạt's café experiences, and how the geographical proximity of production and consumption relates to symbolic and experiential connections between coffee, production, and place.\nThe paper reports an ongoing comparative qualitative content analysis of 12–15 cafés and coffee venues in Đà Lạt, purposively sampled to capture variation among destination/check-in cafés, landscape/atmosphere cafés, farm- or production-linked cafés, and specialty roasteries. The corpus comprises café websites, product pages, and Facebook posts, alongside public customer reviews and tourism media, coded to distinguish what cafés foreground from what customers recount. Three dimensions are coded as independent rather than sequential: reported or documented origin; representational connections to farms, producers, and production; and experiential connections through tasting, brewing, roasting, or farm visits. Coding further separates the centrality of coffee from the centrality of local production.\nPreliminary coding of initial cases suggests that these dimensions need not move together. In one case, detailed Cầu Đất origins appear on a café's product pages while its social media foregrounds destination and atmosphere, positioning local production differently across platforms. In another, a specialty roastery keeps coffee central to its public presentation while linking customers to local, national, and transnational origins, showing that coffee centrality need not coincide with local-production centrality. The paper extends discussion of production–consumption relations by showing how a producing region's coffee landscape is configured through uneven connections among commodity, place, production, and experience across café forms and platforms.",
-         "keywords": "coffee tourism · production–consumption relations · café landscape · local production · Đà Lạt"
         },
         {
          "title": "Dynamics of Coffee Consumption and the Development of Coffee Shops in Kendari, Southeast Sulawesi, Indonesia",
@@ -1086,15 +1075,15 @@
          "keywords": "Flores coffee · coffee value chains · smallholder farmers · market access · certification"
         },
         {
-         "title": "Study on the Coffee Price",
+         "title": "Volatility, Financialization, and the Global Value Chain Imbalance in the World Coffee Market",
          "presenter": "Zhang Jianfeng",
          "affiliation": "Distinguished Researcher, National Centre for Borderlands Ethnic Studies in Southwest China at Yunnan University",
          "coAuthors": "",
          "coming": [],
          "country": "China",
          "online": false,
-         "abstract": "Green coffee beans constitute one of the most significant agricultural commodities in global trade, characterized by pronounced price volatility. This volatility originates primarily from the inherent biological and agronomic characteristics of the coffee production cycle; however, over the past five decades, the increasing financialization of coffee markets—through futures trading, index-based investment, and speculative activity—has substantially amplified price fluctuations, thereby reinforcing cyclical instability. On the demand side, global coffee consumption exhibits strong price inelasticity, reflecting its status as a staple beverage with limited substitution options. Consequently, the resulting structural asymmetry in the global coffee value chain—marked by disproportionate value capture at the upstream (producer) versus downstream (roasting, branding,retail) stages—has exacerbated socioeconomic disparities between producing (predominantly Global South) and consuming (predominantly Global North) countries, prompting sustained academic, policy, and civil society attention.",
-         "keywords": ""
+         "abstract": "Green coffee is among the most important agricultural commodities in world trade, and among the most volatile. This paper examines four propositions about that volatility: that its first-order roots lie in the biological-agronomic cycle of a perennial tree crop compounded by climate shocks; that financialization over the past five decades has amplified the resulting swings; that demand is strongly price-rigid, so that adjustment costs fall almost entirely on producers; and that the global value chain allocates value asymmetrically between the producing South and the consuming North. The paper finds all four propositions supported, though with different mechanism weights: fundamentals set the direction of price moves, financial structure sets their amplitude and tempo, demand rigidity determines who bears the cost, and value-chain governance determines who captures the gains.",
+         "keywords": "coffee price · commodity volatility · financialization · price elasticity of demand · North–South inequality"
         }
        ]
       }
