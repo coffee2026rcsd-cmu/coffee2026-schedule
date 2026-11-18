@@ -321,12 +321,24 @@
   "booths": null,
   "boothsSoon": "Coffee producers, roasters and research groups show their work through both days. The list of booths and a floor plan will be posted here."
  },
- "posts": [],
+ "posts": [
+  {
+   "id": "UMWMCSXQXSQJ",
+   "date": "2026-11-12",
+   "time": "",
+   "title": "Registration for non-presenting, non-participant observers",
+   "text": "Registration for non-presenting, non-participant observers of the “Coffee Landscapes of the Southeast Asia Region” symposium from 27-28 November 2026 is now open! Register now at the link: https://cmu.to/coffee2026reg-aud\n\nAll fees are waived for observers. We ask that you register before 21 November. View the full schedule of panels and events of the symposium here: https://coffee2026rcsd-cmu.github.io/coffee2026-schedule/\n\nAdditional events including cupping, tasting, and other hands-on experiences will be available and the details will be announced soon.",
+   "link": "https://cmu.to/coffee2026reg-aud",
+   "linkText": "",
+   "pin": false,
+   "img": "updates/2026-11-12-mwmcsrpj.jpg?v=mwmcsrpj"
+  }
+ ],
  "map": {
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "18 Nov 2026, 23:44 (GMT+7)",
+ "updated": "18 Nov 2026, 23:47 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
