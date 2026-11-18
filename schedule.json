@@ -30,7 +30,7 @@
   },
   {
    "key": "yard",
-   "name": "Chamchuri Court",
+   "name": "Chamchuri Yard",
    "note": "",
    "photos": [
     "rooms/yard-mwd1q9aamgj.jpg"
@@ -203,13 +203,121 @@
  "about": {
   "text": "The Regional Center for Social Science and Sustainable Development (RCSD) and the Center for Ethnic Studies and Development (CESD), Faculty of Social Sciences, Chiang Mai University, together with the National Centre for Borderlands Ethnic Studies in Southwest China and the School of Ethnology and Sociology at Yunnan University, are pleased to host the 3rd International Symposium on Coffee, Constructing the Coffee Landscape in the Southeast Asia Region: Commodity, Culture, and Knowledge in Transition, on 27–28 November 2026 at Chiang Mai University.\n\nCoffee in Southeast Asia has a long and uneven history. It began with colonial and missionary experiments and grew into a major export crop, from the plantation landscapes of Indonesia and Vietnam to state-led highland development in Thailand and Yunnan, and to the newer, small-scale production now emerging in Myanmar and Cambodia. Across these places, coffee is at once a global commodity, a crop shaped by local communities and ecologies, and an urban culture that is changing quickly. The symposium looks at how this landscape has been built, and how it continues to change, through the legacies of colonial and missionary history, the agrarian transitions of upland and lowland farming communities, and the pressures of climate change and the search for adaptation in agroforestry and farming systems.\n\nOver two days, scholars, coffee growers and producers, development practitioners and entrepreneurs will exchange research and practice-based knowledge across six themes: coffee history; agriculture and agroforestry under climate change; coffee as commodity; coffee culture; agrarian transition; and knowledge production. Alongside paper sessions, panels and a roundtable, the programme includes exhibitions and hands-on activities such as public cupping.",
   "note": "This website is run by the Regional Center for Social Science and Sustainable Development (RCSD), Faculty of Social Sciences, Chiang Mai University, for the 3rd International Symposium on Coffee only.",
-  "contact": "office@rcsd-cmu.com"
+  "contact": "office@rcsd-cmu.com",
+  "dates": "27–28 November 2026",
+  "language": "English (some roundtables in Thai)",
+  "fee": "Free · registration required",
+  "getting": "",
+  "phone": "",
+  "line": "",
+  "themes": [
+   "Southeast Asia coffee history",
+   "Coffee agriculture and agroforestry under climate change",
+   "Coffee as commodity",
+   "Coffee culture",
+   "Coffee in agrarian transition",
+   "Coffee and knowledge production"
+  ],
+  "faq": []
  },
+ "acts": {
+  "reg": [
+   {
+    "key": "audience",
+    "title": "Register to attend",
+    "sub": "Free · QR code by email",
+    "link": "https://cmu.to/coffee2026reg-aud",
+    "st": "open",
+    "main": true
+   },
+   {
+    "key": "cupping",
+    "title": "Public Cupping",
+    "sub": "28 Nov 2026 · 1:30 PM",
+    "link": "https://cmu.to/coffee2026cupping",
+    "st": "open",
+    "logo": "logos/c-cmu-coffee.png?v=mvz4fzc2"
+   },
+   {
+    "key": "nua",
+    "title": "Nua Coffee Space",
+    "sub": "by The Rotate",
+    "link": "",
+    "st": "soon",
+    "left": null,
+    "logo": "logos/c-rotate.png?v=mvz4fw3o"
+   }
+  ],
+  "items": [
+   {
+    "id": "cupping",
+    "group": "cupping",
+    "kind": "Public Cupping",
+    "title": "Public Cupping",
+    "slotId": "S23-Day2",
+    "day": 1,
+    "start": "1:30 PM",
+    "end": "3:00 PM",
+    "startMin": 810,
+    "place": "Chamchuri Yard",
+    "about": "Taste coffees of different varieties, origins and processing methods, hear the story behind each cup — including why growers choose their varieties — and learn how a cup is evaluated and scored. Free; places are limited.",
+    "by": "Coffee Research and Development Center, Department of Highland Agriculture and Natural Resources, Faculty of Agriculture, Chiang Mai University · School Coffee",
+    "logos": [
+     {
+      "logo": "logos/c-cmu-coffee.png?v=mvz4fzc2",
+      "name": "CMU Coffee, Faculty of Agriculture, Chiang Mai University",
+      "url": ""
+     },
+     {
+      "logo": "logos/sp-mw2yxvi043v.png?v=mw2yylb5",
+      "name": "School Coffee",
+      "url": "https://www.facebook.com/schoolcoffee/?locale=th_TH"
+     }
+    ],
+    "reg": true,
+    "link": "https://cmu.to/coffee2026cupping",
+    "st": "open"
+   }
+  ],
+  "groups": {
+   "cupping": {
+    "title": "Public Cupping",
+    "by": "Coffee Research and Development Center, Department of Highland Agriculture and Natural Resources, Faculty of Agriculture, Chiang Mai University · School Coffee",
+    "logos": [
+     {
+      "logo": "logos/c-cmu-coffee.png?v=mvz4fzc2",
+      "name": "CMU Coffee, Faculty of Agriculture, Chiang Mai University",
+      "url": ""
+     },
+     {
+      "logo": "logos/sp-mw2yxvi043v.png?v=mw2yylb5",
+      "name": "School Coffee",
+      "url": "https://www.facebook.com/schoolcoffee/?locale=th_TH"
+     }
+    ]
+   },
+   "nua": {
+    "title": "Nua Coffee Space by The Rotate",
+    "intro": "Several activities at Nua Coffee Space through both days, 10 places each. A deposit holds your place and is returned to you in cash when you join.",
+    "soon": "Several activities at Nua Coffee Space through both days, 10 places each. Details and registration will be posted here and in Updates.",
+    "logos": [
+     {
+      "logo": "logos/c-rotate.png?v=mvz4fw3o",
+      "name": "The Rotate",
+      "url": "https://therotate.co/"
+     }
+    ]
+   }
+  },
+  "booths": null,
+  "boothsSoon": "Coffee producers, roasters and research groups show their work through both days. The list of booths and a floor plan will be posted here."
+ },
+ "posts": [],
  "map": {
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "18 Nov 2026, 21:42 (GMT+7)",
+ "updated": "18 Nov 2026, 23:38 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
@@ -342,7 +450,7 @@
      "type": "side",
      "title": "Roundtable 1 - New Generation Farmers and Women in Coffee Development",
      "about": "",
-     "room": "Chamchuri Court",
+     "room": "Chamchuri Yard",
      "roomKey": "yard",
      "events": [
       {
@@ -430,17 +538,6 @@
          "online": false,
          "abstract": "This paper explores how third-wave coffee makers, together with a set of partnering growers, reclaim the legacy of native culture by creating an affective economy centered on the sensorial characteristics of Coffee grown in native habitats. Since India’s coffee sector entered the free market in the mid-1990s, coffee has circulated through an expanding network of trading units, curing mills, and auction centers, transforming its movement and valuation. Based on my fieldwork across these institutions in the plantation villages of Coorg in Karnataka, South India, this paper articulates how coffee is represented and valued for its flavor and aroma, which simultaneously corresponds to the ways in which it is grown and cared for. \nFollowing global trends towards specialty and artisanal coffee, a few Kodavas, the local dominant community, have recently begun marketing their coffee as grown in ecologically diverse native habitats that produce premium-quality cups. This emerging value regime privileges flavor and aroma over conventional commercial coffee metrics such as size, color, moisture, and gravity. Growers, roasters, and Q-graders from Coorg work together to present ‘Coorg Coffee’ as a distinct sensorial object that both reflects its taste properties and represents the ‘native eco-system’ as the material condition in which coffee grows and develops its flavor profile. This native ecology is demonstrated as the reflection of Kodava cosmology, characterized by love for the land, preservation of tradition, and sacred forests, which becomes integral to coffee’s sensory value. \nFollowing anthropological literature on the production of quality in plantation economies (Besky 2020, Fischer 2022), this paper demonstrates that taste is coproduced through material, social, and discursive relations. Specialty coffee market, I argue, functions through an affective network among the grower, the coffee, and the consumer, navigated by the stories of Kodava life forms and the sustainable farming embedded in them.",
          "keywords": "India · Specialty Coffee · Tradition · Native ecology"
-        },
-        {
-         "title": "Coffee Raves in Thailand: Coffee and the Making of Leisure",
-         "presenter": "Erika Okuno",
-         "affiliation": "Graduate School of Asian and African Area Studies, Kyoto University",
-         "coAuthors": "",
-         "coming": [],
-         "country": "Japan",
-         "online": false,
-         "abstract": "In recent years, coffee raves, daytime events combining coffee, music, and dancing, have attracted attention across Southeast Asia. Often presented as healthier alternatives to conventional nightlife, these events offer opportunities for music and social interaction without necessarily involving alcohol. However, coffee raves differ in their use of coffee, venues, and approaches to leisure.\nThis paper examines how event organizers and venue operators envision different forms of leisure and assign roles to coffee in realizing them. Based on interviews and participant observation conducted in Chiang Mai and Bangkok, Thailand, between August and September 2026, the study compares three coffee rave events held at two cafés and one bar.\nThe findings reveal that the roles assigned to coffee vary according to the forms of leisure that organizers and venue operators seek to create. At Café A, coffee provides an option for those who wish to enjoy music and social interaction without consuming alcohol. At Café B, the organizer emphasizes dancing, music, and a natural environment rather than coffee itself, envisioning a relaxed and health-conscious party. At Bar C, coffee serves as an entry point to daytime parties that bring together people with different attitudes toward drinking and health. The subsequent introduction of alcoholic beverages at Bar C also demonstrates how coffee's role can be adjusted through event operations.\nThese cases suggest that coffee's role in coffee raves is not determined solely by the beverage or the event's name. Instead, it is shaped and adjusted in relation to the forms of leisure envisioned by organizers and venue operators. By examining these relationships, this study highlights how coffee is incorporated into the organization of leisure activities, offering a perspective on coffee culture that extends beyond beverage consumption.",
-         "keywords": "Coffee culture · Chiang Mai · cafés · sociality · coffee consumption"
         },
         {
          "title": "Beyond the Instant Packet: Coffee Mix and Collective Deliberation in Karen Agrarian Landscapes",
@@ -556,17 +653,6 @@
        "chair": "Kanokwan Somsiriwarangkul",
        "papers": [
         {
-         "title": "Producing Urban Space through Coffee Culture: The Transformation of Contemporary Bangkok",
-         "presenter": "Natharinee Neungchamnong",
-         "affiliation": "-",
-         "coAuthors": "",
-         "coming": [],
-         "country": "Thailand",
-         "online": false,
-         "abstract": "The rapid growth of coffee culture in Bangkok has significantly reshaped the city’s urban landscape. This study examines how coffee culture participates in the transformation and production of urban space through a comparative study of Ari and Song Wat. Although both neighborhoods were historically shaped by local communities, the emergence of new forms of consumption and commercialization has transformed their physical, social, and cultural landscapes. Despite these similarities, the two areas differ in their historical development and social contexts. While Ari has developed as a residential area, Song Wat has emerged around its historical role as a riverside trading district. Drawing on Henri Lefebvre’s concept of the production of space, this study conceptualizes coffee shops not only as commercial establishments but as social and cultural spaces through which urban identities, practices, and meanings are produced and negotiated. This research employs a comparative qualitative case-study approach in order to examine changes in the physical environment and patterns of spatial uses, and the experiences of people within these neighborhoods. The study, hence, focuses on three dimensions of urban transformation: physical and commercial changes, changing social practices and experiences, and the symbolic representation of neighborhood identities. By comparing these areas, the research seeks to identify both similarities and differences in how coffee culture interacts with processes of commercialization and urban change. Rather than treating coffee culture as the sole cause of urban transformation, the study positions it as one of the cultural and economic forces that contribute to the reshaping of contemporary Bangkok. This research, therefore, aims to understand how everyday practices can participate in the production, negotiation, and reconfiguration of urban space.",
-         "keywords": "Coffee culture · Urban space · Commercialization · Identities"
-        },
-        {
          "title": "Dynamics of Coffee Consumption and the Development of Coffee Shops in Kendari, Southeast Sulawesi, Indonesia",
          "presenter": "Benny Baskara",
          "affiliation": "Halu Oleo University",
@@ -576,6 +662,28 @@
          "online": true,
          "abstract": "Consuming coffee at coffee shops has become a growing lifestyle in Kendari, the capital city of Southeast Sulawesi Province, Indonesia. Coffee consumption at coffee shops is not merely drinking or enjoying coffee, but coffee shops serve as public spaces where consumers gather and engage in various activities. Coffee consumption patterns are not only determined by consumer demographics, such as age and gender, but also by the development of coffee processing technology. Therefore, besides long-established traditional coffee shops, various new formats have emerged, such as modern coffee shops, street-side coffee stalls, and mobile coffee vendors.\nBased on the background above, this paper will describe the dynamics of coffee consumption and the development of coffee shops in Kendari. The research adopts cultural anthropology perspectives and uses ethnographic methods with two main elements: participant observation and in-depth interviews. Participant observation is conducted at several coffee shops in Kendari, while in-depth interviews are conducted with both consumers and coffee shop owners or managers.\nThe research findings show that coffee shops in Kendari can be categorized into two general types: traditional and modern. Traditional coffee shops serve coffee using simple and traditional methods: brewing coffee grounds with hot water and filtering the mixture using a cloth filter. Meanwhile, modern coffee shops serve coffee using modern machines, resulting in various coffee types with contemporary names, such as espresso, caffè latte, or cappuccino. Based on demographic categories, the consumers of traditional coffee shops are mostly men above 40 years old, whereas consumers of modern coffee shops are mostly young people, both men and women, under 40 years old. In fact, coffee culture in Kendari has developed with a long-standing history rooted in the existence of traditional coffee shops, and later it underwent cultural reconstruction and reproduction with the emergence of modern coffee shops.",
          "keywords": "coffee consumption · coffee shops · Kendari · cultural reproduction"
+        },
+        {
+         "title": "Coffee Raves in Thailand: Coffee and the Making of Leisure",
+         "presenter": "Erika Okuno",
+         "affiliation": "Graduate School of Asian and African Area Studies, Kyoto University",
+         "coAuthors": "",
+         "coming": [],
+         "country": "Japan",
+         "online": false,
+         "abstract": "In recent years, coffee raves, daytime events combining coffee, music, and dancing, have attracted attention across Southeast Asia. Often presented as healthier alternatives to conventional nightlife, these events offer opportunities for music and social interaction without necessarily involving alcohol. However, coffee raves differ in their use of coffee, venues, and approaches to leisure.\nThis paper examines how event organizers and venue operators envision different forms of leisure and assign roles to coffee in realizing them. Based on interviews and participant observation conducted in Chiang Mai and Bangkok, Thailand, between August and September 2026, the study compares three coffee rave events held at two cafés and one bar.\nThe findings reveal that the roles assigned to coffee vary according to the forms of leisure that organizers and venue operators seek to create. At Café A, coffee provides an option for those who wish to enjoy music and social interaction without consuming alcohol. At Café B, the organizer emphasizes dancing, music, and a natural environment rather than coffee itself, envisioning a relaxed and health-conscious party. At Bar C, coffee serves as an entry point to daytime parties that bring together people with different attitudes toward drinking and health. The subsequent introduction of alcoholic beverages at Bar C also demonstrates how coffee's role can be adjusted through event operations.\nThese cases suggest that coffee's role in coffee raves is not determined solely by the beverage or the event's name. Instead, it is shaped and adjusted in relation to the forms of leisure envisioned by organizers and venue operators. By examining these relationships, this study highlights how coffee is incorporated into the organization of leisure activities, offering a perspective on coffee culture that extends beyond beverage consumption.",
+         "keywords": "Coffee culture · Chiang Mai · cafés · sociality · coffee consumption"
+        },
+        {
+         "title": "From Ritual Hospitality to Digital Distinction: Revaluing Coffee in Urban Indonesia",
+         "presenter": "Funco Tanipu",
+         "affiliation": "Universitas Negeri Gorontalo",
+         "coAuthors": "Munirah Tuli., S.Pi., M.Si",
+         "coming": [],
+         "country": "Indonesia",
+         "online": false,
+         "abstract": "**From Ritual Hospitality to Digital Distinction: Revaluing Coffee in Urban Indonesia**\n\nCoffee in Indonesia is commonly described either as an agricultural commodity or as a rapidly expanding urban lifestyle. This paper argues that its contemporary social significance is better understood as a process of **revaluation**, through which inherited meanings of hospitality, ritual, locality, and sociality are selectively translated into new forms of commercial, symbolic, and digital value. Drawing on qualitative field research in Jakarta, Yogyakarta, and Makassar, including observations in traditional and modern coffee spaces and semi-structured interviews with fifteen consumers and five coffee-industry practitioners, the study compares how coffee acquires different meanings across three urban contexts.\n\nThe findings identify four interrelated modes of social valuation: religious and ritual hospitality, social relationship, life-cycle commemoration, and social distinction. In Makassar, coffee remains embedded in post-Ramadan religious gatherings while regional origins such as Toraja and Kalosi are simultaneously reformulated as markers of authenticity and local identity in modern cafés. In Yogyakarta, vernacular coffee practices coexist with specialty cafés, coffee catering, and creative communities, while in Jakarta coffee shops increasingly operate as spaces of professional networking, lifestyle performance, and status differentiation. Across the three cities, cafés, branding practices, origin narratives, visual aesthetics, and social media transform coffee from a beverage into a medium for constructing identity and distinction.\n\nRather than representing a linear shift from tradition to modernity, these processes demonstrate how local meanings are repeatedly reworked through commodity circulation and digital representation. The paper proposes the notion of **urban coffee landscapes as infrastructures of valuation**, where place, ritual, taste, class, and mediated visibility intersect. It contributes to understanding how Southeast Asian coffee cultures are being transformed not through the disappearance of local traditions, but through their selective incorporation into contemporary markets and regimes of distinction.",
+         "keywords": "Keywords: coffee landscape · social valuation · urban coffee culture · distinction · commodity"
         }
        ]
       },
@@ -920,17 +1028,6 @@
          "online": false,
          "abstract": "This article examines how coffee production acquires different meanings beyond Thailand’s northern highlands into new settings. It compares the established Arabica coffee economy associated with Akha entrepreneurship in Chiang Rai with an emerging Robusta initiative among Tai Dam producers in Loei Province. Rather than treating these cases as equivalent, the article approaches them as distinct trajectories shaped by institutional histories, market conditions, and relationships between ethnicity and economic opportunity. The analysis draws on scholarship on highland crop replacement and ethnicized coffee commerce, alongside ten semi-structured interviews with Tai Dam coffee producers conducted on 20 October 2026. All ten interviewees reported receiving provincial funding to begin coffee production, and all described their plantations as being at an early stage. Only one explicitly identified Tai Dam identity as important to coffee branding; the other nine did not identify ethnicity as a branding priority. This finding does not indicate that ethnic identity is unimportant elsewhere. Drawing on Benedict Anderson’s concept of imagined communities and Pierre Bourdieu’s concepts of habitus and symbolic capital, the article argues that the commercial use of ethnic identity depends on institutional and market context. The movement of coffee, therefore, does not necessarily entail the movement of ethnic identity into the marketplace.",
          "keywords": "Isan · Tai Dam · Akha"
-        },
-        {
-         "title": "From Ritual Hospitality to Digital Distinction: Revaluing Coffee in Urban Indonesia",
-         "presenter": "Funco Tanipu",
-         "affiliation": "Universitas Negeri Gorontalo",
-         "coAuthors": "Munirah Tuli., S.Pi., M.Si",
-         "coming": [],
-         "country": "Indonesia",
-         "online": false,
-         "abstract": "**From Ritual Hospitality to Digital Distinction: Revaluing Coffee in Urban Indonesia**\n\nCoffee in Indonesia is commonly described either as an agricultural commodity or as a rapidly expanding urban lifestyle. This paper argues that its contemporary social significance is better understood as a process of **revaluation**, through which inherited meanings of hospitality, ritual, locality, and sociality are selectively translated into new forms of commercial, symbolic, and digital value. Drawing on qualitative field research in Jakarta, Yogyakarta, and Makassar, including observations in traditional and modern coffee spaces and semi-structured interviews with fifteen consumers and five coffee-industry practitioners, the study compares how coffee acquires different meanings across three urban contexts.\n\nThe findings identify four interrelated modes of social valuation: religious and ritual hospitality, social relationship, life-cycle commemoration, and social distinction. In Makassar, coffee remains embedded in post-Ramadan religious gatherings while regional origins such as Toraja and Kalosi are simultaneously reformulated as markers of authenticity and local identity in modern cafés. In Yogyakarta, vernacular coffee practices coexist with specialty cafés, coffee catering, and creative communities, while in Jakarta coffee shops increasingly operate as spaces of professional networking, lifestyle performance, and status differentiation. Across the three cities, cafés, branding practices, origin narratives, visual aesthetics, and social media transform coffee from a beverage into a medium for constructing identity and distinction.\n\nRather than representing a linear shift from tradition to modernity, these processes demonstrate how local meanings are repeatedly reworked through commodity circulation and digital representation. The paper proposes the notion of **urban coffee landscapes as infrastructures of valuation**, where place, ritual, taste, class, and mediated visibility intersect. It contributes to understanding how Southeast Asian coffee cultures are being transformed not through the disappearance of local traditions, but through their selective incorporation into contemporary markets and regimes of distinction.",
-         "keywords": "Keywords: coffee landscape · social valuation · urban coffee culture · distinction · commodity"
         }
        ]
       },
@@ -998,7 +1095,7 @@
      "type": "side",
      "title": "Public Cupping",
      "about": "",
-     "room": "Chamchuri Court",
+     "room": "Chamchuri Yard",
      "roomKey": "yard",
      "events": [
       {
