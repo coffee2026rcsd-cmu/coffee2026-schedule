@@ -66,11 +66,11 @@
    "group": "Co-organised by",
    "items": [
     {
-     "name": "Center for Ethnic Studies and Development",
-     "url": "https://cesd.soc.cmu.ac.th/",
-     "logo": "logos/sp-mvidakp70gn.png?v=mvidmjbu",
-     "size": "l",
-     "h": 118
+     "name": "Chiang Mai University",
+     "url": "https://www.cmu.ac.th/",
+     "logo": "logos/sp-mvid9bjlfvu.png?v=mvidaqpm",
+     "size": "s",
+     "h": 42
     },
     {
      "name": "Faculty of Social Sciences, Chiang Mai University",
@@ -80,60 +80,32 @@
      "h": 54
     },
     {
+     "name": "Center for Ethnic Studies and Development",
+     "url": "https://cesd.soc.cmu.ac.th/",
+     "logo": "logos/sp-mvidakp70gn.png?v=mvidmjbu",
+     "size": "l",
+     "h": 136
+    },
+    {
      "name": "Yunnan University",
      "url": "https://english.ynu.edu.cn/",
      "logo": "logos/sp-mvid0z0k07y.png?v=mvid5v9p",
      "size": "m",
-     "h": 48
-    },
-    {
-     "name": "School of Ethnology and Sociology, Yunnan Univeristy",
-     "url": "",
-     "logo": "logos/sp-mvid63y7bn4.png?v=mvid7cb6",
-     "size": "m",
-     "h": 60
-    },
-    {
-     "name": "",
-     "url": "",
-     "logo": "logos/sp-mvid78utt4g.png?v=mvid82pc",
-     "size": "m",
-     "h": 44
+     "h": 58
     },
     {
      "name": "School of Ethnology and Sociology, Yunnan University",
      "url": "http://english.ynu.edu.cn/2024-01/25/c_958706.htm",
      "logo": "logos/c-ses-ynu.png?v=mvz4fkyd",
      "size": "m",
-     "h": 54
-    },
-    {
-     "name": "National Centre for Borderland Ethnic Studies in Southwest China",
-     "url": "",
-     "logo": "logos/c-ncbes.png?v=mvz4fmgz",
-     "size": "m",
-     "h": 54
-    },
-    {
-     "name": "Center for ASEAN Studies: CAS",
-     "url": "https://www.facebook.com/asean.cmu#",
-     "logo": "logos/sp-mvz32vh3o5d.png?v=mvz34dk3",
-     "size": "m",
-     "h": 54
+     "h": 58
     },
     {
      "name": "Faculty of Agriculture, Chiang Mai University",
      "url": "https://www.agri.cmu.ac.th/",
      "logo": "logos/sp-mvz4jl8nt9h.png?v=mvz4kmcz",
      "size": "m",
-     "h": 54
-    },
-    {
-     "name": "Chiang Mai University",
-     "url": "https://www.cmu.ac.th/",
-     "logo": "logos/sp-mvid9bjlfvu.png?v=mvidaqpm",
-     "size": "s",
-     "h": 36
+     "h": 60
     },
     {
      "name": "CMU Coffee, Faculty of Agriculture, Chiang Mai University",
@@ -176,13 +148,6 @@
    "group": "Supported by",
    "items": [
     {
-     "name": "Art Farmer",
-     "url": "https://www.facebook.com/ArtFarmerCafe/",
-     "logo": "logos/sp-mvrwl84qt3l.png?v=mvrwrndd",
-     "size": "m",
-     "h": 54
-    },
-    {
      "name": "Office of Research Administration, Chiang Mai University",
      "url": "https://ora.oou.cmu.ac.th/",
      "logo": "logos/c-ora.png?v=mvz4fo3y",
@@ -193,6 +158,20 @@
      "name": "Center for ASEAN Studies (CAS), Chiang Mai University",
      "url": "https://www.facebook.com/asean.cmu",
      "logo": "logos/c-cas.png?v=mvz4l5g7",
+     "size": "m",
+     "h": 54
+    },
+    {
+     "name": "Center for Research and Academic Services (CRAS)",
+     "url": "https://www.soc.cmu.ac.th/research/cras",
+     "logo": "logos/sp-mwnlrl0imfh.png?v=mwnls0wz",
+     "size": "s",
+     "h": 34
+    },
+    {
+     "name": "Art Farmer",
+     "url": "https://www.facebook.com/ArtFarmerCafe/",
+     "logo": "logos/sp-mvrwl84qt3l.png?v=mvrwrndd",
      "size": "m",
      "h": 54
     }
@@ -234,8 +213,8 @@
     "key": "cupping",
     "title": "Public Cupping",
     "sub": "28 Nov 2026 · 1:30 PM",
-    "link": "",
-    "st": "soon",
+    "link": "https://cmu.to/coffee2026cupping",
+    "st": "open",
     "logo": "logos/c-cmu-coffee.png?v=mvz4fzc2"
    },
    {
@@ -275,8 +254,8 @@
      }
     ],
     "reg": true,
-    "link": "",
-    "st": "soon"
+    "link": "https://cmu.to/coffee2026cupping",
+    "st": "open"
    }
   ],
   "groups": {
@@ -329,7 +308,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "19 Nov 2026, 14:43 (GMT+7)",
+ "updated": "19 Nov 2026, 20:50 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
@@ -1026,7 +1005,7 @@
          "coAuthors": "",
          "coming": [],
          "country": "China",
-         "online": false,
+         "online": true,
          "abstract": "In recent years, various influencer Cafés that combine sensory experiences such as taste and sight have emerged in China, becoming a new form of tourism in the context of cultural and tourism integration. This study focuses on several\npopular and highly representative influencer Cafes in China, conducting an in-depth analysis to argue that visiting these cafés has become a cultural phenomenon reflecting nature, visual aesthetics, and bodily experience within tourism. Judging from\ncurrent forms—such as waterfall cafés and cave cafés—coffee consumption is deeply integrated with tourism experiences, involving observation, physical sensations, and people's exploration and aspirations toward nature. In today’s tourism consumption, gaze theory and embodiment theory alone are insufficient to fully explain the underlying cultural and social meanings and the mechanisms behind this phenomenon. Drawing on cultural sociology, this study attempts to analyze the cultural mechanisms emerging from the fusion of symbolic consumption and bodily experience, thereby proposing a new theoretical framework for understanding tourism experiences.",
          "keywords": ""
         },
