@@ -284,9 +284,44 @@
   .booths span{display:block;font-size:13px;color:var(--ink-3)}
   .soonb b{display:block;font-size:17px;margin-bottom:2px}
   .soonb{color:var(--ink-2);max-width:700px}
-  .uplist .post{padding:20px 0;border-top:1px solid var(--line);max-width:700px}
-  .uplist .post:first-child{border-top:0}
-  .uplist .post h3{font-size:19px}
+  /* updates: a feed of picture + title, newest first; each opens as a page of its own (#update-ID) */
+  .uplist{max-width:820px}
+  .upc{display:grid;grid-template-columns:220px minmax(0,1fr);gap:20px;align-items:start;padding:20px 0;border-top:1px solid var(--line);text-decoration:none;color:inherit}
+  .upc:first-child{border-top:0;padding-top:4px}
+  .upc .th{position:relative;display:block;aspect-ratio:16/10;border-radius:12px;overflow:hidden;background:var(--accent-soft)}
+  .upc .th img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s}
+  .upc:hover .th img{transform:scale(1.03)}
+  .upc .th .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:34px;color:var(--accent);opacity:.55}
+  .upc .th .pl{position:absolute;left:10px;bottom:10px;width:34px;height:34px;border-radius:50%;background:rgba(0,0,0,.6);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px}
+  .upc time{font-size:13px;color:var(--ink-3)}
+  .upc .pn{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-left:8px}
+  .upc h3{margin:4px 0 6px;font-size:19px;line-height:1.3}
+  .upc:hover h3{color:var(--accent)}
+  .upc p{margin:0;color:var(--ink-2);font-size:14.5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .upc .ic{display:block;margin-top:8px;font-size:12.5px;color:var(--ink-3)}
+  @media (max-width:640px){.upc{grid-template-columns:1fr;gap:10px}.upc .th{aspect-ratio:16/9}}
+  .feed .upc{grid-template-columns:150px minmax(0,1fr);padding:14px 0}
+  .feed .upc h3{font-size:16.5px}
+  @media (max-width:640px){.feed .upc{grid-template-columns:110px minmax(0,1fr);gap:12px}.feed .upc .th{aspect-ratio:1}.feed .upc p{display:none}}
+  /* one update as a page */
+  .postx{max-width:760px}
+  .postx .back{display:inline-block;margin:4px 0 18px;font-weight:700;font-size:14px;color:var(--accent);text-decoration:none}
+  .postx time{font-size:14px;color:var(--ink-3)}
+  .postx h1{margin:6px 0 16px;font-size:clamp(26px,4vw,36px);line-height:1.2;letter-spacing:-.01em}
+  .postx p{margin:0 0 16px;color:var(--ink-2);white-space:pre-line;line-height:1.7;font-size:16.5px}
+  .postx .pimg{display:block;width:100%;max-height:560px;object-fit:cover;border-radius:14px;margin:4px 0 20px;background:var(--line);cursor:zoom-in}
+  .postx .vid{position:relative;width:100%;max-width:760px;border-radius:14px;overflow:hidden;background:#000;margin:4px 0 14px}
+  .postx .vid.tall{max-width:380px}
+  .postx .vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .postx .btns{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 10px}
+  .postx .fb{display:inline-flex;align-items:center;gap:7px;border-radius:999px;padding:9px 16px;font-weight:700;font-size:14px;text-decoration:none;background:#1877f2;color:#fff}
+  .postx .fb svg{width:16px;height:16px;fill:currentColor}
+  .postx .pmore{margin-top:44px;padding-top:22px;border-top:2px solid var(--ink)}
+  .postx .pmore h2{font-size:20px;margin:0 0 6px}
+  .postx .upc h3{color:var(--ink);font-size:17px}
+  .postx .upc:hover h3{color:var(--accent)}
+  .postx .upc p{font-size:14.5px;line-height:1.5;margin:0;white-space:normal}
+  .postx .upc time{font-size:13px}
   .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:22px 0}
   .facts div{background:var(--surface);border-radius:14px;padding:14px 16px}
   .facts small{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
@@ -366,19 +401,19 @@
   };
   var T2 = {
     en: { progV: 'Programme', exV: 'Exhibition & Workshops', upV: 'Updates', register: 'Register', st_openS: 'Open', st_open: 'Registration open', st_soon: 'Soon', st_closed: 'Closed', st_full: 'Full',
-          left: '{n} places left', ofLeft: '{n} of {c} places left', noReg: 'Open to all', latest: 'Latest updates', allUp: 'All updates', pinned: 'Pinned', details: 'Details',
+          left: '{n} places left', ofLeft: '{n} of {c} places left', noReg: 'Open to all', latest: 'Latest updates', allUp: 'All updates', pinned: 'Pinned', details: 'Details', fbVideo: 'Watch on Facebook', fbPhotos: 'See the photos on Facebook', fbPost: 'Open on Facebook', ytVideo: 'Watch on YouTube', openLink: 'Open the link', hasVideo: 'Video', hasPhoto: 'Photos', backUp: 'All updates', moreUp: 'More updates',
           soonH: 'Details coming soon', exLead: 'Activities you can join alongside the programme, and the exhibition that runs through both days.', roundtables: 'Roundtables', exhibition: 'Exhibition',
           bothDays: 'Both days', perAct: '{c} places each', upLead: 'News from the organizers — newest first.', upEmpty: 'No updates yet.', aboutH: 'About the symposium',
           dates: 'Dates', venueL: 'Venue', language: 'Language', attendance: 'Attendance', themes: 'Themes', getting: 'Getting there', openMaps: 'Open in Maps', faq: 'Questions', phone: 'Phone', closedReg: 'Online registration closed', walkins: 'Walk-ins welcome at the desk', allActs: 'All activities & exhibition',
           aiNote: 'Disclaimer: this website and the system behind it were developed with the help of generative AI (Claude, by Anthropic) and are checked by the organizers. If you notice a mistake, please let us know.' },
     zh: { progV: '日程', exV: '展览与工作坊', upV: '最新消息', register: '报名', st_openS: '开放', st_open: '报名中', st_soon: '即将开放', st_closed: '已截止', st_full: '已满',
-          left: '剩余 {n} 个名额', ofLeft: '{c} 个名额，剩余 {n} 个', noReg: '自由参加', latest: '最新消息', allUp: '全部消息', pinned: '置顶', details: '详情',
+          left: '剩余 {n} 个名额', ofLeft: '{c} 个名额，剩余 {n} 个', noReg: '自由参加', latest: '最新消息', allUp: '全部消息', pinned: '置顶', details: '详情', fbVideo: '在 Facebook 上观看', fbPhotos: '在 Facebook 上查看照片', fbPost: '在 Facebook 上打开', ytVideo: '在 YouTube 上观看', openLink: '打开链接', hasVideo: '视频', hasPhoto: '照片', backUp: '全部消息', moreUp: '更多消息',
           soonH: '详情即将公布', exLead: '与日程同时进行、可报名参加的活动，以及两天均开放的展览。', roundtables: '圆桌讨论', exhibition: '展览',
           bothDays: '两天', perAct: '每项 {c} 个名额', upLead: '主办方发布的最新消息。', upEmpty: '暂无消息。', aboutH: '关于研讨会',
           dates: '日期', venueL: '地点', language: '语言', attendance: '参加方式', themes: '主题', getting: '交通指引', openMaps: '在地图中打开', faq: '常见问题', phone: '电话', closedReg: '线上报名已截止', walkins: '欢迎现场登记', allActs: '全部活动与展览',
           aiNote: '免责声明：本网站及其后台系统借助生成式人工智能（Anthropic 公司的 Claude）开发，并由主办方核对。如发现错误，请告知我们。' },
     th: { progV: 'กำหนดการ', exV: 'นิทรรศการและเวิร์กช็อป', upV: 'อัปเดต', register: 'ลงทะเบียน', st_openS: 'เปิด', st_open: 'เปิดรับสมัคร', st_soon: 'เร็วๆ นี้', st_closed: 'ปิดรับแล้ว', st_full: 'เต็มแล้ว',
-          left: 'เหลือ {n} ที่', ofLeft: 'เหลือ {n} จาก {c} ที่', noReg: 'เข้าร่วมได้ทุกคน', latest: 'อัปเดตล่าสุด', allUp: 'อัปเดตทั้งหมด', pinned: 'ปักหมุด', details: 'รายละเอียด',
+          left: 'เหลือ {n} ที่', ofLeft: 'เหลือ {n} จาก {c} ที่', noReg: 'เข้าร่วมได้ทุกคน', latest: 'อัปเดตล่าสุด', allUp: 'อัปเดตทั้งหมด', pinned: 'ปักหมุด', details: 'รายละเอียด', fbVideo: 'ดูวิดีโอบน Facebook', fbPhotos: 'ดูรูปบน Facebook', fbPost: 'เปิดบน Facebook', ytVideo: 'ดูบน YouTube', openLink: 'เปิดลิงก์', hasVideo: 'วิดีโอ', hasPhoto: 'รูปภาพ', backUp: 'อัปเดตทั้งหมด', moreUp: 'อัปเดตอื่น ๆ',
           soonH: 'รายละเอียดเร็วๆ นี้', exLead: 'กิจกรรมที่เข้าร่วมได้ควบคู่กับกำหนดการ และนิทรรศการตลอดสองวัน', roundtables: 'โต๊ะกลม', exhibition: 'นิทรรศการ',
           bothDays: 'ทั้งสองวัน', perAct: 'กิจกรรมละ {c} ที่', upLead: 'ข่าวจากผู้จัด เรียงจากล่าสุด', upEmpty: 'ยังไม่มีอัปเดต', aboutH: 'เกี่ยวกับงานประชุม',
           dates: 'วันที่', venueL: 'สถานที่', language: 'ภาษา', attendance: 'การเข้าร่วม', themes: 'หัวข้อ', getting: 'การเดินทาง', openMaps: 'เปิดในแผนที่', faq: 'คำถามที่พบบ่อย', phone: 'โทรศัพท์', closedReg: 'ปิดลงทะเบียนออนไลน์แล้ว', walkins: 'ลงทะเบียนหน้างานได้', allActs: 'กิจกรรมและนิทรรศการทั้งหมด',
@@ -395,7 +430,7 @@
     fetch(I18N_BASE + 'i18n-' + L + '.json?t=' + Math.floor(Date.now() / 60000), { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : {}; })
       .then(function (m) { I18N[L] = m || {}; render(); }).catch(function () {});
   }
-  var L = 'en', DATA = null, DAY = 0, Q = '', OPEN = {}, VIEW = 'day', CHIP = {}, STAR = {};
+  var POST = '', L = 'en', DATA = null, DAY = 0, Q = '', OPEN = {}, VIEW = 'day', CHIP = {}, STAR = {};
   try { STAR = JSON.parse(localStorage.getItem('stars') || '{}') || {}; } catch (e) { STAR = {}; }
   function saveStars() { try { localStorage.setItem('stars', JSON.stringify(STAR)); } catch (e) {} }
   var THEME_SHORT = { 1: 'Coffee history', 2: 'Agriculture & climate', 3: 'Coffee as commodity', 4: 'Coffee culture', 5: 'Agrarian transition', 6: 'Knowledge production' };
@@ -484,6 +519,10 @@
         (p.affiliation || p.country ? ' <span class="aff">· ' + mark([p.affiliation, p.country && String(p.affiliation).toLowerCase().indexOf(String(p.country).toLowerCase()) === -1 ? p.country : ''].filter(Boolean).join(', ')) + '</span>' : '') + '</div>' +
         '<div class="abs">' + (p.abstract ? mark(tr(p.abstract)) : '<i>' + esc(t('noAbstract')) + '</i>') + (p.keywords ? '<span class="kw">' + esc(t('keywords')) + ': ' + mark(tr(p.keywords)) + '</span>' : '') + '</div>' + '</li>';
     }).join('') + '</ol>';
+  }
+  function closeSheet() {
+    $('sheet').hidden = true;
+    if ($('sheetBody').querySelector('iframe')) $('sheetBody').innerHTML = '';   // stops a video that is playing
   }
   function showSheet(html, wide) {
     $('sheetBody').innerHTML = html;
@@ -580,10 +619,43 @@
     var s = isNaN(dt) ? p.date : dt.toLocaleDateString(L === 'zh' ? 'zh-CN' : L === 'th' ? 'th-TH' : 'en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
     return s + (p.time ? ', ' + p.time : '');
   }
+  /* a video or photo link: what it is, and the player to show for it (Facebook videos and YouTube play in the window) */
+  function mediaOf(u) {
+    var fb = /^https:\/\/(?:www\.|m\.|web\.)?(?:facebook\.com|fb\.watch)\//i.test(u), yt = u.match(/(?:youtube\.com\/(?:watch\?v=|shorts\/|live\/)|youtu\.be\/)([\w-]{6,})/i);
+    if (yt) return { kind: 'video', label: t('ytVideo'), embed: 'https://www.youtube-nocookie.com/embed/' + yt[1], ratio: /shorts\//i.test(u) ? 177.8 : 56.25 };
+    if (!fb) return { kind: 'link', label: t('openLink') };
+    var video = /\/(?:videos|reel|watch)\b|\/share\/[vr]\/|fb\.watch\//i.test(u);
+    var photo = /\/(?:photos?|media\/set|photo\.php)\b/i.test(u) && !video;
+    if (video && !/fb\.watch\/|\/share\//i.test(u)) return { kind: 'video', fb: 1, label: t('fbVideo'), embed: 'https://www.facebook.com/plugins/video.php?href=' + encodeURIComponent(u) + '&show_text=false&width=560', ratio: /\/reel\//i.test(u) ? 177.8 : 56.25 };
+    return { kind: video ? 'video' : photo ? 'photo' : 'post', fb: 1, label: video ? t('fbVideo') : photo ? t('fbPhotos') : t('fbPost') };
+  }
+  var FB_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.02 4.39 11.02 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.96h-1.51c-1.49 0-1.95.93-1.95 1.88v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.09 24 18.09 24 12.07z"/></svg>';
+  /* the feed: picture and title (date, first lines, video / photos marks); a click opens the update as its own page */
   function postHTML(p) {
-    return '<article class="post" id="post-' + esc(p.id) + '"><time>' + esc(fmtPost(p)) + '</time>' + (p.pin ? '<span class="pn">' + esc(t('pinned')) + '</span>' : '') + '<h3>' + esc(tr(p.title)) + '</h3>' +
-      (p.img ? '<figure class="slide" style="margin:0"><img src="' + esc(p.img) + '" alt="" loading="lazy"><figcaption hidden>' + esc(tr(p.title)) + '</figcaption></figure>' : '') +
-      (p.text ? '<p>' + esc(tr(p.text)) + '</p>' : '') + (p.link ? '<a class="pl" href="' + esc(p.link) + '" target="_blank" rel="noopener">' + esc(tr(p.linkText) || p.link) + ' →</a>' : '') + '</article>';
+    var M = (p.media || []).map(mediaOf), vid = M.some(function (m) { return m.kind === 'video'; }), pic = M.some(function (m) { return m.kind === 'photo'; });
+    var th = p.img ? '<img src="' + esc(p.img) + '" alt="" loading="lazy">' : '<span class="ph">' + (vid ? '▶' : pic ? '▣' : '☕') + '</span>';
+    return '<a class="upc" href="#update-' + esc(p.id) + '" id="post-' + esc(p.id) + '"><span class="th">' + th + (vid && p.img ? '<span class="pl">▶</span>' : '') + '</span>' +
+      '<div><time>' + esc(fmtPost(p)) + '</time>' + (p.pin ? '<span class="pn">' + esc(t('pinned')) + '</span>' : '') + '<h3>' + esc(tr(p.title)) + '</h3>' +
+      (p.text ? '<p>' + esc(tr(p.text)) + '</p>' : '') +
+      ((vid || pic) ? '<span class="ic">' + [vid ? '▶ ' + esc(t('hasVideo')) : '', pic ? '▣ ' + esc(t('hasPhoto')) : ''].filter(Boolean).join(' · ') + '</span>' : '') + '</div></a>';
+  }
+  /* one update as a page: picture, text, the videos (played here when they can be), the links, then the other updates */
+  function postPageHTML(id) {
+    var p = posts().filter(function (x) { return x.id === id; })[0];
+    if (!p) return '<div class="postx"><a class="back" href="#up">← ' + esc(t('backUp')) + '</a><div class="empty">' + esc(t('upEmpty')) + '</div></div>';
+    var M = (p.media || []).map(function (u) { var m = mediaOf(u); m.url = u; return m; });
+    var players = M.filter(function (m) { return m.embed; }).map(function (m) {
+      return '<div class="vid' + (m.ratio > 100 ? ' tall' : '') + '" style="padding-top:' + m.ratio + '%"><iframe src="' + esc(m.embed) + '" title="' + esc(tr(p.title)) + '" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe></div>';
+    }).join('');
+    var btns = M.map(function (m) {
+      return '<a class="' + (m.fb ? 'fb' : 'rbtn ghost') + '" href="' + esc(m.url) + '" target="_blank" rel="noopener">' + (m.fb ? FB_ICON : '') + esc(m.label) + ' ↗</a>';
+    }).join('') + (p.link ? '<a class="rbtn" href="' + esc(p.link) + '" target="_blank" rel="noopener">' + esc(tr(p.linkText) || t('openLink')) + ' →</a>' : '');
+    var others = posts().filter(function (x) { return x.id !== id; });
+    return '<div class="postx"><a class="back" href="#up">← ' + esc(t('backUp')) + '</a><div><time>' + esc(fmtPost(p)) + '</time>' + (p.pin ? ' <span class="st">' + esc(t('pinned')) + '</span>' : '') + '</div>' +
+      '<h1>' + esc(tr(p.title)) + '</h1>' +
+      (p.img ? '<figure class="slide" style="margin:0"><img class="pimg" src="' + esc(p.img) + '" alt=""><figcaption hidden>' + esc(tr(p.title)) + '</figcaption></figure>' : '') +
+      (p.text ? '<p>' + esc(tr(p.text)) + '</p>' : '') + players + (btns ? '<div class="btns">' + btns + '</div>' : '') +
+      (others.length ? '<section class="pmore"><h2>' + esc(t('moreUp')) + '</h2><div class="uplist">' + others.map(postHTML).join('') + '</div></section>' : '') + '</div>';
   }
   function regsHTML() {
     var r = (DATA.acts && DATA.acts.reg) || [];
@@ -699,7 +771,7 @@
 
     var html = '', any = false, nowTxt = '';
     var chips = chipsOn().length;
-    var nPosts = posts().length, page = VIEW === 'mine' ? 'day' : VIEW;
+    var nPosts = posts().length, page = VIEW === 'mine' ? 'day' : VIEW === 'post' ? 'up' : VIEW;
     $('pages').innerHTML = [['day', t('progV')], ['ex', t('exV')], ['up', t('upV')], ['people', t('people')], ['about', t('aboutV')]].map(function (v) {
       return '<button data-page="' + v[0] + '" aria-pressed="' + (page === v[0]) + '">' + esc(v[1]) + (v[0] === 'up' && nPosts ? '<span class="n">' + nPosts + '</span>' : '') + '</button>';
     }).join('');
@@ -707,15 +779,16 @@
     if (!$('regs').hidden) $('regs').innerHTML = regsHTML();
     var pin = posts().filter(function (p) { return p.pin; })[0];
     $('pinned').hidden = !pin;
-    $('pinned').innerHTML = pin ? '<b>' + esc(t('pinned')) + '</b><button data-post="' + esc(pin.id) + '">' + esc(tr(pin.title)) + ' <span style="color:var(--ink-3)">· ' + esc(fmtPost(pin)) + '</span></button>' : '';
-    $('bar').hidden = /^(ex|up|about)$/.test(VIEW);
+    $('pinned').innerHTML = pin ? '<b>' + esc(t('pinned')) + '</b><a href="#update-' + esc(pin.id) + '" style="color:var(--ink-2);text-decoration:none">' + esc(tr(pin.title)) + ' <span style="color:var(--ink-3)">· ' + esc(fmtPost(pin)) + '</span></a>' : '';
+    $('bar').hidden = /^(ex|up|post|about)$/.test(VIEW);
     $('nownext').hidden = $('nownext').hidden || !/^(day|mine)$/.test(VIEW);
     $('glance').hidden = !/^(day|mine)$/.test(VIEW);
     $('feed').hidden = VIEW !== 'day' || Q || !nPosts;
-    $('feed').innerHTML = $('feed').hidden ? '' : '<div class="hdr"><h2>' + esc(t('latest')) + '</h2><button class="lnk" data-page="up">' + esc(t('allUp')) + ' →</button></div><div class="cards">' + posts().slice(0, 3).map(postHTML).join('') + '</div>';
+    $('feed').innerHTML = $('feed').hidden ? '' : '<div class="hdr"><h2>' + esc(t('latest')) + '</h2><button class="lnk" data-page="up">' + esc(t('allUp')) + ' →</button></div><div class="uplist upl">' + posts().slice(0, 3).map(postHTML).join('') + '</div>';
     anchorActs();
     if (VIEW === 'ex') { $('main').innerHTML = exHTML(); $('now').hidden = true; return; }
     if (VIEW === 'up') { $('main').innerHTML = upHTML(); $('now').hidden = true; return; }
+    if (VIEW === 'post') { $('main').innerHTML = postPageHTML(POST); $('now').hidden = true; return; }
     if (VIEW === 'people') { $('main').innerHTML = peopleHTML(); $('now').hidden = true; return; }
     if (VIEW === 'about') { $('main').innerHTML = aboutHTML(); $('now').hidden = true; return; }
     DATA.days.forEach(function (d, i) {
@@ -820,7 +893,7 @@
     var ac = e.target.closest('[data-act]');
     if (ac) { openAct(ac.getAttribute('data-act')); return; }
     var po = e.target.closest('[data-post]');
-    if (po) { VIEW = 'up'; render(); var pe = document.getElementById('post-' + po.getAttribute('data-post')); if (pe) pe.scrollIntoView({ block: 'start' }); return; }
+    if (po) { location.hash = 'update-' + po.getAttribute('data-post'); return; }
     var vw = e.target.closest('[data-view]');
     if (vw) { var v = vw.getAttribute('data-view'); VIEW = VIEW === v ? 'day' : v; Q = ''; $('q').value = ''; render(); window.scrollTo({ top: Math.min(window.scrollY, $('main').offsetTop - 80) }); return; }
     var ch = e.target.closest('[data-chip]');
@@ -842,7 +915,7 @@
       goSlide(sl, st.hasAttribute('data-go') ? Number(st.getAttribute('data-go')) : Math.max(0, Math.min(tr.children.length - 1, cur + Number(st.getAttribute('data-step'))))); return; }
     var gt = e.target.closest('[data-goto]');
     if (gt) { $(gt.getAttribute('data-goto')).scrollIntoView({ behavior: 'smooth' }); return; }
-    if (e.target.closest('[data-close]') || e.target === $('sheet')) { $('sheet').hidden = true; return; }
+    if (e.target.closest('[data-close]') || e.target === $('sheet')) { closeSheet(); return; }
     var pp = e.target.closest('[data-paper]');
     if (pp) { var id = pp.getAttribute('data-paper'), li = pp.closest('.paper'); OPEN[id] = !li.classList.contains('open'); li.classList.toggle('open', OPEN[id]); pp.setAttribute('aria-expanded', String(OPEN[id])); return; }
     var d = e.target.closest('[data-day]');
@@ -859,15 +932,18 @@
   });
   $('q').addEventListener('input', function (e) { Q = e.target.value.trim(); render(); });
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') { if (!$('zoom').hidden) { $('zoom').hidden = true; return; } $('sheet').hidden = true; }
+    if (e.key === 'Escape') { if (!$('zoom').hidden) { $('zoom').hidden = true; return; } closeSheet(); }
     if ((e.key === 'Enter' || e.key === ' ') && e.target.matches && e.target.matches('article[data-sess]')) { e.preventDefault(); openSession(e.target.getAttribute('data-sess')); }
   });
   function goHash() {
     var h = decodeURIComponent(location.hash.slice(1));
+    if (!h && DATA && VIEW === 'post') { VIEW = 'day'; render(); return; }   // back from an update to the start page
     if (!h || !DATA) return;
     var m = h.match(/^day(\d)$/i);
     if (m) { DAY = Math.max(0, Math.min(DATA.days.length - 1, Number(m[1]) - 1)); VIEW = 'day'; render(); return; }
     if (/^(mine|people|about|ex|up)$/.test(h)) { VIEW = h; render(); return; }
+    var um = h.match(/^update-(.+)$/);
+    if (um) { closeSheet(); VIEW = 'post'; POST = um[1]; render(); window.scrollTo({ top: Math.max(0, $('pages').offsetTop - 10) }); return; }
     var sid = null, pid = null;
     DATA.days.forEach(function (d, i) {
       d.blocks.forEach(function (b) {
