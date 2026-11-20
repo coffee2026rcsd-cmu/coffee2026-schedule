@@ -293,6 +293,18 @@
  },
  "posts": [
   {
+   "id": "UMWOW8L6L77P",
+   "date": "2026-11-20",
+   "time": "",
+   "title": "Plenary session 1: State of Coffee Production and Consumption in Southeast Asia and China",
+   "text": "Plenary session 1 of the coffee symposium, \"State of Coffee Production and Consumption in Southeast Asia and China\" will be held on Friday, 27 November 2026 from 11:00 am. to 12:30 pm. in Room 1 (Dhani Room), Faculty of Social Sciences, Chiang Mai University\n\nCoffee came to Indonesia, Thailand and Yunnan at different times and for different purposes, and each country’s coffee landscape reflects that history. Indonesia has the oldest export industry of the three. In Thailand, coffee was promoted as a state-supported highland development crop. Yunnan has shifted quickly from bulk supply to specialty production. All three now face uncertain open trade and fast-growing domestic consumption. This plenary brings together perspectives from research, sensory evaluation and social enterprise to review the current situation in each country, and to consider what it would take for the region to trade more directly within itself.\n\nSpeakers include Adi W. Taroepratjeka of 5758 Coffee Lab, Bandung, Indonesia; Fan Xu, coffee sensory assessor and consultant based in Guangzhou, China; and Lee Ayu Chuepa, founder of Akha Ama Coffee, Chiang Mai. They will discuss coffee as commodity, culture and knowledge in transition, covering the history and flavour mapping of Indonesian coffee, the changing value chains linking Yunnan to urban markets in China, and how purpose-driven specialty coffee can carry value back to producers.",
+   "link": "",
+   "linkText": "",
+   "pin": false,
+   "img": "updates/2026-11-20-mwow8f58.jpg?v=mwow8f58",
+   "media": []
+  },
+  {
    "id": "UMWMCSXQXSQJ",
    "date": "2026-11-12",
    "time": "",
@@ -301,14 +313,15 @@
    "link": "https://cmu.to/coffee2026reg-aud",
    "linkText": "",
    "pin": false,
-   "img": "updates/2026-11-12-mwmcsrpj.jpg?v=mwmcsrpj"
+   "img": "updates/2026-11-12-mwmcsrpj.jpg?v=mwmcsrpj",
+   "media": []
   }
  ],
  "map": {
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "20 Nov 2026, 09:55 (GMT+7)",
+ "updated": "20 Nov 2026, 18:26 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
@@ -349,7 +362,7 @@
       },
       {
        "name": "Dr. Chayan Vaddhanaphuti",
-       "affiliation": "RCSD",
+       "affiliation": "Chair of the Academic and Side Events Committee and Director of RCSD",
        "talk": "Expectation and Objectives of the Symposium"
       }
      ]
@@ -367,7 +380,7 @@
      "speakers": [
       {
        "name": "Fuadi Pitsuwan",
-       "affiliation": "Vice President of Specialty Coffee Association of Thailand",
+       "affiliation": "Lecturer, Faculty of Political Science, Thammasat University, Vice President of Specialty Coffee Association of Thailand",
        "talk": ""
       }
      ]
@@ -391,13 +404,13 @@
      "startMin": 660,
      "type": "plenary",
      "title": "Plenary Discussion I: State of coffee production and consumption in Southeast Asia and China (China/Indonesia/Thailand)",
-     "about": "Coffee was introduced into these three countries at different periods and for different purposes, and the resulting landscapes differ accordingly: an established export industry in Vietnam, a state-supported highland development crop in Thailand, and a rapid shift from bulk supply to specialty production in Yunnan. All three now face a period in which open trade cannot be assumed and domestic consumption is growing quickly. This plenary brings together perspectives from research, trade and roasting to review the current situation in each country, and to consider what would be required for the region to trade more directly within itself.",
+     "about": "Coffee came to Indonesia, Thailand and Yunnan at different times and for different purposes, and each country’s coffee landscape reflects that history. Indonesia has the long experience of export industry comparing with the other two. In Thailand, coffee was promoted as a state-supported highland development crop. Yunnan has shifted quickly from bulk supply to specialty production. All three now face uncertain open trade and fast-growing domestic consumption. This plenary brings together perspectives from research, sensory evaluation and social enterprise to review the current situation in each country, and to consider what it would take for the region to trade more directly within itself.",
      "room": "",
      "roomKey": "",
      "speakers": [
       {
        "name": "Fan Xu",
-       "affiliation": "Lecturer in the coffee training system of Yunnan Agricultural University; Founder, Coffactor OÜ.",
+       "affiliation": "Yunnan Agricultural University; Founder, Coffactor OÜ.",
        "talk": "One Object at Three Speeds: Coffee as Commodity, Culture and Knowledge in Transition"
       },
       {
