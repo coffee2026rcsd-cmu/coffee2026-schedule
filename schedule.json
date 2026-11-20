@@ -213,8 +213,8 @@
     "key": "cupping",
     "title": "Public Cupping",
     "sub": "28 Nov 2026 · 1:30 PM",
-    "link": "https://cmu.to/coffee2026cupping",
-    "st": "open",
+    "link": "",
+    "st": "soon",
     "logo": "logos/c-cmu-coffee.png?v=mvz4fzc2"
    },
    {
@@ -254,8 +254,8 @@
      }
     ],
     "reg": true,
-    "link": "https://cmu.to/coffee2026cupping",
-    "st": "open"
+    "link": "",
+    "st": "soon"
    }
   ],
   "groups": {
@@ -308,7 +308,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "19 Nov 2026, 20:50 (GMT+7)",
+ "updated": "20 Nov 2026, 09:55 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
@@ -756,7 +756,7 @@
          "keywords": "Agrarian Capitalism · State Engagement · Zomia · Akha · Coffee"
         },
         {
-         "title": "COFFEE AND EVERYDAY WORLD-MAKING AMONG AKHA IN NORTHERN THAILAND: LAND HISTORY AND PLACE ATTACHMENT AT DOI TUNG",
+         "title": "Coffee and Everyday World-making Among Akha in Northern Thailand: Land History and Place Attachment at Doi Tung",
          "presenter": "ZHEN LIAN",
          "affiliation": "Assumption University of Thailand",
          "coAuthors": "",
