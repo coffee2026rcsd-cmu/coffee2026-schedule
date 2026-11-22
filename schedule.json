@@ -213,8 +213,8 @@
     "key": "cupping",
     "title": "Public Cupping",
     "sub": "28 Nov 2026 · 1:30 PM",
-    "link": "https://cmu.to/coffee2026cupping",
-    "st": "open",
+    "link": "",
+    "st": "soon",
     "logo": "logos/c-cmu-coffee.png?v=mvz4fzc2"
    },
    {
@@ -254,8 +254,8 @@
      }
     ],
     "reg": true,
-    "link": "https://cmu.to/coffee2026cupping",
-    "st": "open"
+    "link": "",
+    "st": "soon"
    }
   ],
   "groups": {
@@ -345,7 +345,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "22 Nov 2026, 21:21 (GMT+7)",
+ "updated": "22 Nov 2026, 21:24 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
