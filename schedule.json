@@ -293,6 +293,18 @@
  },
  "posts": [
   {
+   "id": "UMWRW8OYGXTX",
+   "date": "2026-11-22",
+   "time": "",
+   "title": "Roundtable I: New Generation Farmers and Women in Coffee Development",
+   "text": "Roundtable I: New Generation Farmers and Women in Coffee Development, Friday, 27 November 2026, 12:30 am–1:30 pm, at Chamchuri Yard, Faculty of Social Sciences, Chiang Mai University. The roundtable will be conducted in Thai (TH-EN simultaneous translation provided).\n\nA new generation of coffee farmers is returning to highland villages in northern Thailand. Many left for study or work in the city. They came back because coffee now offers a way to make a living at home, and for some, a high-value product that has won national recognition. Many of these new growers are young women.\n\nThis roundtable brings together three growers from highland communities in Chiang Rai and Chiang Mai to discuss why they returned, what they found when they did, and what they need to stay. They will also discuss who is recognized as the producer in the household and the community, and what changes when a new generation of farmers owns both the farm and the brand. The discussion links these experiences to the symposium's wider themes of land, climate, and whose knowledge counts in coffee.\n\nSpeakers:\n- Melanee (Bua) Laechoeku, Abo-Kor Coffee & Farm, Baan Sip Lang, Chiang Rai\n- Nanthana (Namwhan) Chantavee, Rotator Cuff Coffee Farm, Huay Nam Khuan, Chiang Rai\n- Chukait (Toki) Hongarthan, TOKI Organic Farm and Toki Coffee est. 1968, Galyani Vadhana, Chiang Mai\n\nModerator: Dr. Arratee Ayuttacorn, Faculty of Social Sciences, Chiang Mai University",
+   "link": "https://cmu.to/coffee2026reg-aud",
+   "linkText": "Audience Registration",
+   "pin": false,
+   "img": "",
+   "media": []
+  },
+  {
    "id": "UMWPV211XJJY",
    "date": "2026-11-21",
    "time": "",
@@ -333,7 +345,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "21 Nov 2026, 10:42 (GMT+7)",
+ "updated": "22 Nov 2026, 20:50 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
@@ -859,7 +871,7 @@
       },
       {
        "name": "Siwakorn Odochao",
-       "affiliation": "Lazyman Coffee",
+       "affiliation": "Coffee Grower & Founder, Lazy Man Coffee, Ban Nong Tao, Chiang Mai, Thailand",
        "talk": "Land, forest, and coffee: the limitations of coffee growers in Thailand"
       }
      ],
