@@ -301,7 +301,7 @@
    "link": "https://cmu.to/coffee2026reg-aud",
    "linkText": "Audience Registration",
    "pin": false,
-   "img": "updates/2026-11-23-mwt4bfo8.jpg?v=mwt4bfo8",
+   "img": "updates/2026-11-23-mwt80gqj.jpg?v=mwt80gqj",
    "media": []
   },
   {
@@ -357,7 +357,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "23 Nov 2026, 17:24 (GMT+7)",
+ "updated": "23 Nov 2026, 19:07 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
@@ -1133,17 +1133,6 @@
        "theme": "6. Coffee and knowledge production",
        "chair": "Rajnibhas Sukeaw Samakradhamrongthai",
        "papers": [
-        {
-         "title": "Success and Early Growth Performance of Hypocotyl Mini-Grafting on Elite Robusta Coffee (Coffea canephora) Clones in the Western Highlands of Vietnam",
-         "presenter": "Nguyen Tru",
-         "affiliation": "Western Highlands Agriculture and Forestry Science Institute (WASI)",
-         "coAuthors": "Nguyen Viet Tru, Le Dang Khoa, Aske Skovmand Bosselmann",
-         "coming": [],
-         "country": "Vietnam",
-         "online": false,
-         "abstract": "The rejuvenation of aging coffee estates is paramount for sustaining Vietnam’s agricultural output amidst climate challenges. This study evaluated the technical efficiency of hypocotyl mini-grafting using elite Coffea canephora clones (TR4 and TR11) derived from tissue culture (TC), grafted onto two vigorous rootstocks: hybrid C. canephora (TRS1) and indigenous C. liberica. Grafting was performed at the “matchstick” stage (25–30 days post-germination) to leverage high meristematic activity for rapid vascular integration. Results demonstrated an average survival rate exceeding 85%, with the TR11/C. liberica combination reaching a peak of 91.67% at 90 days after grafting (DAG), indicating high histological compatibility. The implementation of the hypocotyl mini-grafting protocol significantly optimized nursery productivity by condensing the production cycle to 3.5 months, a 60% reduction compared to conventional grafting (8–10 months). Beyond temporal efficiency, this technique effectively circumvented the development of J-rooting, a common morphological defect in traditional nursery practices, thereby ensuring superior root system architecture for field establishment. While graft success was uniform across treatments, subsequent vegetative vigor was primarily dictated by the genetic potential of the scion clones. These findings confirm that integrating tissue culture-derived materials with hypocotyl mini-grafting offers a scalable, technically viable, and high-quality solution for clonal propagation in Vietnam’s coffee sector.",
-         "keywords": "Coffea canephor · Mini-grafting technique · Tissue culture · Vascular integration"
-        },
         {
          "title": "Coffee food safety and monitoring",
          "presenter": "Amorn Owatworakit",
