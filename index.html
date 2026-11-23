@@ -81,6 +81,16 @@
   main{padding:8px 0 80px}
   .block{display:grid;grid-template-columns:118px 1fr;gap:24px;padding:22px 0;border-top:1px solid var(--line);scroll-margin-top:90px}
   .block:first-child{border-top:0}
+  /* each block of the programme on a soft panel, white and warm in turn; breaks, lunch and registration stay plain */
+  .day .block{border-top:0;padding:22px 20px;margin:0 -20px 10px;border-radius:16px;background:var(--surface)}
+  .day .block.alt{background:#efe7dc}
+  .day .block.quiet{background:none;padding:6px 20px;margin-bottom:10px}
+  .day .block.alt .session.card{background:var(--surface)}
+  .day .block:not(.alt):not(.quiet) .session.card{background:#f7f3ee}
+  .day .block .session.card:hover{background:var(--accent-soft)}
+  @media (prefers-color-scheme:dark){.day .block.alt{background:#2a241e}.day .block:not(.alt):not(.quiet) .session.card{background:#262220}}
+  @media (max-width:640px){.day .block{padding:18px 14px;margin:0 -10px 10px}.day .block.quiet{padding:6px 14px}}
+  @media print{.day .block,.day .block.alt{background:none!important;margin:0;padding:12px 0;border-top:1px solid #ccc;border-radius:0}}
   .time{font-variant-numeric:tabular-nums;font-weight:700;font-size:15px}
   .time small{display:block;font-weight:400;color:var(--ink-3);font-size:12.5px;margin-top:2px}
   .block.live .time{color:var(--live)}
@@ -375,7 +385,7 @@
           none: 'Nothing matches that search.', subject: 'This schedule is subject to change.', updated: 'Updated', loading: 'Loading the programme…',
           kinds: { keynote: 'Keynote', plenary: 'Plenary discussion', concurrent: 'Concurrent sessions', roundtable: 'Roundtable', opening: 'Opening', closing: 'Closing', side: 'Side programme', open: 'Open session' },
           about: 'About this session', nowL: 'Now', next: 'Next', min: 'min', failed: 'The programme could not be loaded. Please try again in a moment.',
-          map: 'Map', mapCn: 'Map in China (Amap / Baidu)', seeRooms: 'See the rooms', roomsH: 'The rooms', prev: 'Previous photo', nextP: 'Next photo', keywords: 'Keywords', noAbstract: 'The abstract will be added soon.', papers: '{n} papers — titles and abstracts', inside: 'matches inside', rooms: 'Rooms',
+          map: 'Map', mapCn: 'Map in Chinese (Amap / Baidu)', seeRooms: 'See the rooms', roomsH: 'The rooms', prev: 'Previous photo', nextP: 'Next photo', keywords: 'Keywords', noAbstract: 'The abstract will be added soon.', papers: '{n} papers — titles and abstracts', inside: 'matches inside', rooms: 'Rooms',
           mine: 'My programme', people: 'People', onlineTalks: 'Online talks', star: 'Keep in my programme', unstar: 'Remove from my programme',
           mineEmpty: 'Tap ☆ on a session or a talk to keep it here. It stays in this browser on this phone or computer — no account needed.',
           parallel: 'rounds of parallel sessions', papersN: 'papers', nowNext: 'Next', thenNothing: 'That is all for today', roles: { presenter: 'Presenter', coauthor: 'Co-author', speaker: 'Speaker', chair: 'Chair and discussant', moderator: 'Moderator' },
@@ -393,7 +403,7 @@
           none: 'ไม่พบรายการที่ค้นหา', subject: 'กำหนดการอาจมีการเปลี่ยนแปลง', updated: 'อัปเดต', loading: 'กำลังโหลดกำหนดการ…',
           kinds: { keynote: 'ปาฐกถาหลัก', plenary: 'เสวนารวม', concurrent: 'ห้องย่อยคู่ขนาน', roundtable: 'โต๊ะกลม', opening: 'พิธีเปิด', closing: 'พิธีปิด', side: 'กิจกรรมคู่ขนาน', open: 'ช่วงเปิด' },
           about: 'เกี่ยวกับช่วงนี้', nowL: 'ตอนนี้', next: 'ถัดไป', min: 'นาที', failed: 'โหลดกำหนดการไม่สำเร็จ กรุณาลองใหม่อีกครั้ง',
-          map: 'แผนที่', mapCn: 'แผนที่สำหรับจีน (Amap / Baidu)', seeRooms: 'ดูห้องประชุม', roomsH: 'ห้องประชุม', prev: 'รูปก่อนหน้า', nextP: 'รูปถัดไป', keywords: 'คำสำคัญ', noAbstract: 'บทคัดย่อจะเพิ่มเร็ว ๆ นี้', papers: '{n} บทความ — ชื่อเรื่องและบทคัดย่อ', inside: 'พบในเนื้อหา', rooms: 'ห้อง',
+          map: 'แผนที่', mapCn: 'แผนที่ภาษาจีน (Amap / Baidu)', seeRooms: 'ดูห้องประชุม', roomsH: 'ห้องประชุม', prev: 'รูปก่อนหน้า', nextP: 'รูปถัดไป', keywords: 'คำสำคัญ', noAbstract: 'บทคัดย่อจะเพิ่มเร็ว ๆ นี้', papers: '{n} บทความ — ชื่อเรื่องและบทคัดย่อ', inside: 'พบในเนื้อหา', rooms: 'ห้อง',
           mine: 'ตารางของฉัน', people: 'รายชื่อ', onlineTalks: 'นำเสนอออนไลน์', star: 'เก็บไว้ในตารางของฉัน', unstar: 'นำออกจากตารางของฉัน',
           mineEmpty: 'กด ☆ ที่ช่วงที่สนใจเพื่อเก็บไว้ที่นี่ ข้อมูลเก็บในเบราว์เซอร์ของเครื่องนี้เท่านั้น ไม่ต้องสมัครสมาชิก',
           parallel: 'รอบห้องย่อยคู่ขนาน', papersN: 'บทความ', nowNext: 'ถัดไป', thenNothing: 'จบกำหนดการวันนี้แล้ว', roles: { presenter: 'ผู้นำเสนอ', coauthor: 'ผู้เขียนร่วม', speaker: 'วิทยากร', chair: 'ประธานและผู้วิพากษ์', moderator: 'ผู้ดำเนินรายการ' },
@@ -816,6 +826,10 @@
         }).join('') + '</div>';
     });
     $('main').innerHTML = any ? html : '<div class="' + (VIEW === 'mine' ? 'mine-empty' : 'empty') + '">' + esc(t(VIEW === 'mine' ? 'mineEmpty' : 'none')) + '</div>';
+    // white and warm panels in turn, day by day, counting only the blocks with a programme (not breaks)
+    Array.prototype.forEach.call($('main').querySelectorAll('.day'), function (dd) {
+      var k = 0; Array.prototype.forEach.call(dd.querySelectorAll('.block'), function (b) { if (!b.classList.contains('quiet')) b.classList.toggle('alt', (k++) % 2 === 1); });
+    });
     $('now').hidden = !nowTxt; $('now').textContent = nowTxt ? '● ' + nowTxt : '';
   }
   /** The symposium in short, who organises it with whom, and whose site this is. */
