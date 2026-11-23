@@ -213,8 +213,8 @@
     "key": "cupping",
     "title": "Public Cupping",
     "sub": "28 Nov 2026 · 1:30 PM",
-    "link": "https://cmu.to/coffee2026cupping",
-    "st": "open",
+    "link": "",
+    "st": "soon",
     "logo": "logos/c-cmu-coffee.png?v=mvz4fzc2"
    },
    {
@@ -254,8 +254,8 @@
      }
     ],
     "reg": true,
-    "link": "https://cmu.to/coffee2026cupping",
-    "st": "open"
+    "link": "",
+    "st": "soon"
    }
   ],
   "groups": {
@@ -288,8 +288,29 @@
     ]
    }
   },
-  "booths": null,
-  "boothsSoon": "Coffee producers, roasters and research groups show their work through both days. The list of booths and a floor plan will be posted here.",
+  "booths": [
+   {
+    "name": "Lazy Man coffee, Mae Wang, Chiang Mai",
+    "who": "Siwakorn",
+    "days": "Both days"
+   },
+   {
+    "name": "TOKI COFFEE ORGANIC FARM",
+    "who": "Toki",
+    "days": "Day 1 (27 Nov)"
+   },
+   {
+    "name": "Baan Sip Lang, Chiang Rai",
+    "who": "Bua",
+    "days": ""
+   },
+   {
+    "name": "CMU Coffee",
+    "who": "",
+    "days": ""
+   }
+  ],
+  "boothsSoon": "",
   "boothList": null
  },
  "posts": [
@@ -358,7 +379,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "23 Nov 2026, 20:10 (GMT+7)",
+ "updated": "23 Nov 2026, 20:15 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
