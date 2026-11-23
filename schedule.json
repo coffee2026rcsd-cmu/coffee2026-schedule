@@ -345,7 +345,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "22 Nov 2026, 21:24 (GMT+7)",
+ "updated": "23 Nov 2026, 17:10 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
@@ -898,59 +898,113 @@
      "end": "12:30 PM",
      "startMin": 660,
      "type": "concurrent",
-     "title": "Concurrent Session III (2 Sessions)",
+     "title": "Concurrent Session III (3 Sessions)",
      "about": "",
      "room": "",
      "roomKey": "",
      "sessions": [
       {
        "code": "P07",
-       "name": "Livelihoods and Food Security under Climate Change",
+       "name": "Reimagining Coffee Culture: Image, Value and Identity",
        "room": "Room 1: Dhani Room",
        "roomKey": "dhani-room",
-       "theme": "2. Coffee agriculture and agroforestry under climate change",
-       "chair": "Chaya Vaddhanaphuti",
+       "theme": "4. Coffee culture",
+       "chair": "Sakkarin Na Nan",
        "papers": [
         {
-         "title": "Food Security in Transition: Cash-Crop Coffee Farming, Forest Conservation, and Ethnic Livelihoods in Pangkhon Village, Chiang Rai",
-         "presenter": "Sawang Meesaeng",
-         "affiliation": "School of Social Innovation, Mae Fah Luang University, Chiang Rai, Thailand",
+         "title": "Localized globalization: The Heritagization and Decolonization of Vietnamese Coffee Culture",
+         "presenter": "Yueping Wang",
+         "affiliation": "School of Ethnology and Sociology, Yunnan University",
+         "coAuthors": "",
+         "coming": [],
+         "country": "China",
+         "online": true,
+         "abstract": "For a long time, Vietnamese coffee culture, as a colonial legacy, has been widely embraced by the Vietnamese people and deeply embedded in their everyday life, giving rise to a distinctively Vietnamese style of phin drip-filter coffee. In recent years, however, amid the transformation of Vietnam’s coffee industry, both the Vietnamese government and domestic coffee enterprises have been actively promoting the re-creation of indigenous coffee culture. Notably, in 2025, the inscription of the Knowledge of Coffee Cultivation and Processing in Đắk Lắk Province onto Vietnam’s National List of Intangible Cultural Heritage represents an outcome of the state’s drive toward the heritagization of coffee culture. Meanwhile, Vietnamese coffee enterprises, most notably Trung Nguyên Coffee, have been reshaping the image and positioning of Vietnamese coffee in both domestic and international markets by establishing the “Coffee Dao” (the Way of Coffee) and founding coffee museums. This top-down heritagization of Vietnamese coffee culture and the concomitant construction of “localized globalization” demonstrate the translation and re-creation of Vietnamese coffee culture against the backdrop of global connectivity, while simultaneously constituting a decolonizing engagement with colonial heritage.",
+         "keywords": ""
+        },
+        {
+         "title": "Body, Nature, and the Gaze: A Study on the Cheat code forviews and Cultural Mechanisms of China's influencer Cafes",
+         "presenter": "Yanlan SHI",
+         "affiliation": "School of Law and Politics, Yunnan University of Finance and Economics",
+         "coAuthors": "",
+         "coming": [],
+         "country": "China",
+         "online": true,
+         "abstract": "In recent years, various influencer Cafés that combine sensory experiences such as taste and sight have emerged in China, becoming a new form of tourism in the context of cultural and tourism integration. This study focuses on several\npopular and highly representative influencer Cafes in China, conducting an in-depth analysis to argue that visiting these cafés has become a cultural phenomenon reflecting nature, visual aesthetics, and bodily experience within tourism. Judging from\ncurrent forms—such as waterfall cafés and cave cafés—coffee consumption is deeply integrated with tourism experiences, involving observation, physical sensations, and people's exploration and aspirations toward nature. In today’s tourism consumption, gaze theory and embodiment theory alone are insufficient to fully explain the underlying cultural and social meanings and the mechanisms behind this phenomenon. Drawing on cultural sociology, this study attempts to analyze the cultural mechanisms emerging from the fusion of symbolic consumption and bodily experience, thereby proposing a new theoretical framework for understanding tourism experiences.",
+         "keywords": ""
+        },
+        {
+         "title": "When the Highlands Move: Coffee, Ethnicity, and Regional Politics of Belonging in Thailand",
+         "presenter": "Pheeraphong Jampee",
+         "affiliation": "Chiang Mai University",
          "coAuthors": "",
          "coming": [],
          "country": "Thailand",
          "online": false,
-         "abstract": "This study examines the food security status of ethnic Arabica coffee farmers in the highlands of Chiang Rai, Thailand, focusing on Panghon Village. Originally promoted under agroforestry through royal initiatives to replace opium cultivation and prevent deforestation, coffee farming has increasingly shifted toward monoculture cash-crop production. Coupled with strict conservation laws—such as restrictions on land expansion, hunting, and foraging—and processing conditions that reduced livestock farming, household food production for self-consumption has declined, making farmers heavily reliant on cash income to purchase food.\n\nGrounded in the Food and Agriculture Organization’s (FAO) concept of \"Transitory Food Insecurity\", this study employs a mixed-methods approach, integrating qualitative techniques (participant observation and in-depth interviews) with quantitative household surveys.\n\nThe findings indicate that while coffee cultivation has significantly increased cash income and improved economic well-being, household food security—particularly food availability and access—is no longer tied to local subsistence production or natural foraging. Instead, it relies predominantly on income stability derived from the coffee business. As a result, farmers are more vulnerable to unstable coffee prices, investment-related household debt, and climate change impacts on crop yields.\n\nBased on these findings, the study proposes three key policy recommendations: (1) reforming forest conservation policies to allow community participation in defining sustainable access to forest resources for food; (2) promoting off-season vegetable cultivation for household consumption and supplementary income; and (3) establishing social safety net programs to mitigate future economic vulnerabilities and enhance long-term food security.",
-         "keywords": "Food Security · Arabica Coffee · Transitory Food Insecurity · Highland Communities · Chiang Rai"
-        },
-        {
-         "title": "Livelihood Strategies and Economic Disparities in a Lao Coffee Village: Adaptation to Climate Change on the Bolaven Plateau",
-         "presenter": "Arihiro Minoo",
-         "affiliation": "Waseda University",
-         "coAuthors": "",
-         "coming": [],
-         "country": "Japan",
-         "online": false,
-         "abstract": "This presentation examines the livelihood strategies of residents in the coffee-growing region of the Bolaven Plateau in southern Laos. Here, \"livelihood strategies\" refers to the logic underlying the patterns by which households sustain and expand themselves through the utilization of natural and human resources. By employing this approach—and considering variables such as farmland size, household composition, and coffee yields—we can clarify how and why economic disparities emerge.\n　This study focuses on Village N in Paksong District, Champasak Province. Located near the district center, the village relies primarily on coffee cultivation for its livelihood. However, recent climate change has led to a decline in coffee yields. Amidst this crisis of falling yields, it has become evident that livelihood strategies differ significantly depending on a household's asset levels. Wealthy households were less severely affected by climate change and managed to maintain stable yields on their land. In contrast, households with fewer assets faced a greater impact; as yields dropped, some found coffee cultivation unviable and switched to alternative crops like cucumbers. However, since these alternative crops often command low prices in the domestic market, they offer little prospect for increased income, leaving these households struggling to sustain themselves.\n　These findings allow us to examine how residents cope with climate change. While continuing coffee cultivation is not necessarily the optimal path, we can explore the conditions required to sustain it, as well as the factors that enable a shift to alternative livelihoods or the simultaneous pursuit of multiple income sources.\n　Although rising coffee purchase prices have recently brought a boom to coffee-producing regions, households with limited farmland have been unable to fully reap these benefits, resulting in a widening economic gap. This presentation argues that an understanding of livelihood strategies is essential for the economic development of coffee-dependent rural areas.",
-         "keywords": "Lao PDR · Livelihood strategies · Coffee · Economic disparity · Climate change"
-        },
-        {
-         "title": "From Fresh Tea Leaves to Coffee Cherries: Remaking Practices and Knowledge in a Highland Borderland",
-         "presenter": "Omsin Boonleart",
-         "affiliation": "Mae Fah Luang University",
-         "coAuthors": "",
-         "coming": [],
-         "country": "Thailand",
-         "online": false,
-         "abstract": "Over the past four decades, state-led development and market expansion have changed agricultural practices in the highlands of Northern Thailand. Previous highland agricultural development programs that promoted different crops in different areas, including vegetables, tea, and coffee, contributed to differentiated agricultural landscapes and crop-specific practices and knowledge. However, these agricultural landscapes are not fixed. Growing markets and private actors have increasingly influenced how new crops and practices enter areas with established crop patterns. This paper examines these changes through three neighboring ethnic highland communities in Chiang Rai, which share a similar tea-based agricultural history. While coffee is not new to all of these communities, it is becoming more visible even in areas well known for tea. Coffee has entered these communities through different pathways, which allows me to examine how farmers manage existing and new practices. This paper employs the concept of landscape plasticity to examine how farmers draw on different forms of agricultural and market knowledge as coffee enters existing tea-based landscapes. These practices differ depending on how coffee enters the community and farmers’ access to knowledge, networks and markets. Initial observations from fieldwork on tea production suggest that many farmers continue to rely on tea as a regular source of income, while introducing coffee as an additional crop. Many sell coffee cherries or parchment rather than processing it further, similar to how they sell fresh tea leaves. Others with more financial resources, stronger social networks, and greater market knowledge have more options to experiment with further processing, develop their own brands, explore specialty coffee markets, and continue supplying larger markets. These observations suggest that coffee does not simply replace tea but gradually remakes agricultural practices and knowledge. This process is uneven, showing how landscape plasticity can take different forms within the same highland borderland.",
-         "keywords": "Chiang Rai · Coffee · Landscape Plasticity · Agricultural Knowledge"
+         "abstract": "This article examines how coffee production acquires different meanings beyond Thailand’s northern highlands into new settings. It compares the established Arabica coffee economy associated with Akha entrepreneurship in Chiang Rai with an emerging Robusta initiative among Tai Dam producers in Loei Province. Rather than treating these cases as equivalent, the article approaches them as distinct trajectories shaped by institutional histories, market conditions, and relationships between ethnicity and economic opportunity. The analysis draws on scholarship on highland crop replacement and ethnicized coffee commerce, alongside ten semi-structured interviews with Tai Dam coffee producers conducted on 20 October 2026. All ten interviewees reported receiving provincial funding to begin coffee production, and all described their plantations as being at an early stage. Only one explicitly identified Tai Dam identity as important to coffee branding; the other nine did not identify ethnicity as a branding priority. This finding does not indicate that ethnic identity is unimportant elsewhere. Drawing on Benedict Anderson’s concept of imagined communities and Pierre Bourdieu’s concepts of habitus and symbolic capital, the article argues that the commercial use of ethnic identity depends on institutional and market context. The movement of coffee, therefore, does not necessarily entail the movement of ethnic identity into the marketplace.",
+         "keywords": "Isan · Tai Dam · Akha"
         }
        ]
       },
       {
        "code": "P08",
-       "name": "Constructing Quality: Taste, Fermentation and Sensory Knowledge",
+       "name": "Coffee as Commodity: Prices, Middlemen and Value Chains",
        "room": "Room 2: Co-working Space",
        "roomKey": "co-working-space",
+       "theme": "3. Coffee as commodity",
+       "chair": "Philip Hirsch",
+       "papers": [
+        {
+         "title": "Producing the “Sustainable” Coffee Landscape: Political Ecology, Value Chains, and Smallholder Livelihoods in the Gayo Highlands of Aceh, Indonesia",
+         "presenter": "Sukumar Babu Ramapuram Samuel Vijay",
+         "affiliation": "Goethe University in Germany",
+         "coAuthors": "",
+         "coming": [],
+         "country": "Indonesia",
+         "online": true,
+         "abstract": "Southeast Asia's coffee landscapes are being changed by the combination of global specialty-coffee markets, sustainability interventions, climate change, and evolving rural governance. This research investigates these processes in the Gayo Highlands of Aceh, Indonesia, where smallholder Arabica production is both rooted in global value chains and contested local landscapes of land, forest, and livelihoods. Using political ecology and a critical global value chain (GVC) perspective, the paper investigates how sustainability interventions and global coffee markets reshape smallholder producers' access to land, resources, knowledge, and value, and what the implications are for livelihood and environmental justice. Existing research has demonstrated that coffee upgrading and sustainability programs can create new market opportunities, but they can also perpetuate local inequalities by limiting access to money, markets, institutions, and decision-making. Research on Indonesian coffee shows that the benefits of \"relationship coffee\" and value-chain upgrading are frequently reaped by locally powerful players, but sustainability programs may have limited compatibility with current livelihoods. However, little attention has been paid to how environmental governance, gendered interactions, climate adaptation, and value-chain reconfiguration intersect geographically within the same coffee landscape. The study's methodology is a qualitative, multi-scalar approach that includes semi-structured interviews with farmers, cooperatives, traders, government and development actors, participant observation, life histories, and analysis of coffee certification, land-use, and policy papers. By linking everyday livelihood practices to larger commodity governance processes, the paper contends that \"sustainable coffee\" should be viewed as a contested political process in which value, environmental responsibility, and resource access are negotiated. It thus combines studies on political ecology, agrarian change, and GVCs to demonstrate how sustainability is produced and unevenly distributed across the Gayo coffee landscape.",
+         "keywords": "Political Ecology · Coffee Landscapes · Global Value Chains · Smallholder Livelihoods · Environmental Justice"
+        },
+        {
+         "title": "Between Field and Market: Middlemen as Local Market Regulators, Corporate Connectors, and EUDR Adapters in Vietnam’s Coffee Chain",
+         "presenter": "Thi To Ngoc Do",
+         "affiliation": "Phuoc Son Agricultural Trading Ltd. Company",
+         "coAuthors": "",
+         "coming": [],
+         "country": "Vietnam",
+         "online": false,
+         "abstract": "Local coffee traders connect smallholder farmers to large buying companies, but their significance extends beyond commodity purchasing. This paper examines middlemen in Vietnam’s Central Highlands as de facto local market regulators and corporate connectors whose purchasing, information, informal finance, and traceability functions shape farmers’ access to markets. Drawing on sector literature, Vietnamese press reports, and the author’s practice-based observations within a coffee trading and 4C-certification program in Lam Dong Province, it develops the concept of trader dependency: situations in which access to production credit, inputs, market information, and sales channels becomes concentrated within a durable trader relationship. These relationships provide organizational reach, liquidity, and market access that many sustainability programs lack, but they can also constrain farmers’ choices and create risks of exclusion. Land-tenure insecurity sharpens the condition: households without documented rights find formal finance and sustainability programs harder to reach, and the trader’s bundle of services fills the resulting gap. Their protective function can also be reversed. Recurrent insolvencies of buying agents holding farmers’ consigned coffee show how sharp price movements and defaults on either side can turn established relationships into channels of loss and erode trust. This fragility matters because sustainability interventions operate through existing intermediary networks rather than independently of them, a dynamic made particularly visible by traders’ operational adaptation to the European Union Deforestation Regulation (EUDR). The central policy challenge is therefore not disintermediation but governance: designing institutions capable of aligning intermediary incentives with inclusive and environmentally sustainable rural development and of protecting the trust on which the middleman’s market-regulating, connective, and compliance functions all depend.",
+         "keywords": "Middlemen · Coffee Certification · Sustainability · Trader dependency · EUDR"
+        },
+        {
+         "title": "Brewing inequality in Flores Coffee: Entrepreneurial Mediation, Logistics, and Unequal Value Chains",
+         "presenter": "Putri Agustina Poerwanti",
+         "affiliation": "Linnaeus University",
+         "coAuthors": "",
+         "coming": [],
+         "country": "Sweden",
+         "online": false,
+         "abstract": "This paper examines how coffee farmers in Flores, Indonesia, experience participation in specialty and sustainability-oriented markets. It asks how logistics, harvest timing, buyer and certification requirements shape farmers’ ability to capture value and exercise agency within the coffee value chain. The study draws on qualitative interviews with ten coffee farmers in Flores, complemented by the author’s reflexive account as a coffee entrepreneur and intermediary in the region. The analysis focuses on three connected issues: inter-island transport and freight costs; constraints associated with a concentrated annual harvest; and certification and traceability requirements that privilege documented evidence. It considers how these conditions shape farmers’ bargaining room, the distribution of costs and risks, and the representation of local production practices to distant buyers. The analysis suggests that access to specialty markets can create opportunities while leaving farmers exposed to logistical, temporal, and compliance burdens shaped beyond the place of production. By foregrounding farmers’ accounts and linking them to the wider organization of the coffee trade, the paper offers a place-based perspective on coffee as a commodity. It argues for greater transparency in the allocation of logistics and compliance costs and for recognition of producer-defined priorities in market relationships.",
+         "keywords": "Flores coffee · coffee value chains · smallholder farmers · market access · certification"
+        },
+        {
+         "title": "Volatility, Financialization, and the Global Value Chain Imbalance in the World Coffee Market",
+         "presenter": "Zhang Jianfeng",
+         "affiliation": "Distinguished Researcher, National Centre for Borderlands Ethnic Studies in Southwest China at Yunnan University",
+         "coAuthors": "",
+         "coming": [],
+         "country": "China",
+         "online": false,
+         "abstract": "Green coffee is among the most important agricultural commodities in world trade, and among the most volatile. This paper examines four propositions about that volatility: that its first-order roots lie in the biological-agronomic cycle of a perennial tree crop compounded by climate shocks; that financialization over the past five decades has amplified the resulting swings; that demand is strongly price-rigid, so that adjustment costs fall almost entirely on producers; and that the global value chain allocates value asymmetrically between the producing South and the consuming North. The paper finds all four propositions supported, though with different mechanism weights: fundamentals set the direction of price moves, financial structure sets their amplitude and tempo, demand rigidity determines who bears the cost, and value-chain governance determines who captures the gains.",
+         "keywords": "coffee price · commodity volatility · financialization · price elasticity of demand · North–South inequality"
+        }
+       ]
+      },
+      {
+       "code": "P09",
+       "name": "Constructing Quality: Taste, Fermentation and Sensory Knowledge",
+       "room": "Room 3: Social Science Library",
+       "roomKey": "room-4107",
        "theme": "6. Coffee and knowledge production",
        "chair": "Kengkij Kitirianglarp",
        "papers": [
@@ -1017,50 +1071,50 @@
      "roomKey": "",
      "sessions": [
       {
-       "code": "P09",
-       "name": "Reimagining Coffee Culture: Image, Value and Identity",
+       "code": "P10",
+       "name": "Livelihoods and Food Security under Climate Change",
        "room": "Room 1: Dhani Room",
        "roomKey": "dhani-room",
-       "theme": "4. Coffee culture",
-       "chair": "Sakkarin Na Nan",
+       "theme": "2. Coffee agriculture and agroforestry under climate change",
+       "chair": "Chaya Vaddhanaphuti",
        "papers": [
         {
-         "title": "Localized globalization: The Heritagization and Decolonization of Vietnamese Coffee Culture",
-         "presenter": "Yueping Wang",
-         "affiliation": "School of Ethnology and Sociology, Yunnan University",
-         "coAuthors": "",
-         "coming": [],
-         "country": "China",
-         "online": true,
-         "abstract": "For a long time, Vietnamese coffee culture, as a colonial legacy, has been widely embraced by the Vietnamese people and deeply embedded in their everyday life, giving rise to a distinctively Vietnamese style of phin drip-filter coffee. In recent years, however, amid the transformation of Vietnam’s coffee industry, both the Vietnamese government and domestic coffee enterprises have been actively promoting the re-creation of indigenous coffee culture. Notably, in 2025, the inscription of the Knowledge of Coffee Cultivation and Processing in Đắk Lắk Province onto Vietnam’s National List of Intangible Cultural Heritage represents an outcome of the state’s drive toward the heritagization of coffee culture. Meanwhile, Vietnamese coffee enterprises, most notably Trung Nguyên Coffee, have been reshaping the image and positioning of Vietnamese coffee in both domestic and international markets by establishing the “Coffee Dao” (the Way of Coffee) and founding coffee museums. This top-down heritagization of Vietnamese coffee culture and the concomitant construction of “localized globalization” demonstrate the translation and re-creation of Vietnamese coffee culture against the backdrop of global connectivity, while simultaneously constituting a decolonizing engagement with colonial heritage.",
-         "keywords": ""
-        },
-        {
-         "title": "Body, Nature, and the Gaze: A Study on the Cheat code forviews and Cultural Mechanisms of China's influencer Cafes",
-         "presenter": "Yanlan SHI",
-         "affiliation": "School of Law and Politics, Yunnan University of Finance and Economics",
-         "coAuthors": "",
-         "coming": [],
-         "country": "China",
-         "online": true,
-         "abstract": "In recent years, various influencer Cafés that combine sensory experiences such as taste and sight have emerged in China, becoming a new form of tourism in the context of cultural and tourism integration. This study focuses on several\npopular and highly representative influencer Cafes in China, conducting an in-depth analysis to argue that visiting these cafés has become a cultural phenomenon reflecting nature, visual aesthetics, and bodily experience within tourism. Judging from\ncurrent forms—such as waterfall cafés and cave cafés—coffee consumption is deeply integrated with tourism experiences, involving observation, physical sensations, and people's exploration and aspirations toward nature. In today’s tourism consumption, gaze theory and embodiment theory alone are insufficient to fully explain the underlying cultural and social meanings and the mechanisms behind this phenomenon. Drawing on cultural sociology, this study attempts to analyze the cultural mechanisms emerging from the fusion of symbolic consumption and bodily experience, thereby proposing a new theoretical framework for understanding tourism experiences.",
-         "keywords": ""
-        },
-        {
-         "title": "When the Highlands Move: Coffee, Ethnicity, and Regional Politics of Belonging in Thailand",
-         "presenter": "Pheeraphong Jampee",
-         "affiliation": "Chiang Mai University",
+         "title": "Food Security in Transition: Cash-Crop Coffee Farming, Forest Conservation, and Ethnic Livelihoods in Pangkhon Village, Chiang Rai",
+         "presenter": "Sawang Meesaeng",
+         "affiliation": "School of Social Innovation, Mae Fah Luang University, Chiang Rai, Thailand",
          "coAuthors": "",
          "coming": [],
          "country": "Thailand",
          "online": false,
-         "abstract": "This article examines how coffee production acquires different meanings beyond Thailand’s northern highlands into new settings. It compares the established Arabica coffee economy associated with Akha entrepreneurship in Chiang Rai with an emerging Robusta initiative among Tai Dam producers in Loei Province. Rather than treating these cases as equivalent, the article approaches them as distinct trajectories shaped by institutional histories, market conditions, and relationships between ethnicity and economic opportunity. The analysis draws on scholarship on highland crop replacement and ethnicized coffee commerce, alongside ten semi-structured interviews with Tai Dam coffee producers conducted on 20 October 2026. All ten interviewees reported receiving provincial funding to begin coffee production, and all described their plantations as being at an early stage. Only one explicitly identified Tai Dam identity as important to coffee branding; the other nine did not identify ethnicity as a branding priority. This finding does not indicate that ethnic identity is unimportant elsewhere. Drawing on Benedict Anderson’s concept of imagined communities and Pierre Bourdieu’s concepts of habitus and symbolic capital, the article argues that the commercial use of ethnic identity depends on institutional and market context. The movement of coffee, therefore, does not necessarily entail the movement of ethnic identity into the marketplace.",
-         "keywords": "Isan · Tai Dam · Akha"
+         "abstract": "This study examines the food security status of ethnic Arabica coffee farmers in the highlands of Chiang Rai, Thailand, focusing on Panghon Village. Originally promoted under agroforestry through royal initiatives to replace opium cultivation and prevent deforestation, coffee farming has increasingly shifted toward monoculture cash-crop production. Coupled with strict conservation laws—such as restrictions on land expansion, hunting, and foraging—and processing conditions that reduced livestock farming, household food production for self-consumption has declined, making farmers heavily reliant on cash income to purchase food.\n\nGrounded in the Food and Agriculture Organization’s (FAO) concept of \"Transitory Food Insecurity\", this study employs a mixed-methods approach, integrating qualitative techniques (participant observation and in-depth interviews) with quantitative household surveys.\n\nThe findings indicate that while coffee cultivation has significantly increased cash income and improved economic well-being, household food security—particularly food availability and access—is no longer tied to local subsistence production or natural foraging. Instead, it relies predominantly on income stability derived from the coffee business. As a result, farmers are more vulnerable to unstable coffee prices, investment-related household debt, and climate change impacts on crop yields.\n\nBased on these findings, the study proposes three key policy recommendations: (1) reforming forest conservation policies to allow community participation in defining sustainable access to forest resources for food; (2) promoting off-season vegetable cultivation for household consumption and supplementary income; and (3) establishing social safety net programs to mitigate future economic vulnerabilities and enhance long-term food security.",
+         "keywords": "Food Security · Arabica Coffee · Transitory Food Insecurity · Highland Communities · Chiang Rai"
+        },
+        {
+         "title": "Livelihood Strategies and Economic Disparities in a Lao Coffee Village: Adaptation to Climate Change on the Bolaven Plateau",
+         "presenter": "Arihiro Minoo",
+         "affiliation": "Waseda University",
+         "coAuthors": "",
+         "coming": [],
+         "country": "Japan",
+         "online": false,
+         "abstract": "This presentation examines the livelihood strategies of residents in the coffee-growing region of the Bolaven Plateau in southern Laos. Here, \"livelihood strategies\" refers to the logic underlying the patterns by which households sustain and expand themselves through the utilization of natural and human resources. By employing this approach—and considering variables such as farmland size, household composition, and coffee yields—we can clarify how and why economic disparities emerge.\n　This study focuses on Village N in Paksong District, Champasak Province. Located near the district center, the village relies primarily on coffee cultivation for its livelihood. However, recent climate change has led to a decline in coffee yields. Amidst this crisis of falling yields, it has become evident that livelihood strategies differ significantly depending on a household's asset levels. Wealthy households were less severely affected by climate change and managed to maintain stable yields on their land. In contrast, households with fewer assets faced a greater impact; as yields dropped, some found coffee cultivation unviable and switched to alternative crops like cucumbers. However, since these alternative crops often command low prices in the domestic market, they offer little prospect for increased income, leaving these households struggling to sustain themselves.\n　These findings allow us to examine how residents cope with climate change. While continuing coffee cultivation is not necessarily the optimal path, we can explore the conditions required to sustain it, as well as the factors that enable a shift to alternative livelihoods or the simultaneous pursuit of multiple income sources.\n　Although rising coffee purchase prices have recently brought a boom to coffee-producing regions, households with limited farmland have been unable to fully reap these benefits, resulting in a widening economic gap. This presentation argues that an understanding of livelihood strategies is essential for the economic development of coffee-dependent rural areas.",
+         "keywords": "Lao PDR · Livelihood strategies · Coffee · Economic disparity · Climate change"
+        },
+        {
+         "title": "From Fresh Tea Leaves to Coffee Cherries: Remaking Practices and Knowledge in a Highland Borderland",
+         "presenter": "Omsin Boonleart",
+         "affiliation": "Mae Fah Luang University",
+         "coAuthors": "",
+         "coming": [],
+         "country": "Thailand",
+         "online": false,
+         "abstract": "Over the past four decades, state-led development and market expansion have changed agricultural practices in the highlands of Northern Thailand. Previous highland agricultural development programs that promoted different crops in different areas, including vegetables, tea, and coffee, contributed to differentiated agricultural landscapes and crop-specific practices and knowledge. However, these agricultural landscapes are not fixed. Growing markets and private actors have increasingly influenced how new crops and practices enter areas with established crop patterns. This paper examines these changes through three neighboring ethnic highland communities in Chiang Rai, which share a similar tea-based agricultural history. While coffee is not new to all of these communities, it is becoming more visible even in areas well known for tea. Coffee has entered these communities through different pathways, which allows me to examine how farmers manage existing and new practices. This paper employs the concept of landscape plasticity to examine how farmers draw on different forms of agricultural and market knowledge as coffee enters existing tea-based landscapes. These practices differ depending on how coffee enters the community and farmers’ access to knowledge, networks and markets. Initial observations from fieldwork on tea production suggest that many farmers continue to rely on tea as a regular source of income, while introducing coffee as an additional crop. Many sell coffee cherries or parchment rather than processing it further, similar to how they sell fresh tea leaves. Others with more financial resources, stronger social networks, and greater market knowledge have more options to experiment with further processing, develop their own brands, explore specialty coffee markets, and continue supplying larger markets. These observations suggest that coffee does not simply replace tea but gradually remakes agricultural practices and knowledge. This process is uneven, showing how landscape plasticity can take different forms within the same highland borderland.",
+         "keywords": "Chiang Rai · Coffee · Landscape Plasticity · Agricultural Knowledge"
         }
        ]
       },
       {
-       "code": "P10",
+       "code": "P11",
        "name": "Coffee Science: Grafting, Processing and Food Safety",
        "room": "Room 2: Co-working Space",
        "roomKey": "co-working-space",
@@ -1148,89 +1202,10 @@
      "speakers": []
     },
     {
-     "id": "SMUF1HAO3GT7",
-     "start": "3:15 PM",
-     "end": "4:45 PM",
-     "startMin": 915,
-     "type": "concurrent",
-     "title": "Concurrent Session V (1 Sessions)",
-     "about": "",
-     "room": "",
-     "roomKey": "",
-     "sessions": [
-      {
-       "code": "P11",
-       "name": "Coffee as Commodity: Prices, Middlemen and Value Chains",
-       "room": "Room 1: Dhani Room",
-       "roomKey": "dhani-room",
-       "theme": "3. Coffee as commodity",
-       "chair": "Philip Hirsch",
-       "papers": [
-        {
-         "title": "Producing the “Sustainable” Coffee Landscape: Political Ecology, Value Chains, and Smallholder Livelihoods in the Gayo Highlands of Aceh, Indonesia",
-         "presenter": "Sukumar Babu Ramapuram Samuel Vijay",
-         "affiliation": "Goethe University in Germany",
-         "coAuthors": "",
-         "coming": [],
-         "country": "Indonesia",
-         "online": true,
-         "abstract": "Southeast Asia's coffee landscapes are being changed by the combination of global specialty-coffee markets, sustainability interventions, climate change, and evolving rural governance. This research investigates these processes in the Gayo Highlands of Aceh, Indonesia, where smallholder Arabica production is both rooted in global value chains and contested local landscapes of land, forest, and livelihoods. Using political ecology and a critical global value chain (GVC) perspective, the paper investigates how sustainability interventions and global coffee markets reshape smallholder producers' access to land, resources, knowledge, and value, and what the implications are for livelihood and environmental justice. Existing research has demonstrated that coffee upgrading and sustainability programs can create new market opportunities, but they can also perpetuate local inequalities by limiting access to money, markets, institutions, and decision-making. Research on Indonesian coffee shows that the benefits of \"relationship coffee\" and value-chain upgrading are frequently reaped by locally powerful players, but sustainability programs may have limited compatibility with current livelihoods. However, little attention has been paid to how environmental governance, gendered interactions, climate adaptation, and value-chain reconfiguration intersect geographically within the same coffee landscape. The study's methodology is a qualitative, multi-scalar approach that includes semi-structured interviews with farmers, cooperatives, traders, government and development actors, participant observation, life histories, and analysis of coffee certification, land-use, and policy papers. By linking everyday livelihood practices to larger commodity governance processes, the paper contends that \"sustainable coffee\" should be viewed as a contested political process in which value, environmental responsibility, and resource access are negotiated. It thus combines studies on political ecology, agrarian change, and GVCs to demonstrate how sustainability is produced and unevenly distributed across the Gayo coffee landscape.",
-         "keywords": "Political Ecology · Coffee Landscapes · Global Value Chains · Smallholder Livelihoods · Environmental Justice"
-        },
-        {
-         "title": "Between Field and Market: Middlemen as Local Market Regulators, Corporate Connectors, and EUDR Adapters in Vietnam’s Coffee Chain",
-         "presenter": "Thi To Ngoc Do",
-         "affiliation": "Phuoc Son Agricultural Trading Ltd. Company",
-         "coAuthors": "",
-         "coming": [],
-         "country": "Vietnam",
-         "online": false,
-         "abstract": "Local coffee traders connect smallholder farmers to large buying companies, but their significance extends beyond commodity purchasing. This paper examines middlemen in Vietnam’s Central Highlands as de facto local market regulators and corporate connectors whose purchasing, information, informal finance, and traceability functions shape farmers’ access to markets. Drawing on sector literature, Vietnamese press reports, and the author’s practice-based observations within a coffee trading and 4C-certification program in Lam Dong Province, it develops the concept of trader dependency: situations in which access to production credit, inputs, market information, and sales channels becomes concentrated within a durable trader relationship. These relationships provide organizational reach, liquidity, and market access that many sustainability programs lack, but they can also constrain farmers’ choices and create risks of exclusion. Land-tenure insecurity sharpens the condition: households without documented rights find formal finance and sustainability programs harder to reach, and the trader’s bundle of services fills the resulting gap. Their protective function can also be reversed. Recurrent insolvencies of buying agents holding farmers’ consigned coffee show how sharp price movements and defaults on either side can turn established relationships into channels of loss and erode trust. This fragility matters because sustainability interventions operate through existing intermediary networks rather than independently of them, a dynamic made particularly visible by traders’ operational adaptation to the European Union Deforestation Regulation (EUDR). The central policy challenge is therefore not disintermediation but governance: designing institutions capable of aligning intermediary incentives with inclusive and environmentally sustainable rural development and of protecting the trust on which the middleman’s market-regulating, connective, and compliance functions all depend.",
-         "keywords": "Middlemen · Coffee Certification · Sustainability · Trader dependency · EUDR"
-        },
-        {
-         "title": "Brewing inequality in Flores Coffee: Entrepreneurial Mediation, Logistics, and Unequal Value Chains",
-         "presenter": "Putri Agustina Poerwanti",
-         "affiliation": "Linnaeus University",
-         "coAuthors": "",
-         "coming": [],
-         "country": "Sweden",
-         "online": false,
-         "abstract": "This paper examines how coffee farmers in Flores, Indonesia, experience participation in specialty and sustainability-oriented markets. It asks how logistics, harvest timing, buyer and certification requirements shape farmers’ ability to capture value and exercise agency within the coffee value chain. The study draws on qualitative interviews with ten coffee farmers in Flores, complemented by the author’s reflexive account as a coffee entrepreneur and intermediary in the region. The analysis focuses on three connected issues: inter-island transport and freight costs; constraints associated with a concentrated annual harvest; and certification and traceability requirements that privilege documented evidence. It considers how these conditions shape farmers’ bargaining room, the distribution of costs and risks, and the representation of local production practices to distant buyers. The analysis suggests that access to specialty markets can create opportunities while leaving farmers exposed to logistical, temporal, and compliance burdens shaped beyond the place of production. By foregrounding farmers’ accounts and linking them to the wider organization of the coffee trade, the paper offers a place-based perspective on coffee as a commodity. It argues for greater transparency in the allocation of logistics and compliance costs and for recognition of producer-defined priorities in market relationships.",
-         "keywords": "Flores coffee · coffee value chains · smallholder farmers · market access · certification"
-        },
-        {
-         "title": "Volatility, Financialization, and the Global Value Chain Imbalance in the World Coffee Market",
-         "presenter": "Zhang Jianfeng",
-         "affiliation": "Distinguished Researcher, National Centre for Borderlands Ethnic Studies in Southwest China at Yunnan University",
-         "coAuthors": "",
-         "coming": [],
-         "country": "China",
-         "online": false,
-         "abstract": "Green coffee is among the most important agricultural commodities in world trade, and among the most volatile. This paper examines four propositions about that volatility: that its first-order roots lie in the biological-agronomic cycle of a perennial tree crop compounded by climate shocks; that financialization over the past five decades has amplified the resulting swings; that demand is strongly price-rigid, so that adjustment costs fall almost entirely on producers; and that the global value chain allocates value asymmetrically between the producing South and the consuming North. The paper finds all four propositions supported, though with different mechanism weights: fundamentals set the direction of price moves, financial structure sets their amplitude and tempo, demand rigidity determines who bears the cost, and value-chain governance determines who captures the gains.",
-         "keywords": "coffee price · commodity volatility · financialization · price elasticity of demand · North–South inequality"
-        }
-       ]
-      }
-     ]
-    },
-    {
-     "id": "SMVHUUTI7FXY",
-     "start": "4:45 PM",
-     "end": "4:55 PM",
-     "startMin": 1005,
-     "type": "break",
-     "title": "Transition Period",
-     "about": "",
-     "room": "",
-     "roomKey": "",
-     "speakers": []
-    },
-    {
      "id": "S21-Day2",
-     "start": "4:55 PM",
-     "end": "5:25 PM",
-     "startMin": 1015,
+     "start": "3:15 PM",
+     "end": "3:45 PM",
+     "startMin": 915,
      "type": "closing",
      "title": "Closing remark",
      "about": "",
@@ -1241,6 +1216,26 @@
        "name": "Professor Emeritus Dr. Pongsak Angkasith",
        "affiliation": "Former Director of Highland Coffee Research and Development Center CMU",
        "talk": ""
+      }
+     ]
+    },
+    {
+     "id": "SMWT2XSVKSZ9",
+     "start": "3:45 PM",
+     "end": "4:45 PM",
+     "startMin": 945,
+     "type": "side",
+     "title": "Farewell music performance",
+     "about": "",
+     "room": "",
+     "roomKey": "",
+     "events": [
+      {
+       "name": "Farewell music performance",
+       "kind": "Music performance",
+       "org": "Lovely (Lor Ae) Garbage Band",
+       "panellists": [],
+       "moderator": ""
       }
      ]
     }
