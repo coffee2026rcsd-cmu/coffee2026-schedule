@@ -213,8 +213,8 @@
     "key": "cupping",
     "title": "Public Cupping",
     "sub": "28 Nov 2026 · 1:30 PM",
-    "link": "",
-    "st": "soon",
+    "link": "https://cmu.to/coffee2026cupping",
+    "st": "open",
     "logo": "logos/c-cmu-coffee.png?v=mvz4fzc2"
    },
    {
@@ -254,8 +254,8 @@
      }
     ],
     "reg": true,
-    "link": "",
-    "st": "soon"
+    "link": "https://cmu.to/coffee2026cupping",
+    "st": "open"
    }
   ],
   "groups": {
@@ -289,105 +289,8 @@
    }
   },
   "booths": null,
-  "boothsSoon": "Unshackling coffee: back to its roots in everyday life\n\nNUA is a shared space for the stories of the people who grow and make coffee, and for how coffee shapes and sustains their lives. It brings these stories together through community booths, exhibitions, activities and panel discussions.\n\nVisit booths and hear the stories of growers and ethnic community producers from northern Thailand and the wider region. They bring coffee, along with community products and much more.\n\nIn Thai, \"\"nua\"\" describes a flavour that is rich, mellow and well-rounded, where many different ingredients blend into one harmonious taste. That is what this space hopes to be: many voices coming together into a balanced whole.\n\nCoffee booths and stories from growers and ethnic community producers in northern Thailand and the region: not only coffee, but also community products and beyond",
-  "boothList": {
-   "title": "Exhibition booths at Nua Coffee Space",
-   "intro": "Coffee growers, roasters, bakers and community groups show their work at Nua Coffee Space, by The Rotate, through both days of the symposium. The floor plan shows where each booth is.",
-   "map": "booths/floor-plan-mwta7z80.jpg",
-   "logo": "booths/venue-logo-mwta7z80.png",
-   "items": [
-    {
-     "code": "C1",
-     "name": "CMU Coffee",
-     "about": "Coffee Research and Development Center, Faculty of Agriculture, Chiang Mai University",
-     "logo": "logos/c-cmu-coffee.png?v=mvz4fzc2"
-    },
-    {
-     "code": "C2",
-     "name": "Baan Pang Mahan village",
-     "about": "Pangmahan Coffee & Tea · Mae Fa Luang, Chiang Rai",
-     "logo": "booths/c2-pangmahan-mwta7z80.jpg"
-    },
-    {
-     "code": "C3",
-     "name": "Toki Coffee",
-     "about": "Galyani Vadhana, Chiang Mai province",
-     "logo": "booths/c3-toki-mwta7z80.jpg"
-    },
-    {
-     "code": "C4",
-     "name": "Ban Sip Lang village",
-     "about": "Abo & Kor Coffee & Farm · Vieng Pa Pao, Chiang Rai",
-     "logo": "booths/c4-abokor-mwta7z80.jpg"
-    },
-    {
-     "code": "C5",
-     "name": "LOLA Coffee and Forest",
-     "about": "Mae Hong Son",
-     "logo": "booths/c5-lola-mwta7z80.jpg"
-    },
-    {
-     "code": "C6",
-     "name": "Ann’s Bakery",
-     "about": "",
-     "logo": ""
-    },
-    {
-     "code": "C7",
-     "name": "Chalom Pizza",
-     "about": "",
-     "logo": ""
-    },
-    {
-     "code": "C8",
-     "name": "White Buffalo Bakery",
-     "about": "",
-     "logo": "booths/c8-whitebuffalo-mwta7z80.jpg"
-    },
-    {
-     "code": "C9",
-     "name": "Aceh Manuscript",
-     "about": "Indonesia",
-     "logo": ""
-    },
-    {
-     "code": "C10",
-     "name": "Myanmar Coffee",
-     "about": "Genius Shan Highlands Coffee",
-     "logo": "booths/c10-genius-mwta7z80.jpg"
-    },
-    {
-     "code": "C11",
-     "name": "Mae To Community",
-     "about": "",
-     "logo": ""
-    },
-    {
-     "code": "C12",
-     "name": "Same Thang",
-     "about": "Handmade bags upcycled from coffee sachets",
-     "logo": "booths/c12-samethang-mwta7z80.jpg"
-    },
-    {
-     "code": "C13",
-     "name": "The Rotate",
-     "about": "",
-     "logo": "logos/c-rotate.png?v=mvz4fw3o"
-    },
-    {
-     "code": "C14",
-     "name": "Pong Lom Rang Community",
-     "about": "",
-     "logo": ""
-    },
-    {
-     "code": "C15",
-     "name": "Huay E Khang Community",
-     "about": "Che Su Mo",
-     "logo": "booths/c15-chesumo-mwta7z80.jpg"
-    }
-   ]
-  }
+  "boothsSoon": "Coffee producers, roasters and research groups show their work through both days. The list of booths and a floor plan will be posted here.",
+  "boothList": null
  },
  "posts": [
   {
