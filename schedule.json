@@ -219,8 +219,8 @@
    },
    {
     "key": "nua",
-    "title": "Nua Coffee Space",
-    "sub": "by The Rotate",
+    "title": "Workshop by The Rotate",
+    "sub": "Nua Coffee Space · soon",
     "link": "",
     "st": "soon",
     "left": null,
@@ -276,7 +276,7 @@
     ]
    },
    "nua": {
-    "title": "Nua Coffee Space by The Rotate",
+    "title": "Workshop by The Rotate",
     "intro": "Several activities at Nua Coffee Space through both days, 10 places each. A deposit holds your place and is returned to you in cash when you join.",
     "soon": "Several activities at Nua Coffee Space through both days, 10 places each. Details and registration will be posted here and in Updates.",
     "logos": [
@@ -311,7 +311,104 @@
    }
   ],
   "boothsSoon": "",
-  "boothList": null
+  "boothList": {
+   "title": "Exhibition booths at Nua Coffee Space",
+   "intro": "Coffee growers, roasters, bakers and community groups show their work at Nua Coffee Space, by The Rotate, through both days of the symposium. The floor plan shows where each booth is.",
+   "map": "booths/floor-plan-mwtajq4p.jpg",
+   "logo": "booths/venue-logo-mwtajq4p.png",
+   "items": [
+    {
+     "code": "C1",
+     "name": "CMU Coffee",
+     "about": "Coffee Research and Development Center, Faculty of Agriculture, Chiang Mai University",
+     "logo": "logos/c-cmu-coffee.png?v=mvz4fzc2"
+    },
+    {
+     "code": "C2",
+     "name": "Baan Pang Mahan village",
+     "about": "Pangmahan Coffee & Tea · Mae Fa Luang, Chiang Rai",
+     "logo": "booths/c2-pangmahan-mwtajq4p.jpg"
+    },
+    {
+     "code": "C3",
+     "name": "Toki Coffee",
+     "about": "Galyani Vadhana, Chiang Mai province",
+     "logo": "booths/c3-toki-mwtajq4p.jpg"
+    },
+    {
+     "code": "C4",
+     "name": "Ban Sip Lang village",
+     "about": "Abo & Kor Coffee & Farm · Vieng Pa Pao, Chiang Rai",
+     "logo": "booths/c4-abokor-mwtajq4p.jpg"
+    },
+    {
+     "code": "C5",
+     "name": "LOLA Coffee and Forest",
+     "about": "Mae Hong Son",
+     "logo": "booths/c5-lola-mwtajq4p.jpg"
+    },
+    {
+     "code": "C6",
+     "name": "Ann’s Bakery",
+     "about": "",
+     "logo": ""
+    },
+    {
+     "code": "C7",
+     "name": "Chalom Pizza",
+     "about": "",
+     "logo": ""
+    },
+    {
+     "code": "C8",
+     "name": "White Buffalo Bakery",
+     "about": "",
+     "logo": "booths/c8-whitebuffalo-mwtajq4p.jpg"
+    },
+    {
+     "code": "C9",
+     "name": "Aceh Manuscript",
+     "about": "Indonesia",
+     "logo": ""
+    },
+    {
+     "code": "C10",
+     "name": "Myanmar Coffee",
+     "about": "Genius Shan Highlands Coffee",
+     "logo": "booths/c10-genius-mwtajq4p.jpg"
+    },
+    {
+     "code": "C11",
+     "name": "Mae To Community",
+     "about": "",
+     "logo": ""
+    },
+    {
+     "code": "C12",
+     "name": "Same Thang",
+     "about": "Handmade bags upcycled from coffee sachets",
+     "logo": "booths/c12-samethang-mwtajq4p.jpg"
+    },
+    {
+     "code": "C13",
+     "name": "The Rotate",
+     "about": "",
+     "logo": "logos/c-rotate.png?v=mvz4fw3o"
+    },
+    {
+     "code": "C14",
+     "name": "Pong Lom Rang",
+     "about": "",
+     "logo": ""
+    },
+    {
+     "code": "C15",
+     "name": "Huay E Khang Community",
+     "about": "Che Su Mo",
+     "logo": "booths/c15-chesumo-mwtajq4p.jpg"
+    }
+   ]
+  }
  },
  "posts": [
   {
@@ -379,7 +476,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "23 Nov 2026, 20:17 (GMT+7)",
+ "updated": "23 Nov 2026, 20:29 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
