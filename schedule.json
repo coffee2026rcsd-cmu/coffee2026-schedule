@@ -412,6 +412,18 @@
  },
  "posts": [
   {
+   "id": "UMWUHYVE0SP3",
+   "date": "2026-11-24",
+   "time": "",
+   "title": "Book of Abstracts",
+   "text": "Every abstract of the symposium, in one book — panels, papers, authors, and keywords.",
+   "link": "https://cmu.to/coffee2026abs-book",
+   "linkText": "Read the Book of Abstracts",
+   "pin": false,
+   "img": "updates/2026-11-24-mwuhyk7z.jpg?v=mwuhyk7z",
+   "media": []
+  },
+  {
    "id": "UMWT4BM1ZRUH",
    "date": "2026-11-23",
    "time": "",
@@ -476,7 +488,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "23 Nov 2026, 20:37 (GMT+7)",
+ "updated": "24 Nov 2026, 16:33 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
