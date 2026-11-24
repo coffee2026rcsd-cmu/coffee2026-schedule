@@ -488,7 +488,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "24 Nov 2026, 16:33 (GMT+7)",
+ "updated": "24 Nov 2026, 17:00 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
@@ -1348,6 +1348,11 @@
        "name": "Professor Emeritus Dr. Pongsak Angkasith",
        "affiliation": "Former Director of Highland Coffee Research and Development Center CMU",
        "talk": ""
+      },
+      {
+       "name": "Dr. Pairach Piboonrungroj",
+       "affiliation": "Assistant to the President of Chiang Mai University",
+       "talk": "CMU Role Model : A Potential Coffee Inclusive Innovation for Sustainability in Thailand"
       }
      ]
     },
