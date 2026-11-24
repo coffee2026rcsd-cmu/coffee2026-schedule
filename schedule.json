@@ -21,7 +21,7 @@
    ]
   },
   {
-   "key": "room-4107",
+   "key": "social-sciences-library-room",
    "name": "Room 3: Social Science Library",
    "note": "",
    "photos": [
@@ -488,7 +488,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "24 Nov 2026, 17:00 (GMT+7)",
+ "updated": "24 Nov 2026, 17:31 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
@@ -738,7 +738,7 @@
        "code": "P03",
        "name": "Coffee as Destinations: Experience, Value and Community",
        "room": "Room 3: Social Science Library",
-       "roomKey": "room-4107",
+       "roomKey": "social-sciences-library-room",
        "theme": "3. Coffee as commodity",
        "chair": "Daranrat Jaitiang",
        "papers": [
@@ -907,7 +907,7 @@
        "code": "P06",
        "name": "Ethnicity and Agrarian Transition in the Highlands",
        "room": "Room 3: Social Science Library",
-       "roomKey": "room-4107",
+       "roomKey": "social-sciences-library-room",
        "theme": "5. Coffee in agrarian transition",
        "chair": "Paul T. Cohen",
        "papers": [
@@ -1147,7 +1147,7 @@
        "code": "P09",
        "name": "Constructing Quality: Taste, Fermentation and Sensory Knowledge",
        "room": "Room 3: Social Science Library",
-       "roomKey": "room-4107",
+       "roomKey": "social-sciences-library-room",
        "theme": "6. Coffee and knowledge production",
        "chair": "Kengkij Kitirianglarp",
        "papers": [
