@@ -311,6 +311,9 @@
   .soonb{color:var(--ink-2);max-width:700px}
   /* updates: a feed of picture + title, newest first; each opens as a page of its own (#update-ID) */
   .uplist{max-width:820px}
+  .upq{display:block;width:100%;max-width:820px;margin:0 0 8px;font:inherit;padding:10px 16px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+  .upq:focus{outline:2px solid var(--accent);outline-offset:1px}
+  .upc[hidden]{display:none}
   .upc{display:grid;grid-template-columns:220px minmax(0,1fr);gap:20px;align-items:start;padding:20px 0;border-top:1px solid var(--line);text-decoration:none;color:inherit}
   .upc:first-child{border-top:0;padding-top:4px}
   .upc .th{position:relative;display:block;aspect-ratio:16/10;border-radius:12px;overflow:hidden;background:var(--accent-soft)}
@@ -425,19 +428,19 @@
           aboutV: 'เกี่ยวกับงาน', organisers: 'ผู้จัดและหน่วยงานร่วม', contact: 'ติดต่อ', mt: 'แปลด้วยเครื่อง (Google Translate) ชื่อบุคคลคงตามต้นฉบับ ดูต้นฉบับภาษาอังกฤษได้ที่ EN' }
   };
   var T2 = {
-    en: { progV: 'Programme', exV: 'Exhibition & Workshops', upV: 'Updates', register: 'Register', st_openS: 'Open', st_open: 'Registration open', st_soon: 'Soon', st_closed: 'Closed', st_full: 'Full',
+    en: { progV: 'Programme', exV: 'Exhibition & Workshops', upV: 'Updates', register: 'Register', st_openS: 'Open', upFind: 'Search updates', upNone: 'No updates match “{q}”', st_open: 'Registration open', st_soon: 'Soon', st_closed: 'Closed', st_full: 'Full',
           left: '{n} places left', ofLeft: '{n} of {c} places left', noReg: 'Open to all', latest: 'Latest updates', allUp: 'All updates', pinned: 'Pinned', details: 'Details', fbVideo: 'Watch on Facebook', fbPhotos: 'See the photos on Facebook', fbPost: 'Open on Facebook', ytVideo: 'Watch on YouTube', openLink: 'Open the link', hasVideo: 'Video', hasPhoto: 'Photos', boothsN: 'booths', floorPlan: 'Floor plan', tapZoom: 'click to enlarge', backUp: 'All updates', moreUp: 'More updates',
           soonH: 'Details coming soon', exLead: 'Activities you can join alongside the programme, and the exhibition that runs through both days.', roundtables: 'Roundtables', exhibition: 'Exhibition',
           bothDays: 'Both days', perAct: '{c} places each', upLead: 'News from the organizers — newest first.', upEmpty: 'No updates yet.', aboutH: 'About the symposium',
           dates: 'Dates', venueL: 'Venue', language: 'Language', attendance: 'Attendance', themes: 'Themes', getting: 'Getting there', openMaps: 'Open in Maps', faq: 'Questions', phone: 'Phone', closedReg: 'Online registration closed', walkins: 'Walk-ins welcome at the desk', allActs: 'All activities & exhibition',
           aiNote: 'Disclaimer: this website and the system behind it were developed with the help of generative AI (Claude, by Anthropic) and are checked by the organizers. If you notice a mistake, please let us know.' },
-    zh: { progV: '日程', exV: '展览与工作坊', upV: '最新消息', register: '报名', st_openS: '开放', st_open: '报名中', st_soon: '即将开放', st_closed: '已截止', st_full: '已满',
+    zh: { progV: '日程', exV: '展览与工作坊', upV: '最新消息', register: '报名', st_openS: '开放', upFind: '搜索最新消息', upNone: '没有符合“{q}”的消息', st_open: '报名中', st_soon: '即将开放', st_closed: '已截止', st_full: '已满',
           left: '剩余 {n} 个名额', ofLeft: '{c} 个名额，剩余 {n} 个', noReg: '自由参加', latest: '最新消息', allUp: '全部消息', pinned: '置顶', details: '详情', fbVideo: '在 Facebook 上观看', fbPhotos: '在 Facebook 上查看照片', fbPost: '在 Facebook 上打开', ytVideo: '在 YouTube 上观看', openLink: '打开链接', hasVideo: '视频', hasPhoto: '照片', boothsN: '个展位', floorPlan: '平面图', tapZoom: '点击放大', backUp: '全部消息', moreUp: '更多消息',
           soonH: '详情即将公布', exLead: '与日程同时进行、可报名参加的活动，以及两天均开放的展览。', roundtables: '圆桌讨论', exhibition: '展览',
           bothDays: '两天', perAct: '每项 {c} 个名额', upLead: '主办方发布的最新消息。', upEmpty: '暂无消息。', aboutH: '关于研讨会',
           dates: '日期', venueL: '地点', language: '语言', attendance: '参加方式', themes: '主题', getting: '交通指引', openMaps: '在地图中打开', faq: '常见问题', phone: '电话', closedReg: '线上报名已截止', walkins: '欢迎现场登记', allActs: '全部活动与展览',
           aiNote: '免责声明：本网站及其后台系统借助生成式人工智能（Anthropic 公司的 Claude）开发，并由主办方核对。如发现错误，请告知我们。' },
-    th: { progV: 'กำหนดการ', exV: 'นิทรรศการและเวิร์กช็อป', upV: 'อัปเดต', register: 'ลงทะเบียน', st_openS: 'เปิด', st_open: 'เปิดรับสมัคร', st_soon: 'เร็วๆ นี้', st_closed: 'ปิดรับแล้ว', st_full: 'เต็มแล้ว',
+    th: { progV: 'กำหนดการ', exV: 'นิทรรศการและเวิร์กช็อป', upV: 'อัปเดต', register: 'ลงทะเบียน', st_openS: 'เปิด', upFind: 'ค้นหาอัปเดต', upNone: 'ไม่พบอัปเดตที่ตรงกับ “{q}”', st_open: 'เปิดรับสมัคร', st_soon: 'เร็วๆ นี้', st_closed: 'ปิดรับแล้ว', st_full: 'เต็มแล้ว',
           left: 'เหลือ {n} ที่', ofLeft: 'เหลือ {n} จาก {c} ที่', noReg: 'เข้าร่วมได้ทุกคน', latest: 'อัปเดตล่าสุด', allUp: 'อัปเดตทั้งหมด', pinned: 'ปักหมุด', details: 'รายละเอียด', fbVideo: 'ดูวิดีโอบน Facebook', fbPhotos: 'ดูรูปบน Facebook', fbPost: 'เปิดบน Facebook', ytVideo: 'ดูบน YouTube', openLink: 'เปิดลิงก์', hasVideo: 'วิดีโอ', hasPhoto: 'รูปภาพ', boothsN: 'บูธ', floorPlan: 'ผังบูธ', tapZoom: 'กดเพื่อขยาย', backUp: 'อัปเดตทั้งหมด', moreUp: 'อัปเดตอื่น ๆ',
           soonH: 'รายละเอียดเร็วๆ นี้', exLead: 'กิจกรรมที่เข้าร่วมได้ควบคู่กับกำหนดการ และนิทรรศการตลอดสองวัน', roundtables: 'โต๊ะกลม', exhibition: 'นิทรรศการ',
           bothDays: 'ทั้งสองวัน', perAct: 'กิจกรรมละ {c} ที่', upLead: 'ข่าวจากผู้จัด เรียงจากล่าสุด', upEmpty: 'ยังไม่มีอัปเดต', aboutH: 'เกี่ยวกับงานประชุม',
@@ -659,7 +662,8 @@
   function postHTML(p) {
     var M = (p.media || []).map(mediaOf), vid = M.some(function (m) { return m.kind === 'video'; }), pic = M.some(function (m) { return m.kind === 'photo'; });
     var th = p.img ? '<img src="' + esc(p.img) + '" alt="" loading="lazy">' : '<span class="ph">' + (vid ? '▶' : pic ? '▣' : '☕') + '</span>';
-    return '<a class="upc" href="#update-' + esc(p.id) + '" id="post-' + esc(p.id) + '"><span class="th">' + th + (vid && p.img ? '<span class="pl">▶</span>' : '') + '</span>' +
+    var hay = [p.title, tr(p.title), p.text, tr(p.text), p.linkText, tr(p.linkText), fmtPost(p), p.date].filter(Boolean).join(' ').toLowerCase();
+    return '<a class="upc" href="#update-' + esc(p.id) + '" id="post-' + esc(p.id) + '" data-s="' + esc(hay) + '"><span class="th">' + th + (vid && p.img ? '<span class="pl">▶</span>' : '') + '</span>' +
       '<div><time>' + esc(fmtPost(p)) + '</time>' + (p.pin ? '<span class="pn">' + esc(t('pinned')) + '</span>' : '') + '<h3>' + esc(tr(p.title)) + '</h3>' +
       (p.text ? '<p>' + esc(tr(p.text)) + '</p>' : '') +
       ((vid || pic) ? '<span class="ic">' + [vid ? '▶ ' + esc(t('hasVideo')) : '', pic ? '▣ ' + esc(t('hasPhoto')) : ''].filter(Boolean).join(' · ') + '</span>' : '') + '</div></a>';
@@ -727,7 +731,20 @@
   }
   function upHTML() {
     var P = posts();
-    return '<div class="xp"><h2 class="pt">' + esc(t('upV')) + '</h2><p class="lead">' + esc(t('upLead')) + '</p><div class="uplist">' + (P.length ? P.map(postHTML).join('') : '<div class="empty">' + esc(t('upEmpty')) + '</div>') + '</div></div>';
+    return '<div class="xp"><h2 class="pt">' + esc(t('upV')) + '</h2><p class="lead">' + esc(t('upLead')) + '</p>' +
+      (P.length > 1 ? '<input class="upq" id="upq" type="search" placeholder="' + esc(t('upFind')) + '" aria-label="' + esc(t('upFind')) + '" value="' + esc(UPQ) + '">' : '') +
+      '<div class="uplist" id="uplist">' + (P.length ? P.map(postHTML).join('') : '<div class="empty">' + esc(t('upEmpty')) + '</div>') + '</div><div class="empty" id="upnone" hidden></div></div>';
+  }
+  /* the search on the Updates page: hides the updates whose title, text or date miss every word typed */
+  var UPQ = '';
+  function filterUp() {
+    var box = $('uplist'); if (!box) return;
+    var words = UPQ.toLowerCase().split(/\s+/).filter(Boolean), n = 0;
+    Array.prototype.forEach.call(box.querySelectorAll('.upc'), function (a) {
+      var hit = words.every(function (w) { return (a.getAttribute('data-s') || '').indexOf(w) >= 0; });
+      a.hidden = !hit; if (hit) n++;
+    });
+    var none = $('upnone'); if (none) { none.hidden = !words.length || n > 0; none.textContent = t('upNone').replace('{q}', UPQ); }
   }
   function render() {
     document.documentElement.lang = L === 'zh' ? 'zh-CN' : L === 'th' ? 'th' : 'en';
@@ -820,7 +837,7 @@
     $('feed').innerHTML = $('feed').hidden ? '' : '<div class="hdr"><h2>' + esc(t('latest')) + '</h2><button class="lnk" data-page="up">' + esc(t('allUp')) + ' →</button></div><div class="uplist upl">' + posts().slice(0, 3).map(postHTML).join('') + '</div>';
     anchorActs();
     if (VIEW === 'ex') { $('main').innerHTML = exHTML(); $('now').hidden = true; return; }
-    if (VIEW === 'up') { $('main').innerHTML = upHTML(); $('now').hidden = true; return; }
+    if (VIEW === 'up') { $('main').innerHTML = upHTML(); filterUp(); $('now').hidden = true; return; }
     if (VIEW === 'post') { $('main').innerHTML = postPageHTML(POST); $('now').hidden = true; return; }
     if (VIEW === 'people') { $('main').innerHTML = peopleHTML(); $('now').hidden = true; return; }
     if (VIEW === 'about') { $('main').innerHTML = aboutHTML(); $('now').hidden = true; return; }
@@ -968,6 +985,7 @@
     }
   });
   $('q').addEventListener('input', function (e) { Q = e.target.value.trim(); render(); });
+  document.addEventListener('input', function (e) { if (e.target && e.target.id === 'upq') { UPQ = e.target.value.trim(); filterUp(); } });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') { if (!$('zoom').hidden) { $('zoom').hidden = true; return; } closeSheet(); }
     if ((e.key === 'Enter' || e.key === ' ') && e.target.matches && e.target.matches('article[data-sess]')) { e.preventDefault(); openSession(e.target.getAttribute('data-sess')); }
