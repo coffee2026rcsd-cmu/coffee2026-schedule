@@ -320,6 +320,8 @@
   .upc .th img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s}
   .upc:hover .th img{transform:scale(1.03)}
   .upc .th .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:34px;color:var(--accent);opacity:.55}
+  .acts .aimg{margin:0 0 10px}
+  .acts .aimg img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:10px;cursor:zoom-in}
   .upc .th .nimg{position:absolute;right:8px;bottom:8px;font-size:11.5px;font-weight:700;background:rgba(0,0,0,.6);color:#fff;border-radius:999px;padding:2px 8px}
   .upc .th .pl{position:absolute;left:10px;bottom:10px;width:34px;height:34px;border-radius:50%;background:rgba(0,0,0,.6);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px}
   .upc time{font-size:13px;color:var(--ink-3)}
@@ -711,7 +713,7 @@
     var ng = G.nua || {};
     if (ng.title) h += '<section class="xs"><h3>' + esc(tr(ng.title)) + '<small>' + esc(t('bothDays')) + '</small></h3><div>' + logosHTML(ng.logos) +
       (nua.length ? (ng.intro ? '<p>' + esc(tr(ng.intro)) + '</p>' : '') + '<div class="acts">' + nua.map(function (a) {
-        return '<article>' + stTag(a) + '<h4>' + esc(tr(a.title)) + '</h4><div class="w">' + esc([whenOf(a), tr(a.place)].filter(Boolean).join(' · ')) + '</div>' + seatHTML(a) +
+        return '<article>' + (a.img ? '<figure class="slide aimg"><img src="' + esc(a.img) + '" alt="" loading="lazy"><figcaption hidden>' + esc(tr(a.title)) + '</figcaption></figure>' : '') + stTag(a) + '<h4>' + esc(tr(a.title)) + '</h4><div class="w">' + esc([whenOf(a), tr(a.place)].filter(Boolean).join(' · ')) + '</div>' + seatHTML(a) +
           (a.about ? '<p style="font-size:13.5px;margin:8px 0 0">' + esc(tr(a.about)) + '</p>' : '') + '<div style="margin-top:10px">' + regBtn(a) + '</div></article>';
       }).join('') + '</div>' : '<div class="soonb"><b>' + esc(t('soonH')) + '</b>' + esc(tr(ng.soon || '')) + '</div>') + '</div></section>';
     var rts = [];
