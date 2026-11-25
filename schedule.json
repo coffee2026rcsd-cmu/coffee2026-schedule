@@ -223,7 +223,7 @@
     "sub": "Nua Coffee Space",
     "link": "https://cmu.to/coffee2026rotate-workshop",
     "st": "open",
-    "left": 47,
+    "left": 41,
     "logo": "logos/c-rotate.png?v=mvz4fw3o"
    }
   ],
@@ -268,6 +268,7 @@
     "startMin": 810,
     "place": "S-Shop",
     "about": "Learn how seasonal syrups are fermented from wild forest fruits. In this hands-on workshop you'll get to know the ingredients and how to handle wild fruit. Then you'll make your own syrups, each with its own sour and sweet character.\nTaste of Fruity reflects the fruity flavours of the seasonal fruit that grows in Pgaz K'Nyau community forests.\n\nModerator: Ker Li Pho, Pgaz K'Nyau community, Ban Pong Lom Raeng",
+    "img": "workshops/mww4fms3.jpg?v=mww4fms3",
     "logos": [
      {
       "logo": "logos/c-rotate.png?v=mvz4fw3o",
@@ -277,7 +278,7 @@
     ],
     "reg": true,
     "cap": 10,
-    "left": 10,
+    "left": 9,
     "link": "https://cmu.to/coffee2026rotate-workshop",
     "st": "open"
    },
@@ -292,6 +293,7 @@
     "startMin": 930,
     "place": "S-Shop",
     "about": "This workshop looks at the spices that are part of everyday life for the Lahu Indigenous people. You'll taste seasonal spices in a sensory session, paired with different coffees. Their flavors come from nature, local ecosystems, and the Lahu people's own knowledge of managing resources.\nTaste of Spice reflects the seasonal spices the Lahu use in their daily lives.\n\nModerator: Ha Le Jya, Na Tae Kha community, Ban Kae Noi",
+    "img": "workshops/mww4j8b5.jpg?v=mww4j8b5",
     "logos": [
      {
       "logo": "logos/c-rotate.png?v=mvz4fw3o",
@@ -316,6 +318,7 @@
     "startMin": 660,
     "place": "S-Shop",
     "about": "Open a treasure chest of wild honey from Indigenous communities around the world. Natdanai (Jum) has gathered it over 12 years of travel. Taste it, learn about it, and discover how varied honey can be from one part of the world to another.\nTaste of Pollination reflects how Indigenous peoples around the world care for and manage their resources.\n\nModerator: Natdanai (Jum), The Rotate",
+    "img": "workshops/mww4js62.jpg?v=mww4js62",
     "logos": [
      {
       "logo": "logos/c-rotate.png?v=mvz4fw3o",
@@ -340,6 +343,7 @@
     "startMin": 810,
     "place": "S-Shop",
     "about": "Eco-Print with Coffee Leaves and Beans\nDiscover the natural colours of the Women's Forest of the Huai E Khang community. Many plants in this forest give natural dyes, and their shades change with the weather and the seasons. In this workshop you'll eco-print fabric with coffee leaves and beans, blending your own shades into the cloth with your own hands.\nTaste of Earthy reflects the Pgaz K'Nyau knowledge of the \"Women's Forest\" that guides how the community uses and cares for this forest.\n\nModerator: Che Su Mo, Huai E Khang community",
+    "img": "workshops/mww4kq1h.jpg?v=mww4kq1h",
     "logos": [
      {
       "logo": "logos/c-rotate.png?v=mvz4fw3o",
@@ -364,6 +368,7 @@
     "startMin": 945,
     "place": "S-Shop",
     "about": "This workshop goes to the heart of the idea that \"food is medicine.\" You'll meet seasonal ingredients, spices and community produce, and see how traditional knowledge of preparing and fermenting them turns them into Mother Earth Fermented. It draws on the experience of Auntie Chan of Suan Sin Nong Mon and Thammachat Kuen Chiwit.\nTaste of Fermented reflects the idea of food as medicine, and of looking after yourself by understanding the craft of fermentation.\n\nModerator: Auntie Chan, Suan Sin Nong Mon and Thammachat Kuen Chiwit",
+    "img": "workshops/mww4l56r.jpg?v=mww4l56r",
     "logos": [
      {
       "logo": "logos/c-rotate.png?v=mvz4fw3o",
@@ -373,7 +378,7 @@
     ],
     "reg": true,
     "cap": 10,
-    "left": 10,
+    "left": 5,
     "link": "https://cmu.to/coffee2026rotate-workshop",
     "st": "open"
    }
@@ -620,7 +625,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "25 Nov 2026, 19:43 (GMT+7)",
+ "updated": "25 Nov 2026, 19:55 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
