@@ -213,17 +213,17 @@
     "key": "cupping",
     "title": "Public Cupping",
     "sub": "28 Nov 2026 · 1:30 PM",
-    "link": "",
-    "st": "soon",
+    "link": "https://cmu.to/coffee2026cupping",
+    "st": "open",
     "logo": "logos/c-cmu-coffee.png?v=mvz4fzc2"
    },
    {
     "key": "nua",
-    "title": "Workshop by The Rotate",
-    "sub": "Nua Coffee Space · soon",
-    "link": "",
-    "st": "soon",
-    "left": null,
+    "title": "์Nua Workshop by The Rotate",
+    "sub": "Nua Coffee Space",
+    "link": "https://cmu.to/coffee2026rotate-workshop",
+    "st": "open",
+    "left": 47,
     "logo": "logos/c-rotate.png?v=mvz4fw3o"
    }
   ],
@@ -239,7 +239,7 @@
     "end": "3:00 PM",
     "startMin": 810,
     "place": "Chamchuri Yard",
-    "about": "Taste coffees of different varieties, origins and processing methods, hear the story behind each cup — including why growers choose their varieties — and learn how a cup is evaluated and scored. Free; places are limited.",
+    "about": "An open cupping led by the CMU Coffee Research and Development Center and School Coffee, with coffees from Thailand, Indonesia and Myanmar — including S6, Icatu and Sarchimor from CMU Coffee, Geisha and SCATH01 from growers in Chiang Mai and Chiang Rai, a Liberica from 5758 Coffee Lab and a Geisha from Genius Shan Coffee. No experience needed; free of charge, places are limited.",
     "by": "Coffee Research and Development Center, Department of Highland Agriculture and Natural Resources, Faculty of Agriculture, Chiang Mai University · School Coffee",
     "logos": [
      {
@@ -254,8 +254,128 @@
      }
     ],
     "reg": true,
-    "link": "",
-    "st": "soon"
+    "link": "https://cmu.to/coffee2026cupping",
+    "st": "open"
+   },
+   {
+    "id": "nua-n1",
+    "group": "nua",
+    "kind": "์Nua Workshop by The Rotate",
+    "title": "Workshop 1: Seasonal Forest Fruit Syrub: Taste of Fruity",
+    "day": 0,
+    "start": "1:30 PM",
+    "end": "2:30 PM",
+    "startMin": 810,
+    "place": "S-Shop",
+    "about": "Learn how seasonal syrups are fermented from wild forest fruits. In this hands-on workshop you'll get to know the ingredients and how to handle wild fruit. Then you'll make your own syrups, each with its own sour and sweet character.\nTaste of Fruity reflects the fruity flavours of the seasonal fruit that grows in Pgaz K'Nyau community forests.\n\nModerator: Ker Li Pho, Pgaz K'Nyau community, Ban Pong Lom Raeng",
+    "logos": [
+     {
+      "logo": "logos/c-rotate.png?v=mvz4fw3o",
+      "name": "The Rotate",
+      "url": "https://therotate.co/"
+     }
+    ],
+    "reg": true,
+    "cap": 10,
+    "left": 10,
+    "link": "https://cmu.to/coffee2026rotate-workshop",
+    "st": "open"
+   },
+   {
+    "id": "nua-n2",
+    "group": "nua",
+    "kind": "์Nua Workshop by The Rotate",
+    "title": "Workshop 2: Seasonal Spice from Lahu livelihood: Taste of Spice",
+    "day": -1,
+    "start": "3:30 PM",
+    "end": "4:30 PM",
+    "startMin": 930,
+    "place": "S-Shop",
+    "about": "This workshop looks at the spices that are part of everyday life for the Lahu Indigenous people. You'll taste seasonal spices in a sensory session, paired with different coffees. Their flavors come from nature, local ecosystems, and the Lahu people's own knowledge of managing resources.\nTaste of Spice reflects the seasonal spices the Lahu use in their daily lives.\n\nModerator: Ha Le Jya, Na Tae Kha community, Ban Kae Noi",
+    "logos": [
+     {
+      "logo": "logos/c-rotate.png?v=mvz4fw3o",
+      "name": "The Rotate",
+      "url": "https://therotate.co/"
+     }
+    ],
+    "reg": true,
+    "cap": 10,
+    "left": 10,
+    "link": "https://cmu.to/coffee2026rotate-workshop",
+    "st": "open"
+   },
+   {
+    "id": "nua-n3",
+    "group": "nua",
+    "kind": "์Nua Workshop by The Rotate",
+    "title": "Workshop 3: Seasonal of Indigenous Global Wild Honey: Taste of Pollination",
+    "day": 1,
+    "start": "11:00 AM",
+    "end": "12:00 PM",
+    "startMin": 660,
+    "place": "S-Shop",
+    "about": "Open a treasure chest of wild honey from Indigenous communities around the world. Natdanai (Jum) has gathered it over 12 years of travel. Taste it, learn about it, and discover how varied honey can be from one part of the world to another.\nTaste of Pollination reflects how Indigenous peoples around the world care for and manage their resources.\n\nModerator: Natdanai (Jum), The Rotate",
+    "logos": [
+     {
+      "logo": "logos/c-rotate.png?v=mvz4fw3o",
+      "name": "The Rotate",
+      "url": "https://therotate.co/"
+     }
+    ],
+    "reg": true,
+    "cap": 7,
+    "left": 7,
+    "link": "https://cmu.to/coffee2026rotate-workshop",
+    "st": "open"
+   },
+   {
+    "id": "nua-n4",
+    "group": "nua",
+    "kind": "์Nua Workshop by The Rotate",
+    "title": "Workshop 4: Seasonal Color of Women Forest: Taste of Earthy",
+    "day": 1,
+    "start": "1:30 PM",
+    "end": "2:30 PM",
+    "startMin": 810,
+    "place": "S-Shop",
+    "about": "Eco-Print with Coffee Leaves and Beans\nDiscover the natural colours of the Women's Forest of the Huai E Khang community. Many plants in this forest give natural dyes, and their shades change with the weather and the seasons. In this workshop you'll eco-print fabric with coffee leaves and beans, blending your own shades into the cloth with your own hands.\nTaste of Earthy reflects the Pgaz K'Nyau knowledge of the \"Women's Forest\" that guides how the community uses and cares for this forest.\n\nModerator: Che Su Mo, Huai E Khang community",
+    "logos": [
+     {
+      "logo": "logos/c-rotate.png?v=mvz4fw3o",
+      "name": "The Rotate",
+      "url": "https://therotate.co/"
+     }
+    ],
+    "reg": true,
+    "cap": 10,
+    "left": 10,
+    "link": "https://cmu.to/coffee2026rotate-workshop",
+    "st": "open"
+   },
+   {
+    "id": "nua-n5",
+    "group": "nua",
+    "kind": "์Nua Workshop by The Rotate",
+    "title": "Workshop 5: Seasonal Fermented from Mother Earth: Taste of Fermented",
+    "day": 1,
+    "start": "3:45 PM",
+    "end": "4:45 PM",
+    "startMin": 945,
+    "place": "S-Shop",
+    "about": "This workshop goes to the heart of the idea that \"food is medicine.\" You'll meet seasonal ingredients, spices and community produce, and see how traditional knowledge of preparing and fermenting them turns them into Mother Earth Fermented. It draws on the experience of Auntie Chan of Suan Sin Nong Mon and Thammachat Kuen Chiwit.\nTaste of Fermented reflects the idea of food as medicine, and of looking after yourself by understanding the craft of fermentation.\n\nModerator: Auntie Chan, Suan Sin Nong Mon and Thammachat Kuen Chiwit",
+    "logos": [
+     {
+      "logo": "logos/c-rotate.png?v=mvz4fw3o",
+      "name": "The Rotate",
+      "url": "https://therotate.co/"
+     }
+    ],
+    "reg": true,
+    "cap": 10,
+    "left": 10,
+    "link": "https://cmu.to/coffee2026rotate-workshop",
+    "st": "open"
    }
   ],
   "groups": {
@@ -276,9 +396,9 @@
     ]
    },
    "nua": {
-    "title": "Workshop by The Rotate",
+    "title": "์Nua Workshop by The Rotate",
     "intro": "",
-    "soon": "Several activities at Nua Coffee Space through both days, 10 places each. Details and registration will be posted here and in Updates.",
+    "soon": "",
     "logos": [
      {
       "logo": "logos/c-rotate.png?v=mvz4fw3o",
@@ -500,7 +620,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "24 Nov 2026, 21:26 (GMT+7)",
+ "updated": "25 Nov 2026, 19:43 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
