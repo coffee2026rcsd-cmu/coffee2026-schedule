@@ -320,6 +320,7 @@
   .upc .th img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s}
   .upc:hover .th img{transform:scale(1.03)}
   .upc .th .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:34px;color:var(--accent);opacity:.55}
+  .upc .th .nimg{position:absolute;right:8px;bottom:8px;font-size:11.5px;font-weight:700;background:rgba(0,0,0,.6);color:#fff;border-radius:999px;padding:2px 8px}
   .upc .th .pl{position:absolute;left:10px;bottom:10px;width:34px;height:34px;border-radius:50%;background:rgba(0,0,0,.6);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px}
   .upc time{font-size:13px;color:var(--ink-3)}
   .upc .pn{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-left:8px}
@@ -661,9 +662,10 @@
   /* the feed: picture and title (date, first lines, video / photos marks); a click opens the update as its own page */
   function postHTML(p) {
     var M = (p.media || []).map(mediaOf), vid = M.some(function (m) { return m.kind === 'video'; }), pic = M.some(function (m) { return m.kind === 'photo'; });
+    var nImg = (p.imgs || []).length;
     var th = p.img ? '<img src="' + esc(p.img) + '" alt="" loading="lazy">' : '<span class="ph">' + (vid ? '▶' : pic ? '▣' : '☕') + '</span>';
     var hay = [p.title, tr(p.title), p.text, tr(p.text), p.linkText, tr(p.linkText), fmtPost(p), p.date].filter(Boolean).join(' ').toLowerCase();
-    return '<a class="upc" href="#update-' + esc(p.id) + '" id="post-' + esc(p.id) + '" data-s="' + esc(hay) + '"><span class="th">' + th + (vid && p.img ? '<span class="pl">▶</span>' : '') + '</span>' +
+    return '<a class="upc" href="#update-' + esc(p.id) + '" id="post-' + esc(p.id) + '" data-s="' + esc(hay) + '"><span class="th">' + th + (vid && p.img ? '<span class="pl">▶</span>' : '') + (nImg > 1 ? '<span class="nimg">▣ ' + nImg + '</span>' : '') + '</span>' +
       '<div><time>' + esc(fmtPost(p)) + '</time>' + (p.pin ? '<span class="pn">' + esc(t('pinned')) + '</span>' : '') + '<h3>' + esc(tr(p.title)) + '</h3>' +
       (p.text ? '<p>' + esc(tr(p.text)) + '</p>' : '') +
       ((vid || pic) ? '<span class="ic">' + [vid ? '▶ ' + esc(t('hasVideo')) : '', pic ? '▣ ' + esc(t('hasPhoto')) : ''].filter(Boolean).join(' · ') + '</span>' : '') + '</div></a>';
@@ -682,7 +684,9 @@
     var others = posts().filter(function (x) { return x.id !== id; });
     return '<div class="postx"><a class="back" href="#up">← ' + esc(t('backUp')) + '</a><div><time>' + esc(fmtPost(p)) + '</time>' + (p.pin ? ' <span class="st">' + esc(t('pinned')) + '</span>' : '') + '</div>' +
       '<h1>' + esc(tr(p.title)) + '</h1>' +
-      (p.img ? '<figure class="slide" style="margin:0"><img class="pimg" src="' + esc(p.img) + '" alt=""><figcaption hidden>' + esc(tr(p.title)) + '</figcaption></figure>' : '') +
+      ((p.imgs && p.imgs.length ? p.imgs : p.img ? [p.img] : []).map(function (src, i, all) {
+        return '<figure class="slide" style="margin:0"><img class="pimg" src="' + esc(src) + '" alt=""' + (i ? ' loading="lazy"' : '') + '><figcaption hidden>' + esc(tr(p.title)) + (all.length > 1 ? ' · ' + (i + 1) + '/' + all.length : '') + '</figcaption></figure>';
+      }).join('')) +
       (p.text ? '<p>' + esc(tr(p.text)) + '</p>' : '') + players + (btns ? '<div class="btns">' + btns + '</div>' : '') +
       (others.length ? '<section class="pmore"><h2>' + esc(t('moreUp')) + '</h2><div class="uplist">' + others.map(postHTML).join('') + '</div></section>' : '') + '</div>';
   }
