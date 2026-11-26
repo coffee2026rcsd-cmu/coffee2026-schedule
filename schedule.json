@@ -230,7 +230,7 @@
     "sub": "Nua Coffee Space",
     "link": "https://cmu.to/coffee2026rotate-workshop",
     "st": "open",
-    "left": 39,
+    "left": 33,
     "logo": "logos/c-rotate.png?v=mvz4fw3o"
    }
   ],
@@ -285,7 +285,7 @@
     ],
     "reg": true,
     "cap": 10,
-    "left": 9,
+    "left": 7,
     "link": "https://cmu.to/coffee2026rotate-workshop",
     "st": "open"
    },
@@ -310,7 +310,7 @@
     ],
     "reg": true,
     "cap": 10,
-    "left": 10,
+    "left": 8,
     "link": "https://cmu.to/coffee2026rotate-workshop",
     "st": "open"
    },
@@ -360,7 +360,7 @@
     ],
     "reg": true,
     "cap": 10,
-    "left": 9,
+    "left": 8,
     "link": "https://cmu.to/coffee2026rotate-workshop",
     "st": "open"
    },
@@ -385,7 +385,7 @@
     ],
     "reg": true,
     "cap": 10,
-    "left": 6,
+    "left": 5,
     "link": "https://cmu.to/coffee2026rotate-workshop",
     "st": "open"
    }
@@ -667,7 +667,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "26 Nov 2026, 11:17 (GMT+7)",
+ "updated": "26 Nov 2026, 12:17 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
