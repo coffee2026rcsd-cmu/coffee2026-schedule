@@ -564,7 +564,11 @@
    "link": "https://tally.so/r/M1aP8E",
    "linkText": "Cupping Register",
    "pin": false,
-   "img": "",
+   "img": "updates/2026-11-25-mwwusmpa.jpg?v=mwwusmpa",
+   "imgs": [
+    "updates/2026-11-25-mwwusmpa.jpg?v=mwwusmpa",
+    "updates/2026-11-25-mwwusr3c-1.jpg?v=mwwusr3c-1"
+   ],
    "media": []
   },
   {
@@ -656,7 +660,7 @@
   "google": "https://maps.app.goo.gl/zSuCYi7fkbP54RhJ7",
   "china": "https://j.map.baidu.com/a3/_RHM"
  },
- "updated": "25 Nov 2026, 20:56 (GMT+7)",
+ "updated": "26 Nov 2026, 08:08 (GMT+7)",
  "days": [
   {
    "key": "Day 1",
